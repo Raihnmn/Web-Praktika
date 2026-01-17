@@ -2,6 +2,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     const processItems = document.querySelectorAll('.process-item');
     
+    // Initialize accordion states based on active class
+    processItems.forEach(item => {
+        const contentInit = item.querySelector('.process-content');
+        const toggleInit = item.querySelector('.toggle-btn');
+        if (item.classList.contains('process-item-active')) {
+            contentInit.style.display = 'block';
+            if (toggleInit) toggleInit.textContent = '−';
+        } else {
+            contentInit.style.display = 'none';
+            if (toggleInit) toggleInit.textContent = '+';
+        }
+    });
+
+    // Set up click handlers
     processItems.forEach(item => {
         const header = item.querySelector('.process-header');
         const content = item.querySelector('.process-content');
@@ -88,6 +102,45 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+    
+        // Animated counters for Stats section
+        const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+        const animateCount = (el, target, suffix = '', duration = 1200) => {
+            const start = 0;
+            const startTime = performance.now();
+
+            const step = (now) => {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeOutCubic(progress);
+                const value = Math.round(start + (target - start) * eased);
+                el.textContent = `${value}${suffix}`;
+                if (progress < 1) requestAnimationFrame(step);
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        if (statNumbers.length) {
+            const statsObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        if (el.dataset.counted === 'true') return;
+                        const target = parseFloat(el.dataset.target || '0');
+                        const suffix = el.dataset.suffix || '';
+                        el.dataset.counted = 'true';
+                        animateCount(el, target, suffix);
+                        obs.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            statNumbers.forEach((el) => statsObserver.observe(el));
+        }
     
     // Mobile menu toggle (if needed)
     const createMobileMenu = () => {

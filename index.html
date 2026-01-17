@@ -11,27 +11,43 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="logo.svg" alt="Praktika+" class="logo-img">
+   <nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#program">PKL SMK</a></li>
+                        <li><a href="#program">Internship Mahasiswa</a></li>
+                        <li><a href="#program">Bootcamp</a></li>
+                        <li><a href="#program">Kursus</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#solution" class="nav-link">Our Solution</a></li>
+                <li class="nav-item"><a href="#hub" class="nav-link">Hub</a></li>
+                <li class="nav-item"><a href="#komunitas" class="nav-link">Komunitas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#solution">Our Solution</a></li>
-                    <li><a href="#hub">HUB</a></li>
-                    <li><a href="#komunitas">Komunitas</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                </ul>
                 <div class="nav-buttons">
                     <button class="btn btn-secondary">Masuk</button>
                     <button class="btn btn-primary">Daftar</button>
                 </div>
             </div>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -44,7 +60,7 @@
                 <div class="hero-image">
                     <div class="hero-illustration">
                         <!-- Ganti src dengan path gambar Anda -->
-                        <img src="your-image.png" alt="Hero Illustration" class="hero-img">
+                        <img src="img/orang-removebg-preview.png" alt="Hero Illustration" class="hero-img">
                     </div>
                 </div>
             </div>
@@ -57,26 +73,26 @@
             <div class="partners-slider">
                 <div class="partners-track">
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Digibook+Promotion" alt="Digibook Promotion">
+                        <img src="img/Logo Digibook.png" alt="Digibook Promotion">
                     </div>
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Praktika%2B" alt="Praktika+">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+">
                     </div>
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Partner+3" alt="Partner 3">
+                        <img src="img/Logo Digibook.png" alt="Partner 3">
                     </div>
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Partner+4" alt="Partner 4">
+                        <img src="img/Logo Praktika+.png" alt="Partner 4">
                     </div>
                     <!-- Duplicate for seamless loop -->
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Digibook+Promotion" alt="Digibook Promotion">
+                        <img src="img/Logo Digibook.png" alt="Digibook Promotion">
                     </div>
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Praktika%2B" alt="Praktika+">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+">
                     </div>
                     <div class="partner-logo">
-                        <img src="https://via.placeholder.com/200x80/333/fff?text=Partner+3" alt="Partner 3">
+                        <img src="img/Logo Digibook.png" alt="Partner 3">
                     </div>
                     <div class="partner-logo">
                         <img src="https://via.placeholder.com/200x80/333/fff?text=Partner+4" alt="Partner 4">
@@ -92,22 +108,22 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-icon">👥</div>
-                    <div class="stat-number">700+</div>
+                    <div class="stat-number" data-target="700" data-suffix="+">0</div>
                     <div class="stat-label">Talenta Bergabung</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">📋</div>
-                    <div class="stat-number">100+</div>
+                    <div class="stat-number" data-target="100" data-suffix="+">0</div>
                     <div class="stat-label">Portofolio Tersedia</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">😊</div>
-                    <div class="stat-number">88%</div>
+                    <div class="stat-number" data-target="88" data-suffix="%">0</div>
                     <div class="stat-label">Kepuasan Talenta</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-icon">🤝</div>
-                    <div class="stat-number">20+</div>
+                    <div class="stat-number" data-target="20" data-suffix="+">0</div>
                     <div class="stat-label">Kerjasama dengan SMK & Universitas</div>
                 </div>
             </div>
@@ -115,10 +131,12 @@
     </section>
 
     <!-- Programs Section -->
-    <section class="programs-section">
+    <section id="program" class="programs-section">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">Our Program</span></h2>
-            <p class="section-subtitle">At Praktika+, we offer comprehensive career acceleration programs designed to bridge the gap between academic learning and industry needs. Our featured programs include</p>
+            <div class="section-header">
+                <h2 class="section-title"><span class="highlight">Our Program</span></h2>
+                <p class="section-subtitle">At Praktika+, we offer comprehensive career acceleration programs designed to bridge the gap between academic learning and industry needs. Our featured programs include</p>
+            </div>
             
             <div class="programs-grid">
                 <div class="program-card">
@@ -199,8 +217,10 @@
     <!-- Working Process Section -->
     <section class="working-process">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">Our Working Process</span></h2>
-            <p class="section-subtitle">Step-by-Step Magang di dalam Praktika</p>
+            <div class="section-header">
+                <h2 class="section-title"><span class="highlight">Our Working Process</span></h2>
+                <p class="section-subtitle">Step-by-Step Magang di dalam Praktika</p>
+            </div>
             
             <div class="process-accordion">
                 <div class="process-item process-item-active">
@@ -275,74 +295,100 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title"><span class="highlight">Internship Testimonials</span></h2>
-            <p class="section-subtitle">Real stories, real growth. Discover how our programs helped these talents transform from students into industry-ready professionals.</p>
+            <div class="section-header">
+                <h2 class="section-title"><span class="highlight">Internship Testimonials</span></h2>
+                <p class="section-subtitle">Real stories, real growth. Discover how our programs helped these talents transform from students into industry-ready professionals.</p>
+            </div>
             
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Reno</h4>
                             <p class="institution">SMK 1 Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Kurikulum di Praktika+ sangat relevan dengan industri saat ini. Proyek nyata yang saya kerjakan selama magang menjadi nilai jual utama saat interview kerja.</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-reno.jpg">
+                            <source src="videos/reno.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Juni</h4>
                             <p class="institution">Universitas Negeri Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Mentor di sini bukan cuma mengajar tools, tapi juga pola pikir desain (design thinking). Portofolio saya yang awalnya kosong, kini terisi dengan studi kasus berkualitas</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-juni.jpg">
+                            <source src="videos/juni.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Lia</h4>
                             <p class="institution">Universitas Diponegoro Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Pengalaman magang yang benar-benar beda! Saya belajar berkolaborasi menggunakan metode Agile yang belum pernah diajarkan di kampus.</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-lia.jpg">
+                            <source src="videos/lia.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Dafa</h4>
                             <p class="institution">Universitas Negeri Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Pengalaman magang yang benar-benar beda! Saya belajar berkolaborasi menggunakan metode Agile yang belum pernah diajarkan di kampus.</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-dafa.jpg">
+                            <source src="videos/dafa.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Natan</h4>
                             <p class="institution">SMK 6 Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Pengalaman saya di Praktika+ melampaui sekadar pemahaman teoritis; saya terlibat langsung dalam membedah dan menganalisis data riil yang bersumber dari mitra perusahaan.</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-natan.jpg">
+                            <source src="videos/natan.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card video-card">
                     <div class="testimonial-header">
                         <div>
                             <h4>Sarah</h4>
                             <p class="institution">SMK 3 Semarang</p>
                         </div>
-                        <a href="#" class="linkedin-icon">in</a>
                     </div>
-                    <p class="testimonial-text">Praktika+ benar-benar peduli memastikan alumnnya terserap di dunia kerja, bukan cuma sekadar lulus.</p>
+                    <div class="video-wrapper">
+                        <video controls preload="none" poster="img/poster-sarah.jpg">
+                            <source src="videos/sarah.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
                 </div>
             </div>
 
@@ -357,8 +403,10 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-content">
-                    <h2 class="section-title"><span class="highlight">Contact Us</span></h2>
-                    <p class="section-subtitle">Connect with Us: Let's Discuss Your Question.</p>
+                    <div class="section-header">
+                        <h2 class="section-title"><span class="highlight">Contact Us</span></h2>
+                        <p class="section-subtitle">Connect with Us: Let's Discuss Your Question.</p>
+                    </div>
                     
                     <form class="contact-form">
                         <div class="form-group">
@@ -393,7 +441,7 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-logo">
-                        <img src="logo-white.svg" alt="Praktika+" class="logo-img">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
                     </div>
                     
                     <div class="footer-contact">
