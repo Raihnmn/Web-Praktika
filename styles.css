@@ -189,13 +189,15 @@ body {
     width: 100%;
     overflow: hidden;
     position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .partners-track {
     display: flex;
     gap: 80px;
-    animation: slide 20s linear infinite;
-    width: fit-content;
+    animation: slide 30s linear infinite;
+    will-change: transform;
 }
 
 .partner-logo {
@@ -204,10 +206,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 40px;
+    min-width: 200px;
     background: var(--white);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .partner-logo:hover {
@@ -352,9 +355,31 @@ body {
     color: var(--white);
 }
 
+.program-content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .program-icon {
     font-size: 64px;
-    margin: 20px 0;
+    flex-shrink: 0;
+}
+
+.program-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    flex: 1;
+}
+
+.program-card-featured .program-description {
+    color: var(--text-dark);
+}
+
+.program-card-dark .program-description {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .program-link {
