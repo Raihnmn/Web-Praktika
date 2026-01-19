@@ -82,20 +82,22 @@ body {
     left: 0;
     background: #fff;
     border: 1px solid #EAEAEA;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    padding: 8px 8px 10px;
-    min-width: 220px;
+    padding: 6px 6px 8px;
+    min-width: 200px;
     display: none;
     z-index: 1100;
 }
 .dropdown-menu li { list-style: none; }
 .dropdown-menu a {
     display: block;
-    padding: 10px 12px;
+    padding: 8px 10px;
     text-decoration: none;
     color: var(--text-dark);
     border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
 }
 .dropdown-menu a:hover { background: var(--light-gray); }
 .nav-item.dropdown:hover > .dropdown-menu,
@@ -376,7 +378,7 @@ body {
 
 
 .programs-section {
-    padding: 80px 0;
+    padding: 64px 0;
     background: var(--white);
 }
 
@@ -385,6 +387,9 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
 }
+/* Make Our Program header slightly smaller without affecting others */
+.programs-section .section-title { font-size: 28px; }
+.programs-section .section-subtitle { font-size: 15px; margin-bottom: 28px; max-width: 640px; }
 
 .highlight {
     background: var(--primary-green);
@@ -422,18 +427,18 @@ body {
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .program-card {
     background: var(--white);
     border: 2px solid #E0E0E0;
-    border-radius: 20px;
-    padding: 28px;
+    border-radius: 18px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 240px;
+    min-height: 200px;
     transition: all 0.3s;
 }
 
@@ -443,9 +448,9 @@ body {
 }
 
 .program-card h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .program-card-featured {
@@ -465,7 +470,7 @@ body {
 }
 
 .program-icon {
-    font-size: 48px;
+    font-size: 40px;
     flex-shrink: 0;
 }
 

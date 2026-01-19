@@ -8,6 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- Tailwind CSS via CDN: utilities available without altering existing styles -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                corePlugins: { preflight: false },
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#BFFF00',
+                            darkbg: '#1E1E1E',
+                            darkgray: '#2C2C2C',
+                            lightgray: '#F5F5F5',
+                            textdark: '#1A1A1A',
+                            textgray: '#666666',
+                            white: '#FFFFFF'
+                        },
+                        fontFamily: { inter: ['Inter','sans-serif'] }
+                    }
+                }
+            }
+        </script>
 </head>
 <body>
     <!-- Navigation -->
