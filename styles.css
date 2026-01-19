@@ -768,21 +768,24 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 80px 0;
+    padding: 64px 0;
     background: var(--white);
 }
 
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1.3fr 0.7fr; /* form lebih besar, gambar lebih kecil */
+    gap: 32px;
     align-items: center;
 }
+
+.contact-section .section-title { font-size: 28px; }
+.contact-section .section-subtitle { font-size: 14px; margin-bottom: 24px; }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 .form-group {
@@ -793,16 +796,16 @@ body {
 
 .form-group label {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .form-group input,
 .form-group textarea {
-    padding: 12px;
+    padding: 10px;
     border: 2px solid #E0E0E0;
-    border-radius: 10px;
+    border-radius: 8px;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     transition: border-color 0.3s;
 }
 
@@ -814,9 +817,9 @@ body {
 
 .phone-illustration {
     width: 100%;
-    height: 380px;
+    height: 300px;
     background-image: url("img/phone-removebg-preview.png");
-    background-size: 50%; /* atau nilai pixel seperti 300px */
+    background-size: 38%; /* lebih kecil agar tidak mendominasi */
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
@@ -924,6 +927,9 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     .section-header { flex-direction: column; gap: 12px; }
+
+    /* Perkecil gambar telepon pada tablet */
+    .phone-illustration { height: 260px; background-size: 45%; }
 }
 
 @media (max-width: 768px) {
@@ -942,6 +948,12 @@ body {
     .process-header h3 { font-size: 20px; }
     .process-number { font-size: 32px; min-width: 60px; }
     .process-content { padding-left: 80px; }
+
+    /* Perkecil lagi Contact Us pada mobile */
+    .contact-section { padding: 48px 0; }
+    .contact-section .section-title { font-size: 24px; }
+    .contact-section .section-subtitle { font-size: 13px; }
+    .phone-illustration { height: 220px; background-size: 55%; }
 }
 
 @media (max-width: 480px) {
