@@ -1,8 +1,6 @@
-// Accordion functionality for Working Process section
 document.addEventListener('DOMContentLoaded', function() {
     const processItems = document.querySelectorAll('.process-item');
     
-    // Initialize accordion states based on active class
     processItems.forEach(item => {
         const contentInit = item.querySelector('.process-content');
         const toggleInit = item.querySelector('.toggle-btn');
@@ -15,14 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Set up click handlers
     processItems.forEach(item => {
         const header = item.querySelector('.process-header');
         const content = item.querySelector('.process-content');
         const toggleBtn = item.querySelector('.toggle-btn');
         
         header.addEventListener('click', function() {
-            // Close all other items
             processItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('process-item-active');
@@ -31,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Toggle current item
+            
             item.classList.toggle('process-item-active');
             
             if (content.style.display === 'none' || content.style.display === '') {
@@ -44,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact form submission
+    
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -54,18 +50,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Here you would typically send this data to a server
+            
             console.log('Form submitted:', { name, email, message });
             
-            // Show success message
+            
             alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
             
-            // Reset form
+            
             contactForm.reset();
         });
     }
     
-    // Smooth scrolling for navigation links
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -79,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add animation on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -94,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe elements for animation
+    
     const animateElements = document.querySelectorAll('.program-card, .testimonial-card, .stat-item');
     animateElements.forEach(el => {
         el.style.opacity = '0';
@@ -103,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
-        // Animated counters for Stats section
+        
         const statNumbers = document.querySelectorAll('.stat-number[data-target]');
 
         const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
@@ -142,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
             statNumbers.forEach((el) => statsObserver.observe(el));
         }
     
-    // Mobile menu toggle (if needed)
     const createMobileMenu = () => {
         const nav = document.querySelector('.nav-menu');
         const navButtons = document.querySelector('.nav-buttons');
@@ -182,18 +176,25 @@ document.addEventListener('DOMContentLoaded', function() {
     createMobileMenu();
     window.addEventListener('resize', createMobileMenu);
 
-    // Testimonials carousel (center mode: 1 full card, side peeks)
-    const carousel = document.querySelector('.carousel');
+    const carousel = document.querySelector('.testimonials .carousel');
     if (carousel) {
         const viewport = carousel.querySelector('.carousel-viewport');
         const track = carousel.querySelector('.carousel-track');
         const slides = Array.from(track.children);
         const prevBtn = carousel.querySelector('.carousel-btn.prev');
         const nextBtn = carousel.querySelector('.carousel-btn.next');
-        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        const section = carousel.closest('.testimonials');
+        const header = section ? section.querySelector('.section-header') : null;
+        const titleEl = header ? header.querySelector('.section-title') : null;
+        const dotsContainer = section ? section.querySelector('.carousel-dots') : null;
+        
+        if (dotsContainer && titleEl && titleEl.contains(dotsContainer)) {
+            carousel.parentNode.insertBefore(dotsContainer, carousel.nextSibling);
+        }
         let pageIndex = 0;
         let slideWidth = 0;
-        let peek = 160; // padding left/right inside viewport to reveal neighbors
+        let peek = 160; 
         let pages = slides.length;
 
         const getGap = () => {
@@ -215,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const gap = getGap();
             const vw = viewport.clientWidth;
             peek = calcPeek();
-            // Apply dynamic padding for side peeks
+           
             viewport.style.paddingLeft = peek + 'px';
             viewport.style.paddingRight = peek + 'px';
 
-            // Position arrows just outside the viewport/card edges
+            
             const btnSize = 48;
-            const outsideOffset = 12; // gap between arrow and card edge
+            const outsideOffset = 12; 
             const carouselWidth = carousel.clientWidth;
             const vpLeft = viewport.offsetLeft;
             const vpRightSpace = carouselWidth - vpLeft - viewport.clientWidth;
@@ -234,8 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 nextBtn.style.right = rightPos + 'px';
             }
 
-            // Card width equals content width (vw - 2*peek), cap further to make video smaller
-            slideWidth = Math.min(620, Math.max(260, vw - 2 * peek));
+            slideWidth = Math.min(520, Math.max(240, vw - 2 * peek));
 
             slides.forEach(s => {
                 s.style.flex = `0 0 ${slideWidth}px`;
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const updateTransform = () => {
             const gap = getGap();
-            const pageWidth = slideWidth + gap; // move by one card + gap
+            const pageWidth = slideWidth + gap; 
             track.style.transform = `translateX(${-pageIndex * pageWidth}px)`;
             updateDots();
             updateControls();
@@ -296,7 +296,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
 
-        // Looping navigation
         prevBtn.addEventListener('click', () => {
             pageIndex = (pageIndex - 1 + pages) % pages;
             updateTransform();
@@ -310,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         window.addEventListener('resize', layout);
-        // keyboard arrows
         viewport.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') { prevBtn.click(); }
             if (e.key === 'ArrowRight') { nextBtn.click(); }
@@ -318,10 +316,9 @@ document.addEventListener('DOMContentLoaded', function() {
         viewport.setAttribute('tabindex', '0');
         layout();
 
-        // Disable arrows at ends and update aria states
+
         function updateControls() {
             if (!prevBtn || !nextBtn) return;
-            // Looping mode: controls are always enabled
             prevBtn.disabled = false;
             nextBtn.disabled = false;
             prevBtn.setAttribute('aria-disabled', 'false');
