@@ -181,4 +181,151 @@ document.addEventListener('DOMContentLoaded', function() {
     
     createMobileMenu();
     window.addEventListener('resize', createMobileMenu);
+
+    // Testimonials carousel (center mode: 1 full card, side peeks)
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+        const viewport = carousel.querySelector('.carousel-viewport');
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        let pageIndex = 0;
+        let slideWidth = 0;
+        let peek = 160; // padding left/right inside viewport to reveal neighbors
+        let pages = slides.length;
+
+        const getGap = () => {
+            const style = window.getComputedStyle(track);
+            const gap = parseFloat(style.gap || '0');
+            return isNaN(gap) ? 0 : gap;
+        };
+
+        const calcPeek = () => {
+            const w = viewport.clientWidth;
+            if (w >= 1200) return 180;
+            if (w >= 900) return 160;
+            if (w >= 700) return 120;
+            if (w >= 480) return 80;
+            return 50;
+        };
+
+        const layout = () => {
+            const gap = getGap();
+            const vw = viewport.clientWidth;
+            peek = calcPeek();
+            // Apply dynamic padding for side peeks
+            viewport.style.paddingLeft = peek + 'px';
+            viewport.style.paddingRight = peek + 'px';
+
+            // Position arrows just outside the viewport/card edges
+            const btnSize = 48;
+            const outsideOffset = 12; // gap between arrow and card edge
+            const carouselWidth = carousel.clientWidth;
+            const vpLeft = viewport.offsetLeft;
+            const vpRightSpace = carouselWidth - vpLeft - viewport.clientWidth;
+            if (prevBtn) {
+                const leftPos = Math.max(8, vpLeft - btnSize - outsideOffset);
+                prevBtn.style.left = leftPos + 'px';
+            }
+            if (nextBtn) {
+                const rightPos = Math.max(8, vpRightSpace - btnSize - outsideOffset);
+                nextBtn.style.right = rightPos + 'px';
+            }
+
+            // Card width equals content width (vw - 2*peek), cap further to make video smaller
+            slideWidth = Math.min(620, Math.max(260, vw - 2 * peek));
+
+            slides.forEach(s => {
+                s.style.flex = `0 0 ${slideWidth}px`;
+            });
+
+            pages = slides.length;
+            buildDots();
+            clampPage();
+            updateTransform();
+            pauseHiddenVideos();
+            updateControls();
+        };
+
+        const clampPage = () => {
+            if (pageIndex >= pages) pageIndex = pages - 1;
+            if (pageIndex < 0) pageIndex = 0;
+        };
+
+        const updateTransform = () => {
+            const gap = getGap();
+            const pageWidth = slideWidth + gap; // move by one card + gap
+            track.style.transform = `translateX(${-pageIndex * pageWidth}px)`;
+            updateDots();
+            updateControls();
+        };
+
+        const pauseHiddenVideos = () => {
+            slides.forEach((s, i) => {
+                const video = s.querySelector('video');
+                if (!video) return;
+                if (i !== pageIndex) {
+                    try { video.pause(); } catch(e) {}
+                }
+            });
+        };
+
+        const buildDots = () => {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < pages; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'carousel-dot' + (i === pageIndex ? ' active' : '');
+                btn.setAttribute('aria-label', `Ke halaman ${i+1}`);
+                btn.addEventListener('click', () => {
+                    pageIndex = i;
+                    updateTransform();
+                    pauseHiddenVideos();
+                });
+                dotsContainer.appendChild(btn);
+            }
+        };
+
+        const updateDots = () => {
+            if (!dotsContainer) return;
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            dots.forEach((d, i) => {
+                d.classList.toggle('active', i === pageIndex);
+            });
+        };
+
+        // Looping navigation
+        prevBtn.addEventListener('click', () => {
+            pageIndex = (pageIndex - 1 + pages) % pages;
+            updateTransform();
+            pauseHiddenVideos();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            pageIndex = (pageIndex + 1) % pages;
+            updateTransform();
+            pauseHiddenVideos();
+        });
+
+        window.addEventListener('resize', layout);
+        // keyboard arrows
+        viewport.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') { prevBtn.click(); }
+            if (e.key === 'ArrowRight') { nextBtn.click(); }
+        });
+        viewport.setAttribute('tabindex', '0');
+        layout();
+
+        // Disable arrows at ends and update aria states
+        function updateControls() {
+            if (!prevBtn || !nextBtn) return;
+            // Looping mode: controls are always enabled
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+            prevBtn.setAttribute('aria-disabled', 'false');
+            nextBtn.setAttribute('aria-disabled', 'false');
+        }
+    }
 });
