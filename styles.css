@@ -12,6 +12,7 @@
     --text-dark: #1A1A1A;
     --text-gray: #666666;
     --white: #FFFFFF;
+    --accent-yellow: #F5C400;
 }
 
 body {
@@ -424,6 +425,8 @@ body {
 .section-header .section-title { margin-bottom: 0; }
 .section-header .section-subtitle { margin: 0; }
 
+/* Section divider */
+
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -766,9 +769,77 @@ body {
 .testimonials-cta {
     text-align: center;
 }
+.impact-stats { padding: 68px 0; background: var(--white); }
+.impact-stats .section-title { font-size: 26px; }
+.impact-stats .highlight { padding: 4px 12px; }
+.impact-card {
+    background: var(--dark-bg);
+    color: var(--white);
+    border-radius: 26px;
+    padding: 32px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+.impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; align-items: stretch; }
+.impact-item { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 16px 0; border-right: 1px solid rgba(255,255,255,0.12); }
+.impact-item:last-child { border-right: none; }
+.impact-number-circle {
+    background: var(--white);
+    color: var(--text-dark);
+    border-radius: 18px;
+    padding: 12px 18px;
+    min-width: 120px;
+    display: inline-flex;
+    align-items: baseline; /* align numbers and symbols neatly */
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+}
+.impact-number { font-weight: 800; font-size: 20px; }
+.impact-number { color: var(--text-dark); }
+.impact-stats .stat-number { color: var(--text-dark); }
+.impact-label { background: var(--primary-green); color: var(--text-dark); padding: 8px 14px; border-radius: 18px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 6px 12px rgba(191,255,0,0.25); }
+
+@media (max-width: 1024px) {
+    .impact-grid { grid-template-columns: repeat(2, 1fr); row-gap: 16px; }
+}
+
+@media (max-width: 640px) {
+    .impact-grid { grid-template-columns: 1fr; gap: 16px; }
+}
 
 .testimonials .section-title { font-size: 26px; }
 .testimonials .highlight { padding: 3px 10px; }
+
+/* Talent Pool CTA block */
+.talent-cta { margin: 20px 0 28px; }
+.talent-cta-card {
+    background: var(--dark-bg);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+    align-items: start;
+}
+.talent-cta-heading { font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+.talent-cta-sub { color: rgba(255,255,255,0.8); font-size: 14px; max-width: 760px; margin-bottom: 12px; }
+.talent-cta-list { list-style: none; display: grid; gap: 10px; padding: 0; margin: 0; }
+.talent-cta-list li { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.talent-cta-list .bullet { display: inline-flex; width: 20px; height: 20px; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; font-size: 12px; }
+
+.talent-form { background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 20px; }
+.talent-form-title { text-align: center; font-size: 20px; font-weight: 800; margin-bottom: 16px; }
+.talent-input { width: 100%; background: var(--white); color: var(--text-dark); border: none; border-radius: 28px; padding: 12px 16px; font-size: 14px; margin-bottom: 12px; box-shadow: inset 0 0 0 2px rgba(0,0,0,0.04); }
+.talent-input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--primary-green); }
+.talent-submit { width: 100%; background: var(--primary-green); color: var(--text-dark); border: none; border-radius: 28px; padding: 12px 16px; font-weight: 800; cursor: pointer; box-shadow: 0 6px 14px rgba(191,255,0,0.35); }
+.talent-submit:hover { filter: brightness(1.04); }
+
+@media (max-width: 768px) {
+    .talent-cta-card { grid-template-columns: 1fr; gap: 16px; }
+    .talent-cta-heading { font-size: 24px; }
+}
 
 
 .carousel-dots {
@@ -798,7 +869,7 @@ body {
 
 .contact-section {
     padding: 64px 0;
-    background: var(--white);
+    background: var(--light-gray);
 }
 
 .contact-wrapper {
