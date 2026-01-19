@@ -391,6 +391,8 @@ body {
 /* Make Our Program header slightly smaller without affecting others */
 .programs-section .section-title { font-size: 28px; }
 .programs-section .section-subtitle { font-size: 15px; margin-bottom: 28px; max-width: 640px; }
+/* Bring Program header title and subtitle closer */
+.programs-section .section-header { justify-content: flex-start; gap: 12px; align-items: center; flex-wrap: wrap; }
 
 .highlight {
     background: var(--primary-green);
@@ -553,6 +555,8 @@ body {
     padding: 80px 0;
     background: var(--white);
 }
+.working-process .section-title { font-size: 26px; }
+.working-process .highlight { padding: 4px 12px; }
 
 .process-accordion {
     max-width: 900px;
@@ -786,15 +790,15 @@ body {
     background: var(--white);
     color: var(--text-dark);
     border-radius: 18px;
-    padding: 12px 18px;
-    min-width: 120px;
+    padding: 8px 14px;
+    min-width: 110px;
     display: inline-flex;
     align-items: baseline; /* align numbers and symbols neatly */
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.06);
 }
-.impact-number { font-weight: 800; font-size: 20px; }
+.impact-number { font-weight: 800; font-size: 18px; }
 .impact-number { color: var(--text-dark); }
 .impact-stats .stat-number { color: var(--text-dark); }
 .impact-label { background: var(--primary-green); color: var(--text-dark); padding: 8px 14px; border-radius: 18px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 6px 12px rgba(191,255,0,0.25); }
@@ -809,6 +813,12 @@ body {
 
 .testimonials .section-title { font-size: 26px; }
 .testimonials .highlight { padding: 3px 10px; }
+
+/* Contact header responsive: stack on small screens */
+@media (max-width: 768px) {
+    .contact-section .section-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .contact-section .section-subtitle { max-width: 640px; flex: initial; }
+}
 
 /* Talent Pool CTA block */
 .talent-cta { margin: 20px 0 28px; }
@@ -852,6 +862,14 @@ body {
 
 .testimonials .carousel { display: flex; flex-direction: column; align-items: center; }
 .testimonials .section-header { align-items: center; margin-bottom: 16px; }
+/* Reduce excessive title–subtitle spacing for key sections */
+.working-process .section-header,
+.testimonials .section-header,
+.contact-section .section-header {
+    justify-content: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 .testimonials .carousel-dots { width: 100%; max-width: 780px; }
 .testimonials .carousel-dots { margin-left: auto; margin-right: auto; }
 
@@ -880,7 +898,9 @@ body {
 }
 
 .contact-section .section-title { font-size: 28px; }
-.contact-section .section-subtitle { font-size: 14px; margin-bottom: 24px; }
+.contact-section .section-subtitle { font-size: 14px; color: var(--text-gray); text-align: left; max-width: none; flex: 1; }
+/* Place subtitle to the right of title with a modest gap */
+.contact-section .section-header { flex-direction: row; align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
 
 .contact-form {
     display: flex;
