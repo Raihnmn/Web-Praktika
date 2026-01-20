@@ -408,4 +408,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         viewport.setAttribute('tabindex', '0');
     }
+
+    // Prevent dragging on all images
+    document.querySelectorAll('img').forEach((img) => {
+        img.setAttribute('draggable', 'false');
+        img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+
+    // Block right-click context menu on logo images to hinder copy
+    document.querySelectorAll('.logo-img, .partners-track img').forEach((img) => {
+        img.addEventListener('contextmenu', (e) => e.preventDefault());
+    });
 });

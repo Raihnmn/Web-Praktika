@@ -29,6 +29,12 @@ body {
 }
 
 
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+
 .navbar {
     padding: 20px 0;
     background: var(--white);
@@ -1194,7 +1200,8 @@ body {
 }
 .portfolio-first .container { position: relative; z-index: 1; }
 .portfolio-first .section-header { justify-content: center; margin-bottom: 32px; }
-.portfolio-first .section-title { font-size: 28px; }
+.portfolio-first .section-title { font-size: 22px; }
+.portfolio-first .section-title .highlight { padding: 4px 12px; }
 
 .pf-carousel { position: relative; padding: 0 56px; }
 .pf-viewport { 
