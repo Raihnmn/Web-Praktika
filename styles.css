@@ -780,10 +780,12 @@ body {
 .impact-stats { padding: 68px 0; background: var(--white); }
 .impact-stats .section-title { font-size: 26px; }
 .impact-stats .highlight { padding: 4px 12px; }
-.impact-two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: stretch; }
+.impact-two-col { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: stretch; }
 .impact-cta { background: var(--dark-bg); color: var(--white); border-radius: 26px; padding: 32px; box-shadow: 0 12px 24px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 16px; }
+.impact-cta .impact-summary { border-left: none; padding-left: 0; margin-left: 0; margin-bottom: 8px; }
+.impact-divider { height: 1px; background: rgba(255,255,255,0.15); margin: 8px 0; }
 .impact-cta-title { font-size: 22px; font-weight: 800; }
-.impact-cta-text { font-size: 15px; color: rgba(255,255,255,0.85); }
+.impact-cta-text { font-size: 14px; color: rgba(255,255,255,0.85); }
 .impact-cta-form { display: flex; flex-direction: column; gap: 12px; }
 .impact-cta-btn { width: 100%; background: var(--primary-green); color: var(--text-dark); border: none; border-radius: 28px; padding: 12px 16px; font-weight: 800; box-shadow: 0 6px 14px rgba(191,255,0,0.35); cursor: pointer; }
 .impact-cta-btn:hover { filter: brightness(1.04); }
@@ -791,19 +793,27 @@ body {
 @media (max-width: 1024px) {
     .impact-two-col { grid-template-columns: 1fr; }
 }
+@media (max-width: 1024px) {
+    .impact-card-stats { justify-content: flex-start; }
+}
 .impact-card {
     background: var(--dark-bg);
     color: var(--white);
-    border-radius: 26px;
-    padding: 32px;
+    border-radius: 16px;
+    padding: 16px;
     box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: start;
 }
-.impact-grid { display: flex; flex-direction: column; gap: 24px; }
-.impact-item { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.impact-card-stats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px 28px;
+    width: fit-content;
+    min-width: auto;
+    height: 100%;
+}
+.impact-grid { display: flex; flex-direction: column; gap: 16px; }
+.impact-item { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .impact-number-circle {
     background: transparent;
     color: var(--white);
@@ -815,21 +825,53 @@ body {
     justify-content: flex-start;
     gap: 6px;
     box-shadow: none;
+    white-space: nowrap;
+}
+.impact-number-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    white-space: normal;
+    line-height: 1.1;
 }
 .impact-number { font-weight: 800; font-size: 28px; color: var(--white); }
+.impact-number.prefix { margin-right: 2px; }
+.impact-number.dash { font-weight: 700; line-height: 0.8; font-size: 24px; }
 .impact-stats .stat-number { color: var(--white); }
-.impact-label { background: transparent; color: rgba(255,255,255,0.85); padding: 0; border-radius: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: none; }
+.impact-label { background: transparent; color: rgba(255,255,255,0.85); padding: 0; border-radius: 0; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: none; }
 .impact-summary { 
     color: rgba(255,255,255,0.9); 
     font-size: 14px; 
     line-height: 1.7; 
-    text-align: justify; 
-    text-justify: inter-word; 
+    text-align: left; 
     border-left: 3px solid var(--primary-green);
     padding-left: 24px;
     margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .impact-summary p { margin: 0; }
+.impact-tagline { 
+    font-size: 16px; 
+    font-weight: 700; 
+    margin-bottom: 16px !important; 
+    color: var(--white);
+}
+.impact-points { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+}
+.impact-points li { 
+    font-size: 15px; 
+    color: rgba(255,255,255,0.9); 
+    line-height: 1.5;
+}
 
 @media (max-width: 640px) {
     .impact-number { font-size: 24px; }
