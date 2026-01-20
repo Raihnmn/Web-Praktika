@@ -55,6 +55,14 @@ img {
     height: 40px;
 }
 
+.logo-img,
+.partners-track img {
+    pointer-events: none;           
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;     
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -658,7 +666,7 @@ img {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 10px 0; /* kecilkan padding agar tombol sejajar tengah video */
+    padding: 10px 0; 
     -webkit-mask-image: none;
             mask-image: none;
 }

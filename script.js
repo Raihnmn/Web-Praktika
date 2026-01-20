@@ -321,7 +321,6 @@ document.addEventListener('DOMContentLoaded', function() {
         buildDots();
         updateTransform();
 
-        // Position buttons vertically aligned with active video center
         function positionButtons() {
             if (!prevBtn || !nextBtn) return;
             const activeVideo = track.querySelector('.testimonial-card.active .video-wrapper');
@@ -331,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const topValue = `${middle}px`;
             prevBtn.style.top = topValue;
             nextBtn.style.top = topValue;
-            // ensure translateY centers the circle over the line
             prevBtn.style.transform = 'translateY(-50%)';
             nextBtn.style.transform = 'translateY(-50%)';
         }
@@ -354,17 +352,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return width + gap;
         };
 
-        // Setup seamless looping by cloning edges without changing look
         const setupInfinite = () => {
             const cards = Array.from(track.querySelectorAll('.pf-card'));
-            const cloneCount = Math.min(2, cards.length); // clone 2 on each side for safety
+            const cloneCount = Math.min(2, cards.length); 
             for (let i = 0; i < cloneCount; i++) {
-                // Append clones of first cards
                 track.appendChild(cards[i].cloneNode(true));
-                // Prepend clones of last cards
                 track.insertBefore(cards[cards.length - 1 - i].cloneNode(true), track.firstChild);
             }
-            // Jump to first original card position
             viewport.scrollLeft = cloneCount * getCardWidth();
             return { cloneCount, originalCount: cards.length };
         };
@@ -377,10 +371,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const start = loopState.cloneCount;
             const end = loopState.cloneCount + loopState.originalCount - 1;
             if (rawIndex < start) {
-                // Jump forward by original length
                 viewport.scrollLeft = (rawIndex + loopState.originalCount) * w;
             } else if (rawIndex > end) {
-                // Jump backward by original length
                 viewport.scrollLeft = (rawIndex - loopState.originalCount) * w;
             }
         };
@@ -394,7 +386,6 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(checkBounds, 350);
         });
 
-        // Debounce scroll to correct bounds after user drag
         let scrollTimer;
         viewport.addEventListener('scroll', () => {
             clearTimeout(scrollTimer);
@@ -409,14 +400,14 @@ document.addEventListener('DOMContentLoaded', function() {
         viewport.setAttribute('tabindex', '0');
     }
 
-    // Prevent dragging on all images
     document.querySelectorAll('img').forEach((img) => {
         img.setAttribute('draggable', 'false');
         img.addEventListener('dragstart', (e) => e.preventDefault());
     });
 
-    // Block right-click context menu on logo images to hinder copy
     document.querySelectorAll('.logo-img, .partners-track img').forEach((img) => {
         img.addEventListener('contextmenu', (e) => e.preventDefault());
+        img.addEventListener('selectstart', (e) => e.preventDefault());
+        img.addEventListener('mousedown', (e) => e.preventDefault());
     });
 });
