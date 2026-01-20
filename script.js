@@ -325,4 +325,36 @@ document.addEventListener('DOMContentLoaded', function() {
             nextBtn.setAttribute('aria-disabled', 'false');
         }
     }
+
+    // Portfolio First swipe controls
+    const pf = document.querySelector('.portfolio-first .pf-carousel');
+    if (pf) {
+        const viewport = pf.querySelector('.pf-viewport');
+        const track = pf.querySelector('.pf-track');
+        const prevBtn = pf.querySelector('.pf-btn.prev');
+        const nextBtn = pf.querySelector('.pf-btn.next');
+
+        const getCardWidth = () => {
+            const firstCard = track.querySelector('.pf-card');
+            if (!firstCard) return viewport.clientWidth;
+            const style = window.getComputedStyle(firstCard);
+            const width = firstCard.getBoundingClientRect().width;
+            const gap = parseFloat(window.getComputedStyle(track).gap || '0');
+            return width + gap;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            viewport.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            viewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+
+        // Keyboard support
+        viewport.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+        });
+        viewport.setAttribute('tabindex', '0');
+    }
 });
