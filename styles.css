@@ -30,6 +30,8 @@ body {
 
 
 img {
+    max-width: 100%;
+    height: auto;
     -webkit-user-drag: none;
     user-select: none;
 }
@@ -49,6 +51,22 @@ img {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none;
+    background: #f5f5f5;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .logo-img {
@@ -85,6 +103,30 @@ img {
 
 .nav-menu li {
     flex: 0 0 auto;
+}
+
+/* Mobile dropdown panel via class toggle */
+@media (max-width: 768px) {
+    .navbar.mobile-open .nav-menu {
+        display: flex !important;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 14px 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1100;
+    }
+    .navbar.mobile-open .dropdown-menu {
+        position: static;
+        display: block;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
 }
 
 
@@ -749,6 +791,7 @@ img {
 }
 
 @media (max-width: 768px) {
+    .mobile-menu-toggle { display: flex; }
     .carousel { grid-template-columns: 44px 1fr 44px; padding: 0 10px; }
     .carousel-viewport { padding: 20px 0; }
     .carousel-btn { width: 40px; height: 40px; font-size: 18px; }
@@ -1306,9 +1349,16 @@ img {
 }
 
 @media (max-width: 768px) {
+    .navbar { padding: 12px 0; }
+    .logo-img { height: 32px; }
     .nav-menu { display: none; }
-    .nav-actions { gap: 12px; }
-    .search-bar { max-width: 200px; }
+    .nav-actions { gap: 10px; }
+    /* Compact search to icon-only on phones */
+    .search-bar { max-width: 44px; padding: 6px; background: #f5f5f5; }
+    .search-input { display: none; }
+    .search-btn { padding: 0; }
+    /* Smaller auth buttons */
+    .nav-buttons .btn { padding: 8px 12px; font-size: 14px; border-radius: 10px; }
 
     .hero-text h1 { font-size: 32px; }
     .section-title { font-size: 28px; }
@@ -1354,5 +1404,17 @@ img {
     .program-card h3 {
         font-size: 20px;
     }
+
+    /* Program cards: tighter layout on small screens */
+    .program-card { padding: 16px; }
+    .program-content-wrapper { gap: 12px; align-items: flex-start; }
+    .program-icon { font-size: 32px; }
+    .program-description { font-size: 14px; }
+
+    /* Portfolio First: comfortable single-card view on small screens */
+    .pf-card { min-width: 240px; padding: 20px; }
+    .pf-title { font-size: 18px; }
+    .pf-sub { font-size: 13px; }
+    .pf-btn { width: 32px; height: 32px; font-size: 16px; }
 
 }

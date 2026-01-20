@@ -64,14 +64,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (!href || href === '#') return; // let normal links pass
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+        });
+    });
+
+    // Generic data-scroll handler for buttons/divs
+    document.querySelectorAll('[data-scroll], [data-scroll-to]').forEach(el => {
+        el.addEventListener('click', () => {
+            const selector = el.getAttribute('data-scroll') || el.getAttribute('data-scroll-to');
+            if (!selector) return;
+            const target = document.querySelector(selector);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
     
@@ -138,38 +147,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
     const createMobileMenu = () => {
-        const nav = document.querySelector('.nav-menu');
+        const navMenu = document.querySelector('.nav-menu');
         const navButtons = document.querySelector('.nav-buttons');
-        
+        const navbar = document.querySelector('.navbar');
+
         if (window.innerWidth <= 768) {
             if (!document.querySelector('.mobile-menu-toggle')) {
                 const menuToggle = document.createElement('button');
                 menuToggle.className = 'mobile-menu-toggle';
+                menuToggle.setAttribute('aria-label', 'Toggle menu');
                 menuToggle.innerHTML = '☰';
-                menuToggle.style.cssText = `
-                    display: block;
-                    background: none;
-                    border: none;
-                    font-size: 28px;
-                    cursor: pointer;
-                    padding: 10px;
-                `;
-                
+
                 const navWrapper = document.querySelector('.nav-wrapper');
                 navWrapper.insertBefore(menuToggle, navButtons);
-                
+
                 menuToggle.addEventListener('click', function() {
-                    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-                    nav.style.flexDirection = 'column';
-                    nav.style.position = 'absolute';
-                    nav.style.top = '70px';
-                    nav.style.left = '0';
-                    nav.style.right = '0';
-                    nav.style.background = 'white';
-                    nav.style.padding = '20px';
-                    nav.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                    navbar.classList.toggle('mobile-open');
                 });
             }
+        } else {
+            // Clean up on desktop view
+            if (navbar) navbar.classList.remove('mobile-open');
+            if (navMenu) navMenu.removeAttribute('style');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            if (toggle) toggle.remove();
         }
     };
     
