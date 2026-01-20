@@ -368,7 +368,7 @@ body {
 .stat-number {
     font-size: 34px;
     font-weight: 800;
-    color: var(--primary-green);
+    color: var(--white);
     margin-bottom: 10px;
 }
 
