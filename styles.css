@@ -359,6 +359,12 @@ body {
     margin-bottom: 15px;
 }
 
+.stat-icon-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .stat-number {
     font-size: 34px;
     font-weight: 800;
@@ -1058,7 +1064,36 @@ body {
 }
 
 /* Portfolio First */
-.portfolio-first { padding: 72px 0; background: var(--dark-bg); color: var(--white); }
+.portfolio-first { 
+    padding: 72px 0; 
+    background: var(--dark-bg); 
+    color: var(--white); 
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-first::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -50px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(191,255,0,0.18) 0%, rgba(191,255,0,0.03) 40%, transparent 90%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.portfolio-first::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(191,255,0,0.14) 0%, rgba(191,255,0,0.03) 40%, transparent 90%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.portfolio-first .container { position: relative; z-index: 1; }
 .portfolio-first .section-header { justify-content: center; margin-bottom: 32px; }
 .portfolio-first .section-title { font-size: 28px; }
 
