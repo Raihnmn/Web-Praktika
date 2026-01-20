@@ -192,97 +192,77 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dotsContainer && titleEl && titleEl.contains(dotsContainer)) {
             carousel.parentNode.insertBefore(dotsContainer, carousel.nextSibling);
         }
-        let pageIndex = 0;
-        let slideWidth = 0;
-        let peek = 160; 
-        let pages = slides.length;
+        
+        const totalSlides = slides.length;
+        let centerIndex = 0;
+
+        const visibleCount = () => {
+            if (window.innerWidth >= 1024) return 3; 
+            if (window.innerWidth >= 768) return 2;   
+            return 1;                                  
+        };
 
         const getGap = () => {
             const style = window.getComputedStyle(track);
-            const gap = parseFloat(style.gap || '0');
-            return isNaN(gap) ? 0 : gap;
+            const gap = parseFloat(style.gap || style.getPropertyValue('--slide-gap') || '24');
+            return isNaN(gap) ? 24 : gap;
         };
 
-        const calcPeek = () => {
-            const w = viewport.clientWidth;
-            if (w >= 1200) return 180;
-            if (w >= 900) return 160;
-            if (w >= 700) return 120;
-            if (w >= 480) return 80;
-            return 50;
-        };
-
-        const layout = () => {
-            const gap = getGap();
+        const computeCardWidth = () => {
+            const v = visibleCount();
+            const g = getGap();
             const vw = viewport.clientWidth;
-            peek = calcPeek();
-           
-            viewport.style.paddingLeft = peek + 'px';
-            viewport.style.paddingRight = peek + 'px';
-
-            
-            const btnSize = 48;
-            const outsideOffset = 12; 
-            const carouselWidth = carousel.clientWidth;
-            const vpLeft = viewport.offsetLeft;
-            const vpRightSpace = carouselWidth - vpLeft - viewport.clientWidth;
-            if (prevBtn) {
-                const leftPos = Math.max(8, vpLeft - btnSize - outsideOffset);
-                prevBtn.style.left = leftPos + 'px';
-            }
-            if (nextBtn) {
-                const rightPos = Math.max(8, vpRightSpace - btnSize - outsideOffset);
-                nextBtn.style.right = rightPos + 'px';
-            }
-
-            slideWidth = Math.min(520, Math.max(240, vw - 2 * peek));
-
-            slides.forEach(s => {
-                s.style.flex = `0 0 ${slideWidth}px`;
-            });
-
-            pages = slides.length;
-            buildDots();
-            clampPage();
-            updateTransform();
-            pauseHiddenVideos();
-            updateControls();
+            const wCalc = (vw - g * (v - 1)) / v;
+            const shrunk = wCalc * 0.92; 
+            return Math.max(220, Math.min(320, shrunk));
         };
 
-        const clampPage = () => {
-            if (pageIndex >= pages) pageIndex = pages - 1;
-            if (pageIndex < 0) pageIndex = 0;
+        const updateSlideClasses = () => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'adjacent');
+                if (i === centerIndex) slide.classList.add('active');
+            });
         };
 
         const updateTransform = () => {
-            const gap = getGap();
-            const pageWidth = slideWidth + gap; 
-            track.style.transform = `translateX(${-pageIndex * pageWidth}px)`;
+            const g = getGap();
+            const w = computeCardWidth();
+            track.style.setProperty('--slide-width', `${w}px`);
+            const centerOffset = (viewport.clientWidth - w) / 2;
+            const translateX = centerOffset - (centerIndex * (w + g));
+            track.style.transform = `translateX(${translateX}px)`;
+            updateSlideClasses();
             updateDots();
-            updateControls();
+            pauseHiddenVideos();
+            updateButtons();
+            positionButtons();
         };
 
         const pauseHiddenVideos = () => {
+            const span = Math.floor(visibleCount() / 2);
+            const left = centerIndex - span;
+            const right = centerIndex + span;
             slides.forEach((s, i) => {
                 const video = s.querySelector('video');
                 if (!video) return;
-                if (i !== pageIndex) {
+                if (i < left || i > right) {
                     try { video.pause(); } catch(e) {}
                 }
             });
         };
 
+        const getPageCount = () => totalSlides;
+
         const buildDots = () => {
             if (!dotsContainer) return;
             dotsContainer.innerHTML = '';
-            for (let i = 0; i < pages; i++) {
+            for (let i = 0; i < getPageCount(); i++) {
                 const btn = document.createElement('button');
-                btn.className = 'carousel-dot' + (i === pageIndex ? ' active' : '');
+                btn.className = 'carousel-dot' + (i === centerIndex ? ' active' : '');
                 btn.setAttribute('aria-label', `Ke halaman ${i+1}`);
                 btn.addEventListener('click', () => {
-                    pageIndex = i;
+                    centerIndex = i;
                     updateTransform();
-                    pauseHiddenVideos();
                 });
                 dotsContainer.appendChild(btn);
             }
@@ -292,41 +272,72 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!dotsContainer) return;
             const dots = dotsContainer.querySelectorAll('.carousel-dot');
             dots.forEach((d, i) => {
-                d.classList.toggle('active', i === pageIndex);
+                d.classList.toggle('active', i === centerIndex);
             });
         };
 
-        prevBtn.addEventListener('click', () => {
-            pageIndex = (pageIndex - 1 + pages) % pages;
-            updateTransform();
-            pauseHiddenVideos();
-        });
+        const updateButtons = () => {
+            
+            if (prevBtn) prevBtn.disabled = false;
+            if (nextBtn) nextBtn.disabled = false;
+        };
 
-        nextBtn.addEventListener('click', () => {
-            pageIndex = (pageIndex + 1) % pages;
+        const goToPrev = () => {
+            centerIndex = (centerIndex - 1 + totalSlides) % totalSlides;
             updateTransform();
-            pauseHiddenVideos();
-        });
+        };
 
-        window.addEventListener('resize', layout);
+        const goToNext = () => {
+            centerIndex = (centerIndex + 1) % totalSlides;
+            updateTransform();
+        };
+
+        prevBtn.addEventListener('click', goToPrev);
+        nextBtn.addEventListener('click', goToNext);
+
+        window.addEventListener('resize', () => {
+            buildDots();
+            updateTransform();
+        });
+        
         viewport.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') { prevBtn.click(); }
-            if (e.key === 'ArrowRight') { nextBtn.click(); }
+            if (e.key === 'ArrowLeft') goToPrev();
+            if (e.key === 'ArrowRight') goToNext();
         });
         viewport.setAttribute('tabindex', '0');
-        layout();
+        
+        
+        slides.forEach((s) => {
+            const video = s.querySelector('video');
+            const wrapper = s.querySelector('.video-wrapper');
+            if (!video || !wrapper) return;
+            video.addEventListener('play', () => wrapper.classList.add('playing'));
+            video.addEventListener('pause', () => wrapper.classList.remove('playing'));
+            video.addEventListener('ended', () => wrapper.classList.remove('playing'));
+        });
 
+        
+        centerIndex = Math.floor(totalSlides / 2);
+        buildDots();
+        updateTransform();
 
-        function updateControls() {
+        // Position buttons vertically aligned with active video center
+        function positionButtons() {
             if (!prevBtn || !nextBtn) return;
-            prevBtn.disabled = false;
-            nextBtn.disabled = false;
-            prevBtn.setAttribute('aria-disabled', 'false');
-            nextBtn.setAttribute('aria-disabled', 'false');
+            const activeVideo = track.querySelector('.testimonial-card.active .video-wrapper');
+            const containerRect = carousel.getBoundingClientRect();
+            const refRect = activeVideo ? activeVideo.getBoundingClientRect() : viewport.getBoundingClientRect();
+            const middle = refRect.top + refRect.height / 2 - containerRect.top;
+            const topValue = `${middle}px`;
+            prevBtn.style.top = topValue;
+            nextBtn.style.top = topValue;
+            // ensure translateY centers the circle over the line
+            prevBtn.style.transform = 'translateY(-50%)';
+            nextBtn.style.transform = 'translateY(-50%)';
         }
     }
 
-    // Portfolio First swipe controls
+    
     const pf = document.querySelector('.portfolio-first .pf-carousel');
     if (pf) {
         const viewport = pf.querySelector('.pf-viewport');
@@ -350,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
             viewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
         });
 
-        // Keyboard support
+        
         viewport.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') prevBtn.click();
             if (e.key === 'ArrowRight') nextBtn.click();
