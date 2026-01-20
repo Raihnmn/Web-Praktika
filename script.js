@@ -354,11 +354,51 @@ document.addEventListener('DOMContentLoaded', function() {
             return width + gap;
         };
 
+        // Setup seamless looping by cloning edges without changing look
+        const setupInfinite = () => {
+            const cards = Array.from(track.querySelectorAll('.pf-card'));
+            const cloneCount = Math.min(2, cards.length); // clone 2 on each side for safety
+            for (let i = 0; i < cloneCount; i++) {
+                // Append clones of first cards
+                track.appendChild(cards[i].cloneNode(true));
+                // Prepend clones of last cards
+                track.insertBefore(cards[cards.length - 1 - i].cloneNode(true), track.firstChild);
+            }
+            // Jump to first original card position
+            viewport.scrollLeft = cloneCount * getCardWidth();
+            return { cloneCount, originalCount: cards.length };
+        };
+
+        const loopState = setupInfinite();
+
+        const checkBounds = () => {
+            const w = getCardWidth();
+            const rawIndex = Math.round(viewport.scrollLeft / w);
+            const start = loopState.cloneCount;
+            const end = loopState.cloneCount + loopState.originalCount - 1;
+            if (rawIndex < start) {
+                // Jump forward by original length
+                viewport.scrollLeft = (rawIndex + loopState.originalCount) * w;
+            } else if (rawIndex > end) {
+                // Jump backward by original length
+                viewport.scrollLeft = (rawIndex - loopState.originalCount) * w;
+            }
+        };
+
         prevBtn.addEventListener('click', () => {
             viewport.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+            setTimeout(checkBounds, 350);
         });
         nextBtn.addEventListener('click', () => {
             viewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+            setTimeout(checkBounds, 350);
+        });
+
+        // Debounce scroll to correct bounds after user drag
+        let scrollTimer;
+        viewport.addEventListener('scroll', () => {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(checkBounds, 120);
         });
 
         
