@@ -270,6 +270,28 @@ img {
     font-size: 15px;
 }
 
+/* Dark-themed CTA button override for Portfolio CTA */
+.portfolio-cta .btn-cta-dark {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.35);
+    border-radius: 28px;
+    padding: 12px 24px;
+    font-weight: 700;
+    box-shadow: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.portfolio-cta .btn-cta-dark:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25), 0 0 18px rgba(255,255,255,0.18);
+}
+.portfolio-cta .btn-cta-dark:focus-visible {
+    outline: none;
+    border-color: rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25), 0 0 18px rgba(255,255,255,0.18);
+}
+
 .btn-dark {
     background: var(--dark-bg);
     color: var(--white);
@@ -624,7 +646,32 @@ img {
 
 .portfolio-cta {
     padding: 48px 0;
-    background: var(--light-gray);
+    background: var(--dark-bg);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-cta::before {
+    content: '';
+    position: absolute;
+    top: -90px;
+    left: -60px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.portfolio-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -60px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .cta-content {
@@ -638,11 +685,12 @@ img {
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 20px;
+    color: var(--white);
 }
 
 .cta-text p {
     font-size: 15px;
-    color: var(--text-gray);
+    color: rgba(255,255,255,0.88);
     margin-bottom: 24px;
 }
 
@@ -960,7 +1008,6 @@ img {
     line-height: 1.7;
     color: var(--text-gray);
 }
-
 
 .video-card { padding: 12px; flex: 1; display: flex; flex-direction: column; }
 .video-wrapper {
