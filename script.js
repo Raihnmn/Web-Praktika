@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (!href || href === '#') return; // let normal links pass
+            if (!href || href === '#') return; 
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Generic data-scroll handler for buttons/divs
     document.querySelectorAll('[data-scroll], [data-scroll-to]').forEach(el => {
         el.addEventListener('click', () => {
             const selector = el.getAttribute('data-scroll') || el.getAttribute('data-scroll-to');
@@ -159,7 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuToggle.innerHTML = '☰';
 
                 const navWrapper = document.querySelector('.nav-wrapper');
-                // Place the toggle next to the logo and before menu so it's visible
                 if (navMenu) {
                     navWrapper.insertBefore(menuToggle, navMenu);
                 } else if (navButtons) {
@@ -174,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         } else {
-            // Clean up on desktop view
             if (navbar) navbar.classList.remove('mobile-open');
             if (navMenu) navMenu.removeAttribute('style');
             const toggle = document.querySelector('.mobile-menu-toggle');
@@ -303,6 +300,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         prevBtn.addEventListener('click', goToPrev);
         nextBtn.addEventListener('click', goToNext);
+
+        slides.forEach((slide, i) => {
+            slide.addEventListener('click', (e) => {
+                if (i === centerIndex) return;
+                centerIndex = i;
+                updateTransform();
+            });
+        });
 
         window.addEventListener('resize', () => {
             buildDots();
