@@ -97,12 +97,39 @@ img {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
     white-space: nowrap;
+    position: relative;
 }
 
 .nav-menu a:hover {
     color: var(--primary-green);
+    text-decoration: none;
+}
+
+
+.nav-menu a:focus-visible {
+    color: var(--primary-green);
+    text-decoration: none;
+    outline: none;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-green);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 180ms ease;
+}
+.nav-menu a:hover::after,
+.nav-menu a:focus-visible::after {
+    transform: scaleX(1);
 }
 
 .nav-menu li {
@@ -270,7 +297,6 @@ img {
     font-size: 15px;
 }
 
-/* Dark-themed CTA button override for Portfolio CTA */
 .portfolio-cta .btn-cta-dark {
     background: transparent;
     color: var(--white);
