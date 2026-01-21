@@ -159,10 +159,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuToggle.innerHTML = '☰';
 
                 const navWrapper = document.querySelector('.nav-wrapper');
-                navWrapper.insertBefore(menuToggle, navButtons);
+                // Place the toggle next to the logo and before menu so it's visible
+                if (navMenu) {
+                    navWrapper.insertBefore(menuToggle, navMenu);
+                } else if (navButtons) {
+                    navWrapper.insertBefore(menuToggle, navButtons);
+                } else {
+                    navWrapper.appendChild(menuToggle);
+                }
 
                 menuToggle.addEventListener('click', function() {
-                    navbar.classList.toggle('mobile-open');
+                    const open = navbar.classList.toggle('mobile-open');
+                    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
                 });
             }
         } else {
