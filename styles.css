@@ -753,11 +753,12 @@ img {
     border-radius: 16px;
     margin-bottom: 16px;
     overflow: hidden;
-    transition: all 0.3s;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease, background 0.25s ease;
 }
 
 .process-item-active {
     background: var(--primary-green);
+    padding-bottom: 18px;
 }
 
 .process-header {
@@ -766,6 +767,7 @@ img {
     padding: 18px;
     cursor: pointer;
     gap: 14px;
+    transition: background 0.2s ease;
 }
 
 .process-number {
@@ -791,7 +793,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .toggle-btn:hover {
@@ -800,15 +802,26 @@ img {
 }
 
 .process-content {
-    padding: 0 18px 18px 72px;
+    padding: 0 18px 0 72px;
     font-size: 14px;
     line-height: 1.6;
     color: var(--text-gray);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
 }
 
 .process-item-active .process-content {
     color: var(--text-dark);
+    max-height: 500px;
+    opacity: 1;
+    padding: 0 18px 36px 72px;
 }
+
+.process-header:hover { background: #FAFAFA; }
+.process-item-active .process-header:hover { background: rgba(191,255,0,0.18); }
+.process-item-active .toggle-btn { transform: rotate(180deg); background: var(--text-dark); color: var(--white); border-color: var(--text-dark); }
 
 
 .testimonials {

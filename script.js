@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     const processItems = document.querySelectorAll('.process-item');
-    
+
     processItems.forEach(item => {
-        const contentInit = item.querySelector('.process-content');
-        const toggleInit = item.querySelector('.toggle-btn');
+        const content = item.querySelector('.process-content');
+        const toggle = item.querySelector('.toggle-btn');
+        if (!content) return;
         if (item.classList.contains('process-item-active')) {
-            contentInit.style.display = 'block';
-            if (toggleInit) toggleInit.textContent = '−';
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.opacity = '1';
+            content.style.paddingBottom = '18px';
+            if (toggle) toggle.textContent = '−';
         } else {
-            contentInit.style.display = 'none';
-            if (toggleInit) toggleInit.textContent = '+';
+            content.style.maxHeight = '0px';
+            content.style.opacity = '0';
+            content.style.paddingBottom = '0';
+            if (toggle) toggle.textContent = '+';
         }
     });
 
@@ -17,24 +22,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = item.querySelector('.process-header');
         const content = item.querySelector('.process-content');
         const toggleBtn = item.querySelector('.toggle-btn');
-        
+
         header.addEventListener('click', function() {
             processItems.forEach(otherItem => {
                 if (otherItem !== item) {
+                    const oc = otherItem.querySelector('.process-content');
+                    const ot = otherItem.querySelector('.toggle-btn');
                     otherItem.classList.remove('process-item-active');
-                    otherItem.querySelector('.process-content').style.display = 'none';
-                    otherItem.querySelector('.toggle-btn').textContent = '+';
+                    if (oc) {
+                        oc.style.maxHeight = '0px';
+                        oc.style.opacity = '0';
+                        oc.style.paddingBottom = '0';
+                    }
+                    if (ot) ot.textContent = '+';
                 }
             });
-            
-            
+
             item.classList.toggle('process-item-active');
-            
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
+
+            if (item.classList.contains('process-item-active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                content.style.paddingBottom = '18px';
                 toggleBtn.textContent = '−';
             } else {
-                content.style.display = 'none';
+                content.style.maxHeight = '0px';
+                content.style.opacity = '0';
+                content.style.paddingBottom = '0';
                 toggleBtn.textContent = '+';
             }
         });
