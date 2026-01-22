@@ -602,12 +602,15 @@ img {
     flex-direction: column;
     justify-content: space-between;
     min-height: 200px;
-    transition: all 0.3s;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 180ms ease, background-color 220ms ease;
+    position: relative;
+    will-change: transform, box-shadow;
 }
 
 .program-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px) scale(1.01);
+    border-color: #E0E0E0; /* tetap netral, tanpa aksen hitam/hijau */
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12); /* hilangkan ring */
 }
 
 .program-card h3 {
@@ -635,6 +638,7 @@ img {
 .program-icon {
     font-size: 40px;
     flex-shrink: 0;
+    transition: transform 220ms ease, filter 220ms ease;
 }
 
 .program-description {
@@ -668,6 +672,20 @@ img {
 
 .program-link:hover svg {
     transform: translateX(5px);
+}
+
+/* Hover micro-interactions for clarity */
+.program-card:hover .program-icon {
+    transform: translateY(-4px) rotate(-4deg);
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.15));
+}
+.program-card-dark:hover {
+    box-shadow: 0 14px 36px rgba(0,0,0,0.35), 0 0 0 4px rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.25);
+}
+.program-card-featured:hover {
+    /* Gunakan ring gelap, tanpa menambah kehijauan */
+    filter: brightness(0.98);
 }
 
 .portfolio-cta {
