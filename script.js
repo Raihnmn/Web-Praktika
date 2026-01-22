@@ -428,7 +428,6 @@ document.addEventListener('DOMContentLoaded', function() {
         viewport.setAttribute('tabindex', '0');
     }
 
-    // Hub Berita slider (Contact section replacement)
     const hub = document.querySelector('.contact-section .hub-carousel');
     if (hub) {
         const viewport = hub.querySelector('.hub-viewport');
@@ -522,34 +521,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.addEventListener('resize', () => { buildDots(); updateTransform(); });
 
-        // Category filtering
         const setHubCategory = (cat, scroll = false) => {
             slides.forEach((s) => {
                 const isMatch = cat === 'all' || s.dataset.cat === cat;
                 if (isMatch) s.removeAttribute('hidden'); else s.setAttribute('hidden', '');
             });
-            // Update tab UI
             document.querySelectorAll('.hub-tab').forEach((b) => b.classList.toggle('active', b.dataset.hubCat === cat));
             centerVisible = 0;
             buildDots();
             updateTransform();
-            // Scroll into view only on user interaction
             if (scroll) {
                 const section = document.querySelector('#contact');
                 if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         };
 
-        // Hook up tabs and navbar dropdown items
         document.querySelectorAll('[data-hub-cat]').forEach((el) => {
             el.addEventListener('click', (e) => {
                 const cat = el.getAttribute('data-hub-cat');
-                // Don't block scrolling handled elsewhere
                 setTimeout(() => setHubCategory(cat, true), 0);
             });
         });
 
-        // Initial state: show first tab/category
         setHubCategory('showcase', false);
 
         function positionButtons() {

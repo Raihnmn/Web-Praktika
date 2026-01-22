@@ -1351,7 +1351,6 @@ img {
 .contact-points li { display: flex; align-items: center; gap: 10px; font-size: 14px; }
 .contact-points li::before { content: "\2713"; display: inline-flex; width: 20px; height: 20px; align-items: center; justify-content: center; background: rgba(191,255,0,0.18); border: 1px solid rgba(191,255,0,0.5); border-radius: 50%; font-size: 12px; color: var(--text-dark); flex: none; }
 
-/* Hub Berita Slider (replaces contact form) */
 .hub-carousel {
     position: relative;
     display: grid;
@@ -1414,7 +1413,6 @@ img {
 .hub-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
 .hub-dots .carousel-dot { width: 8px; height: 8px; }
 
-/* Hub categories tabs */
 .hub-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 18px; }
 .hub-tab { border: 1px solid #DADADA; background: #fff; color: var(--text-dark); border-radius: 999px; padding: 8px 12px; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease; }
 .hub-tab:hover { transform: translateY(-1px); border-color: #cfcfcf; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
