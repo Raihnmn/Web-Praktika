@@ -428,6 +428,103 @@ document.addEventListener('DOMContentLoaded', function() {
         viewport.setAttribute('tabindex', '0');
     }
 
+    // Hub Berita slider (Contact section replacement)
+    const hub = document.querySelector('.contact-section .hub-carousel');
+    if (hub) {
+        const viewport = hub.querySelector('.hub-viewport');
+        const track = hub.querySelector('.hub-track');
+        const slides = Array.from(track.children);
+        const prevBtn = hub.querySelector('.hub-btn.prev');
+        const nextBtn = hub.querySelector('.hub-btn.next');
+        const dotsContainer = hub.parentElement.querySelector('.hub-dots');
+
+        let centerIndex = 0;
+
+        const visibleCount = () => {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        };
+
+        const getGap = () => {
+            const style = window.getComputedStyle(track);
+            const gap = parseFloat(style.gap || '20');
+            return isNaN(gap) ? 20 : gap;
+        };
+
+        const computeCardWidth = () => {
+            const v = visibleCount();
+            const g = getGap();
+            const vw = viewport.clientWidth;
+            const wCalc = (vw - g * (v - 1)) / v;
+            return Math.max(240, Math.min(380, wCalc));
+        };
+
+        const updateButtons = () => {
+            if (prevBtn) prevBtn.disabled = false;
+            if (nextBtn) nextBtn.disabled = false;
+        };
+
+        const buildDots = () => {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'carousel-dot' + (i === centerIndex ? ' active' : '');
+                btn.setAttribute('aria-label', `Ke halaman ${i+1}`);
+                btn.addEventListener('click', () => { centerIndex = i; updateTransform(); });
+                dotsContainer.appendChild(btn);
+            });
+        };
+
+        const updateDots = () => {
+            if (!dotsContainer) return;
+            dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === centerIndex);
+            });
+        };
+
+        const updateTransform = () => {
+            const g = getGap();
+            const w = computeCardWidth();
+            track.style.setProperty('--hub-card-width', `${w}px`);
+            const centerOffset = (viewport.clientWidth - w) / 2;
+            const translateX = centerOffset - (centerIndex * (w + g));
+            track.style.transform = `translateX(${translateX}px)`;
+            updateDots();
+            updateButtons();
+            positionButtons();
+        };
+
+        const goPrev = () => { centerIndex = (centerIndex - 1 + slides.length) % slides.length; updateTransform(); };
+        const goNext = () => { centerIndex = (centerIndex + 1) % slides.length; updateTransform(); };
+
+        prevBtn.addEventListener('click', goPrev);
+        nextBtn.addEventListener('click', goNext);
+        viewport.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') goPrev(); if (e.key === 'ArrowRight') goNext(); });
+        viewport.setAttribute('tabindex', '0');
+
+        slides.forEach((s, i) => s.addEventListener('click', () => { if (i !== centerIndex) { centerIndex = i; updateTransform(); } }));
+
+        window.addEventListener('resize', () => { buildDots(); updateTransform(); });
+
+        centerIndex = Math.min(1, slides.length - 1); // Start near beginning
+        buildDots();
+        updateTransform();
+
+        function positionButtons() {
+            if (!prevBtn || !nextBtn) return;
+            const containerRect = hub.getBoundingClientRect();
+            const refRect = viewport.getBoundingClientRect();
+            const middle = refRect.top + refRect.height / 2 - containerRect.top;
+            const topValue = `${middle}px`;
+            prevBtn.style.top = topValue;
+            nextBtn.style.top = topValue;
+            prevBtn.style.transform = 'translateY(-50%)';
+            nextBtn.style.transform = 'translateY(-50%)';
+        }
+    }
+
     document.querySelectorAll('img').forEach((img) => {
         img.setAttribute('draggable', 'false');
         img.addEventListener('dragstart', (e) => e.preventDefault());
