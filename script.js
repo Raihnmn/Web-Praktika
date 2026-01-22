@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', () => { buildDots(); updateTransform(); });
 
         // Category filtering
-        const setHubCategory = (cat) => {
+        const setHubCategory = (cat, scroll = false) => {
             slides.forEach((s) => {
                 const isMatch = cat === 'all' || s.dataset.cat === cat;
                 if (isMatch) s.removeAttribute('hidden'); else s.setAttribute('hidden', '');
@@ -533,9 +533,11 @@ document.addEventListener('DOMContentLoaded', function() {
             centerVisible = 0;
             buildDots();
             updateTransform();
-            // Ensure section is in view
-            const section = document.querySelector('#contact');
-            if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Scroll into view only on user interaction
+            if (scroll) {
+                const section = document.querySelector('#contact');
+                if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         };
 
         // Hook up tabs and navbar dropdown items
@@ -543,12 +545,12 @@ document.addEventListener('DOMContentLoaded', function() {
             el.addEventListener('click', (e) => {
                 const cat = el.getAttribute('data-hub-cat');
                 // Don't block scrolling handled elsewhere
-                setTimeout(() => setHubCategory(cat), 0);
+                setTimeout(() => setHubCategory(cat, true), 0);
             });
         });
 
         // Initial state: show first tab/category
-        setHubCategory('showcase');
+        setHubCategory('showcase', false);
 
         function positionButtons() {
             if (!prevBtn || !nextBtn) return;
