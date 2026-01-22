@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextBtn = hub.querySelector('.hub-btn.next');
         const dotsContainer = hub.parentElement.querySelector('.hub-dots');
 
-        let centerIndex = 0;
+        let centerVisible = 0;
 
         const visibleCount = () => {
             if (window.innerWidth >= 1024) return 3;
@@ -460,6 +460,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return Math.max(240, Math.min(380, wCalc));
         };
 
+        const visibleSlides = () => slides.filter(s => !s.hasAttribute('hidden'));
+
         const updateButtons = () => {
             if (prevBtn) prevBtn.disabled = false;
             if (nextBtn) nextBtn.disabled = false;
@@ -467,21 +469,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const buildDots = () => {
             if (!dotsContainer) return;
+            const vis = visibleSlides();
             dotsContainer.innerHTML = '';
-            slides.forEach((_, i) => {
+            vis.forEach((_, i) => {
                 const btn = document.createElement('button');
-                btn.className = 'carousel-dot' + (i === centerIndex ? ' active' : '');
+                btn.className = 'carousel-dot' + (i === centerVisible ? ' active' : '');
                 btn.setAttribute('aria-label', `Ke halaman ${i+1}`);
-                btn.addEventListener('click', () => { centerIndex = i; updateTransform(); });
+                btn.addEventListener('click', () => { centerVisible = i; updateTransform(); });
                 dotsContainer.appendChild(btn);
             });
         };
 
         const updateDots = () => {
             if (!dotsContainer) return;
-            dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-                d.classList.toggle('active', i === centerIndex);
-            });
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            dots.forEach((d, i) => d.classList.toggle('active', i === centerVisible));
         };
 
         const updateTransform = () => {
@@ -489,28 +491,64 @@ document.addEventListener('DOMContentLoaded', function() {
             const w = computeCardWidth();
             track.style.setProperty('--hub-card-width', `${w}px`);
             const centerOffset = (viewport.clientWidth - w) / 2;
-            const translateX = centerOffset - (centerIndex * (w + g));
+            const translateX = centerOffset - (centerVisible * (w + g));
             track.style.transform = `translateX(${translateX}px)`;
             updateDots();
             updateButtons();
             positionButtons();
         };
 
-        const goPrev = () => { centerIndex = (centerIndex - 1 + slides.length) % slides.length; updateTransform(); };
-        const goNext = () => { centerIndex = (centerIndex + 1) % slides.length; updateTransform(); };
+        const goPrev = () => {
+            const len = visibleSlides().length || 1;
+            centerVisible = (centerVisible - 1 + len) % len;
+            updateTransform();
+        };
+        const goNext = () => {
+            const len = visibleSlides().length || 1;
+            centerVisible = (centerVisible + 1) % len;
+            updateTransform();
+        };
 
         prevBtn.addEventListener('click', goPrev);
         nextBtn.addEventListener('click', goNext);
         viewport.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') goPrev(); if (e.key === 'ArrowRight') goNext(); });
         viewport.setAttribute('tabindex', '0');
 
-        slides.forEach((s, i) => s.addEventListener('click', () => { if (i !== centerIndex) { centerIndex = i; updateTransform(); } }));
+        slides.forEach((s) => s.addEventListener('click', () => {
+            const idx = visibleSlides().indexOf(s);
+            if (idx === -1) return;
+            if (idx !== centerVisible) { centerVisible = idx; updateTransform(); }
+        }));
 
         window.addEventListener('resize', () => { buildDots(); updateTransform(); });
 
-        centerIndex = Math.min(1, slides.length - 1); // Start near beginning
-        buildDots();
-        updateTransform();
+        // Category filtering
+        const setHubCategory = (cat) => {
+            slides.forEach((s) => {
+                const isMatch = cat === 'all' || s.dataset.cat === cat;
+                if (isMatch) s.removeAttribute('hidden'); else s.setAttribute('hidden', '');
+            });
+            // Update tab UI
+            document.querySelectorAll('.hub-tab').forEach((b) => b.classList.toggle('active', b.dataset.hubCat === cat));
+            centerVisible = 0;
+            buildDots();
+            updateTransform();
+            // Ensure section is in view
+            const section = document.querySelector('#contact');
+            if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        // Hook up tabs and navbar dropdown items
+        document.querySelectorAll('[data-hub-cat]').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                const cat = el.getAttribute('data-hub-cat');
+                // Don't block scrolling handled elsewhere
+                setTimeout(() => setHubCategory(cat), 0);
+            });
+        });
+
+        // Initial state: show first tab/category
+        setHubCategory('showcase');
 
         function positionButtons() {
             if (!prevBtn || !nextBtn) return;

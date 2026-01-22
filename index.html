@@ -49,7 +49,17 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a href="#solution" class="nav-link">Our Solution</a></li>
-                <li class="nav-item"><a href="#hub" class="nav-link">Hub</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                        <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                        <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        <li><a href="#contact" data-hub-cat="resources">📚 Tips & Resources</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="#komunitas" class="nav-link">Komunitas</a></li>
             </ul>
             <div class="nav-actions">
@@ -541,77 +551,207 @@
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><span class="highlight">Hub Berita</span></h2>
+                <h2 class="section-title"><span class="highlight">Hub</span></h2>
                 <p class="section-subtitle">Update terbaru seputar program, komunitas, dan karier. Geser untuk membaca.</p>
+            </div>
+
+            <!-- Hub categories tabs -->
+            <div class="hub-tabs" role="tablist" aria-label="Kategori Hub">
+                <button class="hub-tab active" data-hub-cat="showcase" role="tab">Showcase</button>
+                <button class="hub-tab" data-hub-cat="blog" role="tab">Blog Berita</button>
+                <button class="hub-tab" data-hub-cat="jobs" role="tab">Lowongan Kerja</button>
+                <button class="hub-tab" data-hub-cat="events" role="tab">Event & Webinar</button>
+                <button class="hub-tab" data-hub-cat="competition" role="tab">Challenge & Competition</button>
+                <button class="hub-tab" data-hub-cat="resources" role="tab">Tips & Resources</button>
             </div>
 
             <div class="hub-carousel" aria-label="Hub Berita">
                 <button class="hub-btn prev" aria-label="Sebelumnya">‹</button>
                 <div class="hub-viewport">
                     <div class="hub-track">
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="showcase">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,university,classroom" alt="Mahasiswa di kelas - Tips Portofolio" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Announcement</span>
-                                <h3 class="hub-title">10 Tips Meningkatkan Portofolio Digital</h3>
+                                <span class="hub-cat">Showcase</span>
+                                <h3 class="hub-title">Karya Terbaik: Portofolio Digital Peserta</h3>
                                 <p class="hub-excerpt">Panduan singkat untuk menyiapkan portofolio yang disukai HR dan klien.</p>
                             </div>
                         </article>
+                        <article class="hub-card" data-cat="showcase">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?students,presentation,project" alt="Presentasi proyek mahasiswa" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Showcase</span>
+                                <h3 class="hub-title">Studi Kasus: 3.5x ROAS untuk EdTech</h3>
+                                <p class="hub-excerpt">Tim peserta mengoptimasi funnel iklan dan kreatif hingga 3.5x ROAS.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="showcase">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?design,students,collaboration" alt="Tim desain kolaborasi" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Showcase</span>
+                                <h3 class="hub-title">Design System untuk Brand UMKM</h3>
+                                <p class="hub-excerpt">Komponen UI, guideline tipografi, dan grid untuk konsistensi brand.</p>
+                            </div>
+                        </article>
 
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="blog">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,computer,lab" alt="Mahasiswa di lab komputer - AI Tools" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Insights</span>
+                                <span class="hub-cat">Blog Berita</span>
                                 <h3 class="hub-title">Top 12 AI Tools untuk Marketer Pemula</h3>
                                 <p class="hub-excerpt">Kumpulkan tools yang wajib dicoba untuk efisiensi campaign dan riset.</p>
                             </div>
                         </article>
+                        <article class="hub-card" data-cat="blog">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?marketing,trends,2026" alt="Tren marketing 2026" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Blog Berita</span>
+                                <h3 class="hub-title">Trend Digital Marketing 2026</h3>
+                                <p class="hub-excerpt">AI generatif, short video, dan komunitas jadi mesin pertumbuhan.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="blog">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?seo,students,study" alt="Belajar SEO" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Blog Berita</span>
+                                <h3 class="hub-title">SEO Cepat untuk UMKM</h3>
+                                <p class="hub-excerpt">Checklist optimasi on-page sederhana yang langsung terasa dampaknya.</p>
+                            </div>
+                        </article>
 
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="jobs">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,highschool,teamwork" alt="Siswa SMK bekerja tim - Konten Visual" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Komunitas</span>
-                                <h3 class="hub-title">15 Tips Konten Visual untuk Brand UKM</h3>
-                                <p class="hub-excerpt">Cara membuat visual yang konsisten dan menarik untuk sosial media.</p>
+                                <span class="hub-cat">Lowongan Kerja</span>
+                                <h3 class="hub-title">Hiring Intern Digital Marketing (Remote)</h3>
+                                <p class="hub-excerpt">Kesempatan magang berbayar untuk mahasiswa/SMK dengan minat konten dan ads.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="jobs">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?writing,student,laptop" alt="Menulis konten di laptop" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Lowongan Kerja</span>
+                                <h3 class="hub-title">Intern Content Writer (Remote)</h3>
+                                <p class="hub-excerpt">Latih riset keyword dan penulisan artikel SEO untuk berbagai niche.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="jobs">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?office,marketing,team" alt="Tim marketing berdiskusi" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Lowongan Kerja</span>
+                                <h3 class="hub-title">Junior Performance Ads (Part-time)</h3>
+                                <p class="hub-excerpt">Bantu optimasi iklan Meta & Google, cocok buat fresh graduates.</p>
                             </div>
                         </article>
 
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="events">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,workshop,mentor" alt="Workshop mahasiswa bersama mentor - Bootcamp" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Program</span>
-                                <h3 class="hub-title">Bootcamp Batch 04 Resmi Dibuka</h3>
-                                <p class="hub-excerpt">Daftar sekarang, kuota terbatas dengan proyek nyata dari mitra industri.</p>
+                                <span class="hub-cat">Event & Webinar</span>
+                                <h3 class="hub-title">Webinar: Bangun Portofolio HR-Ready</h3>
+                                <p class="hub-excerpt">Live bersama mentor industri. Kuota terbatas—daftar gratis sekarang.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="events">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?workshop,creative,brief" alt="Workshop creative brief" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Event & Webinar</span>
+                                <h3 class="hub-title">Workshop Offline: Creative Brief</h3>
+                                <p class="hub-excerpt">Praktik menulis brief yang jelas untuk desain dan produksi konten.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="events">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?webinar,students,online" alt="Webinar online" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Event & Webinar</span>
+                                <h3 class="hub-title">Webinar: Karier di Growth Marketing</h3>
+                                <p class="hub-excerpt">Kenali peran growth beserta skill yang paling dicari perusahaan.</p>
                             </div>
                         </article>
 
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="competition">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,project,presentation" alt="Mahasiswa presentasi proyek - Partnership" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Partnership</span>
-                                <h3 class="hub-title">Kolaborasi Baru: Praktika+ x Brand X</h3>
-                                <p class="hub-excerpt">Kemitraan untuk memperluas kesempatan kerja dan proyek bagi peserta.</p>
+                                <span class="hub-cat">Challenge & Competition</span>
+                                <h3 class="hub-title">Kompetisi UGC: Konten Produk F&B</h3>
+                                <p class="hub-excerpt">Menangkan merchandise dan kesempatan wawancara cepat dengan hiring partner.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="competition">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?hackathon,students,code" alt="Hackathon kampus" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Challenge & Competition</span>
+                                <h3 class="hub-title">Hackathon Kampus: Marketing Analytics</h3>
+                                <p class="hub-excerpt">Bangun dashboard KPI dan rekomendasi berbasis data dalam 24 jam.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="competition">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?design,contest,students" alt="Lomba desain mahasiswa" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Challenge & Competition</span>
+                                <h3 class="hub-title">Lomba Desain Konten Sosial</h3>
+                                <p class="hub-excerpt">Cari ide visual yang engaging untuk campaign brand lokal.</p>
                             </div>
                         </article>
 
-                        <article class="hub-card">
+                        <article class="hub-card" data-cat="resources">
                             <div class="hub-thumb">
                                 <img src="https://source.unsplash.com/800x500/?students,career,interview" alt="Mahasiswa persiapan wawancara - Karier" />
                             </div>
                             <div class="hub-body">
-                                <span class="hub-cat">Karier</span>
+                                <span class="hub-cat">Tips & Resources</span>
                                 <h3 class="hub-title">Cara Lolos HR dengan Portofolio yang Tepat</h3>
-                                <p class="hub-excerpt">Belajar menyusun portofolio yang relevan dan berdampak untuk posisi impian.</p>
+                                <p class="hub-excerpt">Template, checklist, dan contoh portofolio siap pakai untuk pemula.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="resources">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?resume,cv,document" alt="Template CV" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Tips & Resources</span>
+                                <h3 class="hub-title">Template CV & Portofolio ATS</h3>
+                                <p class="hub-excerpt">Format ramah ATS plus contoh isi untuk marketing & kreatif.</p>
+                            </div>
+                        </article>
+                        <article class="hub-card" data-cat="resources">
+                            <div class="hub-thumb">
+                                <img src="https://source.unsplash.com/800x500/?checklist,marketing,plan" alt="Checklist campaign" />
+                            </div>
+                            <div class="hub-body">
+                                <span class="hub-cat">Tips & Resources</span>
+                                <h3 class="hub-title">Checklist Campaign Sosial Media</h3>
+                                <p class="hub-excerpt">Dari riset persona sampai pelaporan—semua dalam satu checklist.</p>
                             </div>
                         </article>
                     </div>
