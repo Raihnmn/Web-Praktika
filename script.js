@@ -355,7 +355,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const containerRect = carousel.getBoundingClientRect();
             const refRect = activeVideo ? activeVideo.getBoundingClientRect() : viewport.getBoundingClientRect();
             const middle = refRect.top + refRect.height / 2 - containerRect.top;
-            const topValue = `${middle}px`;
+            const offset = -50; 
+            const topValue = `${middle + offset}px`;
             prevBtn.style.top = topValue;
             nextBtn.style.top = topValue;
             prevBtn.style.transform = 'translateY(-50%)';

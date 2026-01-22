@@ -825,7 +825,7 @@ img {
 
 
 .testimonials {
-    padding: 80px 0;
+    padding: 40px 0;
     background: var(--dark-bg);
     color: var(--white);
     position: relative;
@@ -863,7 +863,7 @@ img {
 
 .carousel {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 64px 1fr 64px; 
     align-items: center;
@@ -877,7 +877,7 @@ img {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 10px 0; 
+    padding: 8px 0; 
     -webkit-mask-image: none;
             mask-image: none;
 }
@@ -887,7 +887,7 @@ img {
     will-change: transform;
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     gap: var(--slide-gap, 24px);
-    padding: 20px 0;
+    padding: 8px 0;
     align-items: center;
     justify-content: flex-start;
 }
@@ -970,7 +970,7 @@ img {
         .program-content-wrapper { flex-direction: column; align-items: flex-start; }
     .mobile-menu-toggle { display: flex; }
     .carousel { grid-template-columns: 44px 1fr 44px; padding: 0 10px; }
-    .carousel-viewport { padding: 20px 0; }
+    .carousel-viewport { padding: 12px 0; }
     .carousel-btn { width: 40px; height: 40px; font-size: 18px; }
 }
 
