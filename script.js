@@ -569,4 +569,16 @@ document.addEventListener('DOMContentLoaded', function() {
         img.addEventListener('selectstart', (e) => e.preventDefault());
         img.addEventListener('mousedown', (e) => e.preventDefault());
     });
+
+    // Floating WhatsApp Button handler
+    const waBtn = document.getElementById('waFabBtn');
+    if (waBtn) {
+        waBtn.addEventListener('click', () => {
+            const number = waBtn.getAttribute('data-wa-number') || '';
+            const text = waBtn.getAttribute('data-wa-text') || '';
+            if (!number) return;
+            const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank', 'noopener');
+        });
+    }
 });

@@ -48,6 +48,36 @@ img {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.wa-fab {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 1200;
+}
+.wa-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: #25D366; 
+    color: #FFFFFF;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.wa-btn:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 14px 28px rgba(0,0,0,0.22); }
+.wa-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,211,102,0.35); }
+.wa-btn svg { display: block; }
+@media (max-width: 480px) {
+    .wa-btn { width: 52px; height: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .wa-btn { transition: none; }
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -609,8 +639,8 @@ img {
 
 .program-card:hover {
     transform: translateY(-6px) scale(1.01);
-    border-color: #E0E0E0; /* tetap netral, tanpa aksen hitam/hijau */
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12); /* hilangkan ring */
+    border-color: #E0E0E0;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12); 
 }
 
 .program-card h3 {
@@ -674,7 +704,6 @@ img {
     transform: translateX(5px);
 }
 
-/* Hover micro-interactions for clarity */
 .program-card:hover .program-icon {
     transform: translateY(-4px) rotate(-4deg);
     filter: drop-shadow(0 6px 14px rgba(0,0,0,0.15));
@@ -684,7 +713,6 @@ img {
     border-color: rgba(255,255,255,0.25);
 }
 .program-card-featured:hover {
-    /* Gunakan ring gelap, tanpa menambah kehijauan */
     filter: brightness(0.98);
 }
 
