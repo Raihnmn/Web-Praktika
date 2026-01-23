@@ -105,6 +105,11 @@ img {
 
 .logo-img {
     height: 40px;
+    width: auto;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    display: block;
 }
 
 .logo-img,

@@ -172,12 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuToggle.innerHTML = '☰';
 
                 const navWrapper = document.querySelector('.nav-wrapper');
-                if (navMenu) {
-                    navWrapper.insertBefore(menuToggle, navMenu);
-                } else if (navButtons) {
-                    navWrapper.insertBefore(menuToggle, navButtons);
-                } else {
-                    navWrapper.appendChild(menuToggle);
+                // Place toggle to the far left, before the logo
+                if (navWrapper) {
+                    navWrapper.insertBefore(menuToggle, navWrapper.firstChild);
                 }
 
                 menuToggle.addEventListener('click', function() {
