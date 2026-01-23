@@ -570,7 +570,6 @@ document.addEventListener('DOMContentLoaded', function() {
         img.addEventListener('mousedown', (e) => e.preventDefault());
     });
 
-    // Floating WhatsApp Button handler
     const waBtn = document.getElementById('waFabBtn');
     if (waBtn) {
         waBtn.addEventListener('click', () => {
