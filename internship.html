@@ -356,53 +356,88 @@
     </section>
     
     <!-- Alur Pendaftaran -->
-    <section id="process" class="py-20 bg-[#121212] border-t border-white/5 relative">
+    <section id="process" class="py-24 bg-[#121212] border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#BFFF00]/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2"></div>
+    
         <div class="container relative z-10">
-            <div class="text-center mb-16 anim-fade-up">
-                <h2 class="text-3xl font-extrabold text-white mb-4">Alur Pendaftaran</h2>
-                <p class="text-white/60">Proses seleksi transparan dan cepat.</p>
+            <div class="text-center mb-20 anim-fade-up">
+                <span class="text-[#BFFF00] font-bold text-sm tracking-wider uppercase mb-3 block">How to Join</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Alur Pendaftaran</h2>
+                <p class="text-white/60 max-w-xl mx-auto">4 langkah mudah memulai karier profesionalmu.</p>
             </div>
-
+    
             <div class="relative grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="hidden md:block absolute top-6 left-0 w-full h-0.5 bg-white/10 -z-10"></div>
-
-                <div class="text-center group anim-fade-up">
-                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(191,255,0,0.3)]">1</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Registrasi</h3>
-                    <p class="text-white/50 text-sm">Isi form data diri dan upload CV serta Portofolio terbaikmu.</p>
+                
+                <div class="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-[#2C2C2C] -z-10"></div>
+    
+                <div class="group relative text-center anim-fade-up">
+                    <div class="w-24 h-24 mx-auto bg-[#1E1E1E] border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:border-[#BFFF00] group-hover:shadow-[0_0_30px_rgba(191,255,0,0.25)] group-hover:scale-110">
+                        <svg class="w-9 h-9 text-white group-hover:text-[#BFFF00] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-[#2C2C2C] text-white border-4 border-[#121212] flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#BFFF00] group-hover:text-[#1E1E1E]">1</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Registrasi</h3>
+                    <p class="text-white/50 text-sm leading-relaxed px-4">Isi form data diri dan upload CV serta Portofolio terbaikmu di website.</p>
                 </div>
-
-                <div class="text-center group anim-fade-up delay-1">
-                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">2</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Skill Test</h3>
-                    <p class="text-white/50 text-sm">Kerjakan studi kasus singkat sesuai posisi yang dilamar.</p>
+    
+                <div class="group relative text-center anim-fade-up delay-1">
+                    <div class="w-24 h-24 mx-auto bg-[#1E1E1E] border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:border-[#BFFF00] group-hover:shadow-[0_0_30px_rgba(191,255,0,0.25)] group-hover:scale-110">
+                        <svg class="w-9 h-9 text-white group-hover:text-[#BFFF00] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-[#2C2C2C] text-white border-4 border-[#121212] flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#BFFF00] group-hover:text-[#1E1E1E]">2</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Skill Test</h3>
+                    <p class="text-white/50 text-sm leading-relaxed px-4">Kerjakan studi kasus singkat (mini project) sesuai posisi yang dilamar.</p>
                 </div>
-
-                <div class="text-center group anim-fade-up delay-2">
-                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">3</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Interview</h3>
-                    <p class="text-white/50 text-sm">Diskusi santai tentang pengalaman dan motivasimu bersama HR.</p>
+    
+                <div class="group relative text-center anim-fade-up delay-2">
+                    <div class="w-24 h-24 mx-auto bg-[#1E1E1E] border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:border-[#BFFF00] group-hover:shadow-[0_0_30px_rgba(191,255,0,0.25)] group-hover:scale-110">
+                        <svg class="w-9 h-9 text-white group-hover:text-[#BFFF00] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        </svg>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-[#2C2C2C] text-white border-4 border-[#121212] flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#BFFF00] group-hover:text-[#1E1E1E]">3</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">User Interview</h3>
+                    <p class="text-white/50 text-sm leading-relaxed px-4">Diskusi santai 1-on-1 tentang pengalaman, skill, dan motivasimu.</p>
                 </div>
-
-                <div class="text-center group anim-fade-up delay-3">
-                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">4</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Onboarding</h3>
-                    <p class="text-white/50 text-sm">Selamat! Kamu resmi menjadi bagian dari Praktika+ Intern.</p>
+    
+                <div class="group relative text-center anim-fade-up delay-3">
+                    <div class="w-24 h-24 mx-auto bg-[#1E1E1E] border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10 transition-all duration-300 group-hover:border-[#BFFF00] group-hover:shadow-[0_0_30px_rgba(191,255,0,0.25)] group-hover:scale-110">
+                        <svg class="w-9 h-9 text-white group-hover:text-[#BFFF00] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <div class="absolute -top-1 -right-1 w-8 h-8 rounded-full bg-[#2C2C2C] text-white border-4 border-[#121212] flex items-center justify-center font-bold text-sm transition-all duration-300 group-hover:bg-[#BFFF00] group-hover:text-[#1E1E1E]">4</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Onboarding</h3>
+                    <p class="text-white/50 text-sm leading-relaxed px-4">Selamat! Kamu resmi bergabung dan siap memulai perjalanan kariermu.</p>
                 </div>
+    
             </div>
         </div>
     </section>
     
     <!-- Call to Action -->
-    <section class="py-24 bg-[#BFFF00] text-[#1E1E1E]">
-        <div class="container text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Siap Memulai Karier Profesionalmu?</h2>
-            <p class="text-lg font-medium mb-10 max-w-xl mx-auto opacity-80">Batch 6 akan segera ditutup. Jangan sampai kehabisan kuota magang di posisi impianmu.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#roles" class="px-8 py-4 rounded-xl bg-[#1E1E1E] text-white font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+    <section class="relative py-28 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" alt="Office Background" class="absolute inset-0 w-full h-full object-cover">        
+        <div class="absolute inset-0 bg-black/80"></div>
+
+        <div class="container relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                Siap Memulai Karier <br>
+                <span class="text-[#BFFF00]">Profesionalmu?</span>
+            </h2>
+            <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+                Batch 6 akan segera ditutup. Jangan sampai kehabisan kuota magang di posisi impianmu.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="#roles" class="no-underline inline-block px-10 py-4 rounded-xl bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-base hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(191,255,0,0.4)]">
                     Daftar Sekarang
                 </a>
-                <a href="#" class="px-8 py-4 rounded-xl border-2 border-[#1E1E1E] text-[#1E1E1E] font-bold text-lg hover:bg-[#1E1E1E]/10 transition-colors">
+                
+                <a href="#" class="no-underline inline-block px-10 py-4 rounded-xl border border-white/30 text-white font-bold text-base hover:bg-white/10 hover:border-white transition-all duration-300">
                     Tanya HR Dulu
                 </a>
             </div>
