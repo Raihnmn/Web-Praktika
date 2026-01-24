@@ -118,139 +118,109 @@
         </section>
 
         <!-- Program Categories -->
-        <section id="programs" class="py-20 relative overflow-hidden" style="background: #1E1E1E;">
-            <!-- Decorative circles like testimonials -->
-            <div class="absolute top-[-90px] left-[-60px] w-[520px] h-[520px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
-            <div class="absolute bottom-[-80px] right-[-60px] w-[460px] h-[460px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
+            <section id="programs" class="py-20 relative overflow-hidden" style="background: #1E1E1E;">
+        <div class="absolute top-[-90px] left-[-60px] w-[520px] h-[520px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
+        <div class="absolute bottom-[-80px] right-[-60px] w-[460px] h-[460px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
+        
+        <div class="container relative z-10">
+            <div class="text-center mb-12 anim-fade-up">
+                <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-white mb-4">Programs</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-3 text-white">Pilih Jalur Karirmu</h2>
+                <p class="text-white/70 max-w-2xl mx-auto">8 program intensif yang dirancang sesuai kebutuhan industri saat ini.</p>
+            </div>
             
-            <div class="container relative z-10">
-                <div class="text-center mb-12 anim-fade-up">
-                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-white mb-4">Programs</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3 text-white">Pilih Jalur Karirmu</h2>
-                    <p class="text-white/70 max-w-2xl mx-auto">8 program intensif yang dirancang sesuai kebutuhan industri saat ini.</p>
-                </div>
-                
-                <!-- Slider Container - Same style as testimonials carousel -->
-                <div class="relative grid grid-cols-[64px_1fr_64px] items-center gap-3 px-2">
-                    <!-- Navigation Button Prev -->
-                    <button onclick="slidePrograms('prev')" class="w-12 h-12 rounded-full border-2 border-white/35 bg-transparent text-white flex items-center justify-center text-xl font-bold cursor-pointer transition-all duration-300 hover:scale-105 hover:border-white/60 hover:shadow-[0_0_0_2px_rgba(255,255,255,0.25),0_0_18px_rgba(255,255,255,0.18)] z-10">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Slider Track -->
-                    <div class="overflow-hidden w-full max-w-[1000px] mx-auto py-2">
-                        <div id="programSlider" class="flex gap-6 transition-transform duration-500 ease-out py-2 items-center">
-                            <!-- Card 1 -->
-                            <div class="program-slide flex-shrink-0 w-[220px] min-h-[270px] h-[270px] bg-transparent border border-white/16 rounded-2xl p-4 cursor-pointer transition-all duration-500 hover:border-white/16">
-                                <div class="icon-box mb-4 bg-white/10">💻</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Fullstack Web Development</h3>
-                                <p class="text-white/60 text-sm mb-4">Frontend, Backend, Database, hingga Deployment. Jadi developer handal!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Node.js</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SQL</span>
-                                </div>
+            <div class="carousel program-carousel" aria-label="Program Pilihan">
+                <button class="carousel-btn prev" aria-label="Sebelumnya">‹</button>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">💻</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Fullstack Web Dev</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">Frontend, Backend, Database, hingga Deployment. Jadi developer handal!</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Node.js</span>
                             </div>
-                            <!-- Card 2 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">📈</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Digital Marketing</h3>
-                                <p class="text-white/60 text-sm mb-4">SEO, SEM, Social Media, hingga Analytics. Kuasai strategi marketing digital!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Meta Ads</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Google Ads</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SEO</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">📈</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Digital Marketing</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">SEO, SEM, Social Media, hingga Analytics. Kuasai strategi marketing!</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Meta Ads</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SEO</span>
                             </div>
-                            <!-- Card 3 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">🎨</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">UI/UX Design</h3>
-                                <p class="text-white/60 text-sm mb-4">User Research, Wireframe, Prototyping, hingga Design System profesional.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Figma</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Adobe XD</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Protopie</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">🎨</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">UI/UX Design</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">User Research, Wireframe, Prototyping, hingga Design System.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Figma</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Adobe XD</span>
                             </div>
-                            <!-- Card 4 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">📊</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Data Analytics</h3>
-                                <p class="text-white/60 text-sm mb-4">SQL, Python, Visualization, hingga Business Intelligence. Jadi data-driven!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Python</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SQL</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Tableau</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">📊</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Data Analytics</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">SQL, Python, Visualization, hingga Business Intelligence.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Python</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SQL</span>
                             </div>
-                            <!-- Card 5 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">📱</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Mobile App Development</h3>
-                                <p class="text-white/60 text-sm mb-4">Bangun aplikasi Android & iOS dengan framework modern dan praktis!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Flutter</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React Native</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Firebase</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">📱</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Mobile App Dev</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">Bangun aplikasi Android & iOS dengan framework modern.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Flutter</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React Native</span>
                             </div>
-                            <!-- Card 6 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">🤖</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">AI & Machine Learning</h3>
-                                <p class="text-white/60 text-sm mb-4">Pelajari AI, Deep Learning, dan implementasi model machine learning!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">TensorFlow</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">PyTorch</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">OpenAI</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">🤖</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">AI & Machine Learning</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">Pelajari AI, Deep Learning, dan implementasi model ML!</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">TensorFlow</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">PyTorch</span>
                             </div>
-                            <!-- Card 7 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">☁️</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Cloud Computing</h3>
-                                <p class="text-white/60 text-sm mb-4">Kuasai infrastruktur cloud, DevOps, dan deployment skala besar!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">AWS</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">GCP</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Docker</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">☁️</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Cloud Computing</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">Kuasai infrastruktur cloud, DevOps, dan deployment!</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">AWS</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Docker</span>
                             </div>
-                            <!-- Card 8 -->
-                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
-                                <div class="icon-box mb-4 bg-white/10">🔒</div>
-                                <h3 class="font-bold text-xl mb-2 text-white">Cyber Security</h3>
-                                <p class="text-white/60 text-sm mb-4">Pelajari keamanan jaringan, ethical hacking, dan proteksi sistem!</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Pentesting</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Kali Linux</span>
-                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">OWASP</span>
-                                </div>
+                        </div>
+
+                        <div class="program-slide-card">
+                            <div class="icon-box mb-4 bg-white/10 text-2xl">🔒</div>
+                            <h3 class="font-bold text-xl mb-2 text-white">Cyber Security</h3>
+                            <p class="text-white/60 text-sm mb-4 flex-grow">Pelajari keamanan jaringan, ethical hacking, dan proteksi sistem!</p>
+                            <div class="flex flex-wrap gap-2 mt-auto">
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Kali Linux</span>
+                                <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">OWASP</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Navigation Button Next -->
-                    <button onclick="slidePrograms('next')" class="w-12 h-12 rounded-full border-2 border-white/35 bg-transparent text-white flex items-center justify-center text-xl font-bold cursor-pointer transition-all duration-300 hover:scale-105 hover:border-white/60 hover:shadow-[0_0_0_2px_rgba(255,255,255,0.25),0_0_18px_rgba(255,255,255,0.18)] z-10">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
                 </div>
-                
-                <!-- Dots Indicator - Same style as testimonials -->
-                <div class="flex justify-center items-center gap-[10px] mt-6">
-                    <button onclick="goToSlide(0)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
-                    <button onclick="goToSlide(1)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
-                    <button onclick="goToSlide(2)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
-                    <button onclick="goToSlide(3)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
-                    <button onclick="goToSlide(4)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
-                </div>
+                <button class="carousel-btn next" aria-label="Berikutnya">›</button>
             </div>
-        </section>
+            <div class="carousel-dots program-dots" aria-label="Halaman"></div>
+        </div>
+    </section>
 
         <!-- Why Choose Us -->
         <section id="benefits" class="py-20">
@@ -942,8 +912,6 @@
         });
 
         // Program Slider Functionality
-        let currentSlide = 0;
-        const totalSlides = 5; // Total dot indicators
         const cardWidth = 220 + 24; // card width + gap
         
         function slidePrograms(direction) {
@@ -1016,6 +984,124 @@
             updateSlider();
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const progCarousel = document.querySelector('.program-carousel');
+            
+            if (progCarousel) {
+                const viewport = progCarousel.querySelector('.carousel-viewport');
+                const track = progCarousel.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                const prevBtn = progCarousel.querySelector('.carousel-btn.prev');
+                const nextBtn = progCarousel.querySelector('.carousel-btn.next');
+                const dotsContainer = document.querySelector('.program-dots'); // Target container dots baru
+
+                let currentSlide = 0;
+                
+                // 1. Hitung berapa kartu terlihat berdasarkan layar
+                const getVisibleCount = () => {
+                    if (window.innerWidth >= 1024) return 3;
+                    if (window.innerWidth >= 768) return 2;
+                    return 1;
+                };
+
+                // 2. Hitung lebar kartu agar pas di tengah
+                const updateDimensions = () => {
+                    const gap = 24; // Gap antar kartu (sesuai CSS)
+                    const visible = getVisibleCount();
+                    const containerWidth = viewport.clientWidth;
+                    
+                    // Hitung lebar kartu: (Lebar Container - Total Gap) / Jumlah Item
+                    const cardWidth = (containerWidth - (gap * (visible - 1))) / visible;
+                    
+                    // Set CSS Variable agar CSS bisa baca ukurannya
+                    track.style.setProperty('--slide-width', `${cardWidth}px`);
+                    track.style.gap = `${gap}px`;
+                    
+                    return { cardWidth, gap };
+                };
+
+                // 3. Buat Dots
+                const buildDots = () => {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = '';
+                    // Jumlah dot = total slide - (visible - 1) agar tidak ada dot kosong di akhir
+                    const visible = getVisibleCount();
+                    const dotCount = slides.length - visible + 1; 
+                    
+                    for (let i = 0; i < (dotCount > 0 ? dotCount : slides.length); i++) {
+                        const btn = document.createElement('button');
+                        btn.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
+                        btn.addEventListener('click', () => {
+                            currentSlide = i;
+                            updateSlider();
+                        });
+                        dotsContainer.appendChild(btn);
+                    }
+                };
+
+                // 4. Update Posisi Slider
+                const updateSlider = () => {
+                    const { cardWidth, gap } = updateDimensions();
+                    
+                    // Geser track
+                    const moveAmount = currentSlide * (cardWidth + gap);
+                    track.style.transform = `translateX(-${moveAmount}px)`;
+                    
+                    // Update class active pada dots
+                    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                    dots.forEach((d, i) => {
+                        d.classList.toggle('active', i === currentSlide);
+                    });
+
+                    // Matikan tombol jika mentok (opsional, bisa dibuat infinite loop juga)
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    
+                    if(prevBtn) prevBtn.style.opacity = currentSlide <= 0 ? '0.5' : '1';
+                    if(nextBtn) nextBtn.style.opacity = currentSlide >= maxIndex ? '0.5' : '1';
+                };
+
+                // 5. Event Listeners Buttons
+                const nextSlide = () => {
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    if (currentSlide < maxIndex) {
+                        currentSlide++;
+                    } else {
+                        currentSlide = 0; // Loop balik ke awal
+                    }
+                    updateSlider();
+                };
+
+                const prevSlide = () => {
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                    } else {
+                        currentSlide = maxIndex; // Loop ke akhir
+                    }
+                    updateSlider();
+                };
+
+                if(nextBtn) nextBtn.addEventListener('click', nextSlide);
+                if(prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+                // 6. Init & Responsive
+                updateDimensions();
+                buildDots();
+                updateSlider();
+
+                window.addEventListener('resize', () => {
+                    updateDimensions();
+                    buildDots();
+                    updateSlider();
+                });
+            }
+        });
+        </script>
 
     <!-- Floating WhatsApp Button -->
     <div class="wa-fab" aria-label="WhatsApp Chat">
