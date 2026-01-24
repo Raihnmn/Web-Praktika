@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intensive Bootcamps – Praktika+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN: utilities available without altering existing styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#BFFF00',
+                        darkbg: '#1E1E1E',
+                        darkgray: '#2C2C2C',
+                        lightgray: '#F5F5F5',
+                        textdark: '#1A1A1A',
+                        textgray: '#666666',
+                        white: '#FFFFFF'
+                    },
+                    fontFamily: { poppins: ['Poppins','sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation (shared) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper flex items-center justify-between gap-[16px] py-[10px]">
+                <div class="logo">
+                    <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu list-none flex items-center gap-[20px]">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="indexV1.html#program">🎓 Certified Internship Program</a></li>
+                            <li><a href="indexV1.html#program">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="indexV1.html#program">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="indexV1.html#solution" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="indexV1.html#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="indexV1.html#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="indexV1.html#komunitas" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions flex items-center gap-[16px]">
+                    <div class="search-bar flex items-center gap-[8px]">
+                        <input type="text" placeholder="Search..." class="search-input outline-none">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons flex items-center gap-[10px]">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Program Bootcamp (Landing Theme) -->
+    <main>
+        <!-- Hero -->
+        <section class="bg-gradient-hero py-20 md:py-28">
+            <div class="container relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 anim-fade-up relative z-10">
+                        <span class="badge-glow inline-flex items-center px-4 py-2 rounded-full text-sm font-bold text-[#1A1A1A] anim-pulse">
+                            <span class="w-2 h-2 bg-[#BFFF00] rounded-full mr-2 anim-glow"></span>
+                            Batch 5 Dibuka — Kuota Terbatas!
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Intensive <span class="price-gradient">Bootcamps</span><br/>
+                            <span class="text-[#1E1E1E]">Praktika+</span>
+                        </h1>
+                        <p class="text-lg text-[#666666] max-w-xl leading-relaxed">
+                            Pilih jalur kariermu! Dari <strong>Web Development</strong>, <strong>Digital Marketing</strong>, hingga <strong>UI/UX Design</strong> dan Program Bootcamp yang lain, Program intensif 3 bulan dengan proyek nyata, mentor industri, dan sertifikasi resmi.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="#programs" class="btn-cta-enhanced inline-flex items-center gap-2">
+                                Pilih Program
+                            </a>
+                            <a href="#benefits" class="btn-cta-enhanced inline-flex items-center gap-2 !bg-white !text-[#1A1A1A] border-2 border-[#1A1A1A] !shadow-none hover:!bg-[#1A1A1A] hover:!text-white">
+                                Lihat Benefit
+                            </a>
+                        </div>
+                    </div>
+                    <div class="anim-float delay-2">
+                        <div class="hero-image-wrapper shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Intensive Bootcamps" class="w-full h-[350px] md:h-[480px] object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Categories -->
+        <section id="programs" class="py-20 relative overflow-hidden" style="background: #1E1E1E;">
+            <!-- Decorative circles like testimonials -->
+            <div class="absolute top-[-90px] left-[-60px] w-[520px] h-[520px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
+            <div class="absolute bottom-[-80px] right-[-60px] w-[460px] h-[460px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 40%, transparent 90%);"></div>
+            
+            <div class="container relative z-10">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-white mb-4">Programs</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3 text-white">Pilih Jalur Karirmu</h2>
+                    <p class="text-white/70 max-w-2xl mx-auto">8 program intensif yang dirancang sesuai kebutuhan industri saat ini.</p>
+                </div>
+                
+                <!-- Slider Container - Same style as testimonials carousel -->
+                <div class="relative grid grid-cols-[64px_1fr_64px] items-center gap-3 px-2">
+                    <!-- Navigation Button Prev -->
+                    <button onclick="slidePrograms('prev')" class="w-12 h-12 rounded-full border-2 border-white/35 bg-transparent text-white flex items-center justify-center text-xl font-bold cursor-pointer transition-all duration-300 hover:scale-105 hover:border-white/60 hover:shadow-[0_0_0_2px_rgba(255,255,255,0.25),0_0_18px_rgba(255,255,255,0.18)] z-10">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Slider Track -->
+                    <div class="overflow-hidden w-full max-w-[1000px] mx-auto py-2">
+                        <div id="programSlider" class="flex gap-6 transition-transform duration-500 ease-out py-2 items-center">
+                            <!-- Card 1 -->
+                            <div class="program-slide flex-shrink-0 w-[220px] min-h-[270px] h-[270px] bg-transparent border border-white/16 rounded-2xl p-4 cursor-pointer transition-all duration-500 hover:border-white/16">
+                                <div class="icon-box mb-4 bg-white/10">💻</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Fullstack Web Development</h3>
+                                <p class="text-white/60 text-sm mb-4">Frontend, Backend, Database, hingga Deployment. Jadi developer handal!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Node.js</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SQL</span>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">📈</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Digital Marketing</h3>
+                                <p class="text-white/60 text-sm mb-4">SEO, SEM, Social Media, hingga Analytics. Kuasai strategi marketing digital!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Meta Ads</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Google Ads</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SEO</span>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">🎨</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">UI/UX Design</h3>
+                                <p class="text-white/60 text-sm mb-4">User Research, Wireframe, Prototyping, hingga Design System profesional.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Figma</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Adobe XD</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Protopie</span>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">📊</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Data Analytics</h3>
+                                <p class="text-white/60 text-sm mb-4">SQL, Python, Visualization, hingga Business Intelligence. Jadi data-driven!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Python</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">SQL</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Tableau</span>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">📱</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Mobile App Development</h3>
+                                <p class="text-white/60 text-sm mb-4">Bangun aplikasi Android & iOS dengan framework modern dan praktis!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Flutter</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">React Native</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Firebase</span>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">🤖</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">AI & Machine Learning</h3>
+                                <p class="text-white/60 text-sm mb-4">Pelajari AI, Deep Learning, dan implementasi model machine learning!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">TensorFlow</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">PyTorch</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">OpenAI</span>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">☁️</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Cloud Computing</h3>
+                                <p class="text-white/60 text-sm mb-4">Kuasai infrastruktur cloud, DevOps, dan deployment skala besar!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">AWS</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">GCP</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Docker</span>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="program-slide flex-shrink-0 w-[260px] min-h-[320px] h-[320px] bg-[#23272f] border border-white/20 rounded-2xl p-6 cursor-pointer transition-all duration-500 hover:border-primary-green/60 shadow-xl flex flex-col items-start justify-between">
+                                <div class="icon-box mb-4 bg-white/10">🔒</div>
+                                <h3 class="font-bold text-xl mb-2 text-white">Cyber Security</h3>
+                                <p class="text-white/60 text-sm mb-4">Pelajari keamanan jaringan, ethical hacking, dan proteksi sistem!</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Pentesting</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">Kali Linux</span>
+                                    <span class="px-2 py-1 rounded-full text-xs bg-white/10 text-white/80">OWASP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Button Next -->
+                    <button onclick="slidePrograms('next')" class="w-12 h-12 rounded-full border-2 border-white/35 bg-transparent text-white flex items-center justify-center text-xl font-bold cursor-pointer transition-all duration-300 hover:scale-105 hover:border-white/60 hover:shadow-[0_0_0_2px_rgba(255,255,255,0.25),0_0_18px_rgba(255,255,255,0.18)] z-10">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Dots Indicator - Same style as testimonials -->
+                <div class="flex justify-center items-center gap-[10px] mt-6">
+                    <button onclick="goToSlide(0)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
+                    <button onclick="goToSlide(1)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
+                    <button onclick="goToSlide(2)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
+                    <button onclick="goToSlide(3)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
+                    <button onclick="goToSlide(4)" class="program-dot w-[10px] h-[10px] rounded-full bg-[#DADADA] border-none cursor-pointer transition-all duration-200 hover:scale-110"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="benefits" class="py-20">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Why Us</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Kenapa Pilih Praktika+ Bootcamp?</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Metode belajar modern yang terfokus pada praktik nyata dan dukungan karier.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up hover-lift">
+                        <div class="icon-box mb-4">🎥</div>
+                        <h3 class="font-bold text-xl mb-2">Live Mentoring</h3>
+                        <p class="text-[#666666]">Sesi interaktif bersama mentor industri, Q&A langsung, dan review tugas personal.</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up delay-2 hover-lift">
+                        <div class="icon-box mb-4">🧪</div>
+                        <h3 class="font-bold text-xl mb-2">Hands‑on Projects</h3>
+                        <p class="text-[#666666]">Kerjakan 10+ studi kasus nyata yang membangun portofolio profesional.</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up delay-3 hover-lift">
+                        <div class="icon-box mb-4">💼</div>
+                        <h3 class="font-bold text-xl mb-2">Career Support</h3>
+                        <p class="text-[#666666]">Bimbingan CV, simulasi interview, dan akses ke talent pool 50+ hiring partner.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="py-16 bg-gradient-section">
+            <div class="container">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                    <div class="stat-card flex items-center gap-4 anim-fade-up hover-lift">
+                        <div class="icon-box">⏱️</div>
+                        <div>
+                            <div class="text-2xl font-extrabold">3 Bulan</div>
+                            <div class="text-[#666666]">Durasi Program</div>
+                        </div>
+                    </div>
+                    <div class="stat-card flex items-center gap-4 anim-fade-up delay-2 hover-lift">
+                        <div class="icon-box">📚</div>
+                        <div>
+                            <div class="text-2xl font-extrabold">8 Program</div>
+                            <div class="text-[#666666]">Pilihan Karier</div>
+                        </div>
+                    </div>
+                    <div class="stat-card flex items-center gap-4 anim-fade-up delay-3 hover-lift">
+                        <div class="icon-box">🧩</div>
+                        <div>
+                            <div class="text-2xl font-extrabold">10+ Projects</div>
+                            <div class="text-[#666666]">Real Case Studies</div>
+                        </div>
+                    </div>
+                    <div class="stat-card flex items-center gap-4 anim-fade-up delay-4 hover-lift">
+                        <div class="icon-box">🎓</div>
+                        <div>
+                            <div class="text-2xl font-extrabold">Sertifikat</div>
+                            <div class="text-[#666666]">Resmi & Diakui</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outcomes -->
+        <section class="py-20">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Outcomes</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Hasil yang Kamu Dapat</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Apapun program yang kamu pilih, ini yang akan kamu dapatkan.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card rounded-2xl p-6 anim-pop hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">1</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Portofolio Profesional</h3>
+                                <p class="text-[#666666] text-sm">Studi kasus nyata dengan metrik yang terukur dan siap ditunjukkan ke HR.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 anim-pop delay-2 hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">2</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Skill yang Relevan</h3>
+                                <p class="text-[#666666] text-sm">Materi up-to-date sesuai kebutuhan industri saat ini.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 anim-pop delay-3 hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">3</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Sertifikasi Resmi</h3>
+                                <p class="text-[#666666] text-sm">Sertifikat penyelesaian + rekomendasi ke hiring partner.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 anim-pop delay-4 hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">4</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Soft Skills</h3>
+                                <p class="text-[#666666] text-sm">Kerja tim, komunikasi, presentasi, dan problem solving.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 anim-pop delay-5 hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">5</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Network & Komunitas</h3>
+                                <p class="text-[#666666] text-sm">Terhubung dengan sesama learners dan profesional di bidangmu.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-6 anim-pop delay-6 hover-lift">
+                        <div class="flex items-start gap-4">
+                            <div class="number-badge">6</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Jalur Karier Jelas</h3>
+                                <p class="text-[#666666] text-sm">Panduan job role, salary range, dan peta belajar lanjutan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kurikulum / Learning Journey -->
+        <section id="kurikulum" class="py-20 bg-gradient-dark text-white relative overflow-hidden">
+            <div class="deco-circle deco-circle-1 opacity-30"></div>
+            <div class="container relative z-10">
+                <div class="text-center mb-16 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#BFFF00] mb-4">Learning Journey</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Struktur Pembelajaran</h2>
+                    <p class="text-white/70 max-w-2xl mx-auto">12 minggu perjalanan intensif menuju karier impianmu.</p>
+                </div>
+                
+                <!-- Timeline Design -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Timeline connector line -->
+                    <div class="hidden md:block absolute left-1/2 top-[280px] bottom-[100px] w-1 bg-gradient-to-b from-[#BFFF00] via-[#BFFF00]/50 to-transparent -translate-x-1/2" style="height: 400px;"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Phase 1 -->
+                        <div class="relative anim-fade-up">
+                            <div class="glass-card-dark rounded-3xl p-8 border border-[#BFFF00]/30 hover:border-[#BFFF00] transition-all group">
+                                <!-- Week badge -->
+                                <div class="absolute -top-4 left-6 px-4 py-1 rounded-full bg-[#BFFF00] text-[#1E1E1E] text-sm font-bold">
+                                    Minggu 1-4
+                                </div>
+                                <!-- Icon -->
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#BFFF00]/30 to-[#BFFF00]/10 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                                    🎯
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Foundation</h3>
+                                <p class="text-white/60 text-sm mb-4">Bangun pondasi yang kuat dengan konsep dasar.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Pengenalan industri
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Teori fundamental
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Setup tools & software
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 2 -->
+                        <div class="relative anim-fade-up delay-2 md:mt-12">
+                            <div class="glass-card-dark rounded-3xl p-8 border border-[#BFFF00]/30 hover:border-[#BFFF00] transition-all group">
+                                <!-- Week badge -->
+                                <div class="absolute -top-4 left-6 px-4 py-1 rounded-full bg-[#BFFF00] text-[#1E1E1E] text-sm font-bold">
+                                    Minggu 5-8
+                                </div>
+                                <!-- Icon -->
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#BFFF00]/30 to-[#BFFF00]/10 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                                    ⚡
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Deep Dive</h3>
+                                <p class="text-white/60 text-sm mb-4">Kuasai skill inti dengan praktik intensif.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Materi inti bidang
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Mini projects
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        1-on-1 mentor review
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 3 -->
+                        <div class="relative anim-fade-up delay-3">
+                            <div class="glass-card-dark rounded-3xl p-8 border border-[#BFFF00]/30 hover:border-[#BFFF00] transition-all group">
+                                <!-- Week badge -->
+                                <div class="absolute -top-4 left-6 px-4 py-1 rounded-full bg-[#BFFF00] text-[#1E1E1E] text-sm font-bold">
+                                    Minggu 9-12
+                                </div>
+                                <!-- Icon -->
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#BFFF00]/30 to-[#BFFF00]/10 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                                    🚀
+                                </div>
+                                <h3 class="text-xl font-bold mb-3 text-white">Launch Ready</h3>
+                                <p class="text-white/60 text-sm mb-4">Siap terjun ke industri dengan portofolio kuat.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Capstone project
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Portfolio building
+                                    </li>
+                                    <li class="flex items-center gap-2 text-sm text-white/80">
+                                        <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs text-[#BFFF00]">✓</span>
+                                        Interview prep
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom CTA -->
+                    <div class="text-center mt-12 anim-fade-up delay-4">
+                        <p class="text-white/60 mb-4">Kurikulum disesuaikan untuk setiap program yang kamu pilih</p>
+                        <a href="#programs" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/30 text-[#BFFF00] font-semibold hover:bg-[#BFFF00]/20 transition-all">
+                            Lihat Program
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps to Enroll -->
+        <section class="py-20 bg-gradient-section relative overflow-hidden">
+            <div class="deco-circle deco-circle-2"></div>
+            <div class="container relative z-10">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">How to Join</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Cara Daftar</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Mudah dan cepat—siap mulai belajar dalam hitungan hari.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="glass-card rounded-2xl p-8 text-center anim-fade-up hover-lift relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#BFFF00] text-[#1E1E1E] font-bold flex items-center justify-center text-sm">1</div>
+                        <div class="icon-box mx-auto mb-4">📝</div>
+                        <h3 class="font-bold text-lg mb-2">Isi Form</h3>
+                        <p class="text-[#666666] text-sm">Data diri & minat belajar.</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 text-center anim-fade-up delay-2 hover-lift relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#BFFF00] text-[#1E1E1E] font-bold flex items-center justify-center text-sm">2</div>
+                        <div class="icon-box mx-auto mb-4">💬</div>
+                        <h3 class="font-bold text-lg mb-2">Consult Call</h3>
+                        <p class="text-[#666666] text-sm">Diskusi kebutuhan & jadwal.</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 text-center anim-fade-up delay-3 hover-lift relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#BFFF00] text-[#1E1E1E] font-bold flex items-center justify-center text-sm">3</div>
+                        <div class="icon-box mx-auto mb-4">💳</div>
+                        <h3 class="font-bold text-lg mb-2">Pembayaran</h3>
+                        <p class="text-[#666666] text-sm">Pilih skema cicilan/early bird.</p>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 text-center anim-fade-up delay-4 hover-lift relative">
+                        <div class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#BFFF00] text-[#1E1E1E] font-bold flex items-center justify-center text-sm">4</div>
+                        <div class="icon-box mx-auto mb-4">🚀</div>
+                        <h3 class="font-bold text-lg mb-2">Mulai Kelas</h3>
+                        <p class="text-[#666666] text-sm">Join sesi live & project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Stack -->
+        <section class="py-20">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Tools</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Tools yang Dipelajari</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Software & platform industri yang akan kamu kuasai.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop hover-lift">
+                        <div class="text-3xl mb-2">🎨</div>
+                        <span class="font-semibold">Figma</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop delay-2 hover-lift">
+                        <div class="text-3xl mb-2">⚛️</div>
+                        <span class="font-semibold">React</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop delay-3 hover-lift">
+                        <div class="text-3xl mb-2">📊</div>
+                        <span class="font-semibold">Google Ads</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop delay-4 hover-lift">
+                        <div class="text-3xl mb-2">🐍</div>
+                        <span class="font-semibold">Python</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop delay-5 hover-lift">
+                        <div class="text-3xl mb-2">🗂️</div>
+                        <span class="font-semibold">SQL</span>
+                    </div>
+                    <div class="glass-card flex flex-col items-center justify-center h-28 rounded-2xl anim-pop delay-6 hover-lift">
+                        <div class="text-3xl mb-2">📈</div>
+                        <span class="font-semibold">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-20">
+            <div class="container">
+                <div class="bg-gradient-dark rounded-3xl p-10 md:p-16 text-white relative overflow-hidden anim-fade-up">
+                    <div class="deco-circle deco-circle-1 opacity-20"></div>
+                    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div class="text-center lg:text-left">
+                            <h3 class="text-3xl md:text-4xl font-extrabold mb-3">Siap Mulai Karier Impianmu?</h3>
+                            <p class="text-white/70 text-lg max-w-xl">Pilih bidang yang kamu minati dan mulai perjalanan bersama mentor profesional.</p>
+                        </div>
+                        <a href="#programs" class="btn-cta-enhanced inline-flex items-center gap-3 text-lg">
+                            Pilih Program
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mentor -->
+        <section class="py-20 bg-gradient-section">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Mentors</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Belajar dari Praktisi</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Mentor berpengalaman dari berbagai industri terkemuka.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass-card mentor-card rounded-2xl p-6 text-center anim-fade-up hover-lift">
+                        <img class="mentor-img w-20 h-20 rounded-full object-cover mx-auto relative z-10" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=160&q=80" alt="Mentor"/>
+                        <div class="mt-4 relative z-10">
+                            <h3 class="font-bold text-lg">Raka Pratama</h3>
+                            <p class="text-[#666666] text-sm mb-2">Lead Engineer – TechCorp</p>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-[#BFFF00]/20">Web Dev</span>
+                        </div>
+                    </div>
+                    <div class="glass-card mentor-card rounded-2xl p-6 text-center anim-fade-up delay-2 hover-lift">
+                        <img class="mentor-img w-20 h-20 rounded-full object-cover mx-auto relative z-10" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Mentor"/>
+                        <div class="mt-4 relative z-10">
+                            <h3 class="font-bold text-lg">Sarah Putri</h3>
+                            <p class="text-[#666666] text-sm mb-2">Marketing Lead – E-commerce</p>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-[#BFFF00]/20">Marketing</span>
+                        </div>
+                    </div>
+                    <div class="glass-card mentor-card rounded-2xl p-6 text-center anim-fade-up delay-3 hover-lift">
+                        <img class="mentor-img w-20 h-20 rounded-full object-cover mx-auto relative z-10" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80" alt="Mentor"/>
+                        <div class="mt-4 relative z-10">
+                            <h3 class="font-bold text-lg">Dina Maharani</h3>
+                            <p class="text-[#666666] text-sm mb-2">Senior Designer – Agency</p>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-[#BFFF00]/20">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="glass-card mentor-card rounded-2xl p-6 text-center anim-fade-up delay-4 hover-lift">
+                        <img class="mentor-img w-20 h-20 rounded-full object-cover mx-auto relative z-10" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80" alt="Mentor"/>
+                        <div class="mt-4 relative z-10">
+                            <h3 class="font-bold text-lg">Andi Wijaya</h3>
+                            <p class="text-[#666666] text-sm mb-2">Data Lead – FinTech</p>
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-[#BFFF00]/20">Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="py-20">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Pricing</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Investasi Karier</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Harga sama untuk semua program. Early bird terbatas!</p>
+                </div>
+                <div class="max-w-lg mx-auto">
+                    <div class="pricing-card glass-card rounded-3xl p-10 text-center anim-fade-up hover-lift">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-red-100 text-red-600 mb-6 anim-pulse">
+                            🔥 Hemat Rp 1.500.000
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Full Bootcamp (3 Bulan)</h3>
+                        <div class="mb-6">
+                            <div class="text-[#999999] line-through text-xl mb-1">Rp 4.999.000</div>
+                            <div class="text-5xl md:text-6xl font-extrabold price-gradient">Rp 3.499.000</div>
+                            <div class="text-[#666666] mt-2">atau cicilan mulai Rp 600K/bulan</div>
+                        </div>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs">✓</span>
+                                <span>12 Minggu Intensive Learning</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs">✓</span>
+                                <span>10+ Real Projects & Portfolio</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs">✓</span>
+                                <span>Live Mentoring Sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs">✓</span>
+                                <span>Sertifikat Resmi</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-[#BFFF00]/20 flex items-center justify-center text-xs">✓</span>
+                                <span>Career Support & Job Matching</span>
+                            </li>
+                        </ul>
+                        <a href="#programs" class="btn-cta-enhanced w-full inline-flex items-center justify-center gap-2 text-lg">
+                            Pilih Program & Daftar
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <p class="text-sm text-[#666666] mt-4">💳 Pembayaran aman & bisa cicilan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 bg-gradient-section">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">FAQ</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Pertanyaan Umum</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Temukan jawaban untuk pertanyaan yang sering diajukan.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <details class="accordion-item group rounded-2xl bg-white p-5 anim-fade-up">
+                        <summary class="flex items-center justify-between cursor-pointer">
+                            <span class="font-bold text-lg">Apakah perlu pengalaman sebelumnya?</span>
+                            <span class="w-8 h-8 rounded-full bg-[#F5F5F5] flex items-center justify-center text-[#1A1A1A] text-xl group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-[#666666] leading-relaxed">Tidak wajib! Semua program dirancang ramah pemula. Materi dimulai dari fundamental dan dipandu mentor berpengalaman di bidangnya.</p>
+                    </details>
+                    <details class="accordion-item group rounded-2xl bg-white p-5 anim-fade-up delay-2">
+                        <summary class="flex items-center justify-between cursor-pointer">
+                            <span class="font-bold text-lg">Bisa ambil lebih dari satu program?</span>
+                            <span class="w-8 h-8 rounded-full bg-[#F5F5F5] flex items-center justify-center text-[#1A1A1A] text-xl group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-[#666666] leading-relaxed">Tentu! Banyak alumni yang mengambil program kedua setelah lulus. Kamu juga akan dapat diskon khusus alumni untuk program berikutnya.</p>
+                    </details>
+                    <details class="accordion-item group rounded-2xl bg-white p-5 anim-fade-up delay-3">
+                        <summary class="flex items-center justify-between cursor-pointer">
+                            <span class="font-bold text-lg">Format kelas seperti apa?</span>
+                            <span class="w-8 h-8 rounded-full bg-[#F5F5F5] flex items-center justify-center text-[#1A1A1A] text-xl group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-[#666666] leading-relaxed">Live online dengan jadwal fleksibel, tugas proyek mingguan, review mentor 1-on-1, dan kerja tim untuk project akhir.</p>
+                    </details>
+                    <details class="accordion-item group rounded-2xl bg-white p-5 anim-fade-up delay-4">
+                        <summary class="flex items-center justify-between cursor-pointer">
+                            <span class="font-bold text-lg">Bagaimana jika tidak bisa ikut sesi live?</span>
+                            <span class="w-8 h-8 rounded-full bg-[#F5F5F5] flex items-center justify-center text-[#1A1A1A] text-xl group-open:rotate-45 transition-transform">+</span>
+                        </summary>
+                        <p class="mt-4 text-[#666666] leading-relaxed">Semua sesi direkam dan bisa diakses ulang kapan saja. Kamu juga bisa booking sesi konsultasi tambahan dengan mentor.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20">
+            <div class="container">
+                <div class="text-center mb-12 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Kata Alumni</h2>
+                    <p class="text-[#666666] max-w-2xl mx-auto">Cerita sukses dari berbagai program bootcamp kami.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up hover-lift">
+                        <div class="flex items-center gap-1 mb-4">
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                        </div>
+                        <p class="text-[#666666] mb-6 leading-relaxed">"Dari nol bisa bangun aplikasi fullstack dalam 3 bulan. Mentor sabar dan supportive banget!"</p>
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Alumni"/>
+                            <div>
+                                <div class="font-bold">Budi Santoso</div>
+                                <div class="text-sm text-[#666666]">Web Dev • Now: Junior Dev @ StartupXYZ</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up delay-2 hover-lift">
+                        <div class="flex items-center gap-1 mb-4">
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                        </div>
+                        <p class="text-[#666666] mb-6 leading-relaxed">"Belajar digital marketing dari praktisi langsung. Sekarang handle campaign brand besar!"</p>
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Alumni"/>
+                            <div>
+                                <div class="font-bold">Lisa Anggraini</div>
+                                <div class="text-sm text-[#666666]">Marketing • Now: Digital Marketer @ Agency</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-2xl p-8 anim-fade-up delay-3 hover-lift">
+                        <div class="flex items-center gap-1 mb-4">
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                            <span class="text-[#BFFF00] text-xl">★</span>
+                        </div>
+                        <p class="text-[#666666] mb-6 leading-relaxed">"Portofolio UI/UX dari bootcamp ini yang bikin aku dilirik HR. Worth every penny!"</p>
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Alumni"/>
+                            <div>
+                                <div class="font-bold">Andi Rahman</div>
+                                <div class="text-sm text-[#666666]">UI/UX • Now: Product Designer @ TechID</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hiring Partners -->
+        <section class="py-16 bg-gradient-section">
+            <div class="container">
+                <div class="text-center mb-10 anim-fade-up">
+                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/20 text-[#1A1A1A] mb-4">Partners</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Hiring Partner Kami</h2>
+                    <p class="text-[#666666]">Alumni kami bekerja di berbagai perusahaan tech terkemuka.</p>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 anim-fade-up">
+                    <div class="px-6 py-4 rounded-xl bg-white border border-[#E0E0E0] text-xl font-bold text-[#999999] hover:text-[#1A1A1A] hover:border-[#BFFF00] transition-all">TechCorp</div>
+                    <div class="px-6 py-4 rounded-xl bg-white border border-[#E0E0E0] text-xl font-bold text-[#999999] hover:text-[#1A1A1A] hover:border-[#BFFF00] transition-all">FinTech ID</div>
+                    <div class="px-6 py-4 rounded-xl bg-white border border-[#E0E0E0] text-xl font-bold text-[#999999] hover:text-[#1A1A1A] hover:border-[#BFFF00] transition-all">CloudPro</div>
+                    <div class="px-6 py-4 rounded-xl bg-white border border-[#E0E0E0] text-xl font-bold text-[#999999] hover:text-[#1A1A1A] hover:border-[#BFFF00] transition-all">StartupXYZ</div>
+                    <div class="px-6 py-4 rounded-xl bg-white border border-[#E0E0E0] text-xl font-bold text-[#999999] hover:text-[#1A1A1A] hover:border-[#BFFF00] transition-all">Digital Agency</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+    <!-- Footer (shared) -->
+    <footer class="footer">
+        <div class="max-w-[1200px] mx-auto px-[16px]">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html#about">About us</a>
+                        <a href="indexV1.html#services">Services</a>
+                        <a href="indexV1.html#usecases">Use Cases</a>
+                        <a href="indexV1.html#pricing">Pricing</a>
+                        <a href="indexV1.html#blog">Blog</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok" title="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Positivus. All Rights Reserved.</p>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Scroll Reveal Animation -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.anim-fade-up, .anim-pop, .anim-slide-left').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+
+        // Add active styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .anim-fade-up.active, .anim-pop.active, .anim-slide-left.active {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+                transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .delay-2.active { transition-delay: 0.15s !important; }
+            .delay-3.active { transition-delay: 0.25s !important; }
+            .delay-4.active { transition-delay: 0.35s !important; }
+            .delay-5.active { transition-delay: 0.45s !important; }
+            .delay-6.active { transition-delay: 0.55s !important; }
+        `;
+        document.head.appendChild(style);
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const counter = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(counter);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Program Slider Functionality
+        let currentSlide = 0;
+        const totalSlides = 5; // Total dot indicators
+        const cardWidth = 220 + 24; // card width + gap
+        
+        function slidePrograms(direction) {
+            const slider = document.getElementById('programSlider');
+            const maxSlide = totalSlides - 1;
+            
+            if (direction === 'next') {
+                currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            } else {
+                currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            }
+            
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        
+        function updateSlider() {
+            const slider = document.getElementById('programSlider');
+            // Center 3 cards in viewport
+            const container = slider.parentElement;
+            const visibleCards = 3;
+            const totalWidth = visibleCards * cardWidth;
+            const containerWidth = container.offsetWidth;
+            const leftOffset = (containerWidth - totalWidth) / 2;
+            const offset = currentSlide * cardWidth - leftOffset;
+            slider.style.transform = `translateX(-${offset}px)`;
+            
+            // Update dots - same style as testimonials
+            document.querySelectorAll('.program-dot').forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.style.background = '#BFFF00';
+                    dot.style.transform = 'scale(1.25)';
+                    dot.style.boxShadow = '0 0 0 6px rgba(191,255,0,0.18)';
+                } else {
+                    dot.style.background = '#DADADA';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                }
+            });
+            
+            // Update card active state
+            document.querySelectorAll('.program-slide').forEach((card, index) => {
+                if (index >= currentSlide && index < currentSlide + 3) {
+                    card.style.background = 'rgba(255,255,255,0.06)';
+                    card.style.borderColor = 'rgba(255,255,255,0.22)';
+                } else {
+                    card.style.background = 'transparent';
+                    card.style.borderColor = 'rgba(255,255,255,0.16)';
+                }
+            });
+            // Add hover animation for program cards
+            document.querySelectorAll('.program-slide').forEach(card => {
+                card.onmouseenter = function() {
+                    card.style.transform = 'scale(1.06)';
+                    card.style.boxShadow = '0 12px 32px 0 rgba(191,255,0,0.18)';
+                };
+                card.onmouseleave = function() {
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = 'none';
+                };
+            });
+        }
+        
+        // Initialize first dot as active
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSlider();
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="wa-fab" aria-label="WhatsApp Chat">
+        <button id="waFabBtn" class="wa-btn" type="button" title="Chat WhatsApp"
+                aria-label="Chat WhatsApp" data-wa-number="6281234567890"
+                data-wa-text="Halo, saya tertarik dengan Praktika+ Bootcamps">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
