@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intensive Bootcamps – Praktika+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS via CDN: utilities available without altering existing styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#BFFF00',
+                        darkbg: '#1E1E1E',
+                        darkgray: '#2C2C2C',
+                        lightgray: '#F5F5F5',
+                        textdark: '#1A1A1A',
+                        textgray: '#666666',
+                        white: '#FFFFFF'
+                    },
+                    fontFamily: { poppins: ['Poppins','sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation (shared) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper flex items-center justify-between gap-[16px] py-[10px]">
+                <div class="logo">
+                    <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu list-none flex items-center gap-[20px]">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="indexV1.html#program">🎓 Certified Internship Program</a></li>
+                            <li><a href="indexV1.html#program">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="indexV1.html#program">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="indexV1.html#solution" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="indexV1.html#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="indexV1.html#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="indexV1.html#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="indexV1.html#komunitas" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions flex items-center gap-[16px]">
+                    <div class="search-bar flex items-center gap-[8px]">
+                        <input type="text" placeholder="Search..." class="search-input outline-none">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons flex items-center gap-[10px]">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detail Program Bootcamp (Landing Theme) -->
+    <main>
+    <section class="relative pt-32 pb-20 bg-[#121212] overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#BFFF00]/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="anim-fade-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+                        <span class="w-2 h-2 rounded-full bg-[#BFFF00] animate-pulse"></span>
+                        <span class="text-xs font-bold text-white tracking-wide uppercase">Batch 6 Open for Registration</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Bukan Sekadar <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#BFFF00] to-[#E0F780]">Magang Biasa.</span>
+                    </h1>
+                    <p class="text-white/60 text-lg mb-8 max-w-lg leading-relaxed">
+                        Rasakan pengalaman kerja sesungguhnya dengan menangani proyek riil. Konversi SKS, bangun portofolio, dan persiapkan dirimu menjadi talenta siap kerja.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#roles" class="px-8 py-4 rounded-xl bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-sm hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(191,255,0,0.3)]">
+                            Lihat Posisi
+                        </a>
+                        <a href="#process" class="px-8 py-4 rounded-xl border border-white/20 text-white font-bold text-sm hover:bg-white/5 hover:border-white transition-all duration-300">
+                            Alur Seleksi
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 pt-8 border-t border-white/10">
+                        <p class="text-xs text-white/40 mb-4 uppercase tracking-widest">Alumni accepted at</p>
+                        <div class="flex gap-6 opacity-50 grayscale">
+                            <div class="h-6 w-20 bg-white/20 rounded"></div>
+                            <div class="h-6 w-20 bg-white/20 rounded"></div>
+                            <div class="h-6 w-20 bg-white/20 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative anim-fade-up delay-2 hidden lg:block">
+                    <div class="relative z-10 bg-[#1E1E1E] border border-white/10 rounded-2xl p-2 shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Working" class="rounded-xl w-full object-cover h-[400px] grayscale hover:grayscale-0 transition-all duration-500">
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-[#2C2C2C] p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+                                ✓
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-sm">Accepted</div>
+                                <div class="text-white/50 text-xs">UI/UX Intern</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-[#BFFF00] rounded-2xl transform -rotate-3 translate-x-4 translate-y-4 opacity-20 -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-20 bg-white">
+        <div class="container">
+            <div class="text-center mb-16 anim-fade-up">
+                <h2 class="text-3xl font-extrabold text-[#1A1A1A] mb-4">Kenapa Magang di Praktika+?</h2>
+                <p class="text-[#666666] max-w-2xl mx-auto">Kami tidak menyuruhmu membuat kopi. Kami memberimu tanggung jawab nyata.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group anim-fade-up">
+                    <div class="w-14 h-14 bg-[#BFFF00]/20 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#BFFF00] transition-all duration-300">🎓</div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-black transition-colors">Konversi SKS</h3>
+                    <p class="text-[#666666] text-sm group-hover:text-[#444] transition-colors">Program terstruktur yang diakui kampus. Laporan kegiatan lengkap untuk konversi hingga 20 SKS.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group anim-fade-up delay-2">
+                    <div class="w-14 h-14 bg-[#BFFF00]/20 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#BFFF00] transition-all duration-300">💼</div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-black transition-colors">Real Client Project</h3>
+                    <p class="text-[#666666] text-sm group-hover:text-[#444] transition-colors">Bukan dummy project. Kamu akan menangani brief asli dari klien partner kami.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group anim-fade-up delay-3">
+                    <div class="w-14 h-14 bg-[#BFFF00]/20 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#BFFF00] transition-all duration-300">👨‍🏫</div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-black transition-colors">Dedicated Mentor</h3>
+                    <p class="text-[#666666] text-sm group-hover:text-[#444] transition-colors">1-on-1 feedback session setiap minggu. Belajar langsung dari praktisi senior.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-300 group anim-fade-up delay-4">
+                    <div class="w-14 h-14 bg-[#BFFF00]/20 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 group-hover:bg-[#BFFF00] transition-all duration-300">📜</div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-black transition-colors">Sertifikat Industri</h3>
+                    <p class="text-[#666666] text-sm group-hover:text-[#444] transition-colors">Sertifikat penyelesaian magang dan surat rekomendasi kerja bagi best intern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="roles" class="py-20 bg-[#121212] border-t border-white/5">
+        <div class="container">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 anim-fade-up">
+                <div>
+                    <span class="text-[#BFFF00] font-bold text-sm tracking-wider uppercase mb-2 block">Open Roles</span>
+                    <h2 class="text-3xl font-extrabold text-white">Posisi Tersedia</h2>
+                </div>
+                
+                <div class="flex flex-wrap gap-2" id="role-filters">
+                    <button class="filter-btn active px-5 py-2.5 rounded-full bg-[#BFFF00] text-[#1E1E1E] text-sm font-bold border border-[#BFFF00] transition-all hover:scale-105 shadow-[0_0_10px_rgba(191,255,0,0.3)]" data-filter="all">
+                        All
+                    </button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-white/30 text-white bg-transparent text-sm font-medium hover:border-[#BFFF00] hover:text-[#BFFF00] hover:bg-[#BFFF00]/10 transition-all" data-filter="tech">
+                        Tech & Data
+                    </button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-white/30 text-white bg-transparent text-sm font-medium hover:border-[#BFFF00] hover:text-[#BFFF00] hover:bg-[#BFFF00]/10 transition-all" data-filter="creative">
+                        Creative
+                    </button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-white/30 text-white bg-transparent text-sm font-medium hover:border-[#BFFF00] hover:text-[#BFFF00] hover:bg-[#BFFF00]/10 transition-all" data-filter="marketing">
+                        Marketing
+                    </button>
+                </div>
+            </div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="roles-grid">
+                
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up" data-category="creative">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-xl">🎨</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">UI/UX Designer</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Membuat desain antarmuka aplikasi web & mobile yang user-friendly.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Figma</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Wireframing</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-1" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-xl">💻</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Hybrid</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Frontend Dev</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Slicing desain ke kode HTML, CSS, JS dan integrasi API dasar.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">React/Vue</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Tailwind</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-2" data-category="marketing">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-xl">📢</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Social Media Spec</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Merancang content plan, caption writing, dan analisis insight IG/TikTok.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Copywriting</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Trends</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up" data-category="creative">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-xl">🎬</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Hybrid</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Content Creator</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Produksi video pendek (Reels/TikTok) dari ide, shooting, hingga editing.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">CapCut</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Videography</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-1" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-xl">📊</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Data Analyst</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Mengolah data mentah menjadi laporan visual yang mudah dipahami.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Excel/Spreadsheet</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">SQL Basic</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-2" data-category="marketing">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-xl">📈</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Digital Marketer</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Membantu optimasi SEO artikel dan menjalankan iklan berbayar (Ads).</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">SEO Basic</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Meta Ads</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up" data-category="creative">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-xl">🖌️</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Remote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Graphic Designer</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Membuat aset visual untuk kebutuhan media sosial dan materi promosi.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Photoshop</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">Illustrator</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+                <div class="role-card group bg-[#1E1E1E] rounded-2xl p-6 border border-white/10 hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-1" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-xl">⚙️</div>
+                        <span class="px-2 py-1 rounded bg-white/5 text-white/60 text-[10px] uppercase font-bold tracking-wide border border-white/10">Office</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-[#BFFF00] transition-colors">Web Admin</h3>
+                    <p class="text-white/50 text-sm mb-6 line-clamp-2">Mengelola konten website, update produk, dan maintenance ringan.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">CMS/Wordpress</span>
+                        <span class="px-2 py-1 bg-[#2C2C2C] rounded text-xs text-white/70 border border-white/5">HTML Basic</span>
+                    </div>
+                    <a href="#" class="block w-full py-3 rounded-lg bg-[#BFFF00] text-[#1E1E1E] text-center text-sm font-extrabold hover:bg-white hover:text-[#1E1E1E] hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_10px_rgba(0,0,0,0.2)] hover:shadow-[0_0_15px_rgba(191,255,0,0.4)]">Apply Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#1E1E1E]">
+        <div class="container">
+            <div class="text-center mb-16 anim-fade-up">
+                <span class="inline-block px-4 py-1 rounded-full text-xs font-bold bg-[#BFFF00]/10 text-[#BFFF00] mb-4">Internship Showcase</span>
+                <h2 class="text-3xl font-extrabold text-white">Karya Anak Magang</h2>
+                <p class="text-white/60 mt-3">Hasil nyata dari kolaborasi intern dan mentor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="relative rounded-2xl overflow-hidden group h-[400px] anim-fade-up">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80" alt="App Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8">
+                        <span class="text-[#BFFF00] text-xs font-bold uppercase mb-2">Web Development</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">E-Commerce Dashboard Revamp</h3>
+                        <p class="text-white/70 text-sm mb-4 line-clamp-2">Redesign dashboard admin untuk klien UMKM fashion, meningkatkan efisiensi kelola stok hingga 40%.</p>
+                        <a href="#" class="text-white text-sm font-bold underline decoration-[#BFFF00] hover:text-[#BFFF00]">Lihat Case Study ↗</a>
+                    </div>
+                </div>
+
+                <div class="grid grid-rows-2 gap-8 h-[400px]">
+                    <div class="relative rounded-2xl overflow-hidden group anim-fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Social Media" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-lg font-bold text-white">Campaign Instagram "Lokal Juara"</h3>
+                        </div>
+                    </div>
+                    <div class="relative rounded-2xl overflow-hidden group anim-fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80" alt="UI Design" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-lg font-bold text-white">Fintech App Mobile Design</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 bg-[#121212] border-t border-white/5 relative">
+        <div class="container relative z-10">
+            <div class="text-center mb-16 anim-fade-up">
+                <h2 class="text-3xl font-extrabold text-white mb-4">Alur Pendaftaran</h2>
+                <p class="text-white/60">Proses seleksi transparan dan cepat.</p>
+            </div>
+
+            <div class="relative grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="hidden md:block absolute top-6 left-0 w-full h-0.5 bg-white/10 -z-10"></div>
+
+                <div class="text-center group anim-fade-up">
+                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(191,255,0,0.3)]">1</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Registrasi</h3>
+                    <p class="text-white/50 text-sm">Isi form data diri dan upload CV serta Portofolio terbaikmu.</p>
+                </div>
+
+                <div class="text-center group anim-fade-up delay-1">
+                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">2</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Skill Test</h3>
+                    <p class="text-white/50 text-sm">Kerjakan studi kasus singkat sesuai posisi yang dilamar.</p>
+                </div>
+
+                <div class="text-center group anim-fade-up delay-2">
+                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">3</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Interview</h3>
+                    <p class="text-white/50 text-sm">Diskusi santai tentang pengalaman dan motivasimu bersama HR.</p>
+                </div>
+
+                <div class="text-center group anim-fade-up delay-3">
+                    <div class="w-12 h-12 mx-auto bg-[#2C2C2C] border-2 border-white/20 group-hover:border-[#BFFF00] rounded-full flex items-center justify-center text-white font-bold mb-6 relative z-10 transition-all">4</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Onboarding</h3>
+                    <p class="text-white/50 text-sm">Selamat! Kamu resmi menjadi bagian dari Praktika+ Intern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#BFFF00] text-[#1E1E1E]">
+        <div class="container text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Siap Memulai Karier Profesionalmu?</h2>
+            <p class="text-lg font-medium mb-10 max-w-xl mx-auto opacity-80">Batch 6 akan segera ditutup. Jangan sampai kehabisan kuota magang di posisi impianmu.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#roles" class="px-8 py-4 rounded-xl bg-[#1E1E1E] text-white font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                    Daftar Sekarang
+                </a>
+                <a href="#" class="px-8 py-4 rounded-xl border-2 border-[#1E1E1E] text-[#1E1E1E] font-bold text-lg hover:bg-[#1E1E1E]/10 transition-colors">
+                    Tanya HR Dulu
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+    
+
+
+    <!-- Footer (shared) -->
+    <footer class="footer">
+        <div class="max-w-[1200px] mx-auto px-[16px]">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html#about">About us</a>
+                        <a href="indexV1.html#services">Services</a>
+                        <a href="indexV1.html#usecases">Use Cases</a>
+                        <a href="indexV1.html#pricing">Pricing</a>
+                        <a href="indexV1.html#blog">Blog</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok" title="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Positivus. All Rights Reserved.</p>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Scroll Reveal Animation -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.anim-fade-up, .anim-pop, .anim-slide-left').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+
+        // Add active styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .anim-fade-up.active, .anim-pop.active, .anim-slide-left.active {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+                transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .delay-2.active { transition-delay: 0.15s !important; }
+            .delay-3.active { transition-delay: 0.25s !important; }
+            .delay-4.active { transition-delay: 0.35s !important; }
+            .delay-5.active { transition-delay: 0.45s !important; }
+            .delay-6.active { transition-delay: 0.55s !important; }
+        `;
+        document.head.appendChild(style);
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const counter = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(counter);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Program Slider Functionality
+        const cardWidth = 220 + 24; // card width + gap
+        
+        function slidePrograms(direction) {
+            const slider = document.getElementById('programSlider');
+            const maxSlide = totalSlides - 1;
+            
+            if (direction === 'next') {
+                currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            } else {
+                currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            }
+            
+            updateSlider();
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+        
+        function updateSlider() {
+            const slider = document.getElementById('programSlider');
+            // Center 3 cards in viewport
+            const container = slider.parentElement;
+            const visibleCards = 3;
+            const totalWidth = visibleCards * cardWidth;
+            const containerWidth = container.offsetWidth;
+            const leftOffset = (containerWidth - totalWidth) / 2;
+            const offset = currentSlide * cardWidth - leftOffset;
+            slider.style.transform = `translateX(-${offset}px)`;
+            
+            // Update dots - same style as testimonials
+            document.querySelectorAll('.program-dot').forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.style.background = '#BFFF00';
+                    dot.style.transform = 'scale(1.25)';
+                    dot.style.boxShadow = '0 0 0 6px rgba(191,255,0,0.18)';
+                } else {
+                    dot.style.background = '#DADADA';
+                    dot.style.transform = 'scale(1)';
+                    dot.style.boxShadow = 'none';
+                }
+            });
+            
+            // Update card active state
+            document.querySelectorAll('.program-slide').forEach((card, index) => {
+                if (index >= currentSlide && index < currentSlide + 3) {
+                    card.style.background = 'rgba(255,255,255,0.06)';
+                    card.style.borderColor = 'rgba(255,255,255,0.22)';
+                } else {
+                    card.style.background = 'transparent';
+                    card.style.borderColor = 'rgba(255,255,255,0.16)';
+                }
+            });
+            // Add hover animation for program cards
+            document.querySelectorAll('.program-slide').forEach(card => {
+                card.onmouseenter = function() {
+                    card.style.transform = 'scale(1.06)';
+                    card.style.boxShadow = '0 12px 32px 0 rgba(191,255,0,0.18)';
+                };
+                card.onmouseleave = function() {
+                    card.style.transform = 'scale(1)';
+                    card.style.boxShadow = 'none';
+                };
+            });
+        }
+        
+        // Initialize first dot as active
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSlider();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const progCarousel = document.querySelector('.program-carousel');
+            
+            if (progCarousel) {
+                const viewport = progCarousel.querySelector('.carousel-viewport');
+                const track = progCarousel.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                const prevBtn = progCarousel.querySelector('.carousel-btn.prev');
+                const nextBtn = progCarousel.querySelector('.carousel-btn.next');
+                const dotsContainer = document.querySelector('.program-dots'); // Target container dots baru
+
+                let currentSlide = 0;
+                
+                // 1. Hitung berapa kartu terlihat berdasarkan layar
+                const getVisibleCount = () => {
+                    if (window.innerWidth >= 1024) return 3;
+                    if (window.innerWidth >= 768) return 2;
+                    return 1;
+                };
+
+                // 2. Hitung lebar kartu agar pas di tengah
+                const updateDimensions = () => {
+                    const gap = 24; // Gap antar kartu (sesuai CSS)
+                    const visible = getVisibleCount();
+                    const containerWidth = viewport.clientWidth;
+                    
+                    // Hitung lebar kartu: (Lebar Container - Total Gap) / Jumlah Item
+                    const cardWidth = (containerWidth - (gap * (visible - 1))) / visible;
+                    
+                    // Set CSS Variable agar CSS bisa baca ukurannya
+                    track.style.setProperty('--slide-width', `${cardWidth}px`);
+                    track.style.gap = `${gap}px`;
+                    
+                    return { cardWidth, gap };
+                };
+
+                // 3. Buat Dots
+                const buildDots = () => {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = '';
+                    // Jumlah dot = total slide - (visible - 1) agar tidak ada dot kosong di akhir
+                    const visible = getVisibleCount();
+                    const dotCount = slides.length - visible + 1; 
+                    
+                    for (let i = 0; i < (dotCount > 0 ? dotCount : slides.length); i++) {
+                        const btn = document.createElement('button');
+                        btn.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
+                        btn.addEventListener('click', () => {
+                            currentSlide = i;
+                            updateSlider();
+                        });
+                        dotsContainer.appendChild(btn);
+                    }
+                };
+
+                // 4. Update Posisi Slider
+                const updateSlider = () => {
+                    const { cardWidth, gap } = updateDimensions();
+                    
+                    // Geser track
+                    const moveAmount = currentSlide * (cardWidth + gap);
+                    track.style.transform = `translateX(-${moveAmount}px)`;
+                    
+                    // Update class active pada dots
+                    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                    dots.forEach((d, i) => {
+                        d.classList.toggle('active', i === currentSlide);
+                    });
+
+                    // Matikan tombol jika mentok (opsional, bisa dibuat infinite loop juga)
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    
+                    if(prevBtn) prevBtn.style.opacity = currentSlide <= 0 ? '0.5' : '1';
+                    if(nextBtn) nextBtn.style.opacity = currentSlide >= maxIndex ? '0.5' : '1';
+                };
+
+                // 5. Event Listeners Buttons
+                const nextSlide = () => {
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    if (currentSlide < maxIndex) {
+                        currentSlide++;
+                    } else {
+                        currentSlide = 0; // Loop balik ke awal
+                    }
+                    updateSlider();
+                };
+
+                const prevSlide = () => {
+                    const visible = getVisibleCount();
+                    const maxIndex = slides.length - visible;
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                    } else {
+                        currentSlide = maxIndex; // Loop ke akhir
+                    }
+                    updateSlider();
+                };
+
+                if(nextBtn) nextBtn.addEventListener('click', nextSlide);
+                if(prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+                // 6. Init & Responsive
+                updateDimensions();
+                buildDots();
+                updateSlider();
+
+                window.addEventListener('resize', () => {
+                    updateDimensions();
+                    buildDots();
+                    updateSlider();
+                });
+            }
+        });
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const roleCards = document.querySelectorAll('.role-card');
+
+            // Styles for Active vs Inactive Buttons (Tailwind Classes)
+            const activeClasses = ['bg-[#BFFF00]', 'text-[#1E1E1E]', 'border-[#BFFF00]', 'font-bold', 'shadow-[0_0_10px_rgba(191,255,0,0.3)]'];
+            const inactiveClasses = ['bg-transparent', 'text-white', 'border-white/30', 'font-medium', 'shadow-none'];
+
+            // Function to set button state
+            function setButtonState(btn, isActive) {
+                if (isActive) {
+                    btn.classList.remove(...inactiveClasses);
+                    btn.classList.add(...activeClasses);
+                } else {
+                    btn.classList.remove(...activeClasses);
+                    btn.classList.add(...inactiveClasses);
+                }
+            }
+
+            if(filterButtons.length > 0) {
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // 1. Reset all buttons to inactive
+                        filterButtons.forEach(b => setButtonState(b, false));
+                        
+                        // 2. Set clicked button to active
+                        setButtonState(btn, true);
+
+                        // 3. Filter Cards Logic
+                        const filterValue = btn.getAttribute('data-filter');
+                        
+                        roleCards.forEach(card => {
+                            const cardCategory = card.getAttribute('data-category');
+                            
+                            // Reset animation logic
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+
+                            if (filterValue === 'all' || filterValue === cardCategory) {
+                                card.style.display = 'block';
+                                // Add simple fade-in animation
+                                card.animate([
+                                    { opacity: 0, transform: 'translateY(10px)' },
+                                    { opacity: 1, transform: 'translateY(0)' }
+                                ], { duration: 300, fill: 'forwards', easing: 'ease-out' });
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            }
+        });
+        </script>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="wa-fab" aria-label="WhatsApp Chat">
+        <button id="waFabBtn" class="wa-btn" type="button" title="Chat WhatsApp"
+                aria-label="Chat WhatsApp" data-wa-number="6281234567890"
+                data-wa-text="Halo, saya tertarik dengan Praktika+ Bootcamps">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+    
+</body>
+</html>
