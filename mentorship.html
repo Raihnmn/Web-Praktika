@@ -59,6 +59,14 @@
                     <li class="nav-item"><a href="indexV1.html#komunitas" class="nav-link">Komunitas</a></li>
                 </ul>
                 <div class="nav-actions flex items-center gap-[16px]">
+                    <div class="search-bar flex items-center gap-[8px]">
+                        <input type="text" placeholder="Search..." class="search-input outline-none">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="nav-buttons flex items-center gap-[10px]">
                         <button class="btn btn-secondary">Masuk</button>
                         <button class="btn btn-primary">Daftar</button>
@@ -87,9 +95,6 @@
                             <a href="#services" class="btn-cta-enhanced inline-flex items-center gap-2">
                                 Mulai Konsultasi
                             </a>
-                            <a href="#mentors" class="btn-cta-enhanced inline-flex items-center gap-2 !bg-white !text-[#1A1A1A] border-2 border-[#1A1A1A] !shadow-none hover:!bg-[#1A1A1A] hover:!text-white">
-                                Lihat Mentor
-                            </a>
                         </div>
                     </div>
                     <div class="anim-float delay-2">
@@ -109,34 +114,51 @@
         </section>
 
         <section class="py-20 bg-white">
-            <div class="container">
-                <div class="text-center mb-16 anim-fade-up">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 animate-fade-up">
                     <h2 class="text-3xl font-extrabold mb-4 text-[#1A1A1A]">Pernah Merasakan Ini?</h2>
-                    <p class="text-[#666666] max-w-2xl mx-auto">Jangan biarkan kesalahan kecil menghambat karier besarmu.</p>
+                    <p class="text-gray-500 max-w-2xl mx-auto">Jangan biarkan kesalahan kecil menghambat karier besarmu.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-2xl bg-[#F9FAFB] border border-gray-100 hover:border-[#BFFF00] transition-all duration-300 group anim-fade-up">
-                        <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all">📄</div>
-                        <h3 class="text-xl font-bold mb-2 text-[#1A1A1A]">CV Selalu Ditolak</h3>
-                        <p class="text-[#666666] text-sm">Sudah sebar ratusan lamaran tapi tidak ada panggilan? Mungkin CV-mu tidak lolos sistem ATS.</p>
+                    
+                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out">
+                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
+                            📄
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">CV Selalu Ditolak</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
+                            Sudah sebar ratusan lamaran tapi tidak ada panggilan? Mungkin CV-mu tidak lolos sistem ATS karena format yang salah.
+                        </p>
                     </div>
-                    <div class="p-8 rounded-2xl bg-[#F9FAFB] border border-gray-100 hover:border-[#BFFF00] transition-all duration-300 group anim-fade-up delay-2">
-                        <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all">😰</div>
-                        <h3 class="text-xl font-bold mb-2 text-[#1A1A1A]">Grogi Saat Interview</h3>
-                        <p class="text-[#666666] text-sm">Bingung menjawab "Tell me about yourself" atau negosiasi gaji? Kami punya cheat sheet-nya.</p>
+
+                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out delay-100">
+                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
+                            😰
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">Grogi Saat Interview</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
+                            Bingung menjawab "Tell me about yourself" atau negosiasi gaji? Kami punya cheat sheet rahasia untuk menjawabnya.
+                        </p>
                     </div>
-                    <div class="p-8 rounded-2xl bg-[#F9FAFB] border border-gray-100 hover:border-[#BFFF00] transition-all duration-300 group anim-fade-up delay-3">
-                        <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all">👻</div>
-                        <h3 class="text-xl font-bold mb-2 text-[#1A1A1A]">LinkedIn Sepi</h3>
-                        <p class="text-[#666666] text-sm">Profil LinkedIn tidak dilirik recruiter? Optimalkan profilmu agar tawaran kerja yang datang padamu.</p>
+
+                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out delay-200">
+                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
+                            👻
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">LinkedIn Sepi</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
+                            Profil LinkedIn tidak dilirik recruiter? Optimalkan profilmu agar tawaran kerja yang datang mengejarmu.
+                        </p>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-24 bg-[#1E1E1E] relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#BFFF00]/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <section id="services" class="py-24 bg-[#121212] relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#BFFF00]/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
             
             <div class="container relative z-10">
                 <div class="text-center mb-16 anim-fade-up">
@@ -146,82 +168,137 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="group relative bg-[#2C2C2C] rounded-2xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-300 anim-fade-up">
-                        <div class="absolute top-6 right-6 text-3xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all">📝</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Bedah CV & Cover Letter</h3>
-                        <p class="text-white/60 mb-6">Review mendalam baris demi baris. Kami pastikan CV-mu ATS-Friendly dan menonjolkan pencapaian terbaikmu dengan metode STAR.</p>
-                        <ul class="space-y-2 mb-8">
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Cek skor ATS</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Perbaikan tata bahasa & struktur</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Template CV Premium</li>
-                        </ul>
+                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">📝</div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Bedah CV & Cover Letter</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Review mendalam baris demi baris. Kami pastikan CV-mu ATS-Friendly dan menonjolkan pencapaian terbaikmu.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Cek skor ATS otomatis
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Perbaikan tata bahasa
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Template CV Premium
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="group relative bg-[#2C2C2C] rounded-2xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-300 anim-fade-up delay-2">
-                        <div class="absolute top-6 right-6 text-3xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all">🎙️</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Mock Interview Practice</h3>
-                        <p class="text-white/60 mb-6">Simulasi wawancara kerja (HR & User) dengan feedback langsung. Hilangkan grogi dan latih jawaban yang meyakinkan.</p>
-                        <ul class="space-y-2 mb-8">
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Simulasi Bahasa Indo/Inggris</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Teknik negosiasi gaji</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Rekaman sesi evaluasi</li>
-                        </ul>
+                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up delay-2">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🎙️</div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Mock Interview Practice</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Simulasi wawancara kerja (HR & User) dengan feedback langsung. Hilangkan grogi dan latih jawaban.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Simulasi Indo/Inggris
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Teknik negosiasi gaji
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Rekaman sesi evaluasi
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="group relative bg-[#2C2C2C] rounded-2xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-300 anim-fade-up">
-                        <div class="absolute top-6 right-6 text-3xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all">🔗</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">LinkedIn Makeover</h3>
-                        <p class="text-white/60 mb-6">Ubah profil LinkedIn-mu menjadi magnet recruiter. Optimasi headline, about section, dan featured posts.</p>
-                        <ul class="space-y-2 mb-8">
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Optimasi Keyword Pencarian</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Strategi Personal Branding</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Template Pesan Networking</li>
-                        </ul>
+                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🔗</div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">LinkedIn Makeover</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Ubah profil LinkedIn-mu menjadi magnet recruiter. Optimasi headline, about section, dan featured posts.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Optimasi Keyword
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Strategi Branding
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Template Networking
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="group relative bg-[#2C2C2C] rounded-2xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-300 anim-fade-up delay-2">
-                        <div class="absolute top-6 right-6 text-3xl opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all">🗺️</div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Career Roadmap & Consultation</h3>
-                        <p class="text-white/60 mb-6">Bingung mau jadi apa? Diskusi mendalam untuk memetakan potensi, minat, dan jalur karier yang paling cocok untukmu.</p>
-                        <ul class="space-y-2 mb-8">
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Tes Minat Bakat Sederhana</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Action Plan 3-6 Bulan</li>
-                            <li class="flex items-center gap-3 text-sm text-white/80"><span class="text-[#BFFF00]">✓</span> Rekomendasi Skill/Course</li>
-                        </ul>
+                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up delay-2">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🗺️</div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Career Roadmap</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Diskusi mendalam untuk memetakan potensi, minat, dan jalur karier yang paling cocok untukmu.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Tes Minat Bakat
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Action Plan 3 Bulan
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
+                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
+                                Rekomendasi Skill
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-[#FAFAFA]">
-            <div class="container">
+        <section class="py-24 bg-[#FAFAFA] relative">
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="text-center mb-16 anim-fade-up">
                     <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-[#1A1A1A]">Investasi Karier</h2>
-                    <p class="text-[#666666]">Harga terjangkau untuk hasil yang memuaskan.</p>
+                    <p class="text-gray-500">Harga terjangkau untuk hasil yang memuaskan.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
                     
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Review Satuan</h3>
+                    <div class="group bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 transition-all duration-300 anim-fade-up">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">Review Satuan</h3>
                         <p class="text-sm text-gray-500 mb-6">Pilih satu layanan spesifik.</p>
                         <div class="mb-6">
                             <span class="text-3xl font-extrabold text-gray-900">Rp 150rb</span>
                             <span class="text-sm text-gray-500">/sesi</span>
                         </div>
-                        <a href="#" class="block w-full py-3 rounded-lg border-2 border-[#1A1A1A] text-[#1A1A1A] font-bold text-center hover:bg-[#1A1A1A] hover:text-white transition-all">Pilih Layanan</a>
+                        <a href="#" class="block w-full py-3 rounded-lg bg-[#1A1A1A] text-white font-bold text-center border-2 border-[#1A1A1A] hover:bg-[#BFFF00] hover:text-[#1E1E1E] hover:border-[#BFFF00] transform transition-all duration-300 hover:scale-[1.03] shadow-md">
+                            Pilih Layanan
+                        </a>
                         <ul class="mt-8 space-y-4 text-sm text-gray-600">
-                            <li class="flex items-center gap-3">✓ Pilih: CV / Interview / LinkedIn</li>
-                            <li class="flex items-center gap-3">✓ 45 Menit via Zoom</li>
-                            <li class="flex items-center gap-3">✓ Recording Sesi</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Pilih: CV / Interview / LinkedIn</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> 45 Menit via Zoom</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Recording Sesi</li>
                         </ul>
                     </div>
 
-                    <div class="relative bg-[#1E1E1E] rounded-2xl p-10 border-2 border-[#BFFF00] shadow-2xl transform md:scale-110 z-10 anim-fade-up delay-2">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BFFF00] text-[#1E1E1E] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                    <div class="relative bg-[#1E1E1E] rounded-2xl p-10 border-2 border-[#BFFF00] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] transform md:scale-110 z-10 transition-all duration-500 hover:shadow-[0_20px_60px_-10px_rgba(191,255,0,0.3)] anim-fade-up delay-100 group">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BFFF00] text-[#1E1E1E] px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg animate-bounce">
                             Career Starter Pack
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Bundle Siap Kerja</h3>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-[#BFFF00] transition-colors">Bundle Siap Kerja</h3>
                         <p class="text-sm text-white/60 mb-6">Semua yang kamu butuhkan untuk melamar.</p>
                         <div class="mb-6">
                             <span class="text-gray-400 line-through text-sm mr-2">Rp 750.000</span>
@@ -229,45 +306,38 @@
                                 <span class="text-4xl font-extrabold text-[#BFFF00]">Rp 499rb</span>
                             </div>
                         </div>
-                        <a href="#" class="block w-full py-4 rounded-lg bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-center hover:shadow-[0_0_20px_rgba(191,255,0,0.5)] transition-all">Ambil Bundle Hemat</a>
+                        
+                        <a href="#" class="block w-full py-4 rounded-xl bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-center transition-all duration-300 hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(191,255,0,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+                            Ambil Bundle Hemat
+                        </a>
+                        
                         <ul class="mt-8 space-y-4 text-sm text-white">
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]">✓ Review CV & Cover Letter</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]">✓ Optimasi LinkedIn</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]">✓ 1x Mock Interview</li>
-                            <li class="flex items-center gap-3 text-white/80">✓ Template CV ATS Friendly</li>
-                            <li class="flex items-center gap-3 text-white/80">✓ Akses Grup Komunitas</li>
+                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Review CV & Cover Letter</li>
+                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Optimasi LinkedIn</li>
+                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> 1x Mock Interview</li>
+                            <li class="flex items-center gap-3 text-white/80"><span class="text-gray-500">✓</span> Template CV ATS Friendly</li>
+                            <li class="flex items-center gap-3 text-white/80"><span class="text-gray-500">✓</span> Akses Grup Komunitas</li>
                         </ul>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:border-[#BFFF00] transition-all duration-300 hover:-translate-y-2 anim-fade-up delay-3">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Intensive Mentoring</h3>
+                    <div class="group bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 transition-all duration-300 anim-fade-up delay-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">Intensive Mentoring</h3>
                         <p class="text-sm text-gray-500 mb-6">Pendampingan penuh selama 1 bulan.</p>
                         <div class="mb-6">
                             <span class="text-3xl font-extrabold text-gray-900">Rp 1.2jt</span>
                             <span class="text-sm text-gray-500">/bulan</span>
                         </div>
-                        <a href="#" class="block w-full py-3 rounded-lg bg-[#1A1A1A] text-white font-bold text-center hover:bg-[#BFFF00] hover:text-[#1A1A1A] transition-all">Daftar Mentoring</a>
+                        <a href="#" class="block w-full py-3 rounded-lg bg-[#1A1A1A] text-white font-bold text-center border-2 border-[#1A1A1A] hover:bg-[#BFFF00] hover:text-[#1E1E1E] hover:border-[#BFFF00] transform transition-all duration-300 hover:scale-[1.03] shadow-md">
+                            Daftar Mentoring
+                        </a>
                         <ul class="mt-8 space-y-4 text-sm text-gray-600">
-                            <li class="flex items-center gap-3">✓ 4x Sesi 1-on-1 (Weekly)</li>
-                            <li class="flex items-center gap-3">✓ Personalized Career Roadmap</li>
-                            <li class="flex items-center gap-3">✓ Unlimited Chat Support</li>
-                            <li class="flex items-center gap-3">✓ Priority Job Referral</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> 4x Sesi 1-on-1 (Weekly)</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Personalized Career Roadmap</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Unlimited Chat Support</li>
+                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Priority Job Referral</li>
                         </ul>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-[#121212] relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            <div class="container relative z-10 text-center">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Jangan Biarkan <span class="text-[#BFFF00]">Ragumu</span><br>Menghambat Kariermu.</h2>
-                <p class="text-white/60 text-lg mb-10 max-w-2xl mx-auto">Ribuan alumni Praktika+ sudah membuktikan hasilnya. Giliranmu sekarang.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://wa.me/6281234567890" target="_blank" class="px-8 py-4 rounded-xl bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(191,255,0,0.4)]">
-                        Chat Admin via WA
-                    </a>
                 </div>
             </div>
         </section>
