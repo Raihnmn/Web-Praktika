@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills & Leadership - Praktika+</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* HERO (Section 1 - Putih) */
+        .hero-student {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
+            padding-top: 60px; padding-bottom: 80px;
+        }
+
+        /* DARK SECTION (Section 2, 4, 6 - Hitam) */
+        .section-dark {
+            background-color: #1a1a1a; /* Hitam Soft */
+            color: white;
+            padding: 80px 0;
+        }
+        .section-dark .section-title { color: white; }
+        .section-dark .section-subtitle { color: rgba(255,255,255,0.7) !important; }
+        
+        /* WHITE SECTION (Section 3, 5 - Putih) */
+        .section-white {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            padding: 80px 0;
+        }
+
+        /* Badge Pill */
+        .badge-pill {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+            background: rgba(191, 255, 0, 0.15); border: 1px solid rgba(191, 255, 0, 0.4);
+            border-radius: 50px; font-weight: 600; font-size: 13px; color: #1a1a1a;
+            margin-bottom: 24px;
+        }
+
+        /* Highlight Text */
+        .highlight-text {
+            position: relative; z-index: 1; white-space: nowrap;
+        }
+        .highlight-text::after {
+            content: ''; position: absolute; bottom: 5px; left: 0; width: 100%; height: 15px;
+            background: #BFFF00; z-index: -1; transform: skewX(-10deg); opacity: 0.8; border-radius: 4px;
+        }
+
+        /* Card Problem (Dark Mode) */
+        .problem-card-dark {
+            background: #2a2a2a;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .problem-card-dark:hover {
+            transform: translateY(-5px);
+            border-color: #BFFF00;
+            background: #333;
+        }
+        .problem-card-dark h3 { color: #BFFF00; }
+        .problem-card-dark p { color: rgba(255,255,255,0.8); }
+
+        /* Card Testimoni */
+        .testi-card {
+            background: #F9F9F9;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        .testi-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu list-none">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                            <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#solution" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#komunitas" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-student">
+        <div class="container">
+            <div class="hero-content" style="align-items: center;">
+                <div class="hero-text anim-fade-up">
+                    <div class="badge-pill">
+                        <span>🚀</span> Career Accelerator
+                    </div>
+                    <h1 style="font-size: 44px; line-height: 1.2; font-weight: 800; color: #1a1a1a; margin-bottom: 20px;">
+                        Hard Skills Get You Hired and Soft Skills Get You Promoted
+                    </h1>
+                    <p style="font-size: 16px; color: #555; margin-bottom: 35px; line-height: 1.8;">
+                        Jangan biarkan karier kamu mentok cuma gara-gara gak berani ngomong. Program khusus mahasiswa & SMK untuk menguasai <strong>Public Speaking</strong> & <strong>Leadership</strong>.
+                    </p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <p href="#curriculum" class="btn btn-primary" style="box-shadow: 0 10px 20px rgba(191,255,0,0.3);">Lihat Materi</p>
+                        <p href="#testimoni" class="btn btn-secondary" style="background: white; border: 1px solid #ddd; color: #333;">Kata Alumni</p>
+                    </div>
+                </div>
+                <div class="hero-image anim-float">
+                    <div class="hero-image-wrapper" style="overflow: visible; background: transparent; box-shadow: none;">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students Happy" style="border-radius: 24px; box-shadow: 20px 20px 0px rgba(191,255,0,0.2);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;">
+                <h2 class="section-title" style="margin-bottom: 10px;">
+                    Pernah Ngerasain Ini?
+                </h2>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto; color: rgba(255,255,255,0.7);">
+                    Jujur aja deh, skill teknis jago sering ketutup gara-gara masalah "sepele" ini.
+                </p>
+            </div>
+            
+            <div class="stats-grid" style="margin-top: 50px;">
+                
+                <div class="stat-item anim-fade-up">
+                    <div class="stat-icon" style="margin-bottom: 20px;">😶</div>
+                    <div style="font-size: 20px; font-weight: 800; color: white; margin-bottom: 10px;">Malu Bertanya</div>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">
+                        Pas magang bingung mau ngapain, tapi takut nanya ke mentor. Akhirnya kerjaan macet dan dianggap pasif.
+                    </p>
+                </div>
+
+                <div class="stat-item anim-fade-up delay-2">
+                    <div class="stat-icon" style="margin-bottom: 20px;">😰</div>
+                    <div style="font-size: 20px; font-weight: 800; color: white; margin-bottom: 10px;">Grogi Presentasi</div>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">
+                        Ide kamu sebenernya brilian, tapi pas disuruh ngomong di depan dosen atau klien malah gemeteran.
+                    </p>
+                </div>
+
+                <div class="stat-item anim-fade-up delay-3">
+                    <div class="stat-icon" style="margin-bottom: 20px;">😤</div>
+                    <div style="font-size: 20px; font-weight: 800; color: white; margin-bottom: 10px;">Drama Tim</div>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">
+                        Kesel sama teman kelompok yang "ghosting" atau cuma numpang nama, tapi gak enak hati buat negurnya.
+                    </p>
+                </div>
+
+                <div class="stat-item anim-fade-up delay-4">
+                    <div class="stat-icon" style="margin-bottom: 20px;">👻</div>
+                    <div style="font-size: 20px; font-weight: 800; color: white; margin-bottom: 10px;">Di-Ghosting HR</div>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;">
+                        Udah kirim CV ke puluhan perusahaan tapi gak pernah dipanggil interview. Apa ada yang salah?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="materi" style="background: #ffffff; padding: 80px 0;">
+        <div class="container">
+            <div class="section-header" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; margin-bottom: 50px;">
+                <div>
+                    <h2 class="section-title" style="color: #1a1a1a;">
+                        Skill yang Bakal Kamu Kuasai
+                    </h2>
+                    <p class="section-subtitle" style="color: #666; margin-top: 10px;">
+                        Gak cuma teori, ini skill praktis buat dunia kerja!
+                    </p>
+                </div>
+            </div>
+
+            <div class="programs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                
+                <div class="program-card anim-fade-up hover-lift" style="background: #1a1a1a; border: 1px solid #333; border-radius: 20px; padding: 25px; text-align: left; transition: all 0.3s ease;">
+                    <div style="width: 50px; height: 50px; background: rgba(33, 150, 243, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; color: #2196F3;">
+                        🎤
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 10px;">Public Speaking</h3>
+                    <p style="font-size: 13px; color: #aaa; line-height: 1.6; margin-bottom: 0;">
+                        Teknik atur nafas dan susun materi biar gak gemeteran pas presentasi.
+                    </p>
+                </div>
+
+                <div class="program-card anim-fade-up delay-1 hover-lift" style="background: #1a1a1a; border: 1px solid #BFFF00; border-radius: 20px; padding: 25px; text-align: left; transition: all 0.3s ease; position: relative;">
+                    
+                    <div style="width: 50px; height: 50px; background: rgba(191, 255, 0, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; color: #BFFF00;">
+                        👔
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 10px;">Leadership Dasar</h3>
+                    <p style="font-size: 13px; color: #aaa; line-height: 1.6; margin-bottom: 0;">
+                        Cara bagi tugas tim dan jadi ketua yang asik tapi tetap dihormati.
+                    </p>
+                </div>
+
+                <div class="program-card anim-fade-up delay-2 hover-lift" style="background: #1a1a1a; border: 1px solid #333; border-radius: 20px; padding: 25px; text-align: left; transition: all 0.3s ease;">
+                    <div style="width: 50px; height: 50px; background: rgba(255, 152, 0, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; color: #FF9800;">
+                        🤝
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 10px;">Kerja Tim</h3>
+                    <p style="font-size: 13px; color: #aaa; line-height: 1.6; margin-bottom: 0;">
+                        Tips hadapi teman "toxic" tanpa drama. Fokus solusi bareng-bareng.
+                    </p>
+                </div>
+
+                <div class="program-card anim-fade-up delay-3 hover-lift" style="background: #1a1a1a; border: 1px solid #333; border-radius: 20px; padding: 25px; text-align: left; transition: all 0.3s ease;">
+                    <div style="width: 50px; height: 50px; background: rgba(156, 39, 176, 0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; color: #9C27B0;">
+                        💼
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 10px;">Personal Branding</h3>
+                    <p style="font-size: 13px; color: #aaa; line-height: 1.6; margin-bottom: 0;">
+                        Bikin LinkedIn kece biar HRD yang ngejar kamu, bukan sebaliknya.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="section-dark">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+                <div class="anim-slide-left" style="color: white;">
+                    <h2 class="section-title" style="margin-bottom: 20px; color: white;">
+                        Belajar Santai
+                    </h2>
+                    <p class="section-subtitle" style="margin-bottom: 30px; color: rgba(255,255,255,0.8);">
+                        Program 8 minggu yang didesain pas sama jadwal kuliah/sekolah kamu. <strong>Weekend Only, No Drama.</strong>
+                    </p>
+                    
+                    <div style="border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); border-radius: 16px; padding: 25px; display: flex; flex-direction: column; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 24px;">📅</span> 
+                            <div>
+                                <strong style="color: white; display: block;">Waktu Belajar</strong>
+                                <span style="font-size: 14px; color: #aaa;">Sabtu & Minggu (Via Zoom)</span>
+                            </div>
+                        </div>
+                        <div style="width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="font-size: 24px;">🎮</span> 
+                            <div>
+                                <strong style="color: white; display: block;">Metode Seru</strong>
+                                <span style="font-size: 14px; color: #aaa;">20% Teori, 80% Games & Roleplay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-accordion" style="color: #1a1a1a;">
+                    
+                    <div class="process-item process-item-active anim-fade-up">
+                        <div class="process-header">
+                            <div class="process-number" style="font-size: 16px; background: #BFFF00; color: black; padding: 5px 10px; border-radius: 8px; font-weight: 800;">Lvl 1</div>
+                            <h3 style="margin-left: 10px; font-weight: 700;">Kenali Potensi Diri</h3>
+                            <button class="toggle-btn">−</button>
+                        </div>
+                        <div class="process-content">
+                            <p style="color: #555;">Minggu 1-2: Tes kepribadian MBTI/DISC, cari tau "Super Power" kamu, dan set goals karier masa depan biar gak salah jurusan.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-item anim-fade-up delay-1">
+                        <div class="process-header">
+                            <div class="process-number" style="font-size: 16px; background: #333; color: white; padding: 5px 10px; border-radius: 8px; font-weight: 800;">Lvl 2</div>
+                            <h3 style="margin-left: 10px; font-weight: 700;">Jago Komunikasi</h3>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="process-content">
+                            <p style="color: #555;">Minggu 3-4: Praktik presentasi ala TED Talks, bikin slide yang ga ngebosenin, dan teknik storytelling yang memukau.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-item anim-fade-up delay-2">
+                        <div class="process-header">
+                            <div class="process-number" style="font-size: 16px; background: #333; color: white; padding: 5px 10px; border-radius: 8px; font-weight: 800;">Lvl 3</div>
+                            <h3 style="margin-left: 10px; font-weight: 700;">Career Ready</h3>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="process-content">
+                            <p style="color: #555;">Minggu 5-6: Simulasi interview kerja beneran sama HRD asli. Bedah CV dan LinkedIn sampai terlihat profesional.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="section-white">
+        <div class="container">
+            <div class="section-header" style="justify-content: center; text-align: center;">
+                <h2 class="section-title highlight">Kata Alumni</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div class="testi-card anim-fade-up">
+                    <p style="font-size: 14px; color: #555; margin-bottom: 20px;">
+                        "Awalnya aku introvert parah. Di sini dipaksa praktik tapi suasananya asik banget. Sekarang malah kepilih jadi Ketua OSIS!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" style="width: 45px; height: 45px; border-radius: 50%;" alt="User">
+                        <div>
+                            <h4 style="font-size: 15px; font-weight: 700; margin: 0;">Dina Aulia</h4>
+                            <p style="font-size: 12px; color: #888; margin: 0;">SMK Negeri 1 Semarang</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card anim-fade-up delay-1">
+                    <p style="font-size: 14px; color: #555; margin-bottom: 20px;">
+                        "Materi LinkedIn-nya daging banget! Aku praktekin tips-nya, eh minggu depannya langsung di-chat HRD buat tawaran magang."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" style="width: 45px; height: 45px; border-radius: 50%;" alt="User">
+                        <div>
+                            <h4 style="font-size: 15px; font-weight: 700; margin: 0;">Raka Pratama</h4>
+                            <p style="font-size: 12px; color: #888; margin: 0;">Mahasiswa UNDIP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card anim-fade-up delay-2">
+                    <p style="font-size: 14px; color: #555; margin-bottom: 20px;">
+                        "Diajarin cara negosiasi gaji (ini penting banget buat fresh grad). Mentornya seru ga kaku. Worth it parah!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" style="width: 45px; height: 45px; border-radius: 50%;" alt="User">
+                        <div>
+                            <h4 style="font-size: 15px; font-weight: 700; margin: 0;">Siti Nurhaliza</h4>
+                            <p style="font-size: 12px; color: #888; margin: 0;">Alumni SMK Multimedia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark" style="position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text anim-slide-right">
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">Siap Jadi Versi Terbaikmu?</h2>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Jangan nunggu lulus baru belajar. Cicil skill masa depanmu dari sekarang bareng Praktika+.</p>
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; display: inline-block; margin-bottom: 20px;">
+                        <span style="color: #BFFF00; font-weight: bold;">🎁 Bonus:</span> E-Book "Panduan Lolos Interview" & Template CV ATS.
+                    </div>
+                    <br>
+                    <button class="btn btn-cta-dark" style="background: #BFFF00; color: black; border: none; font-weight: 800; border-radius: 50px;">Daftar Kelas Sekarang! 🚀</button>
+                </div>
+                <div class="cta-image">
+                    <div class="folder-illustration" style="background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/success-guarantee-5103689-4265555.png');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Jl. Raya Banaran No.17, Semarang</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html">Home</a>
+                        <a href="bootcamps.html">Bootcamps</a>
+                        <a href="internship.html">Internship</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Praktika+. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.anim-fade-up, .anim-slide-right, .anim-float').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
