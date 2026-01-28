@@ -672,8 +672,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // 1. ANIMASI SCROLL
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -683,7 +681,6 @@
             }, { threshold: 0.1 });
             document.querySelectorAll('.anim-fade-up').forEach(el => observer.observe(el));
 
-            // 2. ACCORDION LOGIC
             const headers = document.querySelectorAll('.header-click');
             headers.forEach(header => {
                 header.addEventListener('click', () => {
@@ -700,7 +697,6 @@
                 });
             });
 
-            // 3. TESTIMONIAL SLIDER LOGIC
             const track = document.getElementById('testimonial-track');
             const prevBtn = document.getElementById('testi-prev');
             const nextBtn = document.getElementById('testi-next');
@@ -719,7 +715,7 @@
         const hubTrack = document.getElementById('hubTrack');
         const hubPrev = document.getElementById('hub-prev');
         const hubNext = document.getElementById('hub-next');
-        const scrollAmt = 340; // Card width + gap
+        const scrollAmt = 340;
 
         if (hubTrack && hubPrev && hubNext) {
             hubNext.addEventListener('click', () => {
