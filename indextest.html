@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* --- BRAND COLORS --- */
         :root {
             --lime: #BFFF00;
             --dark-main: #1E1E1E;
@@ -18,10 +17,8 @@
             --text-dark: #1A1A1A;
         }
         
-        /* Font Override */
         body { font-family: 'Poppins', sans-serif; color: var(--text-dark); }
 
-        /* Custom Utilities */
         .bg-lime { background-color: var(--lime); }
         .text-lime { color: var(--lime); }
         .border-lime { border-color: var(--lime); }
@@ -29,7 +26,6 @@
         .bg-dark-sec { background-color: var(--dark-sec); }
         .text-dark-main { color: var(--text-dark); }
 
-        /* Gradients & Effects */
         .bg-gradient-hero { background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%); }
         .text-gradient {
             background: linear-gradient(135deg, #BFFF00 0%, #8BC34A 100%);
@@ -47,7 +43,6 @@
         .hover-scale:hover { transform: scale(1.05); transition: transform 0.3s ease; }
         .transition-smooth { transition: all 0.3s ease; }
 
-        /* Animations */
         .anim-fade-up {
             opacity: 0; transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
@@ -56,19 +51,16 @@
         .anim-float { animation: float 5s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
-        /* Layout & Spacing Fixes */
         .container-xl { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .w-350 { min-width: 300px; max-width: 350px; }
         .h-200 { height: 200px; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Accordion */
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .accordion-item.active .accordion-content { max-height: 200px; }
         .accordion-item.active { background-color: var(--lime); border-color: var(--lime); }
 
-        /* Responsive */
         @media (max-width: 1000px) {
             .sm-grid-1 { grid-template-columns: 1fr !important; }
             .sm-text-center { text-align: center !important; }

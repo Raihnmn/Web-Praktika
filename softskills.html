@@ -12,29 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        /* HERO (Section 1 - Putih) */
         .hero-student {
             background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
             padding-top: 60px; padding-bottom: 80px;
         }
 
-        /* DARK SECTION (Section 2, 4, 6 - Hitam) */
         .section-dark {
-            background-color: #1a1a1a; /* Hitam Soft */
+            background-color: #1a1a1a; 
             color: white;
             padding: 80px 0;
         }
         .section-dark .section-title { color: white; }
         .section-dark .section-subtitle { color: rgba(255,255,255,0.7) !important; }
         
-        /* WHITE SECTION (Section 3, 5 - Putih) */
         .section-white {
             background-color: #ffffff;
             color: #1a1a1a;
             padding: 80px 0;
         }
 
-        /* Badge Pill */
         .badge-pill {
             display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
             background: rgba(191, 255, 0, 0.15); border: 1px solid rgba(191, 255, 0, 0.4);
@@ -42,7 +38,6 @@
             margin-bottom: 24px;
         }
 
-        /* Highlight Text */
         .highlight-text {
             position: relative; z-index: 1; white-space: nowrap;
         }
@@ -51,7 +46,6 @@
             background: #BFFF00; z-index: -1; transform: skewX(-10deg); opacity: 0.8; border-radius: 4px;
         }
 
-        /* Card Problem (Dark Mode) */
         .problem-card-dark {
             background: #2a2a2a;
             border-radius: 16px;
@@ -68,7 +62,6 @@
         .problem-card-dark h3 { color: #BFFF00; }
         .problem-card-dark p { color: rgba(255,255,255,0.8); }
 
-        /* Card Testimoni */
         .testi-card {
             background: #F9F9F9;
             border: 1px solid #eee;
@@ -334,7 +327,6 @@
                             <p style="color: #555;">Minggu 5-6: Simulasi interview kerja beneran sama HRD asli. Bedah CV dan LinkedIn sampai terlihat profesional.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -387,20 +379,36 @@
         </div>
     </section>
 
-    <section class="section-dark" style="position: relative; overflow: hidden;">
+<section class="section-dark" style="position: relative; overflow: hidden; padding: 100px 0;">
+        <div style="position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(191,255,0,0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center;">
+                
                 <div class="cta-text anim-slide-right">
-                    <h2 style="font-size: 32px; margin-bottom: 20px;">Siap Jadi Versi Terbaikmu?</h2>
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Jangan nunggu lulus baru belajar. Cicil skill masa depanmu dari sekarang bareng Praktika+.</p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; display: inline-block; margin-bottom: 20px;">
-                        <span style="color: #BFFF00; font-weight: bold;">🎁 Bonus:</span> E-Book "Panduan Lolos Interview" & Template CV ATS.
+                    <h2 style="font-size: 40px; font-weight: 800; color: white; margin-bottom: 20px; line-height: 1.2;">
+                        Siap Jadi <span style="color: #BFFF00;">Versi Terbaikmu?</span>
+                    </h2>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 35px; font-size: 16px; line-height: 1.7;">
+                        Jangan nunggu lulus baru belajar. Cicil skill masa depanmu dari sekarang bareng mentor praktisi di Praktika+.
+                    </p>
+                    
+                    <div style="background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); padding: 20px; border-radius: 16px; border: 1px solid rgba(191,255,0,0.3); display: flex; align-items: center; gap: 15px; margin-bottom: 35px;">
+                        <span style="font-size: 24px;">🎁</span>
+                        <div>
+                            <strong style="color: #BFFF00; display: block; margin-bottom: 4px;">Bonus Spesial Hari Ini:</strong>
+                            <span style="color: white; font-size: 14px;">E-Book "Panduan Lolos Interview" & Template CV ATS Friendly.</span>
+                        </div>
                     </div>
-                    <br>
-                    <button class="btn btn-cta-dark" style="background: #BFFF00; color: black; border: none; font-weight: 800; border-radius: 50px;">Daftar Kelas Sekarang! 🚀</button>
+                    
+                    <button class="btn btn-cta-dark anim-fade-up" style="background: #BFFF00; color: #1a1a1a; border: none; font-weight: 800; border-radius: 50px; padding: 15px 40px; font-size: 16px; box-shadow: 0 10px 30px rgba(191,255,0,0.3); transition: transform 0.3s ease;">
+                        Daftar Kelas Sekarang! 🚀
+                    </button>
                 </div>
-                <div class="cta-image">
-                    <div class="folder-illustration" style="background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/success-guarantee-5103689-4265555.png');"></div>
+
+                <div class="cta-image anim-float" style="display: flex; justify-content: center; position: relative;">
+                    <div style="position: absolute; inset: 20px; background: #BFFF00; filter: blur(60px); opacity: 0.2; border-radius: 50%;"></div>
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/career-advancement-4487057-3726260.png" alt="Career Success"  style="width: 100%; max-width: 400px; position: relative; z-index: 2; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
                 </div>
             </div>
         </div>
