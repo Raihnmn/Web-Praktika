@@ -34,7 +34,6 @@ body {
    ========================================= */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Display */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .grid { display: grid; }
@@ -43,20 +42,17 @@ body {
 .absolute { position: absolute; }
 .sticky { position: sticky; top: 0; z-index: 1000; }
 
-/* Alignment */
 .items-center { align-items: center; }
 .items-start { align-items: flex-start; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
 .text-center { text-align: center; }
 
-/* Spacing (Gaps) */
 .gap-2 { gap: 8px; }
 .gap-4 { gap: 16px; }
 .gap-6 { gap: 24px; }
 .gap-8 { gap: 32px; }
 
-/* Grid Columns */
 .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
@@ -64,20 +60,18 @@ body {
 /* =========================================
    3. ATOMIC DESIGN (Colors & Typography)
    ========================================= */
-/* Backgrounds */
+
 .bg-lime { background-color: var(--lime); }
 .bg-dark { background-color: var(--dark); }
 .bg-dark-sec { background-color: var(--dark-sec); }
 .bg-white { background-color: var(--white); }
 .bg-gray-light { background-color: var(--gray-light); }
 
-/* Text Colors */
 .text-white { color: var(--white); }
 .text-dark { color: var(--text-main); }
 .text-gray { color: var(--text-muted); }
 .text-lime { color: var(--lime); }
 
-/* Font Size & Weight */
 .text-xs { font-size: 12px; }
 .text-sm { font-size: 14px; }
 .text-base { font-size: 16px; }
@@ -123,13 +117,11 @@ body {
    ========================================= */
 .bg-gradient-hero { background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%); }
 
-/* Glass Effect */
 .card-glass {
     background: radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 100%);
     border: 1px solid rgba(255,255,255,0.14);
 }
 
-/* Animations */
 .anim-fade-up {
     opacity: 0;
     transform: translateY(24px);
