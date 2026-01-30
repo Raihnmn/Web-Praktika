@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas - Praktika+</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- 1. HERO SECTION --- */
+        .hero-community {
+            background: #0f0f0f;
+            color: white;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        /* Background Grid Animation */
+        .grid-bg {
+            position: absolute; inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+            pointer-events: none;
+        }
+
+        /* Floating Avatars Animation */
+        .floating-avatar {
+            position: absolute;
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            border: 2px solid #BFFF00;
+            object-fit: cover;
+            animation: floatUpDown 4s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(191, 255, 0, 0.3);
+        }
+        .fa-1 { top: 20%; left: 15%; animation-delay: 0s; width: 60px; height: 60px; }
+        .fa-2 { top: 30%; right: 15%; animation-delay: 1s; width: 40px; height: 40px; }
+        .fa-3 { bottom: 20%; left: 20%; animation-delay: 2s; width: 45px; height: 45px; }
+        .fa-4 { bottom: 25%; right: 20%; animation-delay: 1.5s; width: 55px; height: 55px; }
+
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* --- 2. STATS BAR --- */
+        .stats-bar {
+            background: rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+        .stat-count { font-size: 32px; font-weight: 800; color: #BFFF00; display: block; }
+        .stat-label { font-size: 14px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- 3. DISCORD CARD --- */
+        .discord-btn {
+            background: #5865F2; /* Discord Color */
+            color: white;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 50px;
+            display: inline-flex; align-items: center; gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .discord-btn:hover {
+            transform: translateY(-5px);
+            background: #4752c4;
+            box-shadow: 0 15px 40px rgba(88, 101, 242, 0.6);
+        }
+
+        /* --- 4. ACTIVITY CARDS (CHAT SIMULATION) --- */
+        .chat-bubble {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            max-width: 80%;
+            display: flex; gap: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .chat-left { margin-right: auto; border-bottom-left-radius: 4px; }
+        .chat-right { margin-left: auto; border-bottom-right-radius: 4px; background: rgba(191,255,0,0.15); border-color: rgba(191,255,0,0.3); }
+        
+        /* --- 5. GALLERY GRID --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery-item {
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, black, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex; align-items: flex-end; padding: 20px;
+        }
+        .gallery-item:hover .gallery-img { transform: scale(1.1); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* --- 6. EVENT CARD --- */
+        .event-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            border-color: #BFFF00;
+            transform: translateY(-5px);
+        }
+        .event-date {
+            background: #BFFF00; color: black;
+            padding: 5px 15px; font-weight: 800;
+            position: absolute; top: 15px; left: 15px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body style="background-color: #111;">
+
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                    <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                </a>
+            </div>
+            <ul class="nav-menu list-none">
+                <li class="nav-item dropdown">
+                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                        <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                        <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                        <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                        <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                        <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary">Masuk</button>
+                    <button class="btn btn-primary">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-community">
+        <div class="grid-bg"></div>
+        
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="floating-avatar fa-1" alt="Member">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="floating-avatar fa-2" alt="Member">
+        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="floating-avatar fa-3" alt="Member">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="floating-avatar fa-4" alt="Member">
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="anim-fade-up">
+                <span style="background: rgba(88, 101, 242, 0.2); color: #aeb4f8; padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 13px; border: 1px solid rgba(88, 101, 242, 0.4);">
+                    <i class="fab fa-discord"></i> 500+ Member Online
+                </span>
+                <h1 style="font-size: 56px; font-weight: 900; margin: 25px 0; line-height: 1.1;">
+                    Bukan Sekadar Grup Chat, <br>
+                    Ini <span style="color: #BFFF00; text-shadow: 0 0 20px rgba(191,255,0,0.4);">Keluarga Tech</span> Kamu.
+                </h1>
+                <p style="font-size: 18px; color: #ccc; max-width: 650px; margin: 0 auto 40px;">
+                    Tempat ngoding bareng, cari loker valid, tanya error tanpa di-bully, dan bangun networking se-Indonesia.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 15px;">
+                    <a href="#" class="discord-btn">
+                        <i class="fab fa-discord" style="font-size: 20px;"></i> Join Discord Server
+                    </a>
+                    <a href="#events" class="btn btn-secondary" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white;">Lihat Kegiatan</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 30px;">
+                <div class="anim-fade-up delay-1">
+                    <span class="stat-count">15,000+</span>
+                    <span class="stat-label">Total Member</span>
+                </div>
+                <div class="anim-fade-up delay-2">
+                    <span class="stat-count">120+</span>
+                    <span class="stat-label">Hiring Partner</span>
+                </div>
+                <div class="anim-fade-up delay-3">
+                    <span class="stat-count">24/7</span>
+                    <span class="stat-label">Code Review</span>
+                </div>
+                <div class="anim-fade-up delay-4">
+                    <span class="stat-count">Weekly</span>
+                    <span class="stat-label">Live Events</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section style="padding: 100px 0; background: #111; color: white;">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                
+                <div class="anim-slide-left">
+                    <div style="background: #1a1a1a; padding: 30px; border-radius: 24px; border: 1px solid #333; position: relative;">
+                        <div style="position: absolute; top: -15px; left: 30px; background: #BFFF00; color: black; padding: 5px 15px; font-weight: 800; font-size: 12px; border-radius: 20px;">#help-coding</div>
+                        
+                        <div class="chat-bubble chat-left">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" style="width: 40px; height: 40px; border-radius: 50%;">
+                            <div>
+                                <div style="font-weight: 700; font-size: 13px; color: #aaa; margin-bottom: 4px;">Rizky_Dev</div>
+                                <div style="font-size: 14px; color: white;">Guys, ada yang paham kenapa Laravel ku error 500 pas deploy ke VPS? 😭</div>
+                            </div>
+                        </div>
+
+                        <div class="chat-bubble chat-right">
+                            <div style="text-align: right; width: 100%;">
+                                <div style="font-weight: 700; font-size: 13px; color: #BFFF00; margin-bottom: 4px;">Senior_Mentor</div>
+                                <div style="font-size: 14px; color: white;">Coba cek permission foldernya bro. Biasanya `storage` butuh chmod 775.</div>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" style="width: 40px; height: 40px; border-radius: 50%;">
+                        </div>
+
+                        <div class="chat-bubble chat-left">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" style="width: 40px; height: 40px; border-radius: 50%;">
+                            <div>
+                                <div style="font-weight: 700; font-size: 13px; color: #aaa; margin-bottom: 4px;">Rizky_Dev</div>
+                                <div style="font-size: 14px; color: white;">Wah bener bang! Udah jalan. Makasih banyak! 🔥</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="anim-fade-up">
+                    <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 20px;">
+                        Jangan Coding <span style="color: #BFFF00;">Sendirian.</span>
+                    </h2>
+                    <p style="color: #aaa; line-height: 1.7; margin-bottom: 30px;">
+                        Di komunitas ini, gak ada pertanyaan bodoh. Semua saling bantu buat tumbuh bareng. Dari error coding sampai curhat gaji, semua ada tempatnya.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="mini-card-dark" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                            <i class="fas fa-briefcase" style="font-size: 24px; color: #BFFF00; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0 0 5px;">Info Loker Valid</h4>
+                            <p style="font-size: 12px; color: #888; margin: 0;">Jalur orang dalam dari alumni.</p>
+                        </div>
+                        <div class="mini-card-dark" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                            <i class="fas fa-code" style="font-size: 24px; color: #BFFF00; margin-bottom: 10px;"></i>
+                            <h4 style="margin: 0 0 5px;">Mabar Coding</h4>
+                            <p style="font-size: 12px; color: #888; margin: 0;">Live coding session tiap minggu.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="events" style="padding: 100px 0; background: #0f0f0f; color: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 36px; font-weight: 800;">Kegiatan <span style="color: #BFFF00;">Seru</span> Kami</h2>
+                <p style="color: #aaa;">Gak cuma belajar, kita juga sering seru-seruan bareng.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="event-card anim-fade-up">
+                    <div style="height: 200px; position: relative;">
+                        <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="event-date">24 FEB</div>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">Webinar: AI for Developer</h3>
+                        <p style="color: #888; font-size: 14px; margin-bottom: 20px;">
+                            Bedah cara pakai AI biar coding 2x lebih cepat tanpa takut diganti robot.
+                        </p>
+                        <a href="#" style="color: #BFFF00; font-weight: 600; text-decoration: none;">Daftar Gratis →</a>
+                    </div>
+                </div>
+
+                <div class="event-card anim-fade-up delay-1">
+                    <div style="height: 200px; position: relative;">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="event-date">02 MAR</div>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">Offline Meetup Jakarta</h3>
+                        <p style="color: #888; font-size: 14px; margin-bottom: 20px;">
+                            Kopi darat member area Jabodetabek. Networking santai sambil ngopi.
+                        </p>
+                        <a href="#" style="color: #BFFF00; font-weight: 600; text-decoration: none;">Lihat Lokasi →</a>
+                    </div>
+                </div>
+
+                <div class="event-card anim-fade-up delay-2">
+                    <div style="height: 200px; position: relative;">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="event-date">15 MAR</div>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">Hackathon 2026</h3>
+                        <p style="color: #888; font-size: 14px; margin-bottom: 20px;">
+                            Lomba bikin aplikasi dalam 24 jam. Total hadiah 50 Juta Rupiah!
+                        </p>
+                        <a href="#" style="color: #BFFF00; font-weight: 600; text-decoration: none;">Info Lengkap →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 0; background: #111;">
+        <div class="container">
+            <h2 class="section-title anim-fade-up" style="color: white; margin-bottom: 30px;">Dokumentasi</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item anim-fade-up">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" class="gallery-img">
+                    <div class="gallery-overlay"><span style="color:white; font-weight:700;">Meeting Online</span></div>
+                </div>
+                <div class="gallery-item anim-fade-up delay-1">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" class="gallery-img">
+                    <div class="gallery-overlay"><span style="color:white; font-weight:700;">Mentoring Session</span></div>
+                </div>
+                <div class="gallery-item anim-fade-up delay-2">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" class="gallery-img">
+                    <div class="gallery-overlay"><span style="color:white; font-weight:700;">Offline Workshop</span></div>
+                </div>
+                <div class="gallery-item anim-fade-up delay-3">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" class="gallery-img">
+                    <div class="gallery-overlay"><span style="color:white; font-weight:700;">Bootcamp Day</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 0; background: linear-gradient(135deg, #1a1a1a 0%, #000 100%); text-align: center; border-top: 1px solid #333;">
+        <div class="container anim-fade-up">
+            <h2 style="color: white; font-size: 40px; font-weight: 900; margin-bottom: 20px;">Tunggu Apa Lagi?</h2>
+            <p style="color: #aaa; margin-bottom: 40px; font-size: 18px;">Gabung sekarang, gratis selamanya. Temukan teman seperjuanganmu.</p>
+            <a href="#" class="discord-btn" style="padding: 20px 50px; font-size: 18px;">
+                <i class="fab fa-discord"></i> Join Community Now
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Jl. Raya Banaran No.17, Semarang</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html">Home</a>
+                        <a href="bootcamps.html">Bootcamps</a>
+                        <a href="internship.html">Internship</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Praktika+. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.anim-fade-up, .anim-slide-left').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+        <div class="wa-fab" aria-label="WhatsApp Chat">
+        <button id="waFabBtn" class="wa-btn" type="button" title="Chat WhatsApp"
+                aria-label="Chat WhatsApp" data-wa-number="6281234567890"
+                data-wa-text="Halo, saya tertarik dengan Praktika+ Bootcamps">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>

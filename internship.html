@@ -12,54 +12,55 @@
 </head>
 <body>
     <!-- Navigation (shared) -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper flex items-center justify-between gap-[16px] py-[10px]">
-                <div class="logo">
-                    <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
-                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
-                    </a>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                    <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                </a>
+            </div>
+            <ul class="nav-menu list-none">
+                <li class="nav-item dropdown">
+                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                        <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                        <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                        <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                        <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                        <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
-                <ul class="nav-menu list-none flex items-center gap-[20px]">
-                    <li class="nav-item dropdown">
-                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
-                        <ul class="dropdown-menu list-none">
-                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
-                            <li><a href="internship.html">🎓 Certified Internship Program</a></li>
-                            <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
-                            <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="indexV1.html#contact" class="nav-link">Hub <span class="caret">▾</span></a>
-                        <ul class="dropdown-menu list-none">
-                            <li><a href="indexV1.html#contact" data-hub-cat="showcase">📌 Showcase</a></li>
-                            <li><a href="indexV1.html#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
-                            <li><a href="indexV1.html#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
-                            <li><a href="indexV1.html#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
-                            <li><a href="indexV1.html#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="indexV1.html#komunitas" class="nav-link">Komunitas</a></li>
-                </ul>
-                <div class="nav-actions flex items-center gap-[16px]">
-                    <div class="search-bar flex items-center gap-[8px]">
-                        <input type="text" placeholder="Search..." class="search-input outline-none">
-                        <button class="search-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="nav-buttons flex items-center gap-[10px]">
-                        <button class="btn btn-secondary">Masuk</button>
-                        <button class="btn btn-primary">Daftar</button>
-                    </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary">Masuk</button>
+                    <button class="btn btn-primary">Daftar</button>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Detail Program Bootcamp (Landing Theme) -->
     <main>
