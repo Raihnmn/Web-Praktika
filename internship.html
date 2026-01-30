@@ -768,15 +768,12 @@
                         
                         roleCards.forEach(card => {
                             const cardCategory = card.getAttribute('data-category');
-                            
-                            // Reset animation logic
                             card.style.animation = 'none';
-                            card.offsetHeight; /* trigger reflow */
+                            card.offsetHeight;
                             card.style.animation = null; 
 
                             if (filterValue === 'all' || filterValue === cardCategory) {
                                 card.style.display = 'block';
-                                // Add simple fade-in animation
                                 card.animate([
                                     { opacity: 0, transform: 'translateY(10px)' },
                                     { opacity: 1, transform: 'translateY(0)' }
