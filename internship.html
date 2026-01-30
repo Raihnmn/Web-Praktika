@@ -475,7 +475,6 @@
     
     <!-- Scroll Reveal Animation -->
     <script>
-        // Intersection Observer for scroll animations
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -490,14 +489,12 @@
             });
         }, observerOptions);
 
-        // Observe all animated elements
         document.querySelectorAll('.anim-fade-up, .anim-pop, .anim-slide-left').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             observer.observe(el);
         });
 
-        // Add active styles
         const style = document.createElement('style');
         style.textContent = `
             .anim-fade-up.active, .anim-pop.active, .anim-slide-left.active {
@@ -513,7 +510,6 @@
         `;
         document.head.appendChild(style);
 
-        // Counter animation for stats
         function animateCounter(element, target, duration = 2000) {
             let start = 0;
             const increment = target / (duration / 16);
@@ -528,7 +524,6 @@
             }, 16);
         }
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -542,8 +537,7 @@
             });
         });
 
-        // Program Slider Functionality
-        const cardWidth = 220 + 24; // card width + gap
+        const cardWidth = 220 + 24; 
         
         function slidePrograms(direction) {
             const slider = document.getElementById('programSlider');
@@ -565,7 +559,6 @@
         
         function updateSlider() {
             const slider = document.getElementById('programSlider');
-            // Center 3 cards in viewport
             const container = slider.parentElement;
             const visibleCards = 3;
             const totalWidth = visibleCards * cardWidth;
@@ -574,7 +567,6 @@
             const offset = currentSlide * cardWidth - leftOffset;
             slider.style.transform = `translateX(-${offset}px)`;
             
-            // Update dots - same style as testimonials
             document.querySelectorAll('.program-dot').forEach((dot, index) => {
                 if (index === currentSlide) {
                     dot.style.background = '#BFFF00';
@@ -587,7 +579,6 @@
                 }
             });
             
-            // Update card active state
             document.querySelectorAll('.program-slide').forEach((card, index) => {
                 if (index >= currentSlide && index < currentSlide + 3) {
                     card.style.background = 'rgba(255,255,255,0.06)';
@@ -597,7 +588,6 @@
                     card.style.borderColor = 'rgba(255,255,255,0.16)';
                 }
             });
-            // Add hover animation for program cards
             document.querySelectorAll('.program-slide').forEach(card => {
                 card.onmouseenter = function() {
                     card.style.transform = 'scale(1.06)';
@@ -610,7 +600,6 @@
             });
         }
         
-        // Initialize first dot as active
         document.addEventListener('DOMContentLoaded', function() {
             updateSlider();
         });
@@ -626,38 +615,31 @@
                 const slides = Array.from(track.children);
                 const prevBtn = progCarousel.querySelector('.carousel-btn.prev');
                 const nextBtn = progCarousel.querySelector('.carousel-btn.next');
-                const dotsContainer = document.querySelector('.program-dots'); // Target container dots baru
+                const dotsContainer = document.querySelector('.program-dots'); 
 
                 let currentSlide = 0;
                 
-                // 1. Hitung berapa kartu terlihat berdasarkan layar
                 const getVisibleCount = () => {
                     if (window.innerWidth >= 1024) return 3;
                     if (window.innerWidth >= 768) return 2;
                     return 1;
                 };
 
-                // 2. Hitung lebar kartu agar pas di tengah
                 const updateDimensions = () => {
-                    const gap = 24; // Gap antar kartu (sesuai CSS)
+                    const gap = 24; 
                     const visible = getVisibleCount();
                     const containerWidth = viewport.clientWidth;
-                    
-                    // Hitung lebar kartu: (Lebar Container - Total Gap) / Jumlah Item
                     const cardWidth = (containerWidth - (gap * (visible - 1))) / visible;
                     
-                    // Set CSS Variable agar CSS bisa baca ukurannya
                     track.style.setProperty('--slide-width', `${cardWidth}px`);
                     track.style.gap = `${gap}px`;
                     
                     return { cardWidth, gap };
                 };
 
-                // 3. Buat Dots
                 const buildDots = () => {
                     if (!dotsContainer) return;
                     dotsContainer.innerHTML = '';
-                    // Jumlah dot = total slide - (visible - 1) agar tidak ada dot kosong di akhir
                     const visible = getVisibleCount();
                     const dotCount = slides.length - visible + 1; 
                     
@@ -672,21 +654,17 @@
                     }
                 };
 
-                // 4. Update Posisi Slider
                 const updateSlider = () => {
                     const { cardWidth, gap } = updateDimensions();
                     
-                    // Geser track
                     const moveAmount = currentSlide * (cardWidth + gap);
                     track.style.transform = `translateX(-${moveAmount}px)`;
                     
-                    // Update class active pada dots
                     const dots = dotsContainer.querySelectorAll('.carousel-dot');
                     dots.forEach((d, i) => {
                         d.classList.toggle('active', i === currentSlide);
                     });
 
-                    // Matikan tombol jika mentok (opsional, bisa dibuat infinite loop juga)
                     const visible = getVisibleCount();
                     const maxIndex = slides.length - visible;
                     
@@ -694,14 +672,13 @@
                     if(nextBtn) nextBtn.style.opacity = currentSlide >= maxIndex ? '0.5' : '1';
                 };
 
-                // 5. Event Listeners Buttons
                 const nextSlide = () => {
                     const visible = getVisibleCount();
                     const maxIndex = slides.length - visible;
                     if (currentSlide < maxIndex) {
                         currentSlide++;
                     } else {
-                        currentSlide = 0; // Loop balik ke awal
+                        currentSlide = 0; 
                     }
                     updateSlider();
                 };
@@ -712,7 +689,7 @@
                     if (currentSlide > 0) {
                         currentSlide--;
                     } else {
-                        currentSlide = maxIndex; // Loop ke akhir
+                        currentSlide = maxIndex; 
                     }
                     updateSlider();
                 };
@@ -739,11 +716,9 @@
             const filterButtons = document.querySelectorAll('.filter-btn');
             const roleCards = document.querySelectorAll('.role-card');
 
-            // Styles for Active vs Inactive Buttons (Tailwind Classes)
             const activeClasses = ['bg-[#BFFF00]', 'text-[#1E1E1E]', 'border-[#BFFF00]', 'font-bold', 'shadow-[0_0_10px_rgba(191,255,0,0.3)]'];
             const inactiveClasses = ['bg-transparent', 'text-white', 'border-white/30', 'font-medium', 'shadow-none'];
 
-            // Function to set button state
             function setButtonState(btn, isActive) {
                 if (isActive) {
                     btn.classList.remove(...inactiveClasses);
@@ -757,13 +732,8 @@
             if(filterButtons.length > 0) {
                 filterButtons.forEach(btn => {
                     btn.addEventListener('click', () => {
-                        // 1. Reset all buttons to inactive
                         filterButtons.forEach(b => setButtonState(b, false));
-                        
-                        // 2. Set clicked button to active
                         setButtonState(btn, true);
-
-                        // 3. Filter Cards Logic
                         const filterValue = btn.getAttribute('data-filter');
                         
                         roleCards.forEach(card => {
