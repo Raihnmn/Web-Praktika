@@ -235,10 +235,12 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         const updateSlideClasses = () => {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active', 'adjacent');
-                if (i === centerIndex) slide.classList.add('active');
-            });
+            slides.forEach((slide) => slide.classList.remove('active', 'adjacent'));
+            const left = (centerIndex - 1 + totalSlides) % totalSlides;
+            const right = (centerIndex + 1) % totalSlides;
+            slides[centerIndex]?.classList.add('active');
+            slides[left]?.classList.add('adjacent');
+            slides[right]?.classList.add('adjacent');
         };
 
         const updateTransform = () => {
@@ -493,6 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateDots();
             updateButtons();
             positionButtons();
+            updateActiveCard();
         };
 
         const goPrev = () => {
@@ -531,6 +534,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scroll) {
                 const section = document.querySelector('#contact');
                 if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        const updateActiveCard = () => {
+            const vis = visibleSlides();
+            vis.forEach((c) => c.classList.remove('active'));
+            if (vis.length) {
+                const idx = Math.min(Math.max(centerVisible, 0), vis.length - 1);
+                vis[idx].classList.add('active');
             }
         };
 
