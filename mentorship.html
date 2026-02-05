@@ -8,108 +8,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            corePlugins: { preflight: false },
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#BFFF00',
-                        darkbg: '#1E1E1E',
-                        darkgray: '#2C2C2C',
-                        lightgray: '#F5F5F5',
-                        textdark: '#1A1A1A',
-                        textgray: '#666666',
-                        white: '#FFFFFF'
-                    },
-                    fontFamily: { poppins: ['Poppins','sans-serif'] }
-                }
-            }
-        }
-    </script>
 </head>
 <body>
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-wrapper">
-            <div class="logo">
-                <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
-                    <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
-                </a>
-            </div>
-            <ul class="nav-menu list-none">
-                <li class="nav-item dropdown">
-                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
-                    <ul class="dropdown-menu list-none">
-                        <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
-                        <li><a href="internship.html">🎓 Certified Internship Program</a></li>
-                        <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
-                        <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
-                <li class="nav-item dropdown">
-                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
-                    <ul class="dropdown-menu list-none">
-                        <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
-                        <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
-                        <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
-                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
-                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
-                        
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search..." class="search-input">
-                    <button class="search-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="indexV1.html" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40">
+                    </a>
                 </div>
-                <div class="nav-buttons">
-                    <button class="btn btn-secondary">Masuk</button>
-                    <button class="btn btn-primary">Daftar</button>
+                <ul class="nav-menu list-none">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                            <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="#contact" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
-        <section class="bg-gradient-hero py-20 md:py-28 relative overflow-hidden">
-            <div class="container relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6 anim-fade-up">
-                        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-[#BFFF00]/20 text-[#1A1A1A] border border-[#BFFF00]/50">
+        <section class="bg-gradient-hero hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text anim-fade-up">
+                        <div class="highlight-green" style="background: rgba(191,255,0,0.2); border: 1px solid rgba(191,255,0,0.5); margin-bottom: 20px;">
                             ✨ Unlock Your Potential
-                        </span>
-                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                        </div>
+                        <h1>
                             Bimbingan Karier <br>
                             <span class="price-gradient">& Mentorship</span>
                         </h1>
-                        <p class="text-lg text-[#666666] max-w-xl leading-relaxed">
+                        <p>
                             Bingung arah karier? CV sering ditolak? Atau grogi saat interview? Dapatkan bimbingan <strong>1-on-1</strong> eksklusif bersama HR & Praktisi Senior untuk menembus perusahaan impianmu.
                         </p>
-                        <div class="flex flex-wrap gap-4 pt-4">
-                            <a href="#services" class="btn-cta-enhanced inline-flex items-center gap-2">
-                                Mulai Konsultasi
-                            </a>
+                        <div style="margin-top: 30px;">
+                            <a href="#services" class="btn-cta-enhanced">Mulai Konsultasi</a>
                         </div>
                     </div>
-                    <div class="anim-float delay-2">
-                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mentorship Session" class="w-full h-[450px] object-cover">
-                            <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-4 max-w-xs anim-pop delay-3">
-                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">💼</div>
-                                <div>
-                                    <p class="font-bold text-sm text-[#1A1A1A]">Offer Letter Received!</p>
-                                    <p class="text-xs text-[#666666]">From: Google Indonesia</p>
-                                </div>
+                    
+                    <div class="hero-image-wrapper anim-float delay-2">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mentorship Session" class="hero-img" style="border-radius: 24px; border: 4px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        
+                        <div style="position: absolute; bottom: 30px; left: 30px; background: rgba(255,255,255,0.9); padding: 15px; border-radius: 12px; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); backdrop-filter: blur(10px);">
+                            <div style="width: 45px; height: 45px; background: #e6ffb3; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px;">💼</div>
+                            <div>
+                                <strong style="display: block; font-size: 14px; color: #1a1a1a;">Offer Letter Received!</strong>
+                                <span style="font-size: 12px; color: #666;">From: Google Indonesia</span>
                             </div>
                         </div>
                     </div>
@@ -117,381 +95,403 @@
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 animate-fade-up">
-                    <h2 class="text-3xl font-extrabold mb-4 text-[#1A1A1A]">Pernah Merasakan Ini?</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto">Jangan biarkan kesalahan kecil menghambat karier besarmu.</p>
+        <section class="programs-section" style="background: #fff;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="anim-fade-up">
+                    <h2 class="section-title">Pernah Merasakan Ini?</h2>
+                    <p class="section-subtitle" style="margin: 0 auto;">Jangan biarkan kesalahan kecil menghambat karier besarmu.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out">
-                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
-                            📄
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">CV Selalu Ditolak</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
-                            Sudah sebar ratusan lamaran tapi tidak ada panggilan? Mungkin CV-mu tidak lolos sistem ATS karena format yang salah.
-                        </p>
+                <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div class="stat-card hover-lift anim-fade-up">
+                        <div class="icon-box" style="margin-bottom: 20px; font-size: 32px;">📄</div>
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">CV Selalu Ditolak</h3>
+                        <p style="color: var(--text-gray); font-size: 14px;">Sudah sebar ratusan lamaran tapi tidak ada panggilan? Mungkin CV-mu tidak lolos sistem ATS.</p>
                     </div>
-
-                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out delay-100">
-                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
-                            😰
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">Grogi Saat Interview</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
-                            Bingung menjawab "Tell me about yourself" atau negosiasi gaji? Kami punya cheat sheet rahasia untuk menjawabnya.
-                        </p>
+                    <div class="stat-card hover-lift anim-fade-up delay-1">
+                        <div class="icon-box" style="margin-bottom: 20px; font-size: 32px;">😰</div>
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">Grogi Saat Interview</h3>
+                        <p style="color: var(--text-gray); font-size: 14px;">Bingung menjawab "Tell me about yourself" atau negosiasi gaji? Kami punya cheat sheet rahasianya.</p>
                     </div>
-
-                    <div class="group relative p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(191,255,0,0.3)] hover:border-primary hover:-translate-y-2 hover:bg-[#FDFDEA] transition-all duration-500 ease-out delay-200">
-                        <div class="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 grayscale group-hover:grayscale-0">
-                            👻
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 text-[#1A1A1A] group-hover:text-black transition-colors">LinkedIn Sepi</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
-                            Profil LinkedIn tidak dilirik recruiter? Optimalkan profilmu agar tawaran kerja yang datang mengejarmu.
-                        </p>
+                    <div class="stat-card hover-lift anim-fade-up delay-2">
+                        <div class="icon-box" style="margin-bottom: 20px; font-size: 32px;">👻</div>
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">LinkedIn Sepi</h3>
+                        <p style="color: var(--text-gray); font-size: 14px;">Profil LinkedIn tidak dilirik recruiter? Optimalkan profilmu agar tawaran kerja yang datang mengejarmu.</p>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-24 bg-[#121212] relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#BFFF00]/5 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-            
+        <section id="services" class="portfolio-cta">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="anim-fade-up">
+                    <span class="highlight" style="background: rgba(191,255,0,0.1); color: #BFFF00; border: 1px solid rgba(191,255,0,0.2);">Services</span>
+                    <h2 class="section-title" style="color: white; margin-top: 15px;">Layanan Karier Kami</h2>
+                    <p style="color: rgba(255,255,255,0.6);">Pilih layanan spesifik sesuai kebutuhanmu saat ini.</p>
+                </div>
+
+                <div class="programs-grid" style="gap: 30px;">
+                    <div class="glass-card-dark p-8 rounded-2xl anim-fade-up hover-lift" style="padding: 30px; border-radius: 24px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                            <h3 style="color: white; font-size: 22px;">Bedah CV & Cover Letter</h3>
+                            <div style="font-size: 32px;">📝</div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 25px; font-size: 15px;">Review mendalam baris demi baris. Kami pastikan CV-mu ATS-Friendly.</p>
+                        <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); font-size: 14px;">
+                            <li style="margin-bottom: 10px;">✓ Cek skor ATS otomatis</li>
+                            <li style="margin-bottom: 10px;">✓ Perbaikan tata bahasa</li>
+                            <li>✓ Template CV Premium</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card-dark p-8 rounded-2xl anim-fade-up delay-1 hover-lift" style="padding: 30px; border-radius: 24px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                            <h3 style="color: white; font-size: 22px;">Mock Interview</h3>
+                            <div style="font-size: 32px;">🎙️</div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 25px; font-size: 15px;">Simulasi wawancara kerja (HR & User) dengan feedback langsung.</p>
+                        <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); font-size: 14px;">
+                            <li style="margin-bottom: 10px;">✓ Simulasi Indo/Inggris</li>
+                            <li style="margin-bottom: 10px;">✓ Teknik negosiasi gaji</li>
+                            <li>✓ Rekaman sesi evaluasi</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card-dark p-8 rounded-2xl anim-fade-up delay-2 hover-lift" style="padding: 30px; border-radius: 24px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                            <h3 style="color: white; font-size: 22px;">LinkedIn Makeover</h3>
+                            <div style="font-size: 32px;">🔗</div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 25px; font-size: 15px;">Ubah profil LinkedIn-mu menjadi magnet recruiter.</p>
+                        <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); font-size: 14px;">
+                            <li style="margin-bottom: 10px;">✓ Optimasi Keyword</li>
+                            <li style="margin-bottom: 10px;">✓ Strategi Branding</li>
+                            <li>✓ Template Networking</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card-dark p-8 rounded-2xl anim-fade-up delay-3 hover-lift" style="padding: 30px; border-radius: 24px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                            <h3 style="color: white; font-size: 22px;">Career Roadmap</h3>
+                            <div style="font-size: 32px;">🗺️</div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 25px; font-size: 15px;">Diskusi mendalam untuk memetakan potensi dan jalur karier.</p>
+                        <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); font-size: 14px;">
+                            <li style="margin-bottom: 10px;">✓ Tes Minat Bakat</li>
+                            <li style="margin-bottom: 10px;">✓ Action Plan 3 Bulan</li>
+                            <li>✓ Rekomendasi Skill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs-section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 50px;" class="anim-fade-up">
+                    <span class="highlight">Our Mentors</span>
+                    <h2 class="section-title" style="margin-top: 15px;">Belajar dari Praktisi Top</h2>
+                    <p class="section-subtitle" style="margin: 0 auto;">Mentor kami bekerja di perusahaan teknologi terkemuka.</p>
+                </div>
+
+                <div class="stats-grid" style="gap: 24px;">
+                    <div class="mentor-card stat-card anim-fade-up" style="padding: 30px; text-align: center;">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="mentor-img rounded-full" style="margin-bottom: 15px; border-radius: 50%;">
+                        <h3 style="font-size: 18px; font-weight: 700;">Rizky Fajar</h3>
+                        <p style="font-size: 13px; color: var(--text-gray); margin-bottom: 15px;">Senior HR at GoTo</p>
+                        <div style="display: flex; gap: 8px; justify-content: center;">
+                            <span class="highlight-green" style="font-size: 11px;">HR Interview</span>
+                            <span class="highlight-green" style="font-size: 11px;">CV Review</span>
+                        </div>
+                    </div>
+                    <div class="mentor-card stat-card anim-fade-up delay-1" style="padding: 30px; text-align: center;">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="mentor-img rounded-full" style="margin-bottom: 15px; border-radius: 50%;">
+                        <h3 style="font-size: 18px; font-weight: 700;">Sarah Amalia</h3>
+                        <p style="font-size: 13px; color: var(--text-gray); margin-bottom: 15px;">Product Lead at Traveloka</p>
+                        <div style="display: flex; gap: 8px; justify-content: center;">
+                            <span class="highlight-green" style="font-size: 11px;">User Interview</span>
+                            <span class="highlight-green" style="font-size: 11px;">Portfolio</span>
+                        </div>
+                    </div>
+                    <div class="mentor-card stat-card anim-fade-up delay-2" style="padding: 30px; text-align: center;">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" class="mentor-img rounded-full" style="margin-bottom: 15px; border-radius: 50%;">
+                        <h3 style="font-size: 18px; font-weight: 700;">Dimas Anggara</h3>
+                        <p style="font-size: 13px; color: var(--text-gray); margin-bottom: 15px;">Sr. Engineer at Grab</p>
+                        <div style="display: flex; gap: 8px; justify-content: center;">
+                            <span class="highlight-green" style="font-size: 11px;">Tech Test</span>
+                            <span class="highlight-green" style="font-size: 11px;">Live Coding</span>
+                        </div>
+                    </div>
+                    <div class="mentor-card stat-card anim-fade-up delay-3" style="padding: 30px; text-align: center;">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" class="mentor-img rounded-full" style="margin-bottom: 15px; border-radius: 50%;">
+                        <h3 style="font-size: 18px; font-weight: 700;">Nadia Putri</h3>
+                        <p style="font-size: 13px; color: var(--text-gray); margin-bottom: 15px;">Recruiter at Shopee</p>
+                        <div style="display: flex; gap: 8px; justify-content: center;">
+                            <span class="highlight-green" style="font-size: 11px;">LinkedIn</span>
+                            <span class="highlight-green" style="font-size: 11px;">Negotiation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-dark-main border-t border-white/5 relative overflow-hidden" style="padding: 80px 0; background: #121212; border-top: 1px solid rgba(255,255,255,0.1);">
             <div class="container relative z-10">
-                <div class="text-center mb-16 anim-fade-up">
-                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/10 text-[#BFFF00] mb-4 border border-[#BFFF00]/20">Services</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Layanan Karier Kami</h2>
-                    <p class="text-white/60 max-w-2xl mx-auto">Pilih layanan spesifik sesuai kebutuhanmu saat ini.</p>
+                
+                <div style="text-align: center; margin-bottom: 50px;" class="anim-fade-up">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand text-dark-primary mb-3 shadow-brand-glow" style="background: #BFFF00; color: #1a1a1a; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 12px;">⚠️ Reality Check</span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3 leading-tight" style="font-size: 36px; color: white; margin-bottom: 15px;">
+                        CV Kamu Masuk Kategori <br> 
+                        <span class="text-gradient-flag" style="color: #BFFF00;">Red Flag atau Green Flag?</span>
+                    </h2>
+                    <p style="color: rgba(255,255,255,0.6);">Cek kenapa lamaranmu sering di-ghosting HRD.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up">
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    
+                    <div class="flag-card card-red anim-fade-up group">
+                        <div style="position: absolute; top: 20px; right: 20px; font-size: 32px; opacity: 0.2;">🚩</div>
                         
-                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">📝</div>
-                        
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Bedah CV & Cover Letter</h3>
-                        <p class="text-white/60 mb-8 leading-relaxed">Review mendalam baris demi baris. Kami pastikan CV-mu ATS-Friendly dan menonjolkan pencapaian terbaikmu.</p>
-                        
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Cek skor ATS otomatis
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; position: relative; z-index: 1;">
+                            <div class="flag-icon" style="width: 45px; height: 45px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px;">❌</div>
+                            <div>
+                                <h3 style="color: white; font-size: 20px; font-weight: 700; margin: 0;">Tim "Red Flag"</h3>
+                                <p style="color: #EF4444; font-size: 13px; font-weight: 600;">Auto Skip by Recruiter</p>
                             </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Perbaikan tata bahasa
+                        </div>
+
+                        <div class="flag-list">
+                            <div class="flag-item">
+                                <span style="color: #EF4444;">🚫</span>
+                                <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin: 0;">Desain rame banget kayak poster pasar malam.</p>
                             </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Template CV Premium
+                            <div class="flag-item">
+                                <span style="color: #EF4444;">🚫</span>
+                                <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin: 0;">Foto selfie atau pas foto muka tegang.</p>
+                            </div>
+                            <div class="flag-item">
+                                <span style="color: #EF4444;">🚫</span>
+                                <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin: 0;">Cuma nulis jobdesc (Zero Achievement).</p>
+                            </div>
+                            <div class="flag-item">
+                                <span style="color: #EF4444;">🚫</span>
+                                <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin: 0;">Typo nama perusahaan (Fatal!).</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up delay-2">
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="flag-card card-green anim-fade-up delay-1 group">
+                        <div style="position: absolute; top: 20px; right: 20px; font-size: 32px; opacity: 0.2;">✅</div>
                         
-                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🎙️</div>
-                        
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Mock Interview Practice</h3>
-                        <p class="text-white/60 mb-8 leading-relaxed">Simulasi wawancara kerja (HR & User) dengan feedback langsung. Hilangkan grogi dan latih jawaban.</p>
-                        
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Simulasi Indo/Inggris
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; position: relative; z-index: 1;">
+                            <div class="flag-icon" style="width: 45px; height: 45px; background: rgba(191, 255, 0, 0.1); border: 1px solid rgba(191, 255, 0, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px;">✨</div>
+                            <div>
+                                <h3 style="color: white; font-size: 20px; font-weight: 700; margin: 0;">Tim "Green Flag"</h3>
+                                <p style="color: #BFFF00; font-size: 13px; font-weight: 600;">Auto Interview Invitation</p>
                             </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Teknik negosiasi gaji
+                        </div>
+
+                        <div class="flag-list">
+                            <div class="flag-item">
+                                <span>💎</span>
+                                <p style="color: white; font-size: 14px; margin: 0;">Layout bersih, profesional, & ATS Friendly.</p>
                             </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Rekaman sesi evaluasi
+                            <div class="flag-item">
+                                <span>💎</span>
+                                <p style="color: white; font-size: 14px; margin: 0;">Fokus ke "Impact" & Angka (Cth: Sales naik 20%).</p>
+                            </div>
+                            <div class="flag-item">
+                                <span>💎</span>
+                                <p style="color: white; font-size: 14px; margin: 0;">Keyword industri masuk semua (Lolos Robot ATS).</p>
+                            </div>
+                            <div class="flag-item">
+                                <span>💎</span>
+                                <p style="color: white; font-size: 14px; margin: 0;">Personal branding statement yang "Mahal".</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up">
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+
+                <div class="mt-8 anim-fade-up delay-2" style="margin-top: 40px;">
+                    <div class="result-badge-container p-4 md:p-6" style="display: flex; align-items: center; justify-content: space-between; padding: 25px; max-width: 800px; margin: 0 auto;">
+                        <div class="result-glow"></div>
                         
-                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🔗</div>
-                        
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">LinkedIn Makeover</h3>
-                        <p class="text-white/60 mb-8 leading-relaxed">Ubah profil LinkedIn-mu menjadi magnet recruiter. Optimasi headline, about section, dan featured posts.</p>
-                        
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Optimasi Keyword
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Strategi Branding
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Template Networking
+                        <div style="display: flex; align-items: center; gap: 20px; position: relative; z-index: 1;">
+                            <div style="width: 60px; height: 60px; background: #BFFF00; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 20px rgba(191,255,0,0.3);">🚀</div>
+                            <div>
+                                <h4 style="color: white; font-size: 20px; font-weight: 700; margin: 0;">Achievement Unlocked!</h4>
+                                <p style="color: #aaa; font-size: 14px; margin: 0;">Hasil setelah mentoring:</p>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="group relative bg-[#1E1E1E] rounded-3xl p-8 border border-white/5 hover:border-[#BFFF00] transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_40px_-10px_rgba(191,255,0,0.15)] overflow-hidden anim-fade-up delay-2">
-                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#BFFF00]/20 rounded-full blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
-                        <div class="absolute top-8 right-8 text-4xl text-white/10 group-hover:text-[#BFFF00] group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">🗺️</div>
-                        
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#BFFF00] transition-colors">Career Roadmap</h3>
-                        <p class="text-white/60 mb-8 leading-relaxed">Diskusi mendalam untuk memetakan potensi, minat, dan jalur karier yang paling cocok untukmu.</p>
-                        
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Tes Minat Bakat
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Action Plan 3 Bulan
-                            </div>
-                            <div class="flex items-center gap-3 text-sm text-white/80 group-hover:text-white transition-colors">
-                                <div class="w-6 h-6 rounded-full bg-[#2C2C2C] flex items-center justify-center text-[#BFFF00] text-xs font-bold border border-white/10">✓</div>
-                                Rekomendasi Skill
+                        <div class="result-stat-box" style="display: flex; align-items: center; gap: 15px; padding: 15px 25px; position: relative; z-index: 1;">
+                            <span style="font-size: 28px;">📈</span>
+                            <div>
+                                <span style="display: block; font-size: 11px; color: #888; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">Interview Rate</span>
+                                <span style="font-size: 20px; font-weight: 800; color: #BFFF00;">Naik 3x Lipat</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16 anim-fade-up">
-                    <span class="inline-block px-4 py-1 rounded-full text-sm font-semibold bg-[#BFFF00]/10 text-[#1A1A1A] mb-4 border border-[#BFFF00]/20">Our Mentors</span>
-                    <h2 class="text-3xl font-extrabold mb-4 text-[#1A1A1A]">Belajar dari Praktisi Top</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto">Mentor kami bekerja di perusahaan teknologi terkemuka (Unicorn & MNC).</p>
+        <section class="programs-section" style="background: #FAFAFA;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 60px;" class="anim-fade-up">
+                    <h2 class="section-title">Investasi Karier</h2>
+                    <p class="section-subtitle" style="margin: 0 auto;">Harga terjangkau untuk hasil yang memuaskan.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto;">
                     
-                    <div class="mentor-card bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 anim-fade-up p-6 text-center">
-                        <div class="relative mb-4 inline-block">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="mentor-img rounded-full mx-auto relative z-10" alt="Mentor">
+                    <div class="pricing-card anim-fade-up" style="padding: 30px; border-radius: 24px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #EAEAEA;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 5px; color: #1E1E1E;">Review Satuan</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Pilih satu layanan spesifik.</p>
+                        <div style="margin-bottom: 25px;">
+                            <span style="font-size: 32px; font-weight: 800; color: #1E1E1E;">Rp 150rb</span>
+                            <span style="font-size: 14px; color: #666;">/sesi</span>
                         </div>
-                        <h3 class="text-lg font-bold text-[#1A1A1A]">Rizky Fajar</h3>
-                        <p class="text-sm text-gray-500 mb-4">Senior HR at GoTo</p>
-                        <div class="flex justify-center gap-2">
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">HR Interview</span>
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">CV Review</span>
-                        </div>
-                    </div>
-
-                    <div class="mentor-card bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 anim-fade-up delay-1 p-6 text-center">
-                        <div class="relative mb-4 inline-block">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="mentor-img rounded-full mx-auto relative z-10" alt="Mentor">
-                        </div>
-                        <h3 class="text-lg font-bold text-[#1A1A1A]">Sarah Amalia</h3>
-                        <p class="text-sm text-gray-500 mb-4">Product Lead at Traveloka</p>
-                        <div class="flex justify-center gap-2">
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">User Interview</span>
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Portfolio</span>
-                        </div>
-                    </div>
-
-                    <div class="mentor-card bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 anim-fade-up delay-2 p-6 text-center">
-                        <div class="relative mb-4 inline-block">
-                            <img src="https://randomuser.me/api/portraits/men/85.jpg" class="mentor-img rounded-full mx-auto relative z-10" alt="Mentor">
-                        </div>
-                        <h3 class="text-lg font-bold text-[#1A1A1A]">Dimas Anggara</h3>
-                        <p class="text-sm text-gray-500 mb-4">Sr. Software Engineer at Grab</p>
-                        <div class="flex justify-center gap-2">
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Tech Test</span>
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Live Coding</span>
-                        </div>
-                    </div>
-
-                    <div class="mentor-card bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 anim-fade-up delay-3 p-6 text-center">
-                        <div class="relative mb-4 inline-block">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="mentor-img rounded-full mx-auto relative z-10" alt="Mentor">
-                        </div>
-                        <h3 class="text-lg font-bold text-[#1A1A1A]">Nadia Putri</h3>
-                        <p class="text-sm text-gray-500 mb-4">Talent Acquisition at Shopee</p>
-                        <div class="flex justify-center gap-2">
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">LinkedIn</span>
-                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium text-gray-600">Negotiation</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-[#FAFAFA] relative">
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="text-center mb-16 anim-fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-[#1A1A1A]">Investasi Karier</h2>
-                    <p class="text-gray-500">Harga terjangkau untuk hasil yang memuaskan.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
-                    
-                    <div class="group bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 transition-all duration-300 anim-fade-up">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">Review Satuan</h3>
-                        <p class="text-sm text-gray-500 mb-6">Pilih satu layanan spesifik.</p>
-                        <div class="mb-6">
-                            <span class="text-3xl font-extrabold text-gray-900">Rp 150rb</span>
-                            <span class="text-sm text-gray-500">/sesi</span>
-                        </div>
-                        <a href="#" class="block w-full py-3 rounded-lg bg-[#1A1A1A] text-white font-bold text-center border-2 border-[#1A1A1A] hover:bg-[#BFFF00] hover:text-[#1E1E1E] hover:border-[#BFFF00] transform transition-all duration-300 hover:scale-[1.03] shadow-md">
-                            Pilih Layanan
-                        </a>
-                        <ul class="mt-8 space-y-4 text-sm text-gray-600">
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Pilih: CV / Interview / LinkedIn</li>
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> 45 Menit via Zoom</li>
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Recording Sesi</li>
+                        <a href="#" class="btn-cta-enhanced" style="display: block; text-align: center; background: #1E1E1E; color: white; box-shadow: none;">Pilih Layanan</a>
+                        
+                        <ul style="margin-top: 30px; list-style: none; padding: 0; font-size: 14px; color: #666;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> Pilih: CV / Interview / LinkedIn
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> 45 Menit via Zoom
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> Recording Sesi
+                            </li>
                         </ul>
                     </div>
 
-                    <div class="relative bg-[#1E1E1E] rounded-2xl p-10 border-2 border-[#BFFF00] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.3)] transform md:scale-110 z-10 transition-all duration-500 hover:shadow-[0_20px_60px_-10px_rgba(191,255,0,0.3)] anim-fade-up delay-100 group">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#BFFF00] text-[#1E1E1E] px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg animate-bounce">
-                            Career Starter Pack
-                        </div>
+                    <div class="pricing-card anim-fade-up delay-1" style="padding: 40px 30px; border-radius: 24px; background: #121212; color: white; transform: scale(1.05); box-shadow: 0 20px 50px rgba(0,0,0,0.2); position: relative; border: 1px solid #333;">
+                        <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #BFFF00; color: #121212; padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Most Popular</div>
                         
-                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-[#BFFF00] transition-colors">Bundle Siap Kerja</h3>
-                        <p class="text-sm text-white/60 mb-6">Semua yang kamu butuhkan untuk melamar.</p>
-                        <div class="mb-6">
-                            <span class="text-gray-400 line-through text-sm mr-2">Rp 750.000</span>
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-4xl font-extrabold text-[#BFFF00]">Rp 499rb</span>
-                            </div>
+                        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 5px; color: white;">Bundle Siap Kerja</h3>
+                        <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px;">Paket lengkap melamar kerja.</p>
+                        <div style="margin-bottom: 25px;">
+                            <span style="font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: line-through;">Rp 750.000</span>
+                            <br>
+                            <span style="font-size: 36px; font-weight: 800; color: #BFFF00;">Rp 499rb</span>
                         </div>
+                        <a href="#" class="btn-cta-enhanced" style="display: block; text-align: center; background: #BFFF00; color: #121212; box-shadow: 0 10px 30px rgba(191,255,0,0.2);">Ambil Bundle</a>
                         
-                        <a href="#" class="block w-full py-4 rounded-xl bg-[#BFFF00] text-[#1E1E1E] font-extrabold text-center transition-all duration-300 hover:bg-white hover:scale-105 shadow-[0_0_20px_rgba(191,255,0,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                            Ambil Bundle Hemat
-                        </a>
-                        <ul class="mt-8 space-y-4 text-sm text-white">
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Review CV & Cover Letter</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Optimasi LinkedIn</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> 1x Mock Interview</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Template CV ATS Friendly</li>
-                            <li class="flex items-center gap-3 font-bold text-[#BFFF00]"><span class="bg-[#BFFF00]/20 rounded-full p-1 text-xs">✓</span> Akses Grup Komunitas</li>
+                        <ul style="margin-top: 30px; list-style: none; padding: 0; font-size: 14px; color: rgba(255,255,255,0.9);">
+                            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                <span style="color: #BFFF00;">✓</span> Review CV & Cover Letter
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                <span style="color: #BFFF00;">✓</span> Optimasi LinkedIn
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                <span style="color: #BFFF00;">✓</span> 1x Mock Interview
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                                <span style="color: #BFFF00;">✓</span> Template CV ATS
+                            </li>
+                            <li style="display: flex; gap: 10px;">
+                                <span style="color: #BFFF00;">✓</span> Grup Komunitas
+                            </li>
                         </ul>
                     </div>
 
-                    <div class="group bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-gray-300 transition-all duration-300 anim-fade-up delay-200">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">Intensive Mentoring</h3>
-                        <p class="text-sm text-gray-500 mb-6">Pendampingan penuh selama 1 bulan.</p>
-                        <div class="mb-6">
-                            <span class="text-3xl font-extrabold text-gray-900">Rp 1.2jt</span>
-                            <span class="text-sm text-gray-500">/bulan</span>
+                    <div class="pricing-card anim-fade-up delay-2" style="padding: 30px; border-radius: 24px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #EAEAEA;">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 5px; color: #1E1E1E;">Intensive Mentoring</h3>
+                        <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Pendampingan full 1 bulan.</p>
+                        <div style="margin-bottom: 25px;">
+                            <span style="font-size: 32px; font-weight: 800; color: #1E1E1E;">Rp 1.2jt</span>
+                            <span style="font-size: 14px; color: #666;">/bulan</span>
                         </div>
-                        <a href="#" class="block w-full py-3 rounded-lg bg-[#1A1A1A] text-white font-bold text-center border-2 border-[#1A1A1A] hover:bg-[#BFFF00] hover:text-[#1E1E1E] hover:border-[#BFFF00] transform transition-all duration-300 hover:scale-[1.03] shadow-md">
-                            Daftar Mentoring
-                        </a>
-                        <ul class="mt-8 space-y-4 text-sm text-gray-600">
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> 4x Sesi 1-on-1 (Weekly)</li>
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Personalized Career Roadmap</li>
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Unlimited Chat Support</li>
-                            <li class="flex items-center gap-3"><span class="text-green-500 font-bold">✓</span> Priority Job Referral</li>
+                        <a href="#" class="btn-secondary-enhanced" style="display: block; text-align: center; border: 2px solid #1E1E1E; color: #1E1E1E;">Daftar Mentoring</a>
+                        
+                        <ul style="margin-top: 30px; list-style: none; padding: 0; font-size: 14px; color: #666;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> 4x Sesi 1-on-1 (Weekly)
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> Career Roadmap
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> Unlimited Chat Support
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #1E1E1E; font-weight: bold;">✓</span> Priority Job Referral
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-[#121212] relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#BFFF00]/5 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+        <section class="py-section bg-gradient-dark" style="padding: 80px 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start;">
                     
-                    <div class="lg:sticky lg:top-32 anim-fade-up">
-                        <span class="text-[#BFFF00] font-bold text-sm uppercase tracking-wider mb-2 block">FAQ</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
-                            Masih Ada <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Pertanyaan?</span>
+                    <div class="anim-fade-up" style="position: sticky; top: 100px;">
+                        <span style="color: #BFFF00; font-weight: 700; font-size: 14px; letter-spacing: 1px;">FAQ</span>
+                        <h2 style="font-size: 36px; font-weight: 800; color: white; line-height: 1.2; margin: 15px 0 20px;">
+                            Masih Ada <br> Pertanyaan?
                         </h2>
-                        <p class="text-white/60 mb-8 text-lg">
-                            Jangan ragu untuk bertanya. Kami siap membantumu memahami program lebih dalam.
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 30px;">
+                            Jangan ragu untuk bertanya. Kami siap membantumu.
                         </p>
-                        <div class="flex flex-col gap-4">
-                            <p href="https://wa.me/6281234567890" class="group flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-[#BFFF00] text-[#1A1A1A] font-extrabold hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(191,255,0,0.3)] hover:-translate-y-1">
-                                Chat Admin WA
-                            </p>
-                        </div>
+                        <a href="https://wa.me/6281234567890" class="btn-cta-enhanced" style="display: inline-flex; align-items: center; gap: 10px;">
+                            <span>💬</span> Chat Admin WA
+                        </a>
                     </div>
-                    <div class="lg:col-span-2 space-y-4">
-                        
-                        <div class="process-item group bg-[#1E1E1E] border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#BFFF00]/50 hover:bg-[#252525] anim-fade-up delay-1">
-                            <div class="process-header flex items-center justify-between p-6 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <span class="w-10 h-10 rounded-full bg-[#BFFF00]/10 flex items-center justify-center text-lg group-hover:bg-[#BFFF00] transition-colors duration-300">👨‍🏫</span>
-                                    <h3 class="font-bold text-white text-lg group-hover:text-[#BFFF00] transition-colors">Apakah mentornya praktisi asli?</h3>
-                                </div>
-                                <div class="toggle-btn w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:border-[#BFFF00] group-hover:text-[#BFFF00] transition-all duration-300 transform group-hover:rotate-90">+</div>
+
+                    <div class="process-accordion" style="width: 100%;">
+                        <div class="process-item anim-fade-up delay-1" style="background: #1E1E1E; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="process-header">
+                                <h3 style="color: white;">Apakah mentornya praktisi asli?</h3>
+                                <div class="toggle-btn" style="border-color: rgba(255,255,255,0.3); color: white;">+</div>
                             </div>
-                            <div class="process-content px-6 pb-6 pl-20 text-white/70 text-sm leading-relaxed hidden">
-                                <p class="mb-2">Ya, 100% mentor kami adalah <strong>praktisi aktif</strong> (bukan sekadar akademisi). Mereka saat ini bekerja di:</p>
-                                <ul class="list-disc pl-5 space-y-1 text-white/60">
-                                    <li>Top Tech Company (Unicorn/Decacorn)</li>
-                                    <li>Perusahaan Multinasional (MNC)</li>
-                                    <li>Agensi Digital Terkemuka</li>
-                                </ul>
-                                <p class="mt-2">Pengalaman minimal mereka adalah 3-5 tahun di bidangnya.</p>
+                            <div class="process-content" style="color: rgba(255,255,255,0.7); padding-left: 20px;">
+                                Ya, 100% mentor kami adalah praktisi aktif di top tech company dan MNC dengan pengalaman minimal 3-5 tahun.
                             </div>
                         </div>
-                        <div class="process-item group bg-[#1E1E1E] border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#BFFF00]/50 hover:bg-[#252525] anim-fade-up delay-2">
-                            <div class="process-header flex items-center justify-between p-6 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <span class="w-10 h-10 rounded-full bg-[#BFFF00]/10 flex items-center justify-center text-lg group-hover:bg-[#BFFF00] transition-colors duration-300">⏱️</span>
-                                    <h3 class="font-bold text-white text-lg group-hover:text-[#BFFF00] transition-colors">Berapa lama durasi per sesi?</h3>
-                                </div>
-                                <div class="toggle-btn w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:border-[#BFFF00] group-hover:text-[#BFFF00] transition-all duration-300 transform group-hover:rotate-90">+</div>
+                        <div class="process-item anim-fade-up delay-2" style="background: #1E1E1E; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="process-header">
+                                <h3 style="color: white;">Berapa lama durasi per sesi?</h3>
+                                <div class="toggle-btn" style="border-color: rgba(255,255,255,0.3); color: white;">+</div>
                             </div>
-                            <div class="process-content px-6 pb-6 pl-20 !text-white/70 text-sm leading-relaxed hidden">
-                                Setiap sesi mentoring berdurasi <strong>45-60 menit</strong> dan dilakukan secara <em>online</em> via Zoom atau Google Meet. Kamu bebas bertanya apa saja, curhat karier, atau minta feedback tugas. Kamu juga akan mendapatkan <strong>rekaman sesi</strong> setelahnya untuk dipelajari ulang.
+                            <div class="process-content" style="color: rgba(255,255,255,0.7); padding-left: 20px;">
+                                Setiap sesi mentoring berdurasi 45-60 menit via Zoom/Google Meet. Termasuk sesi tanya jawab dan rekaman.
                             </div>
                         </div>
-                        <div class="process-item group bg-[#1E1E1E] border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#BFFF00]/50 hover:bg-[#252525] anim-fade-up delay-3">
-                            <div class="process-header flex items-center justify-between p-6 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <span class="w-10 h-10 rounded-full bg-[#BFFF00]/10 flex items-center justify-center text-lg group-hover:bg-[#BFFF00] transition-colors duration-300">🤝</span>
-                                    <h3 class="font-bold text-white text-lg group-hover:text-[#BFFF00] transition-colors">Apakah ada jaminan kerja?</h3>
-                                </div>
-                                <div class="toggle-btn w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:border-[#BFFF00] group-hover:text-[#BFFF00] transition-all duration-300 transform group-hover:rotate-90">+</div>
+                        <div class="process-item anim-fade-up delay-3" style="background: #1E1E1E; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="process-header">
+                                <h3 style="color: white;">Apakah ada jaminan kerja?</h3>
+                                <div class="toggle-btn" style="border-color: rgba(255,255,255,0.3); color: white;">+</div>
                             </div>
-                            <div class="process-content px-6 pb-6 pl-20 !text-white/70 text-sm leading-relaxed hidden">
-                                Kami menjunjung tinggi kejujuran. <strong>Tidak ada jaminan penyaluran kerja (job placement) 100%</strong> karena keputusan akhir ada di tangan user/perusahaan. 
-                                <br><br>
-                                Namun, kami menjamin peningkatan kualitas profil karier (Job Readiness) kamu. Berdasarkan data alumni, peluang diterima kerja naik hingga <strong>3x lipat</strong> setelah mengikuti mentoring kami.
+                            <div class="process-content" style="color: rgba(255,255,255,0.7); padding-left: 20px;">
+                                Tidak ada jaminan 100% diterima kerja, tetapi kami menjamin peningkatan kualitas profil karier (Job Readiness) yang menaikkan peluangmu hingga 3x lipat.
                             </div>
                         </div>
-                        <div class="process-item group bg-[#1E1E1E] border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#BFFF00]/50 hover:bg-[#252525] anim-fade-up delay-4">
-                            <div class="process-header flex items-center justify-between p-6 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <span class="w-10 h-10 rounded-full bg-[#BFFF00]/10 flex items-center justify-center text-lg group-hover:bg-[#BFFF00] transition-colors duration-300">📅</span>
-                                    <h3 class="font-bold text-white text-lg group-hover:text-[#BFFF00] transition-colors">Bagaimana cara mengatur jadwalnya?</h3>
-                                </div>
-                                <div class="toggle-btn w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:border-[#BFFF00] group-hover:text-[#BFFF00] transition-all duration-300 transform group-hover:rotate-90">+</div>
+                        <div class="process-item anim-fade-up delay-4" style="background: #1E1E1E; border: 1px solid rgba(255,255,255,0.1);">
+                            <div class="process-header">
+                                <h3 style="color: white;">Bagaimana cara atur jadwal?</h3>
+                                <div class="toggle-btn" style="border-color: rgba(255,255,255,0.3); color: white;">+</div>
                             </div>
-                            <div class="process-content px-6 pb-6 pl-20 !text-white/70 text-sm leading-relaxed hidden">
-                                Sangat fleksibel! Setelah mendaftar, kamu akan terhubung dengan admin kami untuk mencocokkan jadwal kosongmu dengan mentor. Bisa di <strong>hari kerja (malam)</strong> atau <strong>akhir pekan</strong> sesuai kesepakatan.
+                            <div class="process-content" style="color: rgba(255,255,255,0.7); padding-left: 20px;">
+                                Sangat fleksibel! Admin kami akan mencocokkan jadwal kosongmu dengan mentor (bisa malam hari kerja atau akhir pekan).
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
+
     </main>
+
     <footer class="footer">
-        <div class="max-w-[1200px] mx-auto px-[16px]">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-logo">
@@ -501,90 +501,92 @@
                         <h3><span class="highlight-green">Contact Us</span></h3>
                         <p>Email: Praktika@gmail.com</p>
                         <p>Phone: 0819-0826-6435</p>
-                        <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                        <p>Jl. Raya Banaran No.17, Semarang</p>
                     </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-nav">
                         <a href="indexV1.html#about">About us</a>
-                        <a href="indexV1.html#services">Services</a>
-                        <a href="indexV1.html#usecases">Use Cases</a>
-                        <a href="indexV1.html#pricing">Pricing</a>
-                        <a href="indexV1.html#blog">Blog</a>
+                        <a href="bootcamps.html">Bootcamps</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="mentorship.html">Mentorship</a>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="TikTok" title="TikTok">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
-                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
-                            </svg>
-                        </a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">TT</a>
+                        <a href="#" class="social-icon">YT</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Positivus. All Rights Reserved.</p>
-                <a href="#privacy">Privacy Policy</a>
+                <p>© 2026 Praktika+. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
-        const observerOptions = { threshold: 0.1 };
+        // Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
+                if (entry.isIntersecting) entry.target.style.opacity = 1;
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
+
         document.querySelectorAll('.anim-fade-up, .anim-pop, .anim-float').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease-out';
+            if(el.classList.contains('anim-fade-up')) el.style.transform = 'translateY(20px)';
             observer.observe(el);
         });
+
+        // Add Active Class for Animation
         const style = document.createElement('style');
-        style.textContent = `.active { opacity: 1 !important; transform: translateY(0) !important; }`;
+        style.textContent = `.anim-fade-up[style*="opacity: 1"] { transform: translateY(0) !important; }`;
         document.head.appendChild(style);
 
+        // Accordion Logic
         document.querySelectorAll('.process-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('.toggle-btn');
-            content.classList.toggle('hidden');
-            if (!content.classList.contains('hidden')) {
-                icon.textContent = '-';
-                icon.style.transform = 'rotate(180deg)';
-                header.parentElement.classList.add('border-[#BFFF00]', 'shadow-md');
-            } else {
-                icon.textContent = '+';
-                icon.style.transform = 'rotate(0deg)';
-                header.parentElement.classList.remove('border-[#BFFF00]', 'shadow-md');
-            }
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.toggle-btn');
+                
+                // Close other items (Optional - Accordion Behavior)
+                document.querySelectorAll('.process-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('process-item-active');
+                        otherItem.querySelector('.process-content').style.maxHeight = null;
+                        otherItem.querySelector('.process-content').style.opacity = '0';
+                        if(otherItem.querySelector('.toggle-btn')) otherItem.querySelector('.toggle-btn').textContent = '+';
+                    }
+                });
+
+                item.classList.toggle('process-item-active');
+                
+                if (item.classList.contains('process-item-active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.opacity = '1';
+                    icon.textContent = '-';
+                    // Khusus Dark Mode
+                    if(item.style.backgroundColor === 'rgb(30, 30, 30)' || item.style.backgroundColor === '#1E1E1E') {
+                        item.style.borderColor = '#BFFF00';
+                        icon.style.backgroundColor = '#BFFF00';
+                        icon.style.color = '#1E1E1E';
+                    }
+                } else {
+                    content.style.maxHeight = null;
+                    content.style.opacity = '0';
+                    icon.textContent = '+';
+                    if(item.style.backgroundColor === 'rgb(30, 30, 30)' || item.style.backgroundColor === '#1E1E1E') {
+                        item.style.borderColor = 'rgba(255,255,255,0.1)';
+                        icon.style.backgroundColor = 'transparent';
+                        icon.style.color = 'white';
+                    }
+                }
+            });
         });
-    });
     </script>
 
-    <div class="wa-fab" aria-label="WhatsApp Chat">
-        <button id="waFabBtn" class="wa-btn" type="button" title="Chat WhatsApp"
-                aria-label="Chat WhatsApp" data-wa-number="6281234567890"
-                data-wa-text="Halo, saya tertarik dengan Praktika+ Bootcamps">
-            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
-            </svg>
-        </button>
-    </div>
 </body>
 </html>
