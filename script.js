@@ -107,14 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                if (
-                    entry.target.classList.contains('anim-fade-up') ||
-                    entry.target.classList.contains('anim-pop') ||
-                    entry.target.classList.contains('anim-slide-left') ||
-                    entry.target.classList.contains('anim-slide-right')
-                ) {
-                    entry.target.classList.add('active');
-                }
             }
         });
     }, observerOptions);
@@ -677,4 +669,31 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(url, '_blank', 'noopener');
         });
     }
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item) => {
+        const header = item.querySelector('.faq-header');
+        const body = item.querySelector('.faq-body');
+        if (!header || !body) return;
+        // Initialize closed state
+        body.style.maxHeight = null;
+        body.style.opacity = '0';
+        header.addEventListener('click', () => {
+            const willOpen = !item.classList.contains('active');
+            item.classList.toggle('active');
+            if (willOpen) {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                body.style.opacity = '1';
+            } else {
+                body.style.maxHeight = null;
+                body.style.opacity = '0';
+            }
+        });
+    });
+
+    // Recalculate heights on resize for open FAQ items
+    window.addEventListener('resize', () => {
+        document.querySelectorAll('.faq-item.active .faq-body').forEach((body) => {
+            body.style.maxHeight = body.scrollHeight + 'px';
+        });
+    });
 });
