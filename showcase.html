@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Project – Praktika+</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="indexV1.html" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40">
+                    </a>
+                </div>
+                <ul class="nav-menu list-none">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                            <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="showcase.html" class="nav-link" style="color: #BFFF00; font-weight: 700;">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="showcase.html" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="#contact" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="showcase-hero">
+            <div class="container">
+                <div class="showcase-header text-center anim-fade-up">
+                    <span class="badge-lime">🔥 Student Spotlight</span>
+                    <h1 class="showcase-title">Hall of <span class="text-stroke">Fame</span></h1>
+                    <p class="showcase-subtitle">Galeri proyek terbaik dari alumni Bootcamp & Mentorship Praktika+. Bukti nyata skill yang siap kerja.</p>
+                </div>
+                <div class="filter-container anim-fade-up delay-1">
+                    <button class="filter-btn active">All Projects</button>
+                    <button class="filter-btn">Web Development</button>
+                    <button class="filter-btn">UI/UX Design</button>
+                    <button class="filter-btn">Data Science</button>
+                    <button class="filter-btn">Digital Marketing</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    
+                    <div class="project-card anim-fade-up">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Project 1">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Finance App</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                            <h3 class="project-title">Fintech Dashboard Redesign</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Sarah Amalia</span>
+                                    <span class="author-batch">Batch 12 • UI/UX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card anim-fade-up delay-1">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Project 2">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">E-Commerce</span>
+                                <span class="tag">Fullstack</span>
+                            </div>
+                            <h3 class="project-title">TokoHijau: Sustainable Marketplace</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Rizky Fajar</span>
+                                    <span class="author-batch">Batch 10 • Fullstack</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card anim-fade-up delay-2">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=800&q=80" alt="Project 3">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <h3 class="project-title">Sentiment Analysis for Brands</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Nadia Putri</span>
+                                    <span class="author-batch">Batch 8 • Data Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card anim-fade-up">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?auto=format&fit=crop&w=800&q=80" alt="Project 4">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Mobile App</span>
+                                <span class="tag">Flutter</span>
+                            </div>
+                            <h3 class="project-title">HealthTrack: Fitness Monitor</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Dimas Anggara</span>
+                                    <span class="author-batch">Batch 14 • Mobile Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card anim-fade-up delay-1">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Project 5">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">SEO</span>
+                                <span class="tag">Content</span>
+                            </div>
+                            <h3 class="project-title">Organic Growth Strategy 2026</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Bella Saphira</span>
+                                    <span class="author-batch">Batch 11 • DigMar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card anim-fade-up delay-2">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Project 6">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Lihat Detail ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Frontend</span>
+                                <span class="tag">React JS</span>
+                            </div>
+                            <h3 class="project-title">Netflix Clone with API</h3>
+                            <div class="project-author">
+                                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="User">
+                                <div>
+                                    <span class="author-name">Andi Pratama</span>
+                                    <span class="author-batch">Batch 15 • Frontend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="#" class="btn-load-more">Muat Lebih Banyak</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="showcase-cta">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-content">
+                        <h2>Punya Project Keren?</h2>
+                        <p>Tunjukkan karyamu kepada dunia dan rekruter. Alumni Praktika+ bisa submit project mereka di sini.</p>
+                    </div>
+                    <div class="cta-action">
+                        <a href="#" class="btn-submit-project">Submit Project 🚀</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Semarang</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html#about">About us</a>
+                        <a href="bootcamps.html">Bootcamps</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="mentorship.html">Mentorship</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">TT</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Praktika+. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+        const style = document.createElement('style');
+        style.textContent = `.anim-fade-up.active { opacity: 1 !important; transform: translateY(0) !important; }`;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
