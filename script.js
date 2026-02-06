@@ -74,6 +74,51 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
+
+    // Stats Card Hover Animation
+    const statItems = document.querySelectorAll('.stat-item');
+    statItems.forEach(item => {
+        item.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease';
+        
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.03)';
+            this.style.boxShadow = '0 20px 40px rgba(163, 230, 53, 0.2)';
+            this.style.borderColor = '#a3e635';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '';
+            this.style.borderColor = '';
+        });
+    });
+
+    // Program Card Hover Animation
+    const programCards = document.querySelectorAll('.program-card');
+    programCards.forEach(card => {
+        card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        const icon = card.querySelector('.program-icon');
+        if (icon) {
+            icon.style.transition = 'transform 0.3s ease';
+            icon.style.display = 'inline-block';
+        }
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
+            if (icon) {
+                icon.style.transform = 'scale(1.2) rotate(5deg)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '';
+            if (icon) {
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            }
+        });
+    });
     const partnersTrack = document.querySelector('.partners-track');
     if (partnersTrack) {
         const slider = partnersTrack.closest('.partners-slider');

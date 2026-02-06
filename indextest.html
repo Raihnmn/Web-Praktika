@@ -99,23 +99,23 @@
     <!-- Stats Section -->
     <section class="stats-section bg-gray-900 py8">
         <div class="max-w-1200 m-auto px4">
-            <div class="stats-grid grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition">
+            <div class="stats-grid flex flex-wrap justify-center gap-5">
+                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition" style="flex: 1 1 220px; max-width: 280px;">
                     <div class="stat-icon mb3"><img src="img/talenta bergabung.png" alt="Talenta Bergabung" class="max-w-50"></div>
                     <div class="stat-number text-white text-3xl font-bold" data-target="700" data-suffix="+">0</div>
                     <div class="stat-label mt4 bg-lime-400 text-gray-900 font-bold rounded-full px4 py2 text-xs text-center">Talenta Bergabung</div>
                 </div>
-                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition">
+                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition" style="flex: 1 1 220px; max-width: 280px;">
                     <div class="stat-icon mb3"><img src="img/porto tersedia.png" alt="Portofolio Tersedia" class="max-w-50"></div>
                     <div class="stat-number text-white text-3xl font-bold" data-target="100" data-suffix="+">0</div>
                     <div class="stat-label mt4 bg-lime-400 text-gray-900 font-bold rounded-full px4 py2 text-xs text-center">Portofolio Tersedia</div>
                 </div>
-                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition">
+                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition" style="flex: 1 1 220px; max-width: 280px;">
                     <div class="stat-icon mb3"><img src="img/kepuasan talenta.png" alt="Kepuasan Talenta" class="max-w-50"></div>
                     <div class="stat-number text-white text-3xl font-bold" data-target="88" data-suffix="%">0</div>
                     <div class="stat-label mt4 bg-lime-400 text-gray-900 font-bold rounded-full px4 py2 text-xs text-center">Kepuasan Talenta</div>
                 </div>
-                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition">
+                <div class="stat-item rounded-xl border border-gray-700 bg-gray-800 shadow text-white p7 flex flex-col items-center transition" style="flex: 1 1 220px; max-width: 280px;">
                     <div class="stat-icon mb3"><img src="img/kerjasama sekolah.png" alt="Kerjasama dengan SMK & Universitas" class="max-w-50"></div>
                     <div class="stat-number text-white text-3xl font-bold" data-target="20" data-suffix="+">0</div>
                     <div class="stat-label mt4 bg-lime-400 text-gray-900 font-bold rounded-full px4 py2 text-xs text-center">Kerjasama dengan SMK & Universitas</div>
@@ -127,16 +127,16 @@
     <!-- Programs Section -->
     <section id="program" class="programs-section bg-white py9">
         <div class="max-w-1200 m-auto px4">
-            <div class="text-center mb7">
-                <h2 class="text-2xl font-bold text-gray-900 mb3"><span class="bg-lime-400 px4 py1 rounded-md">Our Program</span></h2>
-                <p class="text-gray-600 text-base max-w-800 m-auto">At Praktika+, we offer comprehensive career acceleration programs designed to bridge the gap between academic learning and industry needs. Our featured programs include</p>
+            <div class="flex items-start gap-5 mb7 flex-col sm:flex-row">
+                <h2 class="text-2xl font-bold text-gray-900"><span class="bg-lime-400 px4 py1 rounded-md">Our Program</span></h2>
+                <p class="text-gray-600 text-base flex-grow">At Praktika+, we offer comprehensive career acceleration programs designed to bridge the gap between academic learning and industry needs. Our featured programs include</p>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="bg-gray-100 rounded-xl p6 flex flex-col shadow transition hover:shadow-lg">
+                <div class="program-card bg-white rounded-xl p6 flex flex-col shadow border border-gray-200 transition">
                     <h3 class="text-lg font-bold text-gray-900 mb3">Intensive Bootcamps</h3>
                     <div class="flex gap-3 mb4 flex-grow">
-                        <div class="text-3xl">🚀</div>
+                        <div class="program-icon text-3xl">🚀</div>
                         <p class="text-gray-600 text-sm">Program pelatihan intensif yang dirancang untuk membangun skill digital marketing secara cepat dan terstruktur dengan praktik langsung.</p>
                     </div>
                     <a href="bootcamps.html" class="flex items-center gap-2 text-gray-900 font-bold transition hover:text-lime-600">
@@ -147,10 +147,10 @@
                     </a>
                 </div>
 
-                <div class="bg-lime-400 rounded-xl p6 flex flex-col shadow transition hover:shadow-lg">
+                <div class="program-card bg-lime-400 rounded-xl p6 flex flex-col shadow transition">
                     <h3 class="text-lg font-bold text-gray-900 mb3">Certified Internship Program</h3>
                     <div class="flex gap-3 mb4 flex-grow">
-                        <div class="text-3xl">🎓</div>
+                        <div class="program-icon text-3xl">🎓</div>
                         <p class="text-gray-800 text-sm">Magang online bersertifikat dengan proyek nyata dari industri. Bangun portofolio profesional sambil mendapat pengalaman kerja.</p>
                     </div>
                     <a href="internship.html" class="flex items-center gap-2 text-gray-900 font-bold transition hover:text-gray-700">
@@ -161,10 +161,10 @@
                     </a>
                 </div>
 
-                <div class="bg-gray-900 rounded-xl p6 flex flex-col shadow transition hover:shadow-lg">
+                <div class="program-card bg-gray-900 rounded-xl p6 flex flex-col shadow transition">
                     <h3 class="text-lg font-bold text-white mb3">Career & Mentorship</h3>
                     <div class="flex gap-3 mb4 flex-grow">
-                        <div class="text-3xl">🧑‍🏫</div>
+                        <div class="program-icon text-3xl">🧑‍🏫</div>
                         <p class="text-gray-300 text-sm">Bimbingan karir personal dari mentor berpengalaman untuk mempersiapkan Anda memasuki dunia kerja dengan percaya diri.</p>
                     </div>
                     <a href="mentorship.html" class="flex items-center gap-2 text-white font-bold transition hover:text-lime-400">
@@ -175,10 +175,10 @@
                     </a>
                 </div>
 
-                <div class="bg-gray-100 rounded-xl p6 flex flex-col shadow transition hover:shadow-lg">
+                <div class="program-card bg-white rounded-xl p6 flex flex-col shadow border border-gray-200 transition">
                     <h3 class="text-lg font-bold text-gray-900 mb3">Soft Skills & Leadership</h3>
                     <div class="flex gap-3 mb4 flex-grow">
-                        <div class="text-3xl">🌟</div>
+                        <div class="program-icon text-3xl">🌟</div>
                         <p class="text-gray-600 text-sm">Kembangkan kemampuan komunikasi, teamwork, dan kepemimpinan yang dibutuhkan untuk sukses di lingkungan profesional.</p>
                     </div>
                     <a href="softskills.html" class="flex items-center gap-2 text-gray-900 font-bold transition hover:text-lime-600">
