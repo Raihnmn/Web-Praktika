@@ -10,36 +10,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-dark">
-
-    <nav class="bg-white sticky top-0 z5 shadow-lg border-b border-gray-200">
-        <div class="container max-w-1000 m-auto px4 py3">
-            <div class="flex justify-between items-center">
-                <div class="max-w-150">
+    <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center gap-4">
+                <div class="w-auto h-10 flex-shrink-0">
                     <a href="indexV1.html" class="block">
-                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="w-full">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="h-10 w-auto object-contain">
                     </a>
                 </div>
+                <ul class="hidden lg:flex items-center gap-8 list-none m-0">
+                    
+                    <li class="relative group">
+                        <a href="#program" class="flex items-center gap-1 text-dark font-medium hover:text-lime transition cursor-pointer">
+                            Program <span class="text-xs">▾</span>
+                        </a>
+                        <ul class="absolute top-full left-0 mt-2 w-250 bg-white border border-gray-200 rounded-xl shadow-lg p-2 hidden group-hover:block z-50">
+                            <li><a href="bootcamps.html" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="internship.html" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🎓 Certified Internship</a></li>
+                            <li><a href="mentorship.html" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="softskills.html" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🌟 Soft Skills</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="solutions.html" class="text-dark font-medium hover:text-lime transition">Our Solution</a></li>
 
-                <ul class="flex items-center gap-6 m0 sm:hidden">
-                    <li><a href="#program" class="text-dark font-bold hover:text-lime-600">Program ▾</a></li>
-                    <li><a href="solutions.html" class="text-dark font-bold hover:text-lime-600">Our Solution</a></li>
-                    <li><a href="#contact" class="text-dark font-bold hover:text-lime-600">Hub ▾</a></li>
-                    <li><a href="komunitas.html" class="text-dark font-bold hover:text-lime-600">Komunitas</a></li>
+                    <li class="relative group">
+                        <a href="#contact" class="flex items-center gap-1 text-dark font-medium hover:text-lime transition cursor-pointer">
+                            Hub <span class="text-xs">▾</span>
+                        </a>
+                        <ul class="absolute top-full left-0 mt-2 w-250 bg-white border border-gray-200 rounded-xl shadow-lg p-2 hidden group-hover:block z-50">
+                            <li><a href="showcase.html" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">📌 Showcase</a></li>
+                            <li><a href="#contact" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">📰 Blog Berita</a></li>
+                            <li><a href="#contact" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">💼 Lowongan Kerja</a></li>
+                            <li><a href="#contact" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🎤 Event & Webinar</a></li>
+                            <li><a href="#contact" class="block px-4 py-2 rounded-lg hover:bg-gray-50 text-sm text-dark hover:text-lime">🏆 Competition</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="komunitas.html" class="text-dark font-medium hover:text-lime transition">Komunitas</a></li>
                 </ul>
 
-                <div class="flex items-center gap-3">
-                    <div class="flex items-center bg-gray-100 rounded-full px3 py2 sm:hidden">
-                        <input type="text" placeholder="Search..." class="bg-transparent border-none text-sm w-150 outline-none">
-                        <button class="bg-transparent border-none cursor-pointer text-gray-500">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <div class="flex items-center gap-4">
+                    
+                    <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 w-250 focus-within:bg-white focus-within:shadow-sm focus-within:ring-2 ring-lime transition">
+                        <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-sm w-full text-dark">
+                        <button class="bg-transparent border-none cursor-pointer text-gray-500 hover:text-lime">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>  
+
+                    <div class="flex items-center gap-3">
+                        <button class="btn btn-outline-white text-dark border border-gray-300 hover:bg-gray-50 text-sm font-bold">
+                            Masuk
+                        </button>
+                        <button class="btn btn-lime text-dark font-bold text-sm hover:shadow-lg">
+                            Daftar
                         </button>
                     </div>
-                    
-                    <div class="flex gap-2">
-                        <button class="px4 py2 rounded-lg border-1 border-gray-300 bg-white text-dark font-bold cursor-pointer hover:bg-gray-100 sm:hidden">Masuk</button>
-                        <button class="px4 py2 rounded-lg bg-lime-500 text-dark font-bold border-none cursor-pointer hover:bg-lime-600">Daftar</button>
-                    </div>
                 </div>
+
             </div>
         </div>
     </nav>
