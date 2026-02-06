@@ -74,6 +74,89 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
+    const partnersTrack = document.querySelector('.partners-track');
+    if (partnersTrack) {
+        const slider = partnersTrack.closest('.partners-slider');
+        const originalLogos = Array.from(partnersTrack.querySelectorAll('.partner-logo'));
+        const logoCount = originalLogos.length;
+        if (logoCount > 0) {
+        const sliderStyle = document.createElement('style');
+        sliderStyle.textContent = `
+            .partners-slider {
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+            }
+            .partners-track {
+                display: flex;
+                width: max-content;
+                animation: scroll-partners 20s linear infinite;
+            }
+            .partners-track:hover {
+                animation-play-state: paused;
+            }
+            .partner-logo {
+                flex-shrink: 0;
+                min-width: 180px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .partner-logo img {
+                width: auto;
+                max-width: 150px;
+                height: 40px;
+                object-fit: contain;
+                filter: grayscale(100%);
+                opacity: 0.6;
+                transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            }
+            .partner-logo:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            }
+            .partner-logo:hover img {
+                filter: grayscale(0%);
+                opacity: 1;
+            }
+        `;
+        document.head.appendChild(sliderStyle);
+        
+        // Clone logos enough times to fill screen + buffer
+        const cloneMultiplier = 10; // Clone 10 times for safety
+        for (let i = 0; i < cloneMultiplier; i++) {
+            originalLogos.forEach(logo => {
+                const clone = logo.cloneNode(true);
+                partnersTrack.appendChild(clone);
+            });
+        }
+        
+        // Calculate width after clones are added and set animation
+        requestAnimationFrame(() => {
+            const gap = parseFloat(window.getComputedStyle(partnersTrack).gap) || 40;
+            let singleSetWidth = 0;
+            originalLogos.forEach(logo => {
+                singleSetWidth += logo.offsetWidth + gap;
+            });
+            
+            // Create keyframes for the exact width
+            const keyframes = document.createElement('style');
+            keyframes.textContent = `
+                @keyframes scroll-partners {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-${singleSetWidth}px);
+                    }
+                }
+            `;
+            document.head.appendChild(keyframes);
+            
+            // Set duration based on number of logos (slower = smoother)
+            const duration = logoCount * 3; // 3 seconds per logo
+            partnersTrack.style.animationDuration = `${duration}s`;
+        });
+        } // end if logoCount > 0
+    }
     
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -177,7 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 menuToggle.innerHTML = '☰';
 
                 const navWrapper = document.querySelector('.nav-wrapper');
-                // Place toggle to the far left, before the logo
                 if (navWrapper) {
                     navWrapper.insertBefore(menuToggle, navWrapper.firstChild);
                 }
