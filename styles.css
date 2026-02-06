@@ -420,7 +420,7 @@ img {
 }
 
 .hero-illustration {
-    width: 100%;
+    width: 85%;
     height: clamp(360px, 40vw, 480px);
     background: transparent;
     border-radius: 0;
