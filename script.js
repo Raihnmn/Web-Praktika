@@ -823,4 +823,29 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.maxHeight = body.scrollHeight + 'px';
         });
     });
+
+    // Portfolio CTA Button - Gradient Border Animation
+    const portfolioCtaBtn = document.getElementById('portfolioCtaBtn');
+    if (portfolioCtaBtn) {
+        // Set initial styles
+        portfolioCtaBtn.style.border = '2px solid rgba(255, 255, 255, 0.3)';
+        portfolioCtaBtn.style.transition = 'all 0.3s ease';
+        portfolioCtaBtn.style.position = 'relative';
+        portfolioCtaBtn.style.background = 'transparent';
+        portfolioCtaBtn.style.boxShadow = 'none';
+
+        portfolioCtaBtn.addEventListener('mouseenter', function() {
+            this.style.border = '2px solid transparent';
+            this.style.background = 'linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff, #5f27cd) border-box';
+            this.style.boxShadow = '0 0 20px rgba(255, 107, 107, 0.3), 0 0 40px rgba(72, 219, 251, 0.2)';
+            this.style.transform = 'translateY(-2px)';
+        });
+
+        portfolioCtaBtn.addEventListener('mouseleave', function() {
+            this.style.border = '2px solid rgba(255, 255, 255, 0.3)';
+            this.style.background = 'transparent';
+            this.style.boxShadow = 'none';
+            this.style.transform = 'translateY(0)';
+        });
+    }
 });

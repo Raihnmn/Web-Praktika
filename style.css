@@ -2876,6 +2876,10 @@ textarea {
     max-width: 200px;
 }
 
+.max-w-250 {
+    max-width: 250px;
+}
+
 .max-w-400 {
     max-width: 400px;
 }
