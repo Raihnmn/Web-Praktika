@@ -1,20 +1,47 @@
 document.addEventListener('DOMContentLoaded', function() {
     const processItems = document.querySelectorAll('.process-item');
 
+    // Initialize process accordion with animations
     processItems.forEach(item => {
         const content = item.querySelector('.process-content');
         const toggle = item.querySelector('.toggle-btn');
+        
         if (!content) return;
+        
+        // Set transition styles via JS
+        content.style.transition = 'max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease';
+        content.style.overflow = 'hidden';
+        item.style.transition = 'background-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease';
+        
+        if (toggle) {
+            toggle.style.transition = 'transform 0.3s ease, background 0.3s ease, color 0.3s ease';
+        }
+        
         if (item.classList.contains('process-item-active')) {
             content.style.maxHeight = content.scrollHeight + 'px';
             content.style.opacity = '1';
-            content.style.paddingBottom = '18px';
-            if (toggle) toggle.textContent = '−';
+            content.style.paddingTop = '0';
+            content.style.paddingBottom = '20px';
+            item.style.backgroundColor = '#BFFF00';
+            if (toggle) {
+                toggle.textContent = '−';
+                toggle.style.transform = 'rotate(180deg)';
+                toggle.style.background = '#1E1E1E';
+                toggle.style.color = '#fff';
+                toggle.style.borderColor = '#1E1E1E';
+            }
         } else {
             content.style.maxHeight = '0px';
             content.style.opacity = '0';
+            content.style.paddingTop = '0';
             content.style.paddingBottom = '0';
-            if (toggle) toggle.textContent = '+';
+            item.style.backgroundColor = '#fff';
+            if (toggle) {
+                toggle.textContent = '+';
+                toggle.style.transform = 'rotate(0deg)';
+                toggle.style.background = 'transparent';
+                toggle.style.color = '#1E1E1E';
+            }
         }
     });
 
@@ -24,32 +51,63 @@ document.addEventListener('DOMContentLoaded', function() {
         const toggleBtn = item.querySelector('.toggle-btn');
 
         header.addEventListener('click', function() {
+            // Close all other items with animation
             processItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     const oc = otherItem.querySelector('.process-content');
                     const ot = otherItem.querySelector('.toggle-btn');
                     otherItem.classList.remove('process-item-active');
+                    otherItem.style.backgroundColor = '#fff';
                     if (oc) {
                         oc.style.maxHeight = '0px';
                         oc.style.opacity = '0';
                         oc.style.paddingBottom = '0';
                     }
-                    if (ot) ot.textContent = '+';
+                    if (ot) {
+                        ot.textContent = '+';
+                        ot.style.transform = 'rotate(0deg)';
+                        ot.style.background = 'transparent';
+                        ot.style.color = '#1E1E1E';
+                    }
                 }
             });
 
             item.classList.toggle('process-item-active');
 
             if (item.classList.contains('process-item-active')) {
+                // Open animation
                 content.style.maxHeight = content.scrollHeight + 'px';
                 content.style.opacity = '1';
-                content.style.paddingBottom = '18px';
+                content.style.paddingBottom = '20px';
+                item.style.backgroundColor = '#BFFF00';
                 toggleBtn.textContent = '−';
+                toggleBtn.style.transform = 'rotate(180deg)';
+                toggleBtn.style.background = '#1E1E1E';
+                toggleBtn.style.color = '#fff';
+                toggleBtn.style.borderColor = '#1E1E1E';
             } else {
+                // Close animation
                 content.style.maxHeight = '0px';
                 content.style.opacity = '0';
                 content.style.paddingBottom = '0';
+                item.style.backgroundColor = '#fff';
                 toggleBtn.textContent = '+';
+                toggleBtn.style.transform = 'rotate(0deg)';
+                toggleBtn.style.background = 'transparent';
+                toggleBtn.style.color = '#1E1E1E';
+            }
+        });
+        
+        // Hover effect on header
+        header.addEventListener('mouseenter', function() {
+            if (!item.classList.contains('process-item-active')) {
+                item.style.backgroundColor = '#FAFAFA';
+            }
+        });
+        
+        header.addEventListener('mouseleave', function() {
+            if (!item.classList.contains('process-item-active')) {
+                item.style.backgroundColor = '#fff';
             }
         });
     });
