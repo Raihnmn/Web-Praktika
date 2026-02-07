@@ -948,4 +948,50 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     }
+
+    // Impact Stats Counter Animation
+    const impactCounters = document.querySelectorAll('.impact-counter');
+    let impactAnimated = false;
+
+    const animateImpactCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        
+        const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(easeOutQuart * target);
+            
+            counter.textContent = current + suffix;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + suffix;
+            }
+        };
+        
+        requestAnimationFrame(updateCounter);
+    };
+
+    const impactObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !impactAnimated) {
+                impactAnimated = true;
+                impactCounters.forEach(counter => {
+                    animateImpactCounter(counter);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const impactSection = document.querySelector('.impact-stats');
+    if (impactSection) {
+        impactObserver.observe(impactSection);
+    }
 });
