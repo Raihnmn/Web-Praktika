@@ -1036,4 +1036,24 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.style.boxShadow = 'none';
         });
     });
+
+    // Hub Card Hover Animation
+    const hubCards = document.querySelectorAll('.hub-card');
+    hubCards.forEach(card => {
+        const img = card.querySelector('img');
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px)';
+            card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            if (img) {
+                img.style.transform = 'scale(1.05)';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = 'none';
+            if (img) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
 });
