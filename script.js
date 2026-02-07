@@ -834,7 +834,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 const isMatch = cat === 'all' || s.dataset.cat === cat;
                 if (isMatch) s.removeAttribute('hidden'); else s.setAttribute('hidden', '');
             });
-            document.querySelectorAll('.hub-tab').forEach((b) => b.classList.toggle('active', b.dataset.hubCat === cat));
+            document.querySelectorAll('.hub-tab').forEach((b) => {
+                const isActive = b.dataset.hubCat === cat;
+                b.classList.toggle('active', isActive);
+                // Update button colors
+                if (isActive) {
+                    b.style.backgroundColor = '#a3e635'; // lime-400
+                    b.style.color = '#111827'; // gray-900
+                } else {
+                    b.style.backgroundColor = '#f3f4f6'; // gray-100
+                    b.style.color = '#374151'; // gray-700
+                }
+            });
             centerVisible = 0;
             buildDots();
             updateTransform();
@@ -994,4 +1005,35 @@ document.addEventListener('DOMContentLoaded', function() {
     if (impactSection) {
         impactObserver.observe(impactSection);
     }
+
+    // Portfolio First Card Hover Animation
+    const pfCards = document.querySelectorAll('.portfolio-first .pf-card');
+    pfCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px)';
+            card.style.borderColor = 'rgba(255,255,255,0.35)';
+            card.style.boxShadow = '0 0 0 2px rgba(255,255,255,0.20), 0 0 22px rgba(255,255,255,0.16), 0 12px 28px rgba(0,0,0,0.30)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.borderColor = 'rgba(255,255,255,0.16)';
+            card.style.boxShadow = 'none';
+        });
+    });
+
+    // Portfolio First Button Hover Animation
+    const pfBtns = document.querySelectorAll('.portfolio-first .pf-btn');
+    pfBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            const currentTransform = btn.style.transform.replace('translateY(-50%)', '').trim();
+            btn.style.transform = 'translateY(-50%) scale(1.08)';
+            btn.style.borderColor = 'rgba(255,255,255,0.6)';
+            btn.style.boxShadow = '0 0 0 2px rgba(255,255,255,0.25), 0 0 18px rgba(255,255,255,0.18)';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translateY(-50%) scale(1)';
+            btn.style.borderColor = 'rgba(255,255,255,0.35)';
+            btn.style.boxShadow = 'none';
+        });
+    });
 });
