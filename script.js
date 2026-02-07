@@ -967,7 +967,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateImpactCounter = (counter) => {
         const target = parseInt(counter.getAttribute('data-target'));
         const suffix = counter.getAttribute('data-suffix') || '';
-        const duration = 2000; // 2 seconds
+        const duration = 2000; 
         const startTime = performance.now();
         
         const updateCounter = (currentTime) => {
