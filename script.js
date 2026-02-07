@@ -425,12 +425,32 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         const updateSlideClasses = () => {
-            slides.forEach((slide) => slide.classList.remove('active', 'adjacent'));
+            slides.forEach((slide) => {
+                slide.classList.remove('active', 'adjacent');
+                slide.style.opacity = '0.5';
+                slide.style.transform = 'scale(0.95)';
+                slide.style.transition = 'all 0.4s ease';
+                slide.style.borderColor = 'rgba(255,255,255,0.15)';
+            });
             const left = (centerIndex - 1 + totalSlides) % totalSlides;
             const right = (centerIndex + 1) % totalSlides;
-            slides[centerIndex]?.classList.add('active');
-            slides[left]?.classList.add('adjacent');
-            slides[right]?.classList.add('adjacent');
+            
+            // Active card (center)
+            if (slides[centerIndex]) {
+                slides[centerIndex].classList.add('active');
+                slides[centerIndex].style.opacity = '1';
+                slides[centerIndex].style.transform = 'scale(1)';
+                slides[centerIndex].style.borderColor = 'rgba(255,255,255,0.35)';
+            }
+            
+            // Adjacent cards (left and right)
+            [left, right].forEach(idx => {
+                if (slides[idx]) {
+                    slides[idx].classList.add('adjacent');
+                    slides[idx].style.opacity = '0.7';
+                    slides[idx].style.transform = 'scale(0.95)';
+                }
+            });
         };
 
         const updateTransform = () => {
@@ -469,6 +489,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const btn = document.createElement('button');
                 btn.className = 'carousel-dot' + (i === centerIndex ? ' active' : '');
                 btn.setAttribute('aria-label', `Ke halaman ${i+1}`);
+                // Style dots via JS
+                btn.style.width = '12px';
+                btn.style.height = '12px';
+                btn.style.borderRadius = '50%';
+                btn.style.border = 'none';
+                btn.style.cursor = 'pointer';
+                btn.style.transition = 'all 0.3s ease';
+                btn.style.backgroundColor = i === centerIndex ? '#BFFF00' : 'rgba(255,255,255,0.4)';
                 btn.addEventListener('click', () => {
                     centerIndex = i;
                     updateTransform();
@@ -482,6 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const dots = dotsContainer.querySelectorAll('.carousel-dot');
             dots.forEach((d, i) => {
                 d.classList.toggle('active', i === centerIndex);
+                d.style.backgroundColor = i === centerIndex ? '#BFFF00' : 'rgba(255,255,255,0.4)';
             });
         };
 
@@ -503,6 +532,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         prevBtn.addEventListener('click', goToPrev);
         nextBtn.addEventListener('click', goToNext);
+        
+        // Button hover effects
+        [prevBtn, nextBtn].forEach(btn => {
+            if (!btn) return;
+            btn.addEventListener('mouseenter', function() {
+                this.style.borderColor = 'rgba(255,255,255,0.6)';
+                this.style.boxShadow = '0 0 15px rgba(255,255,255,0.2)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.borderColor = 'rgba(255,255,255,0.3)';
+                this.style.boxShadow = 'none';
+            });
+        });
 
         slides.forEach((slide, i) => {
             slide.addEventListener('click', (e) => {

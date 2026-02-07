@@ -223,7 +223,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Registration & Screening</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">−</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Pendaftaran & Seleksi Administrasi Calon peserta mendaftar melalui website, melengkapi profil, mengunggah CV serta portofolio. Tim kami akan menyeleksi kandidat yang memenuhi kriteria dasar.</p>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Skill Assessment</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">+</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Penilaian kemampuan dan keterampilan peserta melalui tes kompetensi dan interview untuk menentukan jalur pengembangan yang tepat.</p>
                     </div>
                 </div>
@@ -245,7 +245,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Onboarding & Bootcamp</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">+</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Orientasi dan pelatihan intensif untuk mempersiapkan peserta dengan skill dan pengetahuan yang dibutuhkan.</p>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Project Execution</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">+</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Pelaksanaan proyek nyata dengan bimbingan mentor berpengalaman dari industri.</p>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Mentoring & Evaluation</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">+</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Pendampingan dan evaluasi berkala terhadap progress peserta untuk memastikan perkembangan optimal.</p>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                         <h3 class="flex-grow text-gray-900 font-bold text-lg">Certification & Career Kickstart</h3>
                         <button class="toggle-btn rounded-full cursor-pointer font-bold text-lg flex items-center justify-center" style="width: 28px; height: 28px; border: 2px solid #1E1E1E; background: transparent;">+</button>
                     </div>
-                    <div class="process-content p5" style="padding-left: 72px;">
+                    <div class="process-content p5" style="padding-left: 72px; padding-bottom: 72px;">
                         <p class="text-gray-600 m0">Pemberian sertifikat resmi dan bantuan untuk memulai karier profesional di industri.</p>
                     </div>
                 </div>
@@ -287,23 +287,24 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials bg-gray-50 py9">
+    <section id="testimonials" class="testimonials bg-gray-900 py9">
         <div class="max-w-1200 m-auto px4">
-            <div class="text-center mb7">
-                <h2 class="text-2xl font-bold text-gray-900 mb3"><span class="bg-lime-400 px4 py1 rounded-md">Internship Testimonials</span></h2>
-                <p class="text-gray-600 text-base max-w-800 m-auto">Real stories, real growth. Discover how our programs helped these talents transform from students into industry-ready professionals.</p>
+            <div class="flex items-start gap-5 mb7 flex-col sm:flex-row">
+                <h2 class="text-2xl font-bold text-white">Internship Testimonials</h2>
+                <p class="text-gray-400 text-base flex-grow">Real stories, real growth. Discover how our programs helped these talents transform from students into industry-ready professionals.</p>
             </div>
 
-            <!-- Carousel: show one testimonial at a time -->
-            <div class="carousel relative" aria-label="Testimoni">
-                <div class="carousel-viewport overflow-hidden">
+            <!-- Carousel: show testimonials -->
+            <div class="carousel relative flex items-center" aria-label="Testimoni" style="padding: 0 60px;">
+                <button class="carousel-btn prev rounded-full cursor-pointer z1" aria-label="Sebelumnya" style="position: absolute; left: 0; width: 48px; height: 48px; border: 2px solid rgba(255,255,255,0.3); background: transparent; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">‹</button>
+                <div class="carousel-viewport overflow-hidden flex-grow">
                     <div class="carousel-track flex gap-5 transition">
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Reno</h4>
-                                <p class="text-gray-500 text-sm m0">SMK 1 Semarang</p>
+                                <h4 class="font-bold text-white">Reno</h4>
+                                <p class="text-gray-400 text-sm m0">SMK 1 Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-reno.jpg" class="w-full">
                                     <source src="videos/reno.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -311,12 +312,12 @@
                             </div>
                         </div>
 
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Juni</h4>
-                                <p class="text-gray-500 text-sm m0">Universitas Negeri Semarang</p>
+                                <h4 class="font-bold text-white">Juni</h4>
+                                <p class="text-gray-400 text-sm m0">Universitas Negeri Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-juni.jpg" class="w-full">
                                     <source src="videos/juni.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -324,12 +325,12 @@
                             </div>
                         </div>
 
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Lia</h4>
-                                <p class="text-gray-500 text-sm m0">Universitas Diponegoro Semarang</p>
+                                <h4 class="font-bold text-white">Lia</h4>
+                                <p class="text-gray-400 text-sm m0">Universitas Diponegoro Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-lia.jpg" class="w-full">
                                     <source src="videos/lia.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -337,12 +338,12 @@
                             </div>
                         </div>
 
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Dafa</h4>
-                                <p class="text-gray-500 text-sm m0">Universitas Negeri Semarang</p>
+                                <h4 class="font-bold text-white">Dafa</h4>
+                                <p class="text-gray-400 text-sm m0">Universitas Negeri Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-dafa.jpg" class="w-full">
                                     <source src="videos/dafa.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -350,12 +351,12 @@
                             </div>
                         </div>
 
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Natan</h4>
-                                <p class="text-gray-500 text-sm m0">SMK 6 Semarang</p>
+                                <h4 class="font-bold text-white">Natan</h4>
+                                <p class="text-gray-400 text-sm m0">SMK 6 Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-natan.jpg" class="w-full">
                                     <source src="videos/natan.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -363,12 +364,12 @@
                             </div>
                         </div>
 
-                        <div class="testimonial-card bg-white rounded-xl shadow p5 flex-grow">
+                        <div class=" rounded-xl p5" style="background: #23272f; border: 1px solid rgba(255,255,255,0.15); min-width: 300px;">
                             <div class="mb3">
-                                <h4 class="font-bold text-gray-900">Sarah</h4>
-                                <p class="text-gray-500 text-sm m0">SMK 3 Semarang</p>
+                                <h4 class="font-bold text-white">Sarah</h4>
+                                <p class="text-gray-400 text-sm m0">SMK 3 Semarang</p>
                             </div>
-                            <div class="rounded-lg overflow-hidden">
+                            <div class="rounded-lg overflow-hidden" style="background: #000;">
                                 <video controls preload="none" poster="img/poster-sarah.jpg" class="w-full">
                                     <source src="videos/sarah.mp4" type="video/mp4">
                                     Browser Anda tidak mendukung video HTML5.
@@ -377,8 +378,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn prev absolute left-0 top-1-2 bg-white shadow rounded-full px3 py2 cursor-pointer border-none z1" aria-label="Sebelumnya">‹</button>
-                <button class="carousel-btn next absolute right-0 top-1-2 bg-white shadow rounded-full px3 py2 cursor-pointer border-none z1" aria-label="Berikutnya">›</button>
+                <button class="carousel-btn next rounded-full cursor-pointer z1" aria-label="Berikutnya" style="position: absolute; right: 0; width: 48px; height: 48px; border: 2px solid rgba(255,255,255,0.3); background: transparent; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">›</button>
             </div>
             <div class="carousel-dots flex justify-center gap-2 mt5" aria-label="Halaman"></div>
         </div>
