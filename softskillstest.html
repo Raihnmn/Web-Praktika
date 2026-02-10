@@ -54,9 +54,13 @@
                         Jangan biarkan karier kamu mentok cuma gara-gara gak berani ngomong. Program khusus mahasiswa & SMK untuk menguasai <strong>Public Speaking</strong>, <strong>Leadership</strong>, dan <strong>Personal Branding</strong>.
                     </p>
                     
-                    <div class="flex gap-3 sm:flex-col sm:items-start">
-                        <a href="#curriculum" class="inline-block px6 py3 rounded-full bg-lime-400 text-gray-900 font-bold shadow-lg cursor-pointer">Lihat Materi</a>
-                        <a href="#testimoni" class="inline-block px6 py3 rounded-full bg-white border border-gray-300 text-gray-700 cursor-pointer">Kata Alumni</a>
+                    <div class="flex gap-4 pt2 sm:flex-col">
+                            <a href="#programs" class="inline-flex items-center gap-2 px6 py3 rounded-full bg-lime-300 text-dark font-bold text-base shadow-lg cursor-pointer">
+                                Lihat Materi
+                            </a>
+                            <a href="#benefits" class="inline-flex items-center gap-2 px6 py3 rounded-full bg-white text-dark font-bold text-base border border-dark cursor-pointer">
+                                Kata Alumni
+                            </a>
                     </div>
 
                     <div class="mt8 flex items-center gap-3">
@@ -407,6 +411,7 @@
 
     <script src="script.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
             // === WHATSAPP FAB PULSE ===
             const waBtn = document.getElementById('waFabBtn');
             if (waBtn) {
@@ -432,6 +437,164 @@
                     this.style.boxShadow = '';
                 });
             }
+
+            // === BUTTON HOVER ANIMATIONS ===
+            const buttons = document.querySelectorAll(`
+                a.inline-flex[class*="rounded-full"],
+                button[class*="rounded-full"],
+                a[class*="bg-lime-300"],
+                a[class*="bg-lime-400"],
+                button[class*="bg-lime-300"],
+                button[class*="bg-lime-400"],
+                nav button
+            `);
+            
+            buttons.forEach(btn => {
+                btn.style.transition = 'all 0.3s ease';
+                
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.15)';
+                    
+                    // Lime button specific
+                    if (this.classList.contains('bg-lime-300') || this.classList.contains('bg-lime-400')) {
+                        this.style.boxShadow = '0 10px 30px rgba(163, 230, 53, 0.4)';
+                    }
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // === TESTIMONIAL CARD HOVER ===
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            testimonialCards.forEach(card => {
+                card.style.transition = 'all 0.3s ease';
+                
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
+                    this.style.borderColor = '#a3e635';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                    this.style.borderColor = '';
+                });
+            });
+
+            // === HERO FLOATING CARD ANIMATION ===
+            const heroFloatingCard = document.querySelector('.absolute.bottom-0.left-0');
+            if (heroFloatingCard) {
+                heroFloatingCard.style.animation = 'float 3s ease-in-out infinite';
+                const floatStyle = document.createElement('style');
+                floatStyle.textContent = `
+                    @keyframes float {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-10px); }
+                    }
+                `;
+                document.head.appendChild(floatStyle);
+            }
+
+            // === NAV LINK HOVER ===
+            const navLinks = document.querySelectorAll('nav a.text-sm');
+            navLinks.forEach(link => {
+                link.style.transition = 'all 0.2s ease';
+                link.style.position = 'relative';
+                
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = '#65a30d'; // lime-600
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = '';
+                });
+            });
+
+            // === CURRICULUM INFO CARD HOVER ===
+            const infoCard = document.querySelector('.bg-gray-800.rounded-xl.text-left');
+            if (infoCard) {
+                infoCard.style.transition = 'all 0.3s ease';
+                
+                infoCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.boxShadow = '0 15px 35px rgba(163, 230, 53, 0.15)';
+                });
+                
+                infoCard.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '';
+                });
+            }
+
+            // === CTA BONUS CARD PULSE ===
+            const bonusCard = document.querySelector('.p5.rounded-lg.bg-gray-800.border.border-gray-700');
+            if (bonusCard) {
+                bonusCard.style.animation = 'glow 2s ease-in-out infinite';
+                const glowStyle = document.createElement('style');
+                glowStyle.textContent = `
+                    @keyframes glow {
+                        0%, 100% { box-shadow: 0 0 5px rgba(163, 230, 53, 0.2); }
+                        50% { box-shadow: 0 0 20px rgba(163, 230, 53, 0.4), 0 0 30px rgba(163, 230, 53, 0.2); }
+                    }
+                `;
+                document.head.appendChild(glowStyle);
+            }
+
+            // === FOOTER LINKS HOVER ===
+            const footerLinks = document.querySelectorAll('footer a');
+            footerLinks.forEach(link => {
+                link.style.transition = 'all 0.2s ease';
+                
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = '#a3e635'; // lime-400
+                    this.style.transform = 'translateX(5px)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = '';
+                    this.style.transform = '';
+                });
+            });
+
+            // === BADGE PILL HOVER (Career Accelerator) ===
+            const badgePill = document.querySelector('.inline-flex.items-center.gap-2.px4.py2.rounded-full.mb6');
+            if (badgePill) {
+                badgePill.style.transition = 'all 0.3s ease';
+                
+                badgePill.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.boxShadow = '0 8px 20px rgba(163, 230, 53, 0.3)';
+                });
+                
+                badgePill.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            }
+
+            // === USER AVATARS HOVER ===
+            const userAvatars = document.querySelectorAll('.mt8.flex.items-center.gap-3 img');
+            userAvatars.forEach(avatar => {
+                avatar.style.transition = 'all 0.3s ease';
+                
+                avatar.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.15) translateY(-5px)';
+                    this.style.zIndex = '10';
+                    this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
+                });
+                
+                avatar.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.zIndex = '';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
     </script>
 
 
