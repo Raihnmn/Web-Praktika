@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Pemerintah - Praktika+ | Transformasi ASN & Pelayanan Publik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow z5 py3">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="indexV1.html" aria-label="Praktika+ Dashboard">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="max-h-50" height="40" decoding="async">
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 sm:none">
+                    <a href="#program" class="text-sm text-gray-700 px3 py2">Program</a>
+                    <a href="#transformasi" class="text-sm text-gray-700 px3 py2">Transformasi</a>
+                    <a href="#mitra" class="text-sm text-gray-700 px3 py2">Mitra Instansi</a>
+                    <a href="#kontak" class="text-sm text-gray-700 px3 py2">Kontak</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button class="text-sm px4 py2 rounded-full border border-gray-300 text-gray-700 cursor-pointer bg-white">Login</button>
+                    <button class="text-sm px4 py2 rounded-full bg-lime-400 text-gray-900 font-bold cursor-pointer">Ajukan Proposal</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Government Focus -->
+    <section class="pt9 pb9 bg-blue-900 mt9">
+        <div class="max-w-1200 m-auto px4">
+            <div class="grid grid-cols-2 sm:grid-cols-1 gap-8 items-center">
+                
+                <div class="anim-fade-up">
+                    <div class="inline-flex items-center gap-2 px4 py2 rounded-full mb6 bg-blue-100 border border-blue-300">
+                        <span>🏛️</span> 
+                        <span class="text-sm font-bold text-blue-900">Program Pemerintah</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-2xl font-bold text-white mb5">
+                        Membangun ASN <br>
+                        <span class="text-blue-300">Berkelas Dunia</span>
+                    </h1>
+
+                    <p class="text-base text-blue-200 mb8">
+                        Program pengembangan kapasitas ASN untuk mendukung <strong class="text-white">transformasi digital</strong>, <strong class="text-white">pelayanan prima</strong>, dan <strong class="text-white">tata kelola pemerintahan</strong> yang efektif & akuntabel.
+                    </p>
+                    
+                    <div class="flex gap-4 pt2 sm:flex-col">
+                        <a href="#program" class="inline-flex items-center gap-2 px6 py3 rounded-full bg-blue-400 text-white font-bold text-base shadow-lg cursor-pointer">
+                            📋 Lihat Program
+                        </a>
+                        <a href="#mitra" class="inline-flex items-center gap-2 px6 py3 rounded-full bg-blue-800 text-white font-bold text-base border border-blue-600 cursor-pointer">
+                            🤝 Kerjasama Instansi
+                        </a>
+                    </div>
+
+                    <div class="mt8 flex items-center gap-6 flex-wrap">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🏢</span>
+                            <div>
+                                <p class="text-lg font-bold text-blue-300 mb0">100+</p>
+                                <p class="text-xs text-blue-400 mb0">Instansi Mitra</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">👨‍💼</span>
+                            <div>
+                                <p class="text-lg font-bold text-blue-300 mb0">25K+</p>
+                                <p class="text-xs text-blue-400 mb0">ASN Terlatih</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📍</span>
+                            <div>
+                                <p class="text-lg font-bold text-blue-300 mb0">34</p>
+                                <p class="text-xs text-blue-400 mb0">Provinsi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:order-1 relative anim-fade-up">
+                    <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=800&q=80" alt="Pelayanan Publik" class="rounded-xl shadow-lg w-full">
+                    <div class="absolute top-0 right-0 mt7 mr4 p4 rounded-lg flex items-center gap-3 bg-white border border-blue-200 shadow">
+                        <div class="flex items-center justify-center p2 bg-blue-100 rounded-full text-xl">✅</div>
+                        <div>
+                            <div class="font-bold text-sm text-gray-900">Akreditasi</div>
+                            <div class="text-xs text-gray-500">LAN & Kemendagri</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Pemerintah -->
+    <section class="py9 bg-gray-50">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex flex-col items-center text-center w-full mb8 anim-fade-up">
+                <h2 class="text-2xl font-bold text-gray-900 mb3">
+                    Tantangan Birokrasi Modern 🎯
+                </h2>
+                <p class="text-sm text-gray-500 max-w-400 m-auto">
+                    Era VUCA menuntut ASN dengan kompetensi baru untuk pelayanan yang lebih baik.
+                </p>
+            </div>
+            <div class="grid grid-cols-4 sm:grid-cols-2 gap-6 mt8">
+                <div class="stat-item p6 rounded-xl bg-white text-center border border-gray-200 shadow">
+                    <div class="text-3xl mb5">💻</div>
+                    <div class="text-lg font-bold text-gray-900 mb3">Digital Gap</div>
+                    <p class="text-sm text-gray-500 mb0">
+                        SPBE membutuhkan ASN yang melek digital. Banyak yang masih gagap teknologi.
+                    </p>
+                </div>
+                <div class="stat-item p6 rounded-xl bg-white text-center border border-gray-200 shadow">
+                    <div class="text-3xl mb5">📑</div>
+                    <div class="text-lg font-bold text-gray-900 mb3">Birokrasi Lambat</div>
+                    <p class="text-sm text-gray-500 mb0">
+                        Proses berbelit, warga mengeluh. Perlu mindset pelayanan yang customer-centric.
+                    </p>
+                </div>
+                <div class="stat-item p6 rounded-xl bg-white text-center border border-gray-200 shadow">
+                    <div class="text-3xl mb5">👴</div>
+                    <div class="text-lg font-bold text-gray-900 mb3">Regenerasi</div>
+                    <p class="text-sm text-gray-500 mb0">
+                        Banyak pejabat senior pensiun. Perlu transfer knowledge & kaderisasi cepat.
+                    </p>
+                </div>
+                <div class="stat-item p6 rounded-xl bg-white text-center border border-gray-200 shadow">
+                    <div class="text-3xl mb5">🎯</div>
+                    <div class="text-lg font-bold text-gray-900 mb3">Akuntabilitas</div>
+                    <p class="text-sm text-gray-500 mb0">
+                        Tuntutan transparansi & good governance semakin tinggi dari masyarakat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program ASN -->
+    <section id="program" class="py9 bg-white">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex flex-col items-center text-center w-full mb9 anim-fade-up">
+                <h2 class="text-2xl font-bold text-gray-900 mb3">
+                    Program <span class="bg-blue-200 px2 py1 rounded-md">Pengembangan Kompetensi</span>
+                </h2>
+                <p class="text-sm text-gray-500 max-w-400">
+                    Sesuai dengan kebutuhan instansi & regulasi BKN/LAN.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-4 sm:grid-cols-2 gap-6">
+                <div class="program-card p7 rounded-xl bg-white border border-gray-200 text-center">
+                    <div class="program-icon flex items-center justify-center m-auto mb6 rounded-lg bg-blue-100 text-2xl p4 max-w-100">🖥️</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb3">Digital Literacy</h3>
+                    <p class="text-sm text-gray-500 mb0">
+                        Penguasaan aplikasi perkantoran, SPBE, e-government, dan keamanan siber dasar.
+                    </p>
+                </div>
+
+                <div class="program-card p7 rounded-xl bg-white border border-gray-200 text-center">
+                    <div class="program-icon flex items-center justify-center m-auto mb6 rounded-lg bg-green-100 text-2xl p4 max-w-100">🤝</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb3">Pelayanan Prima</h3>
+                    <p class="text-sm text-gray-500 mb0">
+                        Service excellence, handling complaint, komunikasi publik yang empatik.
+                    </p>
+                </div>
+
+                <div class="program-card p7 rounded-xl bg-white border border-gray-200 text-center">
+                    <div class="program-icon flex items-center justify-center m-auto mb6 rounded-lg bg-purple-100 text-2xl p4 max-w-100">👥</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb3">Leadership ASN</h3>
+                    <p class="text-sm text-gray-500 mb0">
+                        Kepemimpinan birokrasi, pengambilan keputusan, manajemen perubahan.
+                    </p>
+                </div>
+
+                <div class="program-card p7 rounded-xl bg-white border border-gray-200 text-center">
+                    <div class="program-icon flex items-center justify-center m-auto mb6 rounded-lg bg-orange-100 text-2xl p4 max-w-100">📊</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb3">Data Analytics</h3>
+                    <p class="text-sm text-gray-500 mb0">
+                        Evidence-based policy, dashboard monitoring, pelaporan berbasis data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformasi Section -->
+    <section id="transformasi" class="py9 bg-blue-900">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex flex-col items-center text-center w-full mb9 anim-fade-up">
+                <h2 class="text-2xl font-bold text-white mb3">
+                    Mendukung <span class="bg-blue-400 text-white px2 py1 rounded-md">Agenda Nasional</span>
+                </h2>
+                <p class="text-sm text-blue-300 max-w-400">
+                    Program kami selaras dengan RPJMN dan reformasi birokrasi nasional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-3 sm:grid-cols-1 gap-6">
+                <div class="p6 rounded-xl bg-blue-800 text-center anim-fade-up">
+                    <div class="text-3xl mb4">🚀</div>
+                    <h3 class="text-base font-bold text-white mb3">Smart ASN 2024-2029</h3>
+                    <p class="text-sm text-blue-300 mb0">
+                        Mendukung visi ASN berkelas dunia dengan digital competency yang mumpuni.
+                    </p>
+                </div>
+                <div class="p6 rounded-xl bg-blue-800 text-center anim-fade-up">
+                    <div class="text-3xl mb4">🏛️</div>
+                    <h3 class="text-base font-bold text-white mb3">SPBE</h3>
+                    <p class="text-sm text-blue-300 mb0">
+                        Sistem Pemerintahan Berbasis Elektronik yang terintegrasi & efisien.
+                    </p>
+                </div>
+                <div class="p6 rounded-xl bg-blue-800 text-center anim-fade-up">
+                    <div class="text-3xl mb4">📋</div>
+                    <h3 class="text-base font-bold text-white mb3">Reformasi Birokrasi</h3>
+                    <p class="text-sm text-blue-300 mb0">
+                        8 Area perubahan untuk tata kelola pemerintahan yang bersih & akuntabel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Numbers -->
+    <section class="py9 bg-blue-400">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex flex-col items-center text-center w-full mb9 anim-fade-up">
+                <h2 class="text-2xl font-bold text-blue-900 mb3">
+                    Dampak Terukur 📊
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-4 sm:grid-cols-2 gap-6">
+                <div class="text-center p6 bg-white rounded-xl shadow anim-fade-up">
+                    <div class="text-4xl font-bold text-blue-900 mb2">35%</div>
+                    <div class="text-sm text-gray-600 font-bold mb2">↑ Efisiensi</div>
+                    <p class="text-xs text-gray-500 mb0">Waktu pelayanan lebih cepat</p>
+                </div>
+                <div class="text-center p6 bg-white rounded-xl shadow anim-fade-up">
+                    <div class="text-4xl font-bold text-blue-900 mb2">89%</div>
+                    <div class="text-sm text-gray-600 font-bold mb2">Kepuasan</div>
+                    <p class="text-xs text-gray-500 mb0">Index kepuasan masyarakat</p>
+                </div>
+                <div class="text-center p6 bg-white rounded-xl shadow anim-fade-up">
+                    <div class="text-4xl font-bold text-blue-900 mb2">100+</div>
+                    <div class="text-sm text-gray-600 font-bold mb2">Instansi</div>
+                    <p class="text-xs text-gray-500 mb0">Pusat & daerah bermitra</p>
+                </div>
+                <div class="text-center p6 bg-white rounded-xl shadow anim-fade-up">
+                    <div class="text-4xl font-bold text-blue-900 mb2">A</div>
+                    <div class="text-sm text-gray-600 font-bold mb2">Akreditasi</div>
+                    <p class="text-xs text-gray-500 mb0">Lembaga terakreditasi LAN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mitra Instansi -->
+    <section id="mitra" class="py9 bg-white">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex justify-center text-center mb8 anim-fade-up">
+                <h2 class="text-2xl font-bold text-gray-900">Dipercaya oleh <span class="bg-blue-200 px2 py1 rounded-md">Instansi Terkemuka</span></h2>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-1 gap-6 mt8">
+                <div class="testimonial-card p6 rounded-xl border border-gray-200 bg-gray-50">
+                    <div class="flex items-center gap-3 mb5">
+                        <div class="flex items-center justify-center p3 bg-blue-100 rounded-full text-2xl">🏛️</div>
+                        <div>
+                            <h4 class="text-base font-bold text-gray-900 mb0">Kementerian Keuangan</h4>
+                            <p class="text-xs text-gray-500 mb0">Pemerintah Pusat</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb5">
+                        "Program digital literacy dari Praktika+ berhasil meningkatkan produktivitas pegawai kami. Dashboard yang mereka buat sangat membantu monitoring kinerja."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900 mb0">Dr. Suryanto, M.Si</h4>
+                            <p class="text-xs text-gray-500 mb0">Kepala Biro SDM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card p6 rounded-xl border border-gray-200 bg-gray-50">
+                    <div class="flex items-center gap-3 mb5">
+                        <div class="flex items-center justify-center p3 bg-green-100 rounded-full text-2xl">🏢</div>
+                        <div>
+                            <h4 class="text-base font-bold text-gray-900 mb0">Pemerintah Provinsi Jawa Barat</h4>
+                            <p class="text-xs text-gray-500 mb0">Pemerintah Daerah</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb5">
+                        "Training pelayanan prima untuk petugas kelurahan berdampak nyata pada index kepuasan masyarakat. Naik 23% dalam 6 bulan!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-900 mb0">Hj. Dewi Pratiwi</h4>
+                            <p class="text-xs text-gray-500 mb0">Sekretaris Daerah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mekanisme Kerjasama -->
+    <section class="py9 bg-gray-50">
+        <div class="max-w-1200 m-auto px4">
+            <div class="flex justify-center text-center mb8 anim-fade-up">
+                <h2 class="text-2xl font-bold text-gray-900">Mekanisme <span class="bg-blue-200 px2 py1 rounded-md">Kerjasama</span></h2>
+            </div>
+            <div class="grid grid-cols-4 sm:grid-cols-2 gap-4 mt8">
+                <div class="p5 rounded-xl bg-white text-center border border-gray-200 anim-fade-up">
+                    <div class="text-3xl mb4">1️⃣</div>
+                    <h3 class="text-base font-bold text-gray-900 mb2">Konsultasi</h3>
+                    <p class="text-xs text-gray-500 mb0">Identifikasi kebutuhan & gap kompetensi ASN di instansi Anda.</p>
+                </div>
+                <div class="p5 rounded-xl bg-white text-center border border-gray-200 anim-fade-up">
+                    <div class="text-3xl mb4">2️⃣</div>
+                    <h3 class="text-base font-bold text-gray-900 mb2">Proposal</h3>
+                    <p class="text-xs text-gray-500 mb0">Penyusunan proposal & RAB sesuai regulasi pengadaan.</p>
+                </div>
+                <div class="p5 rounded-xl bg-white text-center border border-gray-200 anim-fade-up">
+                    <div class="text-3xl mb4">3️⃣</div>
+                    <h3 class="text-base font-bold text-gray-900 mb2">Pelaksanaan</h3>
+                    <p class="text-xs text-gray-500 mb0">Training dilaksanakan dengan monitoring & evaluasi berkala.</p>
+                </div>
+                <div class="p5 rounded-xl bg-blue-900 text-center anim-fade-up">
+                    <div class="text-3xl mb4">4️⃣</div>
+                    <h3 class="text-base font-bold text-white mb2">Sertifikasi</h3>
+                    <p class="text-xs text-blue-300 mb0">Peserta mendapat sertifikat yang diakui oleh LAN/BKN.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py9 bg-blue-900 relative overflow-hidden">
+        <div class="max-w-1200 m-auto px4 relative z2">
+            <div class="flex flex-col items-center text-center anim-fade-up">
+                <h2 class="text-3xl sm:text-2xl font-bold text-white mb5">
+                    Siap Tingkatkan Kapasitas ASN? 🏛️
+                </h2>
+                <p class="text-blue-300 mb8 text-base max-w-400">
+                    Konsultasikan kebutuhan pengembangan SDM instansi Anda dengan tim kami.
+                </p>
+                <div class="flex gap-4 sm:flex-col">
+                    <button class="bg-blue-400 text-white font-bold rounded-full px8 py4 shadow-lg cursor-pointer">
+                        Ajukan Proposal 📋
+                    </button>
+                    <button class="bg-blue-800 text-white font-bold rounded-full px8 py4 border border-blue-600 cursor-pointer">
+                        Download Company Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="py9 bg-gray-900 text-white border-t border-gray-800">
+        <div class="max-w-1200 m-auto px4">
+            <div class="grid grid-cols-2 sm:grid-cols-1 gap-6">
+                <div>
+                    <div class="mb5">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="max-w-150">
+                    </div>
+                    <div>
+                        <h3 class="mb3 font-bold text-blue-400">Kontak Kerjasama Pemerintah</h3>
+                        <p class="text-sm text-gray-400 mb2">Email: government@praktika.id</p>
+                        <p class="text-sm text-gray-400 mb2">Telepon: +62 21 1234 5678</p>
+                        <p class="text-sm text-gray-400 mb0">Alamat: Jakarta Pusat, Indonesia</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex gap-4 sm:flex-col">
+                        <a href="indexV1.html" class="text-gray-400">Home</a>
+                        <a href="solutions.html" class="text-gray-400">Solutions</a>
+                        <a href="bootcamps.html" class="text-gray-400">Bootcamps</a>
+                    </div>
+                    <div class="mt6">
+                        <h3 class="mb3 font-bold text-blue-400 text-sm">Legalitas & Akreditasi</h3>
+                        <p class="text-xs text-gray-500 mb2">✓ Terdaftar di LKPP (e-Catalogue)</p>
+                        <p class="text-xs text-gray-500 mb2">✓ Akreditasi LAN untuk Diklat ASN</p>
+                        <p class="text-xs text-gray-500 mb0">✓ ISO 9001:2015 Certified</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt8 pt6 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-500 mb0">© 2026 Praktika+ for Government. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <div class="fixed bottom-0 right-0 mb6 mr6 z-full">
+        <button id="waFabBtn" class="rounded-full bg-green-500 text-white border-none cursor-pointer shadow-lg flex items-center justify-center p4" type="button" title="Chat WhatsApp" aria-label="Chat WhatsApp" data-wa-number="6281234567890" data-wa-text="Halo, kami dari [Nama Instansi] ingin konsultasi program pengembangan ASN">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
