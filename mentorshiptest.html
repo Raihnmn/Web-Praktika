@@ -60,7 +60,7 @@
                     </div>
                     <div class="sm:order-1">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Mentorship Session" class="rounded-lg w-full object-cover max-h-400">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mentorship Session" class="w-full rounded-xl shadow-lg object-cover">
                             <div class="absolute bottom-0 left-0 mb6 ml6 bg-white p4 rounded-lg shadow-lg flex items-center gap-3">
                                 <span class="text-xl">💼</span>
                                 <span class="text-dark font-bold text-sm">Offer Letter Received!</span>
@@ -223,7 +223,7 @@
                 </div>
                 <div class="grid grid-cols-2 gap-6 sm:grid-cols-1">
                     <!-- Red Flag Card -->
-                    <div class="bg-gray-800 p6 rounded-xl border border-red-500 relative">
+                    <div id="redFlagCard" class="bg-gray-800 p6 rounded-xl border border-red-500 relative">
                         <div class="absolute top-0 right-0 mt5 mr5 text-2xl opacity-50">🚩</div>
                         <div class="flex items-center gap-4 mb5 relative z1">
                             <div class="flex items-center justify-center p3 bg-red-100 border border-red-300 rounded-full text-lg">❌</div>
@@ -252,7 +252,7 @@
                         </div>
                     </div>
                     <!-- Green Flag Card -->
-                    <div class="bg-gray-800 p6 rounded-xl border border-lime-500 relative">
+                    <div id="greenFlagCard" class="bg-gray-800 p6 rounded-xl border border-lime-500 relative">
                         <div class="absolute top-0 right-0 mt5 mr5 text-2xl opacity-50">✅</div>
                         <div class="flex items-center gap-4 mb5 relative z1">
                             <div class="flex items-center justify-center p3 bg-lime-100 border border-lime-300 rounded-full text-lg">✨</div>
@@ -283,7 +283,7 @@
                 </div>
                 <!-- Achievement Badge -->
                 <div class="mt9">
-                    <div class="bg-gray-800 p6 rounded-xl border border-gray-700 max-w-400 m-auto flex items-center gap-5 sm:flex-col sm:text-center">
+                    <div id="achievementBadge" class="bg-gray-800 p6 rounded-xl border border-gray-700 max-w-400 m-auto flex items-center gap-5 sm:flex-col sm:text-center">
                         <div class="flex items-center justify-center p4 bg-lime-300 rounded-lg text-2xl shadow-lg">🚀</div>
                         <div class="flex-1">
                             <h4 class="text-white text-lg font-bold m0">Achievement Unlocked!</h4>
@@ -550,6 +550,133 @@
                     });
                 });
             }, 100);
+        })();
+    </script>
+    
+    <script>
+        // Red Flag vs Green Flag Cards Animation
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                const redFlagCard = document.getElementById('redFlagCard');
+                const greenFlagCard = document.getElementById('greenFlagCard');
+                const achievementBadge = document.getElementById('achievementBadge');
+                
+                if (!redFlagCard || !greenFlagCard) return;
+                
+                // Initial state - hidden for scroll animation
+                redFlagCard.style.opacity = '0';
+                redFlagCard.style.transform = 'translateX(-60px) rotate(-3deg)';
+                redFlagCard.style.transition = 'all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                
+                greenFlagCard.style.opacity = '0';
+                greenFlagCard.style.transform = 'translateX(60px) rotate(3deg)';
+                greenFlagCard.style.transition = 'all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                
+                if (achievementBadge) {
+                    achievementBadge.style.opacity = '0';
+                    achievementBadge.style.transform = 'translateY(30px) scale(0.9)';
+                    achievementBadge.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }
+                
+                // Scroll animation observer
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (entry.target === redFlagCard) {
+                                setTimeout(() => {
+                                    redFlagCard.style.opacity = '1';
+                                    redFlagCard.style.transform = 'translateX(0) rotate(0deg)';
+                                }, 100);
+                            }
+                            if (entry.target === greenFlagCard) {
+                                setTimeout(() => {
+                                    greenFlagCard.style.opacity = '1';
+                                    greenFlagCard.style.transform = 'translateX(0) rotate(0deg)';
+                                }, 300);
+                            }
+                            if (entry.target === achievementBadge) {
+                                setTimeout(() => {
+                                    achievementBadge.style.opacity = '1';
+                                    achievementBadge.style.transform = 'translateY(0) scale(1)';
+                                }, 600);
+                            }
+                        }
+                    });
+                }, { threshold: 0.2 });
+                
+                observer.observe(redFlagCard);
+                observer.observe(greenFlagCard);
+                if (achievementBadge) observer.observe(achievementBadge);
+                
+                // RED FLAG CARD - Shake & Red Glow on Hover
+                redFlagCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.boxShadow = '0 20px 40px rgba(239, 68, 68, 0.3), 0 0 30px rgba(239, 68, 68, 0.2)';
+                    this.style.borderColor = '#ef4444';
+                    
+                    // Shake animation
+                    let shakeCount = 0;
+                    const shakeInterval = setInterval(() => {
+                        if (shakeCount >= 6) {
+                            clearInterval(shakeInterval);
+                            this.style.transform = 'translateY(-8px) scale(1.02) rotate(0deg)';
+                            return;
+                        }
+                        const rotation = shakeCount % 2 === 0 ? 1.5 : -1.5;
+                        this.style.transform = `translateY(-8px) scale(1.02) rotate(${rotation}deg)`;
+                        shakeCount++;
+                    }, 50);
+                });
+                
+                redFlagCard.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+                    this.style.boxShadow = '';
+                    this.style.borderColor = '#ef4444';
+                });
+                
+                // GREEN FLAG CARD - Pulse & Green Glow on Hover
+                greenFlagCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.03)';
+                    this.style.boxShadow = '0 20px 40px rgba(163, 230, 53, 0.3), 0 0 30px rgba(163, 230, 53, 0.2)';
+                    this.style.borderColor = '#a3e635';
+                    
+                    // Pulse animation
+                    let pulseGrow = true;
+                    let pulseCount = 0;
+                    const pulseInterval = setInterval(() => {
+                        if (pulseCount >= 4) {
+                            clearInterval(pulseInterval);
+                            this.style.transform = 'translateY(-8px) scale(1.03)';
+                            return;
+                        }
+                        const scale = pulseGrow ? 1.05 : 1.02;
+                        this.style.transform = `translateY(-8px) scale(${scale})`;
+                        pulseGrow = !pulseGrow;
+                        pulseCount++;
+                    }, 150);
+                });
+                
+                greenFlagCard.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '';
+                    this.style.borderColor = '#84cc16';
+                });
+                
+                // Achievement Badge - Bounce on Hover
+                if (achievementBadge) {
+                    achievementBadge.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-5px) scale(1.02)';
+                        this.style.boxShadow = '0 15px 30px rgba(163, 230, 53, 0.25)';
+                        this.style.borderColor = '#a3e635';
+                    });
+                    
+                    achievementBadge.addEventListener('mouseleave', function() {
+                        this.style.transform = 'translateY(0) scale(1)';
+                        this.style.boxShadow = '';
+                        this.style.borderColor = '';
+                    });
+                }
+            });
         })();
     </script>
 </body>
