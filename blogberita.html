@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Berita – Praktika+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                    <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                </a>
+            </div>
+            <ul class="nav-menu list-none">
+                <li class="nav-item dropdown">
+                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                        <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                        <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                        <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="showcase.html" data-hub-cat="showcase">📌 Showcase</a></li>
+                        <li><a href="blogberita.html" data-hub-cat="blog">📰 Blog Berita</a></li>
+                        <li><a href="#contact" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary">Masuk</button>
+                    <button class="btn btn-primary">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="showcase-hero">
+            <div class="container">
+                <div class="showcase-header text-center anim-fade-up">
+                    <span class="badge-lime">📰 News & Insights</span>
+                    <h1 class="showcase-title">Blog <span class="text-stroke">Berita</span></h1>
+                    <p class="showcase-subtitle">Update terbaru seputar karier, teknologi, tips magang, dan insight industri untuk membantu perjalanan kariermu.</p>
+                </div>
+                <div class="filter-container anim-fade-up delay-1">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="karier">Tips Karier</button>
+                    <button class="filter-btn" data-filter="teknologi">Teknologi</button>
+                    <button class="filter-btn" data-filter="magang">Magang</button>
+                    <button class="filter-btn" data-filter="industri">Insight Industri</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="blog-featured">
+            <div class="container">
+                <div class="featured-article anim-fade-up">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Featured Article">
+                        <span class="featured-badge">🔥 Featured</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="article-meta">
+                            <span class="article-category">Tips Karier</span>
+                            <span class="article-date">10 Feb 2026</span>
+                        </div>
+                        <h2 class="featured-title">5 Skill Digital Marketing yang Paling Dicari di 2026</h2>
+                        <p class="featured-excerpt">Dunia digital marketing terus berkembang. Pelajari skill-skill yang paling dibutuhkan perusahaan dan bagaimana cara mengasahnya melalui program praktis.</p>
+                        <div class="featured-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                            <div>
+                                <span class="author-name">Sarah Amalia</span>
+                                <span class="author-role">Content Strategist</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="showcase-gallery blog-gallery">
+            <div class="container">
+                <h2 class="section-title anim-fade-up"><span class="highlight">Artikel Terbaru</span></h2>
+                
+                <div class="gallery-grid blog-grid">
+                    <!-- Article 1 -->
+                    <article class="project-card blog-card anim-fade-up" data-category="karier">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="CV Tips">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Tips Karier</span>
+                                <span class="tag">CV</span>
+                            </div>
+                            <h3 class="project-title">Cara Membuat CV ATS-Friendly yang Lolos Seleksi HR</h3>
+                            <p class="blog-excerpt">Pelajari teknik membuat CV yang bisa melewati sistem ATS dan menarik perhatian recruiter...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Rizky Fajar</span>
+                                    <span class="author-batch">8 Feb 2026 • 5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="project-card blog-card anim-fade-up delay-1" data-category="teknologi">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI Marketing">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Teknologi</span>
+                                <span class="tag">AI</span>
+                            </div>
+                            <h3 class="project-title">Bagaimana AI Mengubah Landscape Digital Marketing</h3>
+                            <p class="blog-excerpt">Artificial Intelligence bukan lagi masa depan - ini adalah sekarang. Simak bagaimana AI mempengaruhi...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Nadia Putri</span>
+                                    <span class="author-batch">6 Feb 2026 • 7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="project-card blog-card anim-fade-up delay-2" data-category="magang">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Internship Tips">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Magang</span>
+                                <span class="tag">Tips</span>
+                            </div>
+                            <h3 class="project-title">10 Hal yang Harus Dipersiapkan Sebelum Magang</h3>
+                            <p class="blog-excerpt">Persiapan matang adalah kunci sukses magang. Berikut checklist lengkap untuk memaksimalkan...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Dimas Anggara</span>
+                                    <span class="author-batch">4 Feb 2026 • 6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="project-card blog-card anim-fade-up" data-category="industri">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Industry Insight">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Insight Industri</span>
+                                <span class="tag">Startup</span>
+                            </div>
+                            <h3 class="project-title">Tren Hiring Startup Indonesia di Tahun 2026</h3>
+                            <p class="blog-excerpt">Apa yang dicari startup Indonesia? Analisis tren perekrutan dan skill yang paling diminati...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Sarah Amalia</span>
+                                    <span class="author-batch">2 Feb 2026 • 8 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="project-card blog-card anim-fade-up delay-1" data-category="karier">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Interview Tips">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Tips Karier</span>
+                                <span class="tag">Interview</span>
+                            </div>
+                            <h3 class="project-title">Jawaban Terbaik untuk "Tell Me About Yourself"</h3>
+                            <p class="blog-excerpt">Pertanyaan klasik yang sering membuat nervous. Pelajari framework dan contoh jawaban yang...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Rizky Fajar</span>
+                                    <span class="author-batch">30 Jan 2026 • 4 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="project-card blog-card anim-fade-up delay-2" data-category="teknologi">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Teknologi</span>
+                                <span class="tag">Social Media</span>
+                            </div>
+                            <h3 class="project-title">TikTok Marketing: Strategi untuk Brand di 2026</h3>
+                            <p class="blog-excerpt">Platform video pendek terus mendominasi. Pelajari strategi efektif untuk membangun brand...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Nadia Putri</span>
+                                    <span class="author-batch">28 Jan 2026 • 6 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 7 -->
+                    <article class="project-card blog-card anim-fade-up" data-category="magang">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80" alt="Remote Work">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Magang</span>
+                                <span class="tag">Remote</span>
+                            </div>
+                            <h3 class="project-title">Tips Sukses Magang Online: Produktif dari Rumah</h3>
+                            <p class="blog-excerpt">Magang remote punya tantangan tersendiri. Berikut cara tetap produktif dan membangun relasi...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Dimas Anggara</span>
+                                    <span class="author-batch">25 Jan 2026 • 5 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 8 -->
+                    <article class="project-card blog-card anim-fade-up delay-1" data-category="industri">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Career Path">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Insight Industri</span>
+                                <span class="tag">Karier</span>
+                            </div>
+                            <h3 class="project-title">Career Path Digital Marketing: Dari Junior ke CMO</h3>
+                            <p class="blog-excerpt">Roadmap lengkap untuk berkarier di bidang digital marketing. Dari entry level hingga C-suite...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Sarah Amalia</span>
+                                    <span class="author-batch">22 Jan 2026 • 10 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 9 -->
+                    <article class="project-card blog-card anim-fade-up delay-2" data-category="karier">
+                        <div class="project-thumb blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80" alt="LinkedIn">
+                            <div class="project-overlay">
+                                <a href="#" class="btn-view-project">Baca Artikel ↗</a>
+                            </div>
+                        </div>
+                        <div class="project-body blog-body">
+                            <div class="project-tags">
+                                <span class="tag">Tips Karier</span>
+                                <span class="tag">LinkedIn</span>
+                            </div>
+                            <h3 class="project-title">Optimasi LinkedIn: Rahasia Dilirik Recruiter</h3>
+                            <p class="blog-excerpt">LinkedIn bukan sekadar online CV. Pelajari cara memaksimalkan profil agar recruiter yang menghubungi...</p>
+                            <div class="project-author blog-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author">
+                                <div>
+                                    <span class="author-name">Rizky Fajar</span>
+                                    <span class="author-batch">18 Jan 2026 • 7 min read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container anim-fade-up">
+                    <button class="btn btn-secondary load-more-btn">Muat Lebih Banyak Artikel</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-box anim-fade-up">
+                    <div class="newsletter-content">
+                        <span class="badge-lime">📬 Newsletter</span>
+                        <h2>Dapatkan Update Terbaru</h2>
+                        <p>Subscribe untuk mendapatkan artikel, tips karier, dan info lowongan kerja langsung ke inbox-mu.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Masukkan email kamu" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="#about">About us</a>
+                        <a href="#services">Services</a>
+                        <a href="#usecases">Use Cases</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#blog">Blog</a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok" title="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Positivus. All Rights Reserved.</p>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Scroll Animation Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            .anim-fade-up.active { opacity: 1 !important; transform: translateY(0) !important; }
+            .blog-featured { padding: 40px 0; }
+            .featured-article { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; background: #1a1a2e; border-radius: 24px; overflow: hidden; }
+            .featured-image { position: relative; min-height: 400px; }
+            .featured-image img { width: 100%; height: 100%; object-fit: cover; }
+            .featured-badge { position: absolute; top: 20px; left: 20px; background: #BFFF00; color: #1a1a2e; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 14px; }
+            .featured-content { padding: 40px 40px 40px 0; display: flex; flex-direction: column; justify-content: center; }
+            .article-meta { display: flex; gap: 16px; margin-bottom: 16px; }
+            .article-category { background: rgba(191, 255, 0, 0.2); color: #BFFF00; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+            .article-date { color: #888; font-size: 14px; }
+            .featured-title { font-size: 28px; color: #fff; margin-bottom: 16px; line-height: 1.3; }
+            .featured-excerpt { color: #aaa; font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+            .featured-author { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+            .featured-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+            .featured-author .author-name { color: #fff; font-weight: 600; display: block; }
+            .featured-author .author-role { color: #888; font-size: 13px; }
+            .blog-gallery { padding-top: 20px; }
+            .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+            .blog-card { background: #fff; border-radius: 16px; overflow: hidden; transition: all 0.3s ease; }
+            .blog-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+            .blog-thumb { height: 200px; overflow: hidden; }
+            .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+            .blog-card:hover .blog-thumb img { transform: scale(1.1); }
+            .blog-body { padding: 20px; }
+            .blog-excerpt { color: #666; font-size: 14px; line-height: 1.6; margin: 12px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .blog-author { margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee; }
+            .load-more-container { text-align: center; margin-top: 50px; }
+            .load-more-btn { padding: 16px 40px; font-size: 16px; }
+            .newsletter-section { padding: 80px 0; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+            .newsletter-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 50px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+            .newsletter-content h2 { color: #fff; font-size: 28px; margin: 12px 0; }
+            .newsletter-content p { color: #aaa; font-size: 15px; }
+            .newsletter-form { display: flex; gap: 12px; }
+            .newsletter-input { padding: 16px 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px; min-width: 300px; }
+            .newsletter-input::placeholder { color: #888; }
+            .newsletter-input:focus { outline: none; border-color: #BFFF00; }
+            @media (max-width: 1024px) {
+                .featured-article { grid-template-columns: 1fr; }
+                .featured-content { padding: 30px; }
+                .blog-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 768px) {
+                .blog-grid { grid-template-columns: 1fr; }
+                .newsletter-box { flex-direction: column; text-align: center; padding: 30px; }
+                .newsletter-form { flex-direction: column; width: 100%; }
+                .newsletter-input { min-width: auto; width: 100%; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Blog Filter Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    blogCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filterValue === 'all' || filterValue === category) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Blog Card Hover Animation
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 25px 50px rgba(0,0,0,0.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Featured Article Animation
+            const featuredArticle = document.querySelector('.featured-article');
+            if (featuredArticle) {
+                featuredArticle.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                featuredArticle.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.01)';
+                    this.style.boxShadow = '0 30px 60px rgba(0,0,0,0.3)';
+                });
+                featuredArticle.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = '';
+                });
+            }
+
+            // Newsletter Form
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('.newsletter-input').value;
+                    alert('Terima kasih telah subscribe! Email: ' + email);
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
