@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan Kerja – Praktika+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="logo">
+                <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                    <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                </a>
+            </div>
+            <ul class="nav-menu list-none">
+                <li class="nav-item dropdown">
+                    <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                        <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                        <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                        <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                    <ul class="dropdown-menu list-none">
+                        <li><a href="showcase.html" data-hub-cat="showcase">📌 Showcase</a></li>
+                        <li><a href="blogberita.html" data-hub-cat="blog">📰 Blog Berita</a></li>
+                        <li><a href="lowongan.html" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                        <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                        <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary">Masuk</button>
+                    <button class="btn btn-primary">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="showcase-hero job-hero">
+            <div class="container">
+                <div class="showcase-header text-center anim-fade-up">
+                    <span class="badge-lime">💼 Career Opportunities</span>
+                    <h1 class="showcase-title">Lowongan <span class="text-stroke">Kerja</span></h1>
+                    <p class="showcase-subtitle">Temukan peluang karier impianmu! Lowongan magang, part-time, hingga full-time dari hiring partner terpercaya Praktika+.</p>
+                </div>
+                
+                <!-- Search & Filter Bar -->
+                <div class="job-search-container anim-fade-up delay-1">
+                    <div class="job-search-box">
+                        <div class="search-field">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="jobSearch" placeholder="Cari posisi, skill, atau perusahaan..." class="job-search-input">
+                        </div>
+                        <div class="location-field">
+                            <span class="location-icon">📍</span>
+                            <select id="locationFilter" class="location-select">
+                                <option value="">Semua Lokasi</option>
+                                <option value="remote">Remote</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="semarang">Semarang</option>
+                                <option value="surabaya">Surabaya</option>
+                                <option value="bandung">Bandung</option>
+                                <option value="yogyakarta">Yogyakarta</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary job-search-btn">Cari Lowongan</button>
+                    </div>
+                </div>
+
+                <!-- Filter Tags -->
+                <div class="filter-container anim-fade-up delay-2">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="internship">🎓 Magang</button>
+                    <button class="filter-btn" data-filter="parttime">⏰ Part-time</button>
+                    <button class="filter-btn" data-filter="fulltime">💼 Full-time</button>
+                    <button class="filter-btn" data-filter="freelance">🚀 Freelance</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="job-stats-banner">
+            <div class="container">
+                <div class="stats-row anim-fade-up">
+                    <div class="stat-box">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-text">Lowongan Aktif</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-num">30+</span>
+                        <span class="stat-text">Hiring Partner</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-num">500+</span>
+                        <span class="stat-text">Talenta Diterima</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-num">78%</span>
+                        <span class="stat-text">Repeat Hire Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Jobs -->
+        <section class="featured-jobs-section">
+            <div class="container">
+                <div class="section-header anim-fade-up">
+                    <h2 class="section-title"><span class="highlight">🔥 Hot Jobs</span></h2>
+                    <p class="section-subtitle">Lowongan paling diminati minggu ini</p>
+                </div>
+
+                <div class="featured-jobs-grid">
+                    <!-- Featured Job 1 -->
+                    <div class="featured-job-card anim-fade-up" data-type="internship">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://ui-avatars.com/api/?name=Digibook&background=BFFF00&color=1a1a2e&bold=true&size=60" alt="Digibook">
+                            </div>
+                            <div class="job-badges">
+                                <span class="badge-hot">🔥 Hot</span>
+                                <span class="badge-new">New</span>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <h3 class="job-title">Digital Marketing Intern</h3>
+                            <p class="company-name">Digibook Promotion</p>
+                            <div class="job-meta">
+                                <span class="job-location">📍 Semarang / Remote</span>
+                                <span class="job-type">🎓 Magang</span>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Content</span>
+                                <span class="tag">Ads</span>
+                            </div>
+                            <div class="job-salary">
+                                <span class="salary-label">Allowance:</span>
+                                <span class="salary-amount">Rp 500K - 1.5Jt/bulan</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <span class="job-posted">Posted 2 hari lalu</span>
+                            <a href="#" class="btn btn-primary btn-apply">Lamar Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Job 2 -->
+                    <div class="featured-job-card anim-fade-up delay-1" data-type="fulltime">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://ui-avatars.com/api/?name=TechStartup&background=6366f1&color=fff&bold=true&size=60" alt="TechStartup">
+                            </div>
+                            <div class="job-badges">
+                                <span class="badge-hot">🔥 Hot</span>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <h3 class="job-title">Junior Performance Marketing</h3>
+                            <p class="company-name">TechStartup Indonesia</p>
+                            <div class="job-meta">
+                                <span class="job-location">📍 Jakarta</span>
+                                <span class="job-type">💼 Full-time</span>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">Meta Ads</span>
+                                <span class="tag">Google Ads</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                            <div class="job-salary">
+                                <span class="salary-label">Gaji:</span>
+                                <span class="salary-amount">Rp 5Jt - 8Jt/bulan</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <span class="job-posted">Posted 3 hari lalu</span>
+                            <a href="#" class="btn btn-primary btn-apply">Lamar Sekarang</a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Job 3 -->
+                    <div class="featured-job-card anim-fade-up delay-2" data-type="parttime">
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://ui-avatars.com/api/?name=CreativeAgency&background=ec4899&color=fff&bold=true&size=60" alt="Creative Agency">
+                            </div>
+                            <div class="job-badges">
+                                <span class="badge-remote">🌐 Remote</span>
+                            </div>
+                        </div>
+                        <div class="job-card-body">
+                            <h3 class="job-title">Content Writer (Part-time)</h3>
+                            <p class="company-name">Creative Agency</p>
+                            <div class="job-meta">
+                                <span class="job-location">📍 Remote</span>
+                                <span class="job-type">⏰ Part-time</span>
+                            </div>
+                            <div class="job-tags">
+                                <span class="tag">SEO Writing</span>
+                                <span class="tag">Copywriting</span>
+                                <span class="tag">Research</span>
+                            </div>
+                            <div class="job-salary">
+                                <span class="salary-label">Fee:</span>
+                                <span class="salary-amount">Rp 150K - 300K/artikel</span>
+                            </div>
+                        </div>
+                        <div class="job-card-footer">
+                            <span class="job-posted">Posted 1 hari lalu</span>
+                            <a href="#" class="btn btn-primary btn-apply">Lamar Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Jobs Listing -->
+        <section class="all-jobs-section">
+            <div class="container">
+                <div class="section-header anim-fade-up">
+                    <h2 class="section-title"><span class="highlight">Semua Lowongan</span></h2>
+                </div>
+
+                <div class="jobs-list">
+                    <!-- Job Item 1 -->
+                    <div class="job-list-item anim-fade-up" data-type="internship" data-location="remote">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=Praktika&background=BFFF00&color=1a1a2e&bold=true&size=48" alt="Praktika+">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Social Media Intern</h3>
+                                <p class="company-name">Praktika+</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Remote</span>
+                                    <span>🎓 Magang</span>
+                                    <span>⏱️ 3-6 bulan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 500K - 1Jt/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 2 -->
+                    <div class="job-list-item anim-fade-up" data-type="internship" data-location="semarang">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=EdTech&background=3b82f6&color=fff&bold=true&size=48" alt="EdTech Co">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Graphic Design Intern</h3>
+                                <p class="company-name">EdTech Co</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Semarang</span>
+                                    <span>🎓 Magang</span>
+                                    <span>⏱️ 3 bulan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 750K/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 3 -->
+                    <div class="job-list-item anim-fade-up" data-type="fulltime" data-location="jakarta">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=Fintech&background=10b981&color=fff&bold=true&size=48" alt="Fintech">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">SEO Specialist</h3>
+                                <p class="company-name">Fintech Indonesia</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Jakarta</span>
+                                    <span>💼 Full-time</span>
+                                    <span>🎯 1-2 tahun exp</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 6Jt - 9Jt/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 4 -->
+                    <div class="job-list-item anim-fade-up" data-type="parttime" data-location="remote">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=Agency&background=f59e0b&color=fff&bold=true&size=48" alt="Digital Agency">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Video Editor (Part-time)</h3>
+                                <p class="company-name">Digital Agency Pro</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Remote</span>
+                                    <span>⏰ Part-time</span>
+                                    <span>🎬 Portfolio required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 200K - 500K/video</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 5 -->
+                    <div class="job-list-item anim-fade-up" data-type="freelance" data-location="remote">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=UMKM&background=8b5cf6&color=fff&bold=true&size=48" alt="UMKM">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Social Media Manager (Freelance)</h3>
+                                <p class="company-name">UMKM Kuliner Nusantara</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Remote</span>
+                                    <span>🚀 Freelance</span>
+                                    <span>📱 Instagram & TikTok</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 1.5Jt - 3Jt/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 6 -->
+                    <div class="job-list-item anim-fade-up" data-type="fulltime" data-location="surabaya">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=Ecommerce&background=ef4444&color=fff&bold=true&size=48" alt="E-Commerce">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">E-Commerce Specialist</h3>
+                                <p class="company-name">E-Commerce Giant</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Surabaya</span>
+                                    <span>💼 Full-time</span>
+                                    <span>🛒 Shopee & Tokopedia</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 5Jt - 7Jt/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 7 -->
+                    <div class="job-list-item anim-fade-up" data-type="internship" data-location="bandung">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=SaaS&background=14b8a6&color=fff&bold=true&size=48" alt="SaaS Company">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Growth Marketing Intern</h3>
+                                <p class="company-name">SaaS Solutions</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Bandung</span>
+                                    <span>🎓 Magang</span>
+                                    <span>📊 Data-driven</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 1Jt - 2Jt/bln</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+
+                    <!-- Job Item 8 -->
+                    <div class="job-list-item anim-fade-up" data-type="parttime" data-location="yogyakarta">
+                        <div class="job-list-left">
+                            <div class="company-logo-sm">
+                                <img src="https://ui-avatars.com/api/?name=Startup&background=f97316&color=fff&bold=true&size=48" alt="Startup">
+                            </div>
+                            <div class="job-info">
+                                <h3 class="job-title">Copywriter (Part-time)</h3>
+                                <p class="company-name">Startup Kreatif</p>
+                                <div class="job-meta-inline">
+                                    <span>📍 Yogyakarta / Remote</span>
+                                    <span>⏰ Part-time</span>
+                                    <span>✍️ Creative writing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-list-right">
+                            <div class="job-salary-sm">Rp 100K - 250K/copy</div>
+                            <a href="#" class="btn btn-secondary btn-sm">Detail</a>
+                            <a href="#" class="btn btn-primary btn-sm">Lamar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-container anim-fade-up">
+                    <button class="btn btn-secondary load-more-btn">Lihat Lebih Banyak Lowongan</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join Section -->
+        <section class="why-join-section">
+            <div class="container">
+                <div class="section-header anim-fade-up">
+                    <h2 class="section-title"><span class="highlight">Kenapa Melamar via Praktika+?</span></h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card anim-fade-up">
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Hiring Partner Terpercaya</h3>
+                        <p>Semua lowongan dari perusahaan yang sudah terverifikasi dan bekerja sama dengan Praktika+.</p>
+                    </div>
+                    <div class="benefit-card anim-fade-up delay-1">
+                        <div class="benefit-icon">📋</div>
+                        <h3>CV & Portfolio Review</h3>
+                        <p>Tim kami membantu review dan polish CV serta portofolio sebelum dikirim ke perusahaan.</p>
+                    </div>
+                    <div class="benefit-card anim-fade-up delay-2">
+                        <div class="benefit-icon">🤝</div>
+                        <h3>Interview Preparation</h3>
+                        <p>Dapatkan tips dan mock interview untuk mempersiapkan diri menghadapi wawancara kerja.</p>
+                    </div>
+                    <div class="benefit-card anim-fade-up">
+                        <div class="benefit-icon">🚀</div>
+                        <h3>Fast Track Hiring</h3>
+                        <p>Alumni bootcamp dan magang Praktika+ mendapat prioritas dan jalur cepat dalam proses hiring.</p>
+                    </div>
+                    <div class="benefit-card anim-fade-up delay-1">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Transparansi Gaji</h3>
+                        <p>Informasi gaji yang jelas dan transparan untuk setiap lowongan yang tersedia.</p>
+                    </div>
+                    <div class="benefit-card anim-fade-up delay-2">
+                        <div class="benefit-icon">📈</div>
+                        <h3>Career Growth Support</h3>
+                        <p>Dukungan berkelanjutan untuk pengembangan karier bahkan setelah diterima bekerja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="job-cta-section">
+            <div class="container">
+                <div class="job-cta-box anim-fade-up">
+                    <div class="cta-content">
+                        <span class="badge-lime">🎓 Belum siap melamar?</span>
+                        <h2>Bangun Portofolio Dulu!</h2>
+                        <p>Ikuti program magang bersertifikat Praktika+ untuk membangun portofolio nyata dan meningkatkan peluang diterima kerja hingga 3x lipat.</p>
+                        <div class="cta-buttons">
+                            <a href="internship.html" class="btn btn-primary">Lihat Program Magang</a>
+                            <a href="bootcamps.html" class="btn btn-secondary">Ikut Bootcamp</a>
+                        </div>
+                    </div>
+                    <div class="cta-illustration">
+                        <div class="illustration-circle">
+                            <span class="illustration-emoji">🎯</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For Companies Section -->
+        <section class="for-companies-section">
+            <div class="container">
+                <div class="companies-box anim-fade-up">
+                    <div class="companies-content">
+                        <h2>🏢 Untuk Perusahaan</h2>
+                        <p>Butuh talent digital marketing yang siap kerja? Posting lowongan Anda di Praktika+ dan dapatkan akses ke talent pool berkualitas.</p>
+                        <ul class="companies-benefits">
+                            <li>✅ Talent terlatih dengan portofolio nyata</li>
+                            <li>✅ Proses hiring lebih cepat 70%</li>
+                            <li>✅ Repeat hire rate 78%</li>
+                            <li>✅ Partnership gratis untuk UMKM</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Posting Lowongan Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Semarang</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html#about">About us</a>
+                        <a href="bootcamps.html">Bootcamps</a>
+                        <a href="internship.html">Internship</a>
+                        <a href="mentorship.html">Mentorship</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">TT</a>
+                        <a href="#" class="social-icon">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Praktika+. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Scroll Animation Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Custom Styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .anim-fade-up.active { opacity: 1 !important; transform: translateY(0) !important; }
+            .delay-1 { transition-delay: 0.1s !important; }
+            .delay-2 { transition-delay: 0.2s !important; }
+            
+            /* Job Hero */
+            .job-hero { padding-bottom: 40px; }
+            
+            /* Job Search Box */
+            .job-search-container { margin: 40px 0 30px; }
+            .job-search-box { display: flex; gap: 12px; background: #fff; padding: 12px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto; }
+            .search-field, .location-field { display: flex; align-items: center; gap: 10px; flex: 1; padding: 12px 16px; background: #f5f5f5; border-radius: 12px; }
+            .search-field { flex: 2; }
+            .search-icon, .location-icon { font-size: 18px; }
+            .job-search-input, .location-select { border: none; background: transparent; font-size: 15px; width: 100%; outline: none; font-family: 'Poppins', sans-serif; }
+            .location-select { cursor: pointer; }
+            .job-search-btn { padding: 16px 32px; white-space: nowrap; }
+            
+            /* Stats Banner */
+            .job-stats-banner { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 30px 0; }
+            .stats-row { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+            .stat-box { text-align: center; }
+            .stat-num { display: block; font-size: 36px; font-weight: 800; color: #BFFF00; }
+            .stat-text { color: #aaa; font-size: 14px; }
+            .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.2); }
+            
+            /* Featured Jobs */
+            .featured-jobs-section { padding: 60px 0; background: #f8f9fa; }
+            .featured-jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+            .featured-job-card { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; border: 2px solid transparent; }
+            .featured-job-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); border-color: #BFFF00; }
+            .job-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+            .company-logo img { width: 60px; height: 60px; border-radius: 12px; }
+            .job-badges { display: flex; gap: 8px; }
+            .badge-hot { background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+            .badge-new { background: #BFFF00; color: #1a1a2e; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+            .badge-remote { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+            .job-card-body .job-title { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+            .job-card-body .company-name { color: #666; font-size: 14px; margin-bottom: 12px; }
+            .job-meta { display: flex; gap: 16px; margin-bottom: 12px; font-size: 13px; color: #888; }
+            .job-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+            .job-tags .tag { background: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 6px; font-size: 12px; }
+            .job-salary { background: #f8f9fa; padding: 12px; border-radius: 10px; }
+            .salary-label { font-size: 12px; color: #888; }
+            .salary-amount { font-weight: 700; color: #1a1a2e; display: block; font-size: 15px; }
+            .job-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee; }
+            .job-posted { font-size: 12px; color: #999; }
+            .btn-apply { padding: 10px 20px; font-size: 13px; }
+            
+            /* All Jobs List */
+            .all-jobs-section { padding: 60px 0; }
+            .jobs-list { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+            .job-list-item { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 20px 24px; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: all 0.3s ease; border: 1px solid #eee; }
+            .job-list-item:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.12); transform: translateX(8px); border-color: #BFFF00; }
+            .job-list-left { display: flex; align-items: center; gap: 16px; }
+            .company-logo-sm img { width: 48px; height: 48px; border-radius: 10px; }
+            .job-info .job-title { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 2px; }
+            .job-info .company-name { font-size: 13px; color: #666; margin-bottom: 6px; }
+            .job-meta-inline { display: flex; gap: 16px; font-size: 12px; color: #888; }
+            .job-list-right { display: flex; align-items: center; gap: 12px; }
+            .job-salary-sm { font-weight: 600; color: #1a1a2e; font-size: 14px; min-width: 140px; text-align: right; }
+            .btn-sm { padding: 8px 16px; font-size: 12px; }
+            
+            /* Benefits Grid */
+            .why-join-section { padding: 80px 0; background: #f8f9fa; }
+            .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+            .benefit-card { background: #fff; padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+            .benefit-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+            .benefit-icon { font-size: 48px; margin-bottom: 16px; }
+            .benefit-card h3 { font-size: 18px; color: #1a1a2e; margin-bottom: 10px; }
+            .benefit-card p { font-size: 14px; color: #666; line-height: 1.6; }
+            
+            /* CTA Section */
+            .job-cta-section { padding: 80px 0; }
+            .job-cta-box { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 60px; border-radius: 24px; gap: 40px; }
+            .job-cta-box .cta-content { flex: 1; }
+            .job-cta-box h2 { color: #fff; font-size: 32px; margin: 12px 0; }
+            .job-cta-box p { color: #aaa; font-size: 16px; margin-bottom: 24px; line-height: 1.7; }
+            .cta-buttons { display: flex; gap: 16px; }
+            .cta-illustration { flex-shrink: 0; }
+            .illustration-circle { width: 150px; height: 150px; background: rgba(191,255,0,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: pulse-glow 2s infinite; }
+            .illustration-emoji { font-size: 64px; }
+            @keyframes pulse-glow { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(191,255,0,0.4); } 50% { transform: scale(1.05); box-shadow: 0 0 30px 10px rgba(191,255,0,0.2); } }
+            
+            /* For Companies */
+            .for-companies-section { padding: 60px 0 80px; background: #f8f9fa; }
+            .companies-box { background: #fff; padding: 50px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto; text-align: center; }
+            .companies-box h2 { font-size: 28px; color: #1a1a2e; margin-bottom: 16px; }
+            .companies-box p { color: #666; font-size: 16px; margin-bottom: 24px; }
+            .companies-benefits { list-style: none; padding: 0; margin-bottom: 30px; display: inline-block; text-align: left; }
+            .companies-benefits li { padding: 8px 0; font-size: 15px; color: #444; }
+            
+            /* Load More */
+            .load-more-container { text-align: center; margin-top: 40px; }
+            .load-more-btn { padding: 16px 40px; }
+            
+            /* Responsive */
+            @media (max-width: 1024px) {
+                .featured-jobs-grid { grid-template-columns: repeat(2, 1fr); }
+                .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            }
+            @media (max-width: 768px) {
+                .job-search-box { flex-direction: column; }
+                .featured-jobs-grid { grid-template-columns: 1fr; }
+                .benefits-grid { grid-template-columns: 1fr; }
+                .job-list-item { flex-direction: column; gap: 16px; align-items: flex-start; }
+                .job-list-right { width: 100%; justify-content: space-between; }
+                .stats-row { gap: 20px; }
+                .stat-divider { display: none; }
+                .job-cta-box { flex-direction: column; padding: 40px 30px; text-align: center; }
+                .cta-buttons { flex-direction: column; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Filter Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const jobCards = document.querySelectorAll('.featured-job-card, .job-list-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    jobCards.forEach(card => {
+                        const type = card.getAttribute('data-type');
+                        if (filterValue === 'all' || filterValue === type) {
+                            card.style.display = '';
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                            }, 50);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search Functionality
+            const searchInput = document.getElementById('jobSearch');
+            const locationSelect = document.getElementById('locationFilter');
+            
+            function filterJobs() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const locationValue = locationSelect.value.toLowerCase();
+                
+                document.querySelectorAll('.job-list-item').forEach(item => {
+                    const title = item.querySelector('.job-title').textContent.toLowerCase();
+                    const company = item.querySelector('.company-name').textContent.toLowerCase();
+                    const location = item.getAttribute('data-location') || '';
+                    
+                    const matchesSearch = title.includes(searchTerm) || company.includes(searchTerm);
+                    const matchesLocation = !locationValue || location.includes(locationValue);
+                    
+                    if (matchesSearch && matchesLocation) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+            
+            searchInput.addEventListener('input', filterJobs);
+            locationSelect.addEventListener('change', filterJobs);
+
+            // Card Hover Effects
+            document.querySelectorAll('.featured-job-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+
+            document.querySelectorAll('.benefit-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.querySelector('.benefit-icon').style.transform = 'scale(1.2)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.querySelector('.benefit-icon').style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
