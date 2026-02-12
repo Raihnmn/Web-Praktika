@@ -108,22 +108,22 @@
             <div class="container">
                 <div class="stats-row anim-fade-up">
                     <div class="stat-box">
-                        <span class="stat-num">50+</span>
+                        <span class="stat-num count-up" data-target="50" data-suffix="+">0</span>
                         <span class="stat-text">Lowongan Aktif</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-box">
-                        <span class="stat-num">30+</span>
+                        <span class="stat-num count-up" data-target="30" data-suffix="+">0</span>
                         <span class="stat-text">Hiring Partner</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-box">
-                        <span class="stat-num">500+</span>
+                        <span class="stat-num count-up" data-target="500" data-suffix="+">0</span>
                         <span class="stat-text">Talenta Diterima</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-box">
-                        <span class="stat-num">78%</span>
+                        <span class="stat-num count-up" data-target="78" data-suffix="%">0</span>
                         <span class="stat-text">Repeat Hire Rate</span>
                     </div>
                 </div>
@@ -718,7 +718,6 @@
                 });
             });
 
-            // Search Functionality
             const searchInput = document.getElementById('jobSearch');
             const locationSelect = document.getElementById('locationFilter');
             
@@ -745,7 +744,6 @@
             searchInput.addEventListener('input', filterJobs);
             locationSelect.addEventListener('change', filterJobs);
 
-            // Card Hover Effects
             document.querySelectorAll('.featured-job-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -765,6 +763,40 @@
                     this.querySelector('.benefit-icon').style.transform = '';
                 });
             });
+
+            const countUpElements = document.querySelectorAll('.count-up');
+            let countAnimated = false;
+
+            function animateCount(el) {
+                const target = parseInt(el.getAttribute('data-target'));
+                const suffix = el.getAttribute('data-suffix') || '';
+                const duration = 2000; 
+                const increment = target / (duration / 16); 
+                let current = 0;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current < target) {
+                        el.textContent = Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        el.textContent = target + suffix;
+                    }
+                };
+                updateCount();
+            }
+
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !countAnimated) {
+                        countAnimated = true;
+                        countUpElements.forEach(el => animateCount(el));
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsSection = document.querySelector('.job-stats-banner');
+            if (statsSection) countObserver.observe(statsSection);
         });
     </script>
 </body>
