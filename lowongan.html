@@ -508,8 +508,9 @@
         <!-- For Companies Section -->
         <section class="for-companies-section">
             <div class="container">
-                <div class="companies-box anim-fade-up">
-                    <div class="companies-content">
+                <div class="companies-grid anim-fade-up">
+                    <!-- Left Card - Data & Benefits -->
+                    <div class="companies-card companies-data">
                         <h2>🏢 Untuk Perusahaan</h2>
                         <p>Butuh talent digital marketing yang siap kerja? Posting lowongan Anda di Praktika+ dan dapatkan akses ke talent pool berkualitas.</p>
                         <ul class="companies-benefits">
@@ -518,7 +519,14 @@
                             <li>✅ Repeat hire rate 78%</li>
                             <li>✅ Partnership gratis untuk UMKM</li>
                         </ul>
-                        <p class="btn btn-primary">Posting Lowongan Gratis</p>
+                    </div>
+                    <!-- Right Card - CTA & Button -->
+                    <div class="companies-card companies-cta">
+                        <div class="cta-emoji">🚀</div>
+                        <h3>Mulai Rekrut Sekarang!</h3>
+                        <p>Posting lowongan pertama Anda dan temukan talent terbaik untuk tim Anda.</p>
+                        <a href="#" class="btn btn-primary btn-cta-company">Posting Lowongan Gratis</a>
+                        <span class="cta-note">✨ Gratis untuk UMKM & Startup</span>
                     </div>
                 </div>
             </div>
@@ -683,11 +691,21 @@
             
             /* For Companies */
             .for-companies-section { padding: 60px 0 80px; background: #f8f9fa; }
-            .companies-box { background: #fff; padding: 50px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto; text-align: center; }
-            .companies-box h2 { font-size: 28px; color: #1a1a2e; margin-bottom: 16px; }
-            .companies-box p { color: #666; font-size: 16px; margin-bottom: 24px; }
-            .companies-benefits { list-style: none; padding: 0; margin-bottom: 30px; display: inline-block; text-align: left; }
-            .companies-benefits li { padding: 8px 0; font-size: 15px; color: #444; }
+            .companies-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto; }
+            .companies-card { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+            .companies-data { border-left: 4px solid #BFFF00; }
+            .companies-data h2 { font-size: 26px; color: #1a1a2e; margin-bottom: 16px; }
+            .companies-data > p { color: #666; font-size: 15px; margin-bottom: 20px; line-height: 1.7; }
+            .companies-benefits { list-style: none; padding: 0; margin: 0; }
+            .companies-benefits li { padding: 10px 0; font-size: 15px; color: #444; border-bottom: 1px solid #f0f0f0; }
+            .companies-benefits li:last-child { border-bottom: none; }
+            .companies-cta { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+            .cta-emoji { font-size: 56px; margin-bottom: 16px; animation: bounce 2s infinite; }
+            @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+            .companies-cta h3 { font-size: 22px; color: #fff; margin-bottom: 12px; }
+            .companies-cta p { color: #aaa; font-size: 14px; margin-bottom: 24px; line-height: 1.6; }
+            .btn-cta-company { padding: 14px 32px; font-size: 15px; width: 100%; }
+            .cta-note { display: block; margin-top: 12px; font-size: 12px; color: #BFFF00; }
             
             /* Load More */
             .load-more-container { text-align: center; margin-top: 40px; }
@@ -708,6 +726,9 @@
                 .stat-divider { display: none; }
                 .job-cta-box { flex-direction: column; padding: 40px 30px; text-align: center; }
                 .cta-buttons { flex-direction: column; }
+                .companies-grid { grid-template-columns: 1fr; }
+                .companies-card { padding: 30px; }
+                .companies-cta { order: -1; }
             }
         `;
         document.head.appendChild(style);
