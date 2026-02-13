@@ -237,12 +237,14 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py9 sm:py6 text-center border-t border-gray-700 bg-black">
+<section id="cta-section" class="py9 sm:py6 text-center border-t border-gray-700 bg-black">
     <div class="container">
-        <h2 class="text-3xl sm:text-xl font-bold text-white mb4">Siap Gabung?</h2>
-        <p class="text-lg sm:text-base text-gray-400 mb7">Gratis untuk semua. Temukan partner belajarmu sekarang.</p>
-        <a href="#" class="inline-flex items-center gap-2 py4 px8 rounded-full font-bold text-white text-lg cursor-pointer transition shadow-lg bg-indigo-600 hover:bg-indigo-700">
-            <i class="fab fa-discord"></i> Join Discord Community
+        <h2 id="cta-title" class="text-3xl sm:text-xl font-bold text-white mb4 opacity-0">Siap Gabung?</h2>
+        <p id="cta-desc" class="text-lg sm:text-base text-gray-400 mb7 opacity-0">Gratis untuk semua. Temukan partner belajarmu sekarang.</p>
+        <a href="#" id="cta-btn" class="relative inline-flex items-center gap-2 py4 px8 rounded-full font-bold text-white text-lg cursor-pointer transition shadow-lg bg-indigo-600 overflow-hidden opacity-0">
+            <span id="cta-btn-bg" class="absolute top-0 left-0 right-0 bottom-0 rounded-full"></span>
+            <i class="fab fa-discord relative z1"></i> 
+            <span class="relative z1">Join Discord Community</span>
         </a>
     </div>
 </section>
@@ -556,6 +558,147 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // CTA Section Scroll Animation
+    const ctaObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                const ctaTitle = document.getElementById('cta-title');
+                const ctaDesc = document.getElementById('cta-desc');
+                const ctaBtn = document.getElementById('cta-btn');
+
+                // Animate title
+                if (ctaTitle) {
+                    ctaTitle.style.transform = 'translateY(30px)';
+                    ctaTitle.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                    setTimeout(function() {
+                        ctaTitle.style.opacity = '1';
+                        ctaTitle.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+
+                // Animate description
+                if (ctaDesc) {
+                    ctaDesc.style.transform = 'translateY(30px)';
+                    ctaDesc.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                    setTimeout(function() {
+                        ctaDesc.style.opacity = '1';
+                        ctaDesc.style.transform = 'translateY(0)';
+                    }, 250);
+                }
+
+                // Animate button with bounce effect
+                if (ctaBtn) {
+                    ctaBtn.style.transform = 'translateY(40px) scale(0.8)';
+                    ctaBtn.style.transition = 'opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    setTimeout(function() {
+                        ctaBtn.style.opacity = '1';
+                        ctaBtn.style.transform = 'translateY(0) scale(1)';
+                    }, 400);
+                }
+
+                ctaObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const ctaSection = document.getElementById('cta-section');
+    if (ctaSection) {
+        ctaObserver.observe(ctaSection);
+    }
+
+    // CTA Button Enhanced Hover Animation
+    const ctaBtn = document.getElementById('cta-btn');
+    const ctaBtnBg = document.getElementById('cta-btn-bg');
+    
+    if (ctaBtn && ctaBtnBg) {
+        // Initial styles
+        ctaBtn.style.boxShadow = '0 10px 30px rgba(88, 101, 242, 0.4)';
+        ctaBtnBg.style.background = 'linear-gradient(135deg, #5850ec 0%, #7c3aed 50%, #5850ec 100%)';
+        ctaBtnBg.style.backgroundSize = '200% 200%';
+        ctaBtnBg.style.transition = 'all 0.5s ease';
+        
+        let gradientAnimation = null;
+        let glowPulse = null;
+        let gradientPosition = 0;
+        let glowIntensity = 0.4;
+        let glowDirection = 1;
+
+        ctaBtn.addEventListener('mouseenter', function() {
+            // Scale up and lift
+            this.style.transform = 'translateY(-8px) scale(1.05)';
+            this.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease';
+            
+            // Animated gradient background
+            gradientAnimation = setInterval(function() {
+                gradientPosition += 2;
+                if (gradientPosition >= 100) gradientPosition = 0;
+                ctaBtnBg.style.background = 'linear-gradient(135deg, #5850ec ' + gradientPosition + '%, #7c3aed ' + (gradientPosition + 25) + '%, #a855f7 ' + (gradientPosition + 50) + '%, #5850ec ' + (gradientPosition + 75) + '%)';
+                ctaBtnBg.style.backgroundSize = '300% 300%';
+                ctaBtnBg.style.backgroundPosition = gradientPosition + '% 50%';
+            }, 30);
+            
+            // Pulsing glow effect
+            glowPulse = setInterval(function() {
+                glowIntensity += 0.05 * glowDirection;
+                if (glowIntensity >= 0.8) glowDirection = -1;
+                if (glowIntensity <= 0.4) glowDirection = 1;
+                ctaBtn.style.boxShadow = '0 15px 50px rgba(88, 101, 242, ' + glowIntensity + '), 0 0 30px rgba(139, 92, 246, ' + (glowIntensity * 0.6) + '), inset 0 0 20px rgba(255, 255, 255, 0.1)';
+            }, 50);
+        });
+
+        ctaBtn.addEventListener('mouseleave', function() {
+            // Reset transform
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 10px 30px rgba(88, 101, 242, 0.4)';
+            
+            // Clear animations
+            if (gradientAnimation) {
+                clearInterval(gradientAnimation);
+                gradientAnimation = null;
+            }
+            if (glowPulse) {
+                clearInterval(glowPulse);
+                glowPulse = null;
+            }
+            
+            // Reset background
+            ctaBtnBg.style.background = 'linear-gradient(135deg, #5850ec 0%, #7c3aed 50%, #5850ec 100%)';
+            ctaBtnBg.style.backgroundSize = '200% 200%';
+            
+            // Reset glow variables
+            glowIntensity = 0.4;
+            glowDirection = 1;
+        });
+
+        // Add click ripple effect
+        ctaBtn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255, 255, 255, 0.5)';
+            ripple.style.transform = 'scale(0)';
+            ripple.style.animation = 'ripple-effect 0.6s ease-out';
+            ripple.style.pointerEvents = 'none';
+            
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(function() {
+                ripple.remove();
+            }, 600);
+        });
+    }
+
+    // Add ripple keyframes
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = '@keyframes ripple-effect { to { transform: scale(2.5); opacity: 0; } }';
+    document.head.appendChild(rippleStyle);
 });
 </script>
 </body>
