@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKL SMK – Praktika+</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* PKL SMK Custom Styles */
+        :root {
+            --pkl-green: #BFFF00;
+            --pkl-dark: #121212;
+            --pkl-card: #1E1E1E;
+            --pkl-gray: #2C2C2C;
+        }
+
+        /* Hero Section */
+        .pkl-hero {
+            position: relative;
+            padding: 120px 0 80px;
+            background: var(--pkl-dark);
+            overflow: hidden;
+        }
+        .pkl-hero-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+        .pkl-hero-glow.green {
+            top: -10%;
+            right: -5%;
+            width: 600px;
+            height: 600px;
+            background: rgba(191, 255, 0, 0.05);
+        }
+        .pkl-hero-glow.orange {
+            bottom: 10%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 165, 0, 0.05);
+        }
+        .pkl-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        .pkl-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            margin-bottom: 24px;
+        }
+        .pkl-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--pkl-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .pkl-badge-text {
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .pkl-hero-title {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .pkl-hero-title span {
+            background: linear-gradient(to right, var(--pkl-green), #E0F780);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .pkl-hero-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+        .pkl-hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .pkl-btn-primary {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            background: var(--pkl-green);
+            color: var(--pkl-card);
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(191, 255, 0, 0.3);
+        }
+        .pkl-btn-primary:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+        .pkl-btn-secondary {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .pkl-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: white;
+        }
+        .pkl-hero-image {
+            position: relative;
+        }
+        .pkl-hero-image-wrapper {
+            position: relative;
+            z-index: 10;
+            background: var(--pkl-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 8px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            transform: rotate(3deg);
+            transition: transform 0.5s ease;
+        }
+        .pkl-hero-image-wrapper:hover {
+            transform: rotate(0deg);
+        }
+        .pkl-hero-image img {
+            border-radius: 12px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+        .pkl-hero-image-wrapper:hover img {
+            filter: grayscale(0%);
+        }
+        .pkl-hero-image-bg {
+            position: absolute;
+            inset: 0;
+            background: var(--pkl-green);
+            border-radius: 16px;
+            transform: rotate(-3deg) translate(16px, 16px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+        .pkl-float-card {
+            position: absolute;
+            bottom: -24px;
+            left: -24px;
+            background: var(--pkl-gray);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: bounce 3s ease-in-out infinite;
+        }
+        .pkl-float-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .pkl-float-card-text {
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .pkl-float-card-sub {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+        }
+
+        /* Stats Section */
+        .pkl-stats {
+            padding: 48px 0;
+            background: #1A1A1A;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .pkl-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        .pkl-stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--pkl-green);
+            margin-bottom: 8px;
+        }
+        .pkl-stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Why Section */
+        .pkl-why {
+            padding: 80px 0;
+            background: white;
+        }
+        .pkl-section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .pkl-section-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+        .pkl-section-desc {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .pkl-features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .pkl-feature-card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .pkl-feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .pkl-feature-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(191, 255, 0, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+        .pkl-feature-card:hover .pkl-feature-icon {
+            transform: scale(1.1);
+            background: var(--pkl-green);
+        }
+        .pkl-feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .pkl-feature-desc {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Jurusan Section */
+        .pkl-jurusan {
+            padding: 80px 0;
+            background: var(--pkl-dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .pkl-jurusan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 48px;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .pkl-jurusan-label {
+            color: var(--pkl-green);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .pkl-jurusan-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+        }
+        .pkl-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .pkl-filter-btn {
+            padding: 10px 20px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .pkl-filter-btn:hover {
+            border-color: var(--pkl-green);
+            color: var(--pkl-green);
+            background: rgba(191, 255, 0, 0.1);
+        }
+        .pkl-filter-btn.active {
+            background: var(--pkl-green);
+            color: var(--pkl-card);
+            border-color: var(--pkl-green);
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(191, 255, 0, 0.3);
+        }
+        .pkl-roles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .pkl-role-card {
+            background: var(--pkl-card);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .pkl-role-card:hover {
+            border-color: var(--pkl-green);
+            transform: translateY(-8px);
+        }
+        .pkl-role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .pkl-role-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .pkl-role-tag {
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .pkl-role-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+        .pkl-role-card:hover .pkl-role-title {
+            color: var(--pkl-green);
+        }
+        .pkl-role-desc {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .pkl-role-skills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .pkl-skill-tag {
+            padding: 4px 8px;
+            background: var(--pkl-gray);
+            border-radius: 4px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .pkl-role-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: var(--pkl-green);
+            color: var(--pkl-card);
+            font-weight: 800;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .pkl-role-btn:hover {
+            background: white;
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(191, 255, 0, 0.4);
+        }
+
+        /* Kurikulum Section */
+        .pkl-kurikulum {
+            padding: 80px 0;
+            background: var(--pkl-card);
+        }
+        .pkl-kurikulum .pkl-section-header {
+            margin-bottom: 48px;
+        }
+        .pkl-kurikulum .pkl-section-title {
+            color: white;
+        }
+        .pkl-kurikulum .pkl-section-desc {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .pkl-kurikulum-badge {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 999px;
+            background: rgba(191, 255, 0, 0.1);
+            color: var(--pkl-green);
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .pkl-kurikulum-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .pkl-kurikulum-card {
+            background: var(--pkl-gray);
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .pkl-kurikulum-card:hover {
+            border-color: rgba(191, 255, 0, 0.5);
+        }
+        .pkl-kurikulum-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(191, 255, 0, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        .pkl-kurikulum-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+        .pkl-kurikulum-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pkl-kurikulum-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .pkl-kurikulum-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--pkl-green);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Alur Section */
+        .pkl-alur {
+            padding: 96px 0;
+            background: var(--pkl-dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .pkl-alur-glow {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 500px;
+            height: 500px;
+            background: rgba(191, 255, 0, 0.05);
+            border-radius: 50%;
+            filter: blur(120px);
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .pkl-alur-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 10;
+        }
+        .pkl-alur-line {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--pkl-gray);
+        }
+        .pkl-step {
+            text-align: center;
+            position: relative;
+        }
+        .pkl-step-circle {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 24px;
+            background: var(--pkl-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .pkl-step:hover .pkl-step-circle {
+            border-color: var(--pkl-green);
+            box-shadow: 0 0 30px rgba(191, 255, 0, 0.25);
+            transform: scale(1.1);
+        }
+        .pkl-step-circle svg {
+            width: 36px;
+            height: 36px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .pkl-step:hover .pkl-step-circle svg {
+            color: var(--pkl-green);
+        }
+        .pkl-step-number {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 32px;
+            height: 32px;
+            background: var(--pkl-gray);
+            border: 4px solid var(--pkl-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .pkl-step:hover .pkl-step-number {
+            background: var(--pkl-green);
+            color: var(--pkl-card);
+        }
+        .pkl-step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+        .pkl-step:hover .pkl-step-title {
+            color: var(--pkl-green);
+        }
+        .pkl-step-desc {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            line-height: 1.5;
+            padding: 0 8px;
+        }
+
+        /* Testimoni Section */
+        .pkl-testimoni {
+            padding: 80px 0;
+            background: var(--pkl-card);
+        }
+        .pkl-testimoni-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .pkl-testimoni-card {
+            background: var(--pkl-gray);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .pkl-testimoni-card:hover {
+            border-color: rgba(191, 255, 0, 0.3);
+        }
+        .pkl-testimoni-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .pkl-testimoni-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+        }
+        .pkl-testimoni-name {
+            color: white;
+            font-weight: 700;
+        }
+        .pkl-testimoni-school {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        .pkl-testimoni-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .pkl-testimoni-stars {
+            display: flex;
+            gap: 4px;
+            margin-top: 16px;
+            color: var(--pkl-green);
+        }
+
+        /* Sekolah Section */
+        .pkl-sekolah {
+            padding: 80px 0;
+            background: white;
+        }
+        .pkl-sekolah-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .pkl-sekolah-badge {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 999px;
+            background: var(--pkl-dark);
+            color: var(--pkl-green);
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .pkl-sekolah-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+        .pkl-sekolah-desc {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .pkl-sekolah-features {
+            margin-bottom: 32px;
+        }
+        .pkl-sekolah-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .pkl-sekolah-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--pkl-green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .pkl-sekolah-feature-title {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .pkl-sekolah-feature-desc {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+        .pkl-sekolah-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            background: var(--pkl-dark);
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .pkl-sekolah-btn:hover {
+            background: var(--pkl-gray);
+        }
+        .pkl-sekolah-image {
+            position: relative;
+        }
+        .pkl-sekolah-image img {
+            border-radius: 16px;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .pkl-sekolah-stat {
+            position: absolute;
+            bottom: -24px;
+            right: -24px;
+            background: var(--pkl-green);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 280px;
+        }
+        .pkl-sekolah-stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+        .pkl-sekolah-stat-text {
+            color: rgba(26, 26, 26, 0.7);
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .pkl-cta {
+            position: relative;
+            padding: 112px 0;
+            overflow: hidden;
+        }
+        .pkl-cta-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .pkl-cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .pkl-cta-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+        .pkl-cta-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        .pkl-cta-title span {
+            color: var(--pkl-green);
+        }
+        .pkl-cta-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .pkl-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pkl-hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .pkl-hero-image {
+                display: none;
+            }
+            .pkl-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pkl-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pkl-roles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pkl-kurikulum-grid {
+                grid-template-columns: 1fr;
+            }
+            .pkl-alur-steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .pkl-alur-line {
+                display: none;
+            }
+            .pkl-testimoni-grid {
+                grid-template-columns: 1fr;
+            }
+            .pkl-sekolah-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .pkl-hero {
+                padding: 100px 0 60px;
+            }
+            .pkl-hero-title {
+                font-size: 36px;
+            }
+            .pkl-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pkl-features-grid {
+                grid-template-columns: 1fr;
+            }
+            .pkl-roles-grid {
+                grid-template-columns: 1fr;
+            }
+            .pkl-alur-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pkl-cta-title {
+                font-size: 32px;
+            }
+            .pkl-jurusan-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @media (max-width: 480px) {
+            .pkl-alur-steps {
+                grid-template-columns: 1fr;
+            }
+            .pkl-step-circle {
+                width: 72px;
+                height: 72px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (shared) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="indexV1.html" aria-label="Praktika+ Dashboard" class="logo-link">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="logo-img" height="40" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu list-none">
+                    <li class="nav-item dropdown">
+                        <a href="#program" class="nav-link">Program <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="bootcamps.html">🚀 Intensive Bootcamps</a></li>
+                            <li><a href="internship.html">🎓 Certified Internship Program</a></li>
+                            <li><a href="pklsmk.html">🏫 PKL SMK</a></li>
+                            <li><a href="mentorship.html">🧑‍🏫 Career & Mentorship</a></li>
+                            <li><a href="softskills.html">🌟 Soft Skills & Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="solutions.html" class="nav-link">Our Solution</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#contact" class="nav-link">Hub <span class="caret">▾</span></a>
+                        <ul class="dropdown-menu list-none">
+                            <li><a href="showcase.html" data-hub-cat="showcase">📌 Showcase</a></li>
+                            <li><a href="blogberita.html" data-hub-cat="blog">📰 Blog Berita</a></li>
+                            <li><a href="lowongan.html" data-hub-cat="jobs">💼 Lowongan Kerja</a></li>
+                            <li><a href="#contact" data-hub-cat="events">🎤 Event & Webinar</a></li>
+                            <li><a href="#contact" data-hub-cat="competition">🏆 Challenge & Competition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="komunitas.html" class="nav-link">Komunitas</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." class="search-input">
+                        <button class="search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="btn btn-secondary">Masuk</button>
+                        <button class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pkl-hero">
+            <div class="pkl-hero-glow green"></div>
+            <div class="pkl-hero-glow orange"></div>
+            <div class="container">
+                <div class="pkl-hero-grid">
+                    <div class="anim-fade-up">
+                        <div class="pkl-badge">
+                            <span class="pkl-badge-dot"></span>
+                            <span class="pkl-badge-text">Pendaftaran PKL Dibuka!</span>
+                        </div>
+                        <h1 class="pkl-hero-title">
+                            PKL untuk<br>
+                            <span>Anak SMK.</span>
+                        </h1>
+                        <p class="pkl-hero-desc">
+                            Pengalaman kerja terukur di dunia industri. Bukan sekadar tugas administrasi, tapi belajar skill nyata yang dibutuhkan dunia kerja.
+                        </p>
+                        <div class="pkl-hero-buttons">
+                            <a href="#jurusan" class="pkl-btn-primary">Lihat Jurusan</a>
+                            <a href="#alur" class="pkl-btn-secondary">Alur Pendaftaran</a>
+                        </div>
+                    </div>
+                    <div class="pkl-hero-image anim-fade-up delay-2">
+                        <div class="pkl-hero-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students Working">
+                            <div class="pkl-float-card">
+                                <div class="pkl-float-card-icon">🎓</div>
+                                <div>
+                                    <div class="pkl-float-card-text">PKL Selesai!</div>
+                                    <div class="pkl-float-card-sub">SMKN 1 Semarang</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pkl-hero-image-bg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="pkl-stats">
+            <div class="container">
+                <div class="pkl-stats-grid">
+                    <div class="anim-fade-up">
+                        <div class="pkl-stat-number">500+</div>
+                        <div class="pkl-stat-label">Siswa PKL</div>
+                    </div>
+                    <div class="anim-fade-up delay-1">
+                        <div class="pkl-stat-number">50+</div>
+                        <div class="pkl-stat-label">SMK Partner</div>
+                    </div>
+                    <div class="anim-fade-up delay-2">
+                        <div class="pkl-stat-number">95%</div>
+                        <div class="pkl-stat-label">Tingkat Kepuasan</div>
+                    </div>
+                    <div class="anim-fade-up delay-3">
+                        <div class="pkl-stat-number">3-6</div>
+                        <div class="pkl-stat-label">Bulan Durasi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="pkl-why">
+            <div class="container">
+                <div class="pkl-section-header anim-fade-up">
+                    <h2 class="pkl-section-title">Kenapa PKL di Praktika+?</h2>
+                    <p class="pkl-section-desc">Kami percaya siswa SMK berhak mendapat pengalaman kerja nyata, bukan sekadar tugas fotokopi.</p>
+                </div>
+                <div class="pkl-features-grid">
+                    <div class="pkl-feature-card anim-fade-up">
+                        <div class="pkl-feature-icon">📋</div>
+                        <h3 class="pkl-feature-title">Laporan PKL Lengkap</h3>
+                        <p class="pkl-feature-desc">Dokumentasi kegiatan harian & laporan akhir siap pakai untuk penilaian sekolah.</p>
+                    </div>
+                    <div class="pkl-feature-card anim-fade-up delay-1">
+                        <div class="pkl-feature-icon">🛠️</div>
+                        <h3 class="pkl-feature-title">Proyek Industri Nyata</h3>
+                        <p class="pkl-feature-desc">Terlibat langsung dalam proyek riil bersama tim profesional kami.</p>
+                    </div>
+                    <div class="pkl-feature-card anim-fade-up delay-2">
+                        <div class="pkl-feature-icon">👨‍🏫</div>
+                        <h3 class="pkl-feature-title">Pembimbing Berpengalaman</h3>
+                        <p class="pkl-feature-desc">Dibimbing langsung oleh praktisi industri yang siap membantumu belajar.</p>
+                    </div>
+                    <div class="pkl-feature-card anim-fade-up delay-3">
+                        <div class="pkl-feature-icon">📜</div>
+                        <h3 class="pkl-feature-title">Sertifikat & Portofolio</h3>
+                        <p class="pkl-feature-desc">Sertifikat resmi & portofolio hasil kerja untuk bekal melamar kerja nanti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jurusan Section -->
+        <section id="jurusan" class="pkl-jurusan">
+            <div class="container">
+                <div class="pkl-jurusan-header anim-fade-up">
+                    <div>
+                        <div class="pkl-jurusan-label">Bidang PKL</div>
+                        <h2 class="pkl-jurusan-title">Pilih Sesuai Jurusanmu</h2>
+                    </div>
+                    <div class="pkl-filters" id="jurusan-filters">
+                        <button class="pkl-filter-btn active" data-filter="all">Semua</button>
+                        <button class="pkl-filter-btn" data-filter="tkj">TKJ / RPL</button>
+                        <button class="pkl-filter-btn" data-filter="mm">Multimedia</button>
+                        <button class="pkl-filter-btn" data-filter="otkp">OTKP / AKL</button>
+                    </div>
+                </div>
+                <div class="pkl-roles-grid" id="jurusan-grid">
+                    <!-- TKJ/RPL -->
+                    <div class="pkl-role-card anim-fade-up" data-category="tkj">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(59, 130, 246, 0.1);">💻</div>
+                            <span class="pkl-role-tag">TKJ / RPL</span>
+                        </div>
+                        <h3 class="pkl-role-title">Web Developer Junior</h3>
+                        <p class="pkl-role-desc">Belajar membuat website dari awal: HTML, CSS, JavaScript, dan dasar-dasar framework.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">HTML/CSS</span>
+                            <span class="pkl-skill-tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <div class="pkl-role-card anim-fade-up delay-1" data-category="tkj">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(34, 197, 94, 0.1);">🔧</div>
+                            <span class="pkl-role-tag">TKJ / RPL</span>
+                        </div>
+                        <h3 class="pkl-role-title">IT Support</h3>
+                        <p class="pkl-role-desc">Pelajari troubleshooting hardware, instalasi software, dan pengelolaan jaringan dasar.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Troubleshooting</span>
+                            <span class="pkl-skill-tag">Networking</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <!-- Multimedia -->
+                    <div class="pkl-role-card anim-fade-up delay-2" data-category="mm">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(236, 72, 153, 0.1);">🎨</div>
+                            <span class="pkl-role-tag">Multimedia</span>
+                        </div>
+                        <h3 class="pkl-role-title">Graphic Designer</h3>
+                        <p class="pkl-role-desc">Membuat desain konten sosial media, poster, dan materi promosi untuk klien.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Photoshop</span>
+                            <span class="pkl-skill-tag">Canva</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <div class="pkl-role-card anim-fade-up" data-category="mm">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(239, 68, 68, 0.1);">🎬</div>
+                            <span class="pkl-role-tag">Multimedia</span>
+                        </div>
+                        <h3 class="pkl-role-title">Video Editor</h3>
+                        <p class="pkl-role-desc">Edit video konten untuk YouTube, TikTok, dan kebutuhan promosi perusahaan.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Premiere Pro</span>
+                            <span class="pkl-skill-tag">CapCut</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <div class="pkl-role-card anim-fade-up delay-1" data-category="mm">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(249, 115, 22, 0.1);">📱</div>
+                            <span class="pkl-role-tag">Multimedia</span>
+                        </div>
+                        <h3 class="pkl-role-title">Social Media Admin</h3>
+                        <p class="pkl-role-desc">Kelola konten sosial media, buat caption menarik, dan analisis performa postingan.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Instagram</span>
+                            <span class="pkl-skill-tag">TikTok</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <!-- OTKP/AKL -->
+                    <div class="pkl-role-card anim-fade-up delay-2" data-category="otkp">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(99, 102, 241, 0.1);">📊</div>
+                            <span class="pkl-role-tag">OTKP</span>
+                        </div>
+                        <h3 class="pkl-role-title">Admin Data Entry</h3>
+                        <p class="pkl-role-desc">Kelola database, input data, dan buat laporan menggunakan spreadsheet.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Excel</span>
+                            <span class="pkl-skill-tag">Google Sheets</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <div class="pkl-role-card anim-fade-up" data-category="otkp">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(6, 182, 212, 0.1);">💰</div>
+                            <span class="pkl-role-tag">AKL</span>
+                        </div>
+                        <h3 class="pkl-role-title">Finance Assistant</h3>
+                        <p class="pkl-role-desc">Belajar pencatatan keuangan, rekonsiliasi, dan membuat laporan keuangan sederhana.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Pembukuan</span>
+                            <span class="pkl-skill-tag">Laporan</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                    <div class="pkl-role-card anim-fade-up delay-1" data-category="otkp">
+                        <div class="pkl-role-header">
+                            <div class="pkl-role-icon" style="background: rgba(168, 85, 247, 0.1);">📝</div>
+                            <span class="pkl-role-tag">OTKP</span>
+                        </div>
+                        <h3 class="pkl-role-title">HR Admin Assistant</h3>
+                        <p class="pkl-role-desc">Membantu administrasi HR: kelola dokumen karyawan, absensi, dan arsip perusahaan.</p>
+                        <div class="pkl-role-skills">
+                            <span class="pkl-skill-tag">Administrasi</span>
+                            <span class="pkl-skill-tag">Filing</span>
+                        </div>
+                        <a href="#" class="pkl-role-btn">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kurikulum Section -->
+        <section class="pkl-kurikulum">
+            <div class="container">
+                <div class="pkl-section-header anim-fade-up">
+                    <span class="pkl-kurikulum-badge">Kurikulum PKL</span>
+                    <h2 class="pkl-section-title">Apa yang Akan Kamu Pelajari?</h2>
+                    <p class="pkl-section-desc">Skill industri yang tidak diajarkan di sekolah, tapi sangat dibutuhkan di dunia kerja.</p>
+                </div>
+                <div class="pkl-kurikulum-grid">
+                    <div class="pkl-kurikulum-card anim-fade-up">
+                        <div class="pkl-kurikulum-icon">🎯</div>
+                        <h3 class="pkl-kurikulum-title">Hard Skills Industri</h3>
+                        <ul class="pkl-kurikulum-list">
+                            <li>Tools & software profesional</li>
+                            <li>Best practices industri</li>
+                            <li>Workflow tim profesional</li>
+                            <li>Problem solving nyata</li>
+                        </ul>
+                    </div>
+                    <div class="pkl-kurikulum-card anim-fade-up delay-1">
+                        <div class="pkl-kurikulum-icon">🤝</div>
+                        <h3 class="pkl-kurikulum-title">Soft Skills Penting</h3>
+                        <ul class="pkl-kurikulum-list">
+                            <li>Komunikasi profesional</li>
+                            <li>Kerja sama tim</li>
+                            <li>Time management</li>
+                            <li>Etika kerja</li>
+                        </ul>
+                    </div>
+                    <div class="pkl-kurikulum-card anim-fade-up delay-2">
+                        <div class="pkl-kurikulum-icon">📈</div>
+                        <h3 class="pkl-kurikulum-title">Career Readiness</h3>
+                        <ul class="pkl-kurikulum-list">
+                            <li>Membuat CV menarik</li>
+                            <li>Interview preparation</li>
+                            <li>Personal branding</li>
+                            <li>Portofolio digital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alur Section -->
+        <section id="alur" class="pkl-alur">
+            <div class="pkl-alur-glow"></div>
+            <div class="container">
+                <div class="pkl-section-header anim-fade-up" style="color: white;">
+                    <div class="pkl-jurusan-label" style="text-align: center;">Cara Daftar</div>
+                    <h2 class="pkl-section-title" style="color: white;">Alur Pendaftaran PKL</h2>
+                    <p class="pkl-section-desc">5 langkah mudah untuk memulai PKL-mu di Praktika+.</p>
+                </div>
+                <div class="pkl-alur-steps">
+                    <div class="pkl-alur-line"></div>
+                    <div class="pkl-step anim-fade-up">
+                        <div class="pkl-step-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                            <div class="pkl-step-number">1</div>
+                        </div>
+                        <h3 class="pkl-step-title">Koordinasi Sekolah</h3>
+                        <p class="pkl-step-desc">Sekolahmu menghubungi kami atau kamu bisa daftar mandiri.</p>
+                    </div>
+                    <div class="pkl-step anim-fade-up delay-1">
+                        <div class="pkl-step-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <div class="pkl-step-number">2</div>
+                        </div>
+                        <h3 class="pkl-step-title">Isi Formulir</h3>
+                        <p class="pkl-step-desc">Lengkapi data diri, jurusan, dan periode PKL yang diinginkan.</p>
+                    </div>
+                    <div class="pkl-step anim-fade-up delay-2">
+                        <div class="pkl-step-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                            <div class="pkl-step-number">3</div>
+                        </div>
+                        <h3 class="pkl-step-title">Seleksi Berkas</h3>
+                        <p class="pkl-step-desc">Tim kami akan review berkasmu dalam 3 hari kerja.</p>
+                    </div>
+                    <div class="pkl-step anim-fade-up delay-3">
+                        <div class="pkl-step-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                            </svg>
+                            <div class="pkl-step-number">4</div>
+                        </div>
+                        <h3 class="pkl-step-title">Wawancara</h3>
+                        <p class="pkl-step-desc">Interview singkat untuk penempatan bidang yang sesuai.</p>
+                    </div>
+                    <div class="pkl-step anim-fade-up delay-4">
+                        <div class="pkl-step-circle">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <div class="pkl-step-number">5</div>
+                        </div>
+                        <h3 class="pkl-step-title">Mulai PKL!</h3>
+                        <p class="pkl-step-desc">Selamat! Kamu siap memulai pengalaman PKL yang seru.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni Section -->
+        <section class="pkl-testimoni">
+            <div class="container">
+                <div class="pkl-section-header anim-fade-up">
+                    <span class="pkl-kurikulum-badge">Testimoni</span>
+                    <h2 class="pkl-section-title" style="color: white;">Kata Mereka yang Sudah PKL</h2>
+                </div>
+                <div class="pkl-testimoni-grid">
+                    <div class="pkl-testimoni-card anim-fade-up">
+                        <div class="pkl-testimoni-header">
+                            <div class="pkl-testimoni-avatar" style="background: linear-gradient(135deg, #BFFF00, #22c55e);">R</div>
+                            <div>
+                                <div class="pkl-testimoni-name">Rizki Pratama</div>
+                                <div class="pkl-testimoni-school">SMKN 1 Semarang - TKJ</div>
+                            </div>
+                        </div>
+                        <p class="pkl-testimoni-text">"PKL di sini beda banget. Gak cuma disuruh bikin kopi, tapi beneran belajar coding dan bikin website buat klien asli!"</p>
+                        <div class="pkl-testimoni-stars">★★★★★</div>
+                    </div>
+                    <div class="pkl-testimoni-card anim-fade-up delay-1">
+                        <div class="pkl-testimoni-header">
+                            <div class="pkl-testimoni-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">S</div>
+                            <div>
+                                <div class="pkl-testimoni-name">Sinta Dewi</div>
+                                <div class="pkl-testimoni-school">SMKN 3 Yogyakarta - MM</div>
+                            </div>
+                        </div>
+                        <p class="pkl-testimoni-text">"Aku jadi punya portofolio desain yang keren untuk daftar kerja. Mentornya juga sabar banget ngajarin dari nol."</p>
+                        <div class="pkl-testimoni-stars">★★★★★</div>
+                    </div>
+                    <div class="pkl-testimoni-card anim-fade-up delay-2">
+                        <div class="pkl-testimoni-header">
+                            <div class="pkl-testimoni-avatar" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">A</div>
+                            <div>
+                                <div class="pkl-testimoni-name">Ahmad Fadli</div>
+                                <div class="pkl-testimoni-school">SMKN 2 Bandung - OTKP</div>
+                            </div>
+                        </div>
+                        <p class="pkl-testimoni-text">"Belajar pake Excel dan software HR beneran. Sekarang udah kerja di perusahaan setelah lulus, thanks Praktika+!"</p>
+                        <div class="pkl-testimoni-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekolah Section -->
+        <section class="pkl-sekolah">
+            <div class="container">
+                <div class="pkl-sekolah-grid">
+                    <div class="anim-fade-up">
+                        <span class="pkl-sekolah-badge">Untuk Guru & Sekolah</span>
+                        <h2 class="pkl-sekolah-title">Kemitraan PKL untuk SMK</h2>
+                        <p class="pkl-sekolah-desc">
+                            Praktika+ membuka kerjasama dengan SMK seluruh Indonesia untuk penempatan siswa PKL. Kami menyediakan program terstruktur yang memenuhi standar industri dan kurikulum sekolah.
+                        </p>
+                        <div class="pkl-sekolah-features">
+                            <div class="pkl-sekolah-feature">
+                                <div class="pkl-sekolah-feature-icon">✓</div>
+                                <div>
+                                    <div class="pkl-sekolah-feature-title">Laporan Berkala</div>
+                                    <p class="pkl-sekolah-feature-desc">Progress report mingguan untuk guru pembimbing.</p>
+                                </div>
+                            </div>
+                            <div class="pkl-sekolah-feature">
+                                <div class="pkl-sekolah-feature-icon">✓</div>
+                                <div>
+                                    <div class="pkl-sekolah-feature-title">Sertifikat Resmi</div>
+                                    <p class="pkl-sekolah-feature-desc">Sertifikat penyelesaian PKL yang diakui industri.</p>
+                                </div>
+                            </div>
+                            <div class="pkl-sekolah-feature">
+                                <div class="pkl-sekolah-feature-icon">✓</div>
+                                <div>
+                                    <div class="pkl-sekolah-feature-title">Fleksibel Periode</div>
+                                    <p class="pkl-sekolah-feature-desc">Durasi 3-6 bulan sesuai kalender akademik sekolah.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="pkl-sekolah-btn">Hubungi Tim Kemitraan</a>
+                    </div>
+                    <div class="pkl-sekolah-image anim-fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Teacher and Students">
+                        <div class="pkl-sekolah-stat">
+                            <div class="pkl-sekolah-stat-number">50+</div>
+                            <div class="pkl-sekolah-stat-text">SMK partner yang sudah mempercayakan siswa PKL mereka kepada kami.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="pkl-cta">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80" alt="Students Background" class="pkl-cta-bg">
+            <div class="pkl-cta-overlay"></div>
+            <div class="container">
+                <div class="pkl-cta-content">
+                    <h2 class="pkl-cta-title anim-fade-up">
+                        Siap Memulai<br><span>PKL-mu?</span>
+                    </h2>
+                    <p class="pkl-cta-desc anim-fade-up delay-1">
+                        Pendaftaran PKL selalu dibuka. Daftar sekarang dan dapatkan pengalaman kerja terbaik untuk masa depanmu!
+                    </p>
+                    <div class="pkl-cta-buttons anim-fade-up delay-2">
+                        <a href="#" class="pkl-btn-primary">Daftar PKL Sekarang</a>
+                        <a href="#" class="pkl-btn-secondary">Konsultasi Dulu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (shared) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
+                    </div>
+                    <div class="footer-contact">
+                        <h3><span class="highlight-green">Contact Us</span></h3>
+                        <p>Email: Praktika@gmail.com</p>
+                        <p>Phone: 0819-0826-6435</p>
+                        <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <a href="indexV1.html#about">About us</a>
+                        <a href="indexV1.html#services">Services</a>
+                        <a href="indexV1.html#usecases">Use Cases</a>
+                        <a href="indexV1.html#pricing">Pricing</a>
+                        <a href="indexV1.html#blog">Blog</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok" title="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube" title="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Positivus. All Rights Reserved.</p>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('#jurusan-filters .pkl-filter-btn');
+            const roleCards = document.querySelectorAll('#jurusan-grid .pkl-role-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    roleCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || filterValue === cardCategory) {
+                            card.style.display = 'block';
+                            card.animate([
+                                { opacity: 0, transform: 'translateY(10px)' },
+                                { opacity: 1, transform: 'translateY(0)' }
+                            ], { duration: 300, fill: 'forwards', easing: 'ease-out' });
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="wa-fab" aria-label="WhatsApp Chat">
+        <button id="waFabBtn" class="wa-btn" type="button" title="Chat WhatsApp"
+                aria-label="Chat WhatsApp" data-wa-number="6281234567890"
+                data-wa-text="Halo, saya tertarik dengan PKL SMK di Praktika+">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
