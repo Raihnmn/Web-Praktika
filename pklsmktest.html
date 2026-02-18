@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKL SMK – Praktika+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-900 border-b border-gray-700 z5">
+        <div class="max-w-1000 m-auto px4 py3">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="indexV1.html">
+                        <img src="img/Logo Praktika+.png" alt="Praktika+" class="max-h-50">
+                    </a>
+                </div>
+                <div class="flex gap-4 sm\:none">
+                    <a href="bootcamps.html" class="text-white text-sm no-underline transition hover\:text-lime-400">Bootcamps</a>
+                    <a href="internship.html" class="text-white text-sm no-underline transition hover\:text-lime-400">Internship</a>
+                    <a href="pklsmk.html" class="text-lime-400 text-sm no-underline font-bold">PKL SMK</a>
+                    <a href="mentorship.html" class="text-white text-sm no-underline transition hover\:text-lime-400">Mentorship</a>
+                    <a href="komunitas.html" class="text-white text-sm no-underline transition hover\:text-lime-400">Komunitas</a>
+                </div>
+                <div class="flex gap-2">
+                    <a href="#" class="px4 py2 border border-1 border-gray-500 rounded-full text-white text-sm no-underline cursor-pointer transition hover\:bg-gray-700">Masuk</a>
+                    <a href="#" class="px4 py2 bg-lime-400 rounded-full text-gray-900 text-sm font-bold no-underline cursor-pointer transition hover\:bg-lime-300 btn-hover">Daftar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt9 pb9 bg-gray-900 relative overflow-hidden">
+            <div class="max-w-1000 m-auto px4 relative z1 mt9">
+                <div class="grid grid-cols-2 gap-6 items-center sm\:grid-cols-1">
+                    <div class="anim-fade-up">
+                        <div class="inline-flex items-center gap-2 px3 py2 rounded-full border border-1 border-gray-600 bg-gray-800 mb4 backdrop-blur-xs">
+                            <span class="inline-block bg-lime-400 rounded-full svg0 pulse-dot"></span>
+                            <span class="text-xs font-bold text-white">Pendaftaran PKL Dibuka!</span>
+                        </div>
+                        <h1 class="text-4xl font-bold text-white mb4 sm\:text-2xl">
+                            PKL untuk<br>
+                            <span class="text-lime-400 text-4xl font-bold">Anak SMK.</span>
+                        </h1>
+                        <p class="text-gray-400 text-base mb6 max-w-400">
+                            Pengalaman kerja terukur di dunia industri. Bukan sekadar tugas administrasi, tapi belajar skill nyata yang dibutuhkan dunia kerja.
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="#jurusan" class="px5 py3 rounded-lg bg-lime-400 text-gray-900 font-bold text-sm no-underline cursor-pointer transition shadow btn-hover">
+                                Lihat Jurusan
+                            </a>
+                            <a href="#alur" class="px5 py3 rounded-lg border border-1 border-gray-500 text-white font-bold text-sm no-underline cursor-pointer transition hover\:bg-gray-800">
+                                Alur Pendaftaran
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative sm\:none anim-fade-up delay-2">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-xl p2 shadow-lg hero-image-card">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Students Working" class="rounded-lg w-full object-cover max-h-400 hero-img">
+                        </div>
+                        <div class="absolute bottom-0 left-0 bg-gray-700 p3 rounded-lg border border-1 border-gray-600 shadow flex items-center gap-3 float-card">
+                            <div class="bg-green-100 text-green-600 rounded-full flex items-center justify-center svg4">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-sm">PKL Selesai!</div>
+                                <div class="text-gray-400 text-xs">SMKN 1 Semarang</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py6 bg-gray-800 border-t border-b border-gray-700">
+            <div class="max-w-1000 m-auto px4">
+                <div class="grid grid-cols-4 gap-6 text-center sm\:grid-cols-2">
+                    <div class="anim-fade-up">
+                        <div class="text-3xl font-bold text-lime-400 mb1 stat-number" data-target="500" data-suffix="+">0</div>
+                        <div class="text-gray-400 text-sm">Siswa PKL</div>
+                    </div>
+                    <div class="anim-fade-up delay-1">
+                        <div class="text-3xl font-bold text-lime-400 mb1 stat-number" data-target="50" data-suffix="+">0</div>
+                        <div class="text-gray-400 text-sm">SMK Partner</div>
+                    </div>
+                    <div class="anim-fade-up delay-2">
+                        <div class="text-3xl font-bold text-lime-400 mb1 stat-number" data-target="95" data-suffix="%">0</div>
+                        <div class="text-gray-400 text-sm">Tingkat Kepuasan</div>
+                    </div>
+                    <div class="anim-fade-up delay-3">
+                        <div class="text-3xl font-bold text-lime-400 mb1">3-6</div>
+                        <div class="text-gray-400 text-sm">Bulan Durasi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="py9 bg-white">
+            <div class="max-w-1000 m-auto px4">
+                <div class="text-center mb8 anim-fade-up">
+                    <h2 class="text-2xl font-bold text-gray-900 mb2">Kenapa PKL di Praktika+?</h2>
+                    <p class="text-gray-500 text-sm">Kami percaya siswa SMK berhak mendapat pengalaman kerja nyata, bukan sekadar tugas fotokopi.</p>
+                </div>
+
+                <div class="grid grid-cols-4 gap-4 sm\:grid-cols-2">
+                    <div class="bg-white p5 rounded-xl border border-1 border-gray-200 shadow transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up">
+                        <div class="bg-lime-100 rounded-lg flex items-center justify-center mb3 icon-bounce svg4 p3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb1">Laporan PKL Lengkap</h3>
+                        <p class="text-gray-500 text-sm">Dokumentasi kegiatan harian & laporan akhir siap pakai untuk penilaian sekolah.</p>
+                    </div>
+                    <div class="bg-white p5 rounded-xl border border-1 border-gray-200 shadow transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-1">
+                        <div class="bg-lime-100 rounded-lg flex items-center justify-center mb3 icon-bounce svg4 p3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb1">Proyek Industri Nyata</h3>
+                        <p class="text-gray-500 text-sm">Terlibat langsung dalam proyek riil bersama tim profesional kami.</p>
+                    </div>
+                    <div class="bg-white p5 rounded-xl border border-1 border-gray-200 shadow transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-2">
+                        <div class="bg-lime-100 rounded-lg flex items-center justify-center mb3 icon-bounce svg4 p3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb1">Pembimbing Berpengalaman</h3>
+                        <p class="text-gray-500 text-sm">Dibimbing langsung oleh praktisi industri yang siap membantumu belajar.</p>
+                    </div>
+                    <div class="bg-white p5 rounded-xl border border-1 border-gray-200 shadow transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-3">
+                        <div class="bg-lime-100 rounded-lg flex items-center justify-center mb3 icon-bounce svg4 p3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#65a30d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <path d="M9 16l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb1">Sertifikat & Portofolio</h3>
+                        <p class="text-gray-500 text-sm">Sertifikat resmi & portofolio hasil kerja untuk bekal melamar kerja nanti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jurusan Section -->
+        <section id="jurusan" class="py9 bg-gray-900 border-t border-gray-800">
+            <div class="max-w-1000 m-auto px4">
+                <div class="flex justify-between items-end mb8 gap-4 sm\:flex-col sm\:items-start anim-fade-up">
+                    <div>
+                        <span class="text-lime-400 font-bold text-sm block mb1">Bidang PKL</span>
+                        <h2 class="text-2xl font-bold text-white">Pilih Sesuai Jurusanmu</h2>
+                    </div>
+                    
+                    <div class="flex gap-2" id="jurusan-filters">
+                        <button class="filter-btn px4 py2 rounded-full bg-lime-400 text-gray-900 text-sm font-bold border border-1 border-lime-400 transition cursor-pointer" data-filter="all">
+                            Semua
+                        </button>
+                        <button class="filter-btn px4 py2 rounded-full bg-gray-900 border border-1 border-gray-500 text-white text-sm transition cursor-pointer hover\:bg-gray-800" data-filter="tkj">
+                            TKJ / RPL
+                        </button>
+                        <button class="filter-btn px4 py2 rounded-full bg-gray-900 border border-1 border-gray-500 text-white text-sm transition cursor-pointer hover\:bg-gray-800" data-filter="mm">
+                            Multimedia
+                        </button>
+                        <button class="filter-btn px4 py2 rounded-full bg-gray-900 border border-1 border-gray-500 text-white text-sm transition cursor-pointer hover\:bg-gray-800" data-filter="otkp">
+                            OTKP / AKL
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 sm\:grid-cols-1" id="jurusan-grid">
+                    <!-- TKJ/RPL -->
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up" data-category="tkj">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-blue-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">TKJ / RPL</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Web Developer Junior</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Belajar membuat website dari awal: HTML, CSS, JavaScript, dan dasar-dasar framework.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">HTML/CSS</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">JavaScript</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-1" data-category="tkj">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-green-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">TKJ / RPL</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">IT Support</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Pelajari troubleshooting hardware, instalasi software, dan pengelolaan jaringan dasar.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Troubleshooting</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Networking</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <!-- Multimedia -->
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-2" data-category="mm">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-pink-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">Multimedia</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Graphic Designer</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Membuat desain konten sosial media, poster, dan materi promosi untuk klien.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Photoshop</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Canva</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up" data-category="mm">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-red-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="23 7 16 12 23 17 23 7"/>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">Multimedia</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Video Editor</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Edit video konten untuk YouTube, TikTok, dan kebutuhan promosi perusahaan.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Premiere Pro</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">CapCut</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-1" data-category="mm">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-yellow-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">Multimedia</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Social Media Admin</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Kelola konten sosial media, buat caption menarik, dan analisis performa postingan.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Instagram</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">TikTok</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <!-- OTKP/AKL -->
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-2" data-category="otkp">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-indigo-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">OTKP</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Admin Data Entry</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Kelola database, input data, dan buat laporan menggunakan spreadsheet.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Excel</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Google Sheets</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up" data-category="otkp">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-blue-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">AKL</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">Finance Assistant</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Belajar pencatatan keuangan, rekonsiliasi, dan membuat laporan keuangan sederhana.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Pembukuan</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Laporan</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                    
+                    <div class="role-card bg-gray-800 rounded-xl p5 border border-1 border-gray-700 transition cursor-pointer card-hover hover\:border-lime-400 anim-fade-up delay-1" data-category="otkp">
+                        <div class="flex justify-between items-start mb3">
+                            <div class="bg-purple-100 rounded-lg flex items-center justify-center svg4 p2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                                </svg>
+                            </div>
+                            <span class="px2 py1 rounded bg-gray-700 text-gray-400 text-xxs font-bold border border-1 border-gray-600">OTKP</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb1">HR Admin Assistant</h3>
+                        <p class="text-gray-400 text-sm mb4 webkit-ellipsis-2 overflow-hidden">Membantu administrasi HR: kelola dokumen karyawan, absensi, dan arsip perusahaan.</p>
+                        <div class="flex gap-1 mb4">
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Administrasi</span>
+                            <span class="px2 py1 bg-gray-700 rounded text-xs text-gray-300 border border-1 border-gray-600">Filing</span>
+                        </div>
+                        <a href="#" class="block w-full py2 rounded-lg bg-lime-400 text-gray-900 text-center text-sm font-bold no-underline transition btn-hover hover\:bg-lime-300">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kurikulum Section -->
+        <section class="py9 bg-gray-800">
+            <div class="max-w-1000 m-auto px4">
+                <div class="text-center mb8 anim-fade-up">
+                    <span class="inline-block px4 py1 rounded-full bg-lime-950 text-lime-400 text-xs font-bold mb3">Kurikulum PKL</span>
+                    <h2 class="text-2xl font-bold text-white mb2">Apa yang Akan Kamu Pelajari?</h2>
+                    <p class="text-gray-400 text-sm">Skill industri yang tidak diajarkan di sekolah, tapi sangat dibutuhkan di dunia kerja.</p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6 sm\:grid-cols-1">
+                    <div class="bg-gray-700 rounded-xl p6 border border-1 border-gray-600 transition card-hover anim-fade-up">
+                        <div class="bg-lime-950 rounded-xl flex items-center justify-center mb5 p4">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb4">Hard Skills Industri</h3>
+                        <ul class="list-none m0 p0">
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Tools & software profesional
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Best practices industri
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Workflow tim profesional
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Problem solving nyata
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-700 rounded-xl p6 border border-1 border-gray-600 transition card-hover anim-fade-up delay-1">
+                        <div class="bg-lime-950 rounded-xl flex items-center justify-center mb5 p4">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb4">Soft Skills Penting</h3>
+                        <ul class="list-none m0 p0">
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Komunikasi profesional
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Kerja sama tim
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Time management
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Etika kerja
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-700 rounded-xl p6 border border-1 border-gray-600 transition card-hover anim-fade-up delay-2">
+                        <div class="bg-lime-950 rounded-xl flex items-center justify-center mb5 p4">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="20" x2="12" y2="10"/>
+                                <line x1="18" y1="20" x2="18" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb4">Career Readiness</h3>
+                        <ul class="list-none m0 p0">
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Membuat CV menarik
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Interview preparation
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm mb3">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Personal branding
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="inline-block bg-lime-400 rounded-full svg0"></span>
+                                Portofolio digital
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alur Section -->
+        <section id="alur" class="py9 bg-gray-900 border-t border-gray-800 relative overflow-hidden">
+            <div class="max-w-1000 m-auto px4 relative z1">
+                <div class="text-center mb8 anim-fade-up">
+                    <span class="text-lime-400 font-bold text-sm block mb1">Cara Daftar</span>
+                    <h2 class="text-2xl font-bold text-white mb2">Alur Pendaftaran PKL</h2>
+                    <p class="text-gray-400 text-sm">5 langkah mudah untuk memulai PKL-mu di Praktika+.</p>
+                </div>
+
+                <div class="grid grid-cols-5 gap-4 sm\:grid-cols-2">
+                    <div class="text-center relative anim-fade-up step-item">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-full flex items-center justify-center m-auto mb4 step-circle transition p5">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white step-icon">
+                                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <span class="absolute top-0 right-0 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold step-number p2 mr4">1</span>
+                        <h3 class="text-base font-bold text-white mb1">Koordinasi Sekolah</h3>
+                        <p class="text-gray-500 text-xs px2">Sekolahmu menghubungi kami atau kamu bisa daftar mandiri.</p>
+                    </div>
+
+                    <div class="text-center relative anim-fade-up delay-1 step-item">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-full flex items-center justify-center m-auto mb4 step-circle transition p5">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white step-icon">
+                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <span class="absolute top-0 right-0 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold step-number p2 mr4">2</span>
+                        <h3 class="text-base font-bold text-white mb1">Isi Formulir</h3>
+                        <p class="text-gray-500 text-xs px2">Lengkapi data diri, jurusan, dan periode PKL yang diinginkan.</p>
+                    </div>
+
+                    <div class="text-center relative anim-fade-up delay-2 step-item">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-full flex items-center justify-center m-auto mb4 step-circle transition p5">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white step-icon">
+                                <path d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <span class="absolute top-0 right-0 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold step-number p2 mr4">3</span>
+                        <h3 class="text-base font-bold text-white mb1">Seleksi Berkas</h3>
+                        <p class="text-gray-500 text-xs px2">Tim kami akan review berkasmu dalam 3 hari kerja.</p>
+                    </div>
+
+                    <div class="text-center relative anim-fade-up delay-3 step-item">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-full flex items-center justify-center m-auto mb4 step-circle transition p5">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white step-icon">
+                                <path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                            </svg>
+                        </div>
+                        <span class="absolute top-0 right-0 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold step-number p2 mr4">4</span>
+                        <h3 class="text-base font-bold text-white mb1">Wawancara</h3>
+                        <p class="text-gray-500 text-xs px2">Interview singkat untuk penempatan bidang yang sesuai.</p>
+                    </div>
+
+                    <div class="text-center relative anim-fade-up delay-4 step-item">
+                        <div class="bg-gray-800 border border-1 border-gray-700 rounded-full flex items-center justify-center m-auto mb4 step-circle transition p5">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white step-icon">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <span class="absolute top-0 right-0 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold step-number p2 mr4">5</span>
+                        <h3 class="text-base font-bold text-white mb1">Mulai PKL!</h3>
+                        <p class="text-gray-500 text-xs px2">Selamat! Kamu siap memulai pengalaman PKL yang seru.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni Section -->
+        <section class="py9 bg-gray-800">
+            <div class="max-w-1000 m-auto px4">
+                <div class="text-center mb8 anim-fade-up">
+                    <span class="inline-block px4 py1 rounded-full bg-lime-950 text-lime-400 text-xs font-bold mb3">Testimoni</span>
+                    <h2 class="text-2xl font-bold text-white">Kata Mereka yang Sudah PKL</h2>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 sm\:grid-cols-1">
+                    <div class="bg-gray-700 rounded-xl p5 border border-1 border-gray-600 transition card-hover anim-fade-up">
+                        <div class="flex items-center gap-3 mb4">
+                            <div class="rounded-full flex items-center justify-center text-white font-bold bg-lime-500 p3">R</div>
+                            <div>
+                                <div class="text-white font-bold">Rizki Pratama</div>
+                                <div class="text-gray-400 text-sm">SMKN 1 Semarang - TKJ</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb4">"PKL di sini beda banget. Gak cuma disuruh bikin kopi, tapi beneran belajar coding dan bikin website buat klien asli!"</p>
+                        <div class="flex gap-1 text-lime-400">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700 rounded-xl p5 border border-1 border-gray-600 transition card-hover anim-fade-up delay-1">
+                        <div class="flex items-center gap-3 mb4">
+                            <div class="rounded-full flex items-center justify-center text-white font-bold bg-pink-500 p3">S</div>
+                            <div>
+                                <div class="text-white font-bold">Sinta Dewi</div>
+                                <div class="text-gray-400 text-sm">SMKN 3 Yogyakarta - MM</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb4">"Aku jadi punya portofolio desain yang keren untuk daftar kerja. Mentornya juga sabar banget ngajarin dari nol."</p>
+                        <div class="flex gap-1 text-lime-400">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700 rounded-xl p5 border border-1 border-gray-600 transition card-hover anim-fade-up delay-2">
+                        <div class="flex items-center gap-3 mb4">
+                            <div class="rounded-full flex items-center justify-center text-white font-bold bg-blue-500 p3">A</div>
+                            <div>
+                                <div class="text-white font-bold">Ahmad Fadli</div>
+                                <div class="text-gray-400 text-sm">SMKN 2 Bandung - OTKP</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb4">"Belajar pake Excel dan software HR beneran. Sekarang udah kerja di perusahaan setelah lulus, thanks Praktika+!"</p>
+                        <div class="flex gap-1 text-lime-400">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekolah Section -->
+        <section class="py9 bg-white">
+            <div class="max-w-1000 m-auto px4">
+                <div class="grid grid-cols-2 gap-8 items-center sm\:grid-cols-1">
+                    <div class="anim-fade-up">
+                        <span class="inline-block px4 py1 rounded-full bg-gray-900 text-lime-400 text-xs font-bold mb4">Untuk Guru & Sekolah</span>
+                        <h2 class="text-2xl font-bold text-gray-900 mb4">Kemitraan PKL untuk SMK</h2>
+                        <p class="text-gray-500 text-base mb6">
+                            Praktika+ membuka kerjasama dengan SMK seluruh Indonesia untuk penempatan siswa PKL. Kami menyediakan program terstruktur yang memenuhi standar industri dan kurikulum sekolah.
+                        </p>
+                        
+                        <div class="mb6">
+                            <div class="flex items-start gap-3 mb4">
+                                <div class="bg-lime-400 rounded-lg flex items-center justify-center text-gray-900 font-bold flex-shrink-0 p2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-900">Laporan Berkala</div>
+                                    <p class="text-gray-500 text-sm m0">Progress report mingguan untuk guru pembimbing.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 mb4">
+                                <div class="bg-lime-400 rounded-lg flex items-center justify-center text-gray-900 font-bold flex-shrink-0 p2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-900">Sertifikat Resmi</div>
+                                    <p class="text-gray-500 text-sm m0">Sertifikat penyelesaian PKL yang diakui industri.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-lime-400 rounded-lg flex items-center justify-center text-gray-900 font-bold flex-shrink-0 p2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-900">Fleksibel Periode</div>
+                                    <p class="text-gray-500 text-sm m0">Durasi 3-6 bulan sesuai kalender akademik sekolah.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="inline-block px6 py3 rounded-lg bg-gray-900 text-white font-bold text-sm no-underline cursor-pointer transition hover\:bg-gray-700">
+                            Hubungi Tim Kemitraan
+                        </a>
+                    </div>
+                    
+                    <div class="relative anim-fade-up delay-2 sm\:none">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Teacher and Students" class="rounded-xl w-full object-cover shadow-lg max-h-400">
+                        <div class="absolute bottom-0 right-0 bg-lime-400 p5 rounded-xl shadow-lg max-w-250">
+                            <div class="text-2xl font-bold text-gray-900 mb1">50+</div>
+                            <div class="text-gray-700 text-sm">SMK partner yang sudah mempercayakan siswa PKL mereka kepada kami.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py9 relative overflow-hidden cta-section">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80" alt="Students Background" class="absolute top-0 left-0 w-full h-full object-cover">
+            <div class="absolute top-0 left-0 w-full h-full bg-black cta-overlay"></div>
+            
+            <div class="max-w-1000 m-auto px4 relative z1 text-center py9">
+                <h2 class="text-3xl font-bold text-white mb4 anim-fade-up sm\:text-2xl">
+                    Siap Memulai<br><span class="text-lime-400">PKL-mu?</span>
+                </h2>
+                <p class="text-gray-300 text-base mb6 anim-fade-up delay-1 max-w-400 m-auto">
+                    Pendaftaran PKL selalu dibuka. Daftar sekarang dan dapatkan pengalaman kerja terbaik untuk masa depanmu!
+                </p>
+                <div class="flex justify-center gap-4 anim-fade-up delay-2">
+                    <a href="#" class="px6 py3 rounded-lg bg-lime-400 text-gray-900 font-bold text-sm no-underline cursor-pointer transition shadow btn-hover">
+                        Daftar PKL Sekarang
+                    </a>
+                    <a href="#" class="px6 py3 rounded-lg border border-1 border-gray-400 text-white font-bold text-sm no-underline cursor-pointer transition hover\:bg-gray-800">
+                        Konsultasi Dulu
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py9 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-1000 m-auto px4">
+            <div class="grid grid-cols-2 gap-8 sm\:grid-cols-1">
+                <div>
+                    <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="max-h-50 mb4">
+                    <div>
+                        <h3 class="text-white font-bold mb2"><span class="text-lime-400">Contact Us</span></h3>
+                        <p class="text-gray-400 text-sm m0 mb1">Email: Praktika@gmail.com</p>
+                        <p class="text-gray-400 text-sm m0 mb1">Phone: 0819-0826-6435</p>
+                        <p class="text-gray-400 text-sm m0">Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex gap-4 mb4 sm\:mt4">
+                        <a href="indexV1.html#about" class="text-gray-400 text-sm no-underline transition hover\:text-white">About us</a>
+                        <a href="indexV1.html#services" class="text-gray-400 text-sm no-underline transition hover\:text-white">Services</a>
+                        <a href="indexV1.html#usecases" class="text-gray-400 text-sm no-underline transition hover\:text-white">Use Cases</a>
+                        <a href="indexV1.html#pricing" class="text-gray-400 text-sm no-underline transition hover\:text-white">Pricing</a>
+                        <a href="indexV1.html#blog" class="text-gray-400 text-sm no-underline transition hover\:text-white">Blog</a>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://www.instagram.com/praktika.digibookacademy/" class="bg-gray-800 rounded-full flex items-center justify-center text-white transition hover\:bg-lime-400 hover\:text-gray-900 p3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-800 rounded-full flex items-center justify-center text-white transition hover\:bg-lime-400 hover\:text-gray-900 p3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 6c1.5 1.8 3 2.4 4 2.5v3c-1.8-.1-3.3-.7-4-1.3v5.3c0 3-2.3 5-5 5-2.8 0-5-2.2-5-5 0-2.6 2-4.7 4.5-5v3c-.9.2-1.5 1-1.5 2 0 1.1.9 2 2 2s2-.9 2-2V6h3z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-800 rounded-full flex items-center justify-center text-white transition hover\:bg-lime-400 hover\:text-gray-900 p3">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="7" width="18" height="10" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt6 pt5 flex justify-between flex-wrap gap-3">
+                <p class="text-gray-500 text-sm m0">© 2026 Positivus. All Rights Reserved.</p>
+                <a href="#privacy" class="text-gray-500 hover\:text-white transition text-sm no-underline">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-0 right-0 mb6 mr6 z-full">
+        <button id="waFabBtn" class="rounded-full bg-green-500 text-white border-none cursor-pointer shadow-lg flex items-center justify-center p4 wa-fab" type="button" title="Chat WhatsApp" aria-label="Chat WhatsApp" data-wa-number="6281234567890" data-wa-text="Halo, saya tertarik dengan PKL SMK di Praktika+">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.47-.149-.67.149-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.76-1.653-2.057-.173-.297-.019-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.217-.242-.579-.487-.5-.669-.51-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.064 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.627.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.272-.198-.57-.347zM12.04 2c-5.421 0-9.84 4.42-9.84 9.84 0 1.735.457 3.365 1.252 4.78L2 22l5.515-1.45c1.373.75 2.94 1.18 4.525 1.18 5.421 0 9.84-4.42 9.84-9.84 0-2.637-1.026-5.107-2.89-6.97A9.807 9.807 0 0 0 12.04 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inject animation styles via JavaScript (no inline style attributes)
+        (function() {
+            const animStyle = document.createElement('style');
+            animStyle.textContent = `
+                .anim-fade-up {
+                    opacity: 0;
+                    transform: translateY(40px);
+                    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+                }
+                .anim-fade-up.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                .delay-1 { transition-delay: 0.1s !important; }
+                .delay-2 { transition-delay: 0.2s !important; }
+                .delay-3 { transition-delay: 0.3s !important; }
+                .delay-4 { transition-delay: 0.4s !important; }
+                .delay-5 { transition-delay: 0.5s !important; }
+                .card-hover {
+                    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+                                box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+                                border-color 0.35s ease !important;
+                }
+                .card-hover:hover {
+                    transform: translateY(-8px) !important;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+                }
+                .btn-hover {
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+                }
+                .btn-hover:hover {
+                    transform: translateY(-2px) scale(1.02) !important;
+                    box-shadow: 0 10px 25px rgba(163, 230, 53, 0.35) !important;
+                }
+                .btn-hover:active {
+                    transform: translateY(0) scale(0.98) !important;
+                }
+                .icon-bounce {
+                    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+                }
+                .card-hover:hover .icon-bounce {
+                    transform: scale(1.15) rotate(5deg) !important;
+                }
+                @keyframes pulse-dot {
+                    0%, 100% { opacity: 1; transform: scale(1); }
+                    50% { opacity: 0.7; transform: scale(1.2); }
+                }
+                .pulse-dot {
+                    animation: pulse-dot 2s ease-in-out infinite;
+                    width: 8px;
+                    height: 8px;
+                }
+                @keyframes float-card {
+                    0%, 100% { transform: translate(-10px, 10px); }
+                    50% { transform: translate(-10px, 0px); }
+                }
+                .float-card {
+                    animation: float-card 3s ease-in-out infinite;
+                }
+                .hero-image-card {
+                    transform: rotate(3deg);
+                    transition: transform 0.5s ease;
+                }
+                .hero-image-card:hover {
+                    transform: rotate(0deg) !important;
+                }
+                .hero-img {
+                    filter: grayscale(100%);
+                    transition: filter 0.5s ease;
+                }
+                .hero-image-card:hover .hero-img {
+                    filter: grayscale(0%) !important;
+                }
+                .step-circle {
+                    width: 80px;
+                    height: 80px;
+                }
+                .step-number {
+                    width: 30px;
+                    height: 30px;
+                }
+                .step-item:hover .step-circle {
+                    border-color: #a3e635 !important;
+                    box-shadow: 0 0 30px rgba(163, 230, 53, 0.25);
+                    transform: scale(1.1);
+                }
+                .step-item:hover .step-icon {
+                    color: #a3e635 !important;
+                }
+                .step-item:hover .step-number {
+                    background-color: #a3e635 !important;
+                    color: #1f2937 !important;
+                }
+                .step-item:hover h3 {
+                    color: #a3e635 !important;
+                }
+                .stat-number {
+                    transition: transform 0.3s ease;
+                }
+                .stat-number:hover {
+                    transform: scale(1.1);
+                }
+                .cta-overlay {
+                    opacity: 0.8;
+                }
+                @keyframes pulse-wa {
+                    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+                    50% { transform: scale(1.1); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); }
+                }
+                .wa-fab {
+                    animation: pulse-wa 2s infinite;
+                }
+                .wa-fab:hover {
+                    animation: none;
+                    transform: scale(1.15);
+                    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+                }
+            `;
+            document.head.appendChild(animStyle);
+        })();
+        
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            scrollObserver.observe(el);
+        });
+        
+        // Stats Counter Animation
+        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+        
+        const animateCount = (el, target, suffix = '', duration = 1200) => {
+            const startTime = performance.now();
+            const step = (now) => {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = easeOutCubic(progress);
+                const value = Math.round(target * eased);
+                el.textContent = value + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+        
+        const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    if (el.dataset.counted) return;
+                    el.dataset.counted = 'true';
+                    const target = parseFloat(el.dataset.target);
+                    const suffix = el.dataset.suffix || '';
+                    animateCount(el, target, suffix);
+                    statsObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statNumbers.forEach(el => statsObserver.observe(el));
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Jurusan Filter functionality 
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('#jurusan-filters .filter-btn');
+            const roleCards = document.querySelectorAll('#jurusan-grid .role-card');
+
+            if(filterButtons.length > 0) {
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        filterButtons.forEach(b => {
+                            b.classList.remove('bg-lime-400', 'text-gray-900', 'border-lime-400', 'font-bold');
+                            b.classList.add('bg-gray-900', 'text-white', 'border-gray-500');
+                        });
+                        
+                        btn.classList.remove('bg-gray-900', 'text-white', 'border-gray-500');
+                        btn.classList.add('bg-lime-400', 'text-gray-900', 'border-lime-400', 'font-bold');
+                        
+                        const filterValue = btn.getAttribute('data-filter');
+                        
+                        roleCards.forEach((card, index) => {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (filterValue === 'all' || filterValue === cardCategory) {
+                                card.classList.remove('none');
+                                card.classList.add('block');
+                                setTimeout(() => {
+                                    card.classList.add('visible');
+                                }, index * 80);
+                            } else {
+                                card.classList.add('none');
+                                card.classList.remove('block', 'visible');
+                            }
+                        });
+                    });
+                });
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('backdrop-blur-xs');
+            } else {
+                nav.classList.remove('backdrop-blur-xs');
+            }
+        });
+
+        // WhatsApp FAB click handler
+        const waBtn = document.getElementById('waFabBtn');
+        if (waBtn) {
+            waBtn.addEventListener('click', function() {
+                const number = this.dataset.waNumber;
+                const text = encodeURIComponent(this.dataset.waText);
+                window.open('https://wa.me/' + number + '?text=' + text, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>
