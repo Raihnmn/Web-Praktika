@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Project – Praktika+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Main Content -->
+    <main class="pt9 mt8">
+        
+        <!-- Hero Section -->
+        <section class="py9 text-center">
+            <div class="max-w-1000 m-auto px5">
+                <div class="anim-fade-up">
+                    <span class="inline-block bg-lime-400 text-lime-950 px4 py1 rounded-full text-sm font-bold mb4">
+                        <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        Student Spotlight
+                    </span>
+                    <h1 class="text-5xl font-bold text-dark mb4">
+                        Hall of <span class="text-5xl text-lime-600">Fame</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb6">
+                        Galeri proyek terbaik dari alumni Bootcamp & Mentorship Praktika+. Bukti nyata skill yang siap kerja.
+                    </p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-row justify-center gap-2 mb6 anim-fade-up delay-1">
+                    <button class="filter-btn bg-dark text-white px4 py2 rounded-full text-sm font-bold cursor-pointer border-none transition" data-filter="all">All Projects</button>
+                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="web">Web Dev</button>
+                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="uiux">UI/UX</button>
+                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="data">Data Science</button>
+                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="marketing">Marketing</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="pb9">
+            <div class="max-w-1000 m-auto px5">
+                <div class="grid grid-cols-3 gap-5 sm:grid-cols-1">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="uiux" 
+                         data-title="TokoOren: E-Commerce UI Kit"
+                         data-author="Rizky Fajar"
+                         data-batch="Batch 10 • UI/UX Design"
+                         data-tags="E-Commerce,UI/UX,Figma"
+                         data-description="Sebuah UI Kit lengkap untuk platform e-commerce modern dengan lebih dari 50+ komponen yang dapat digunakan kembali. Dilengkapi dengan dark mode, responsive design, dan design system yang konsisten."
+                         data-tools="Figma, Adobe XD, Illustrator"
+                         data-duration="3 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#E5E7EB"/>
+                                <rect x="40" y="40" width="140" height="90" rx="8" fill="#6366F1"/>
+                                <rect x="200" y="40" width="160" height="40" rx="8" fill="#10B981"/>
+                                <rect x="200" y="100" width="100" height="30" rx="8" fill="#F59E0B"/>
+                                <rect x="40" y="150" width="320" height="60" rx="8" fill="#3B82F6"/>
+                                <circle cx="320" cy="80" r="30" fill="#EC4899"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-lime-100 text-lime-700 px2 py1 rounded text-xxs font-bold">E-Commerce</span>
+                                <span class="bg-purple-100 text-purple-700 px2 py1 rounded text-xxs font-bold">UI/UX</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">TokoOren: E-Commerce UI Kit</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#6366F1"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">RF</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Rizky Fajar</span>
+                                    <span class="block text-xs text-gray-500">Batch 10 • UI/UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="web"
+                         data-title="TokoHijau: Sustainable Marketplace"
+                         data-author="Amanda Putri"
+                         data-batch="Batch 12 • Fullstack Dev"
+                         data-tags="E-Commerce,Fullstack,React"
+                         data-description="Platform marketplace untuk produk ramah lingkungan dengan fitur carbon footprint tracker. Dibangun dengan React dan Node.js, terintegrasi dengan payment gateway dan real-time inventory management."
+                         data-tools="React, Node.js, MongoDB, Stripe"
+                         data-duration="6 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#D1FAE5"/>
+                                <rect x="30" y="30" width="160" height="120" rx="12" fill="#10B981"/>
+                                <rect x="210" y="30" width="160" height="55" rx="8" fill="#059669"/>
+                                <rect x="210" y="95" width="100" height="55" rx="8" fill="#34D399"/>
+                                <rect x="30" y="165" width="340" height="55" rx="8" fill="#6EE7B7"/>
+                                <circle cx="340" cy="60" r="25" fill="#065F46"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">E-Commerce</span>
+                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Fullstack</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">TokoHijau: Sustainable Marketplace</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#10B981"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AP</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Amanda Putri</span>
+                                    <span class="block text-xs text-gray-500">Batch 12 • Fullstack Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="data"
+                         data-title="Sentiment Analysis Dashboard"
+                         data-author="Nadia Sari"
+                         data-batch="Batch 8 • Data Science"
+                         data-tags="Machine Learning,Python,NLP"
+                         data-description="Dashboard analisis sentimen real-time untuk monitoring brand perception di social media. Menggunakan model NLP dengan akurasi 94% untuk klasifikasi sentimen positif, negatif, dan netral."
+                         data-tools="Python, TensorFlow, Streamlit, PostgreSQL"
+                         data-duration="4 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#EDE9FE"/>
+                                <rect x="30" y="40" width="200" height="100" rx="8" fill="#8B5CF6"/>
+                                <rect x="250" y="40" width="120" height="45" rx="8" fill="#A78BFA"/>
+                                <rect x="250" y="95" width="120" height="45" rx="8" fill="#C4B5FD"/>
+                                <rect x="30" y="160" width="80" height="60" rx="8" fill="#7C3AED"/>
+                                <rect x="120" y="160" width="80" height="60" rx="8" fill="#6D28D9"/>
+                                <rect x="210" y="160" width="160" height="60" rx="8" fill="#5B21B6"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-purple-100 text-purple-700 px2 py1 rounded text-xxs font-bold">Machine Learning</span>
+                                <span class="bg-yellow-100 text-yellow-700 px2 py1 rounded text-xxs font-bold">Python</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">Sentiment Analysis Dashboard</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#8B5CF6"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">NS</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Nadia Sari</span>
+                                    <span class="block text-xs text-gray-500">Batch 8 • Data Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="web"
+                         data-title="HealthTrack: Fitness Monitor"
+                         data-author="Dimas Anggara"
+                         data-batch="Batch 14 • Mobile Dev"
+                         data-tags="Mobile App,Flutter,Health"
+                         data-description="Aplikasi fitness tracker dengan fitur workout planner, calorie counter, dan integrasi wearable device. Mendukung sync data dengan Google Fit dan Apple Health untuk tracking yang lebih akurat."
+                         data-tools="Flutter, Dart, Firebase, REST API"
+                         data-duration="5 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#FEE2E2"/>
+                                <rect x="130" y="20" width="140" height="210" rx="20" fill="#EF4444"/>
+                                <rect x="145" y="40" width="110" height="170" rx="8" fill="#FCA5A5"/>
+                                <circle cx="200" cy="80" r="25" fill="#DC2626"/>
+                                <rect x="160" y="120" width="80" height="15" rx="4" fill="#B91C1C"/>
+                                <rect x="160" y="145" width="60" height="15" rx="4" fill="#991B1B"/>
+                                <rect x="160" y="170" width="80" height="25" rx="8" fill="#7F1D1D"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-red-100 text-red-700 px2 py1 rounded text-xxs font-bold">Mobile App</span>
+                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Flutter</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">HealthTrack: Fitness Monitor</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#EF4444"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">DA</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Dimas Anggara</span>
+                                    <span class="block text-xs text-gray-500">Batch 14 • Mobile Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="marketing"
+                         data-title="Organic Growth Strategy 2026"
+                         data-author="Bella Saphira"
+                         data-batch="Batch 11 • Digital Marketing"
+                         data-tags="SEO,Content,Strategy"
+                         data-description="Strategi pertumbuhan organic yang komprehensif untuk startup teknologi. Berhasil meningkatkan organic traffic sebesar 340% dan menurunkan customer acquisition cost hingga 60% dalam 6 bulan."
+                         data-tools="SEMrush, Ahrefs, Google Analytics, HubSpot"
+                         data-duration="8 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#FEF3C7"/>
+                                <rect x="30" y="150" width="50" height="70" rx="4" fill="#F59E0B"/>
+                                <rect x="95" y="110" width="50" height="110" rx="4" fill="#D97706"/>
+                                <rect x="160" y="80" width="50" height="140" rx="4" fill="#B45309"/>
+                                <rect x="225" y="50" width="50" height="170" rx="4" fill="#92400E"/>
+                                <rect x="290" y="30" width="50" height="190" rx="4" fill="#78350F"/>
+                                <path d="M55 130 L120 90 L185 60 L250 35 L315 20" stroke="#DC2626" stroke-width="4" stroke-linecap="round" fill="none"/>
+                                <circle cx="315" cy="20" r="8" fill="#DC2626"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-yellow-100 text-yellow-700 px2 py1 rounded text-xxs font-bold">SEO</span>
+                                <span class="bg-indigo-100 text-indigo-700 px2 py1 rounded text-xxs font-bold">Content</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">Organic Growth Strategy 2026</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#F59E0B"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">BS</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Bella Saphira</span>
+                                    <span class="block text-xs text-gray-500">Batch 11 • Digital Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="web"
+                         data-title="Netflix Clone with API"
+                         data-author="Andi Pratama"
+                         data-batch="Batch 15 • Frontend Dev"
+                         data-tags="Frontend,React JS,API"
+                         data-description="Clone Netflix dengan fitur lengkap termasuk user authentication, video streaming, dynamic content loading, dan responsive design. Terintegrasi dengan TMDB API untuk data film dan TV series."
+                         data-tools="React, Redux, Tailwind CSS, TMDB API"
+                         data-duration="4 Minggu">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#1F2937"/>
+                                <rect x="20" y="20" width="360" height="80" rx="8" fill="#DC2626"/>
+                                <rect x="20" y="115" width="85" height="115" rx="8" fill="#374151"/>
+                                <rect x="115" y="115" width="85" height="115" rx="8" fill="#4B5563"/>
+                                <rect x="210" y="115" width="85" height="115" rx="8" fill="#6B7280"/>
+                                <rect x="305" y="115" width="75" height="115" rx="8" fill="#9CA3AF"/>
+                                <path d="M180 50 L210 70 L180 90 Z" fill="white"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Frontend</span>
+                                <span class="bg-indigo-100 text-indigo-700 px2 py1 rounded text-xxs font-bold">React JS</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">Netflix Clone with API</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#3B82F6"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AP</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-dark">Andi Pratama</span>
+                                    <span class="block text-xs text-gray-500">Batch 15 • Frontend Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py9 bg-dark overflow-hidden">
+            <div class="max-w-1000 m-auto px5">
+                <div class="relative bg-lime-400 rounded-xl p8 overflow-hidden anim-fade-up">
+                    <!-- Decorative Background Shapes -->
+                    <div class="absolute top-0 right-0 opacity-50">
+                        <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="250" cy="50" r="120" fill="#84cc16" opacity="0.5"/>
+                            <circle cx="180" cy="150" r="80" fill="#65a30d" opacity="0.4"/>
+                            <circle cx="300" cy="180" r="60" fill="#4d7c0f" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="absolute bottom-0 left-0 opacity-50">
+                        <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="0" cy="150" r="100" fill="#84cc16" opacity="0.4"/>
+                            <circle cx="100" cy="120" r="50" fill="#65a30d" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="relative z1 flex items-center justify-between gap-6 sm:flex-col sm:text-center">
+                        <div class="flex-1">
+                            <!-- Badge -->
+                            <span class="inline-flex items-center gap-1 bg-dark text-lime-400 px3 py1 rounded-full text-xs font-bold mb3">
+                                <svg class="svg0" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                Alumni Spotlight
+                            </span>
+                            <h2 class="text-4xl font-bold text-dark mb3">
+                                Punya Project <br class="sm:none"/>Level Dewa? 
+                            </h2>
+                            <p class="text-dark text-base mb0">
+                                Jangan disimpan sendiri! Tunjukkan karyamu kepada dunia dan rekruter top. 
+                                <br class="sm:none"/> Alumni Praktika+ bisa submit project untuk ditampilkan di Hall of Fame.
+                            </p>
+                        </div>
+                        
+                        <!-- CTA Card -->
+                        <div class="bg-white rounded-xl p6 shadow-lg text-center cta-card">
+                            <div class="bg-lime-100 rounded-full p4 inline-block mb4">
+                                <svg class="svg4 text-lime-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-dark mb2">Upload Projectmu</h3>
+                            <button class="w-full bg-dark text-white px6 py3 rounded-lg text-base font-bold cursor-pointer border-none transition flex items-center justify-center gap-2 cta-btn">
+                                <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                                Submit Sekarang
+                            </button>
+                            <p class="text-gray-400 text-xs mt3 mb0">Review dalam 24 jam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="fixed top-0 left-0 w-full h-screen bg-dark-opacity backdrop-blur-sm z-full none items-center justify-center">
+        <div class="bg-white rounded-xl max-w-1000 w-full m5 max-h-screen-75 overflow-y-auto shadow-lg anim-modal">
+            <div class="relative">
+                <!-- Modal Header Image -->
+                <div id="modalImage" class="w-full bg-gray-200 rounded-t-lg">
+                    <!-- SVG will be inserted here -->
+                </div>
+                <!-- Close Button -->
+                <button id="closeModal" class="absolute top-0 right-0 m4 bg-white rounded-full p2 cursor-pointer border-none shadow transition hover:bg-gray-100">
+                    <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p6">
+                <!-- Author Section -->
+                <div class="flex items-center gap-3 mb4">
+                    <div id="modalAvatar" class="w-full max-w-50 h-auto">
+                        <!-- Avatar SVG will be inserted here -->
+                    </div>
+                    <div>
+                        <span id="modalAuthor" class="block text-lg font-bold text-dark"></span>
+                        <span id="modalBatch" class="block text-sm text-gray-500"></span>
+                    </div>
+                </div>
+                
+                <!-- Title -->
+                <h2 id="modalTitle" class="text-2xl font-bold text-dark mb3"></h2>
+                
+                <!-- Tags -->
+                <div id="modalTags" class="flex gap-1 mb4">
+                    <!-- Tags will be inserted here -->
+                </div>
+                
+                <!-- Description -->
+                <div class="mb4">
+                    <h3 class="text-base font-bold text-dark mb2 flex items-center gap-2">
+                        <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        Deskripsi Proyek
+                    </h3>
+                    <p id="modalDescription" class="text-gray-600 text-sm mb0"></p>
+                </div>
+                
+                <!-- Project Details Grid -->
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
+                    <div class="bg-gray-50 rounded-lg p4">
+                        <h4 class="text-sm font-bold text-gray-500 mb1 flex items-center gap-2">
+                            <svg class="svg1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                            Tools & Teknologi
+                        </h4>
+                        <p id="modalTools" class="text-dark text-sm font-bold mb0"></p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p4">
+                        <h4 class="text-sm font-bold text-gray-500 mb1 flex items-center gap-2">
+                            <svg class="svg1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            Durasi Pengerjaan
+                        </h4>
+                        <p id="modalDuration" class="text-dark text-sm font-bold mb0"></p>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-3 mt6">
+                    <button class="flex-1 bg-lime-400 text-dark px4 py3 rounded-lg text-sm font-bold cursor-pointer border-none transition hover:bg-lime-500 flex items-center justify-center gap-2">
+                        <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                        Lihat Live Demo
+                    </button>
+                    <button class="flex-1 bg-dark text-white px4 py3 rounded-lg text-sm font-bold cursor-pointer border-none transition hover:bg-gray-800 flex items-center justify-center gap-2">
+                        <svg class="svg2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Lihat Repository
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Animation Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            el.classList.add('anim-init');
+            observer.observe(el);
+        });
+
+        // Add animation styles
+        const animStyles = document.createElement('style');
+        animStyles.textContent = `
+            .anim-init {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .anim-init.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .delay-1 { transition-delay: 0.1s; }
+            .delay-2 { transition-delay: 0.2s; }
+            .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+            .project-card:hover .project-overlay { opacity: 1; }
+            .anim-modal {
+                animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            @keyframes modalIn {
+                from { opacity: 0; transform: scale(0.95) translateY(20px); }
+                to { opacity: 1; transform: scale(1) translateY(0); }
+            }
+            #projectModal.flex { display: flex; }
+            
+            /* CTA Section Animations */
+            .cta-float-1 {
+                animation: ctaFloat1 3s ease-in-out infinite;
+            }
+            .cta-float-2 {
+                animation: ctaFloat2 4s ease-in-out infinite;
+            }
+            .cta-float-3 {
+                animation: ctaFloat3 3.5s ease-in-out infinite;
+            }
+            @keyframes ctaFloat1 {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-10px) rotate(5deg); }
+            }
+            @keyframes ctaFloat2 {
+                0%, 100% { transform: translateY(0) scale(1); }
+                50% { transform: translateY(-8px) scale(1.1); }
+            }
+            @keyframes ctaFloat3 {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-12px) rotate(-5deg); }
+            }
+            .cta-emoji {
+                animation: emojiPulse 2s ease-in-out infinite;
+            }
+            @keyframes emojiPulse {
+                0%, 100% { transform: scale(1) rotate(0deg); }
+                25% { transform: scale(1.2) rotate(-10deg); }
+                75% { transform: scale(1.1) rotate(10deg); }
+            }
+            .cta-card {
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .cta-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            }
+            .cta-btn {
+                transition: all 0.3s ease;
+            }
+            .cta-btn:hover {
+                background-color: #065F46;
+                transform: scale(1.02);
+            }
+        `;
+        document.head.appendChild(animStyles);
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-dark', 'text-white');
+                    b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                });
+                btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                btn.classList.add('bg-dark', 'text-white');
+
+                const filterValue = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filterValue === 'all' || filterValue === category) {
+                        card.classList.remove('none');
+                        card.classList.add('block');
+                    } else {
+                        card.classList.add('none');
+                        card.classList.remove('block');
+                    }
+                });
+            });
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('projectModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const viewProjectBtns = document.querySelectorAll('.btn-view-project');
+
+        const colorMap = {
+            'uiux': '#6366F1',
+            'web': '#10B981',
+            'data': '#8B5CF6',
+            'marketing': '#F59E0B'
+        };
+
+        function openModal(card) {
+            const title = card.getAttribute('data-title');
+            const author = card.getAttribute('data-author');
+            const batch = card.getAttribute('data-batch');
+            const tags = card.getAttribute('data-tags').split(',');
+            const description = card.getAttribute('data-description');
+            const tools = card.getAttribute('data-tools');
+            const duration = card.getAttribute('data-duration');
+            const category = card.getAttribute('data-category');
+            const color = colorMap[category] || '#6366F1';
+            
+            // Set modal content
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalAuthor').textContent = author;
+            document.getElementById('modalBatch').textContent = batch;
+            document.getElementById('modalDescription').textContent = description;
+            document.getElementById('modalTools').textContent = tools;
+            document.getElementById('modalDuration').textContent = duration;
+
+            // Generate avatar
+            const initials = author.split(' ').map(n => n[0]).join('');
+            document.getElementById('modalAvatar').innerHTML = `
+                <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" fill="${color}"/>
+                    <text x="25" y="32" font-size="18" text-anchor="middle" fill="white" font-weight="bold">${initials}</text>
+                </svg>
+            `;
+
+            // Generate tags
+            const tagColors = ['bg-lime-100 text-lime-700', 'bg-purple-100 text-purple-700', 'bg-blue-100 text-blue-700', 'bg-yellow-100 text-yellow-700'];
+            document.getElementById('modalTags').innerHTML = tags.map((tag, i) => 
+                `<span class="${tagColors[i % tagColors.length]} px3 py1 rounded-full text-xs font-bold">${tag.trim()}</span>`
+            ).join('');
+
+            // Copy the SVG from card to modal
+            const cardSvg = card.querySelector('.relative svg');
+            if (cardSvg) {
+                document.getElementById('modalImage').innerHTML = cardSvg.outerHTML;
+            }
+
+            // Show modal
+            modal.classList.remove('none');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('none');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        viewProjectBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const card = btn.closest('.project-card');
+                openModal(card);
+            });
+        });
+
+        // Also allow clicking the card itself
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                openModal(card);
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
