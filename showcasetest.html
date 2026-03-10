@@ -6,7 +6,7 @@
     <title>Showcase Project – Praktika+</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-dark">
     <!-- Main Content -->
     <main class="pt9 mt8">
         
@@ -20,21 +20,22 @@
                         </svg>
                         Student Spotlight
                     </span>
-                    <h1 class="text-5xl font-bold text-dark mb4">
-                        Hall of <span class="text-5xl text-lime-600">Fame</span>
+                    <h1 class="text-5xl font-bold text-white mb4">
+                        Hall of <span class="text-5xl text-lime-400">Fame</span>
                     </h1>
-                    <p class="text-gray-600 text-lg mb6">
+                    <p class="text-gray-400 text-lg mb6">
                         Galeri proyek terbaik dari alumni Bootcamp & Mentorship Praktika+. Bukti nyata skill yang siap kerja.
                     </p>
                 </div>
 
                 <!-- Filter Buttons -->
                 <div class="flex flex-row justify-center gap-2 mb6 anim-fade-up delay-1">
-                    <button class="filter-btn bg-dark text-white px4 py2 rounded-full text-sm font-bold cursor-pointer border-none transition" data-filter="all">All Projects</button>
-                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="web">Web Dev</button>
-                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="uiux">UI/UX</button>
-                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="data">Data Science</button>
-                    <button class="filter-btn bg-white text-gray-700 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-300 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="marketing">Marketing</button>
+                    <button class="filter-btn bg-lime-400 text-dark px4 py2 rounded-full text-sm font-bold cursor-pointer border-none transition" data-filter="all">Semua</button>
+                    <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-700 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="bisnis">Bisnis</button>
+                    <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-700 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="kreatif">Kreatif</button>
+                    <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-700 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="sosial">Sosial</button>
+                    <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-700 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="pendidikan">Pendidikan</button>
+                    <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold cursor-pointer border border-gray-700 transition hover:bg-lime-400 hover:text-dark hover:border-lime-400" data-filter="teknologi">Teknologi</button>
                 </div>
             </div>
         </section>
@@ -42,25 +43,27 @@
         <!-- Gallery Grid -->
         <section class="pb9">
             <div class="max-w-1000 m-auto px5">
-                <div class="grid grid-cols-3 gap-5 sm:grid-cols-1">
+                <div class="grid grid-cols-3 gap-5 sm:grid-cols-1 project-grid">
                     
-                    <!-- Project Card 1 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="uiux" 
-                         data-title="TokoOren: E-Commerce UI Kit"
+                    <!-- Project Card 1 - Bisnis -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="bisnis" 
+                         data-title="GrowthPlan: Business Model Canvas UMKM"
                          data-author="Rizky Fajar"
-                         data-batch="Batch 10 • UI/UX Design"
-                         data-tags="E-Commerce,UI/UX,Figma"
-                         data-description="Sebuah UI Kit lengkap untuk platform e-commerce modern dengan lebih dari 50+ komponen yang dapat digunakan kembali. Dilengkapi dengan dark mode, responsive design, dan design system yang konsisten."
-                         data-tools="Figma, Adobe XD, Illustrator"
-                         data-duration="3 Minggu">
+                         data-batch="Batch 10 • Manajemen Bisnis"
+                         data-tags="Business Plan,UMKM,Strategi"
+                         data-description="Pengembangan model bisnis komprehensif untuk UMKM kuliner lokal. Meliputi analisis pasar, strategi pemasaran, proyeksi keuangan 3 tahun, dan rencana ekspansi. Berhasil membantu 5 UMKM meningkatkan omzet 150%."
+                         data-tools="Business Model Canvas, SWOT Analysis, Financial Modeling"
+                         data-duration="6 Minggu"
+                         data-images="3">
                         <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#E5E7EB"/>
-                                <rect x="40" y="40" width="140" height="90" rx="8" fill="#6366F1"/>
-                                <rect x="200" y="40" width="160" height="40" rx="8" fill="#10B981"/>
-                                <rect x="200" y="100" width="100" height="30" rx="8" fill="#F59E0B"/>
-                                <rect x="40" y="150" width="320" height="60" rx="8" fill="#3B82F6"/>
-                                <circle cx="320" cy="80" r="30" fill="#EC4899"/>
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#DBEAFE"/>
+                                <rect x="30" y="30" width="160" height="90" rx="8" fill="#3B82F6"/>
+                                <rect x="30" y="130" width="75" height="90" rx="8" fill="#60A5FA"/>
+                                <rect x="115" y="130" width="75" height="90" rx="8" fill="#93C5FD"/>
+                                <rect x="210" y="30" width="160" height="190" rx="8" fill="#1D4ED8"/>
+                                <circle cx="290" cy="125" r="50" fill="#BFDBFE" opacity="0.5"/>
+                                <path d="M260 100 L290 80 L320 100 L320 150 L260 150 Z" fill="#EFF6FF"/>
                             </svg>
                             <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
                                 <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
@@ -74,270 +77,277 @@
                         </div>
                         <div class="p4">
                             <div class="flex gap-1 mb2">
-                                <span class="bg-lime-100 text-lime-700 px2 py1 rounded text-xxs font-bold">E-Commerce</span>
-                                <span class="bg-purple-100 text-purple-700 px2 py1 rounded text-xxs font-bold">UI/UX</span>
+                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Business Plan</span>
+                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">UMKM</span>
                             </div>
-                            <h3 class="text-lg font-bold text-dark mb2">TokoOren: E-Commerce UI Kit</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-full max-w-30 h-auto">
-                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#6366F1"/>
-                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">RF</text>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-sm font-bold text-dark">Rizky Fajar</span>
-                                    <span class="block text-xs text-gray-500">Batch 10 • UI/UX Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="web"
-                         data-title="TokoHijau: Sustainable Marketplace"
-                         data-author="Amanda Putri"
-                         data-batch="Batch 12 • Fullstack Dev"
-                         data-tags="E-Commerce,Fullstack,React"
-                         data-description="Platform marketplace untuk produk ramah lingkungan dengan fitur carbon footprint tracker. Dibangun dengan React dan Node.js, terintegrasi dengan payment gateway dan real-time inventory management."
-                         data-tools="React, Node.js, MongoDB, Stripe"
-                         data-duration="6 Minggu">
-                        <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#D1FAE5"/>
-                                <rect x="30" y="30" width="160" height="120" rx="12" fill="#10B981"/>
-                                <rect x="210" y="30" width="160" height="55" rx="8" fill="#059669"/>
-                                <rect x="210" y="95" width="100" height="55" rx="8" fill="#34D399"/>
-                                <rect x="30" y="165" width="340" height="55" rx="8" fill="#6EE7B7"/>
-                                <circle cx="340" cy="60" r="25" fill="#065F46"/>
-                            </svg>
-                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
-                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
-                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                    Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p4">
-                            <div class="flex gap-1 mb2">
-                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">E-Commerce</span>
-                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Fullstack</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-dark mb2">TokoHijau: Sustainable Marketplace</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-full max-w-30 h-auto">
-                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#10B981"/>
-                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AP</text>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-sm font-bold text-dark">Amanda Putri</span>
-                                    <span class="block text-xs text-gray-500">Batch 12 • Fullstack Dev</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="data"
-                         data-title="Sentiment Analysis Dashboard"
-                         data-author="Nadia Sari"
-                         data-batch="Batch 8 • Data Science"
-                         data-tags="Machine Learning,Python,NLP"
-                         data-description="Dashboard analisis sentimen real-time untuk monitoring brand perception di social media. Menggunakan model NLP dengan akurasi 94% untuk klasifikasi sentimen positif, negatif, dan netral."
-                         data-tools="Python, TensorFlow, Streamlit, PostgreSQL"
-                         data-duration="4 Minggu">
-                        <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#EDE9FE"/>
-                                <rect x="30" y="40" width="200" height="100" rx="8" fill="#8B5CF6"/>
-                                <rect x="250" y="40" width="120" height="45" rx="8" fill="#A78BFA"/>
-                                <rect x="250" y="95" width="120" height="45" rx="8" fill="#C4B5FD"/>
-                                <rect x="30" y="160" width="80" height="60" rx="8" fill="#7C3AED"/>
-                                <rect x="120" y="160" width="80" height="60" rx="8" fill="#6D28D9"/>
-                                <rect x="210" y="160" width="160" height="60" rx="8" fill="#5B21B6"/>
-                            </svg>
-                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
-                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
-                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                    Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p4">
-                            <div class="flex gap-1 mb2">
-                                <span class="bg-purple-100 text-purple-700 px2 py1 rounded text-xxs font-bold">Machine Learning</span>
-                                <span class="bg-yellow-100 text-yellow-700 px2 py1 rounded text-xxs font-bold">Python</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-dark mb2">Sentiment Analysis Dashboard</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-full max-w-30 h-auto">
-                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#8B5CF6"/>
-                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">NS</text>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-sm font-bold text-dark">Nadia Sari</span>
-                                    <span class="block text-xs text-gray-500">Batch 8 • Data Science</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 4 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="web"
-                         data-title="HealthTrack: Fitness Monitor"
-                         data-author="Dimas Anggara"
-                         data-batch="Batch 14 • Mobile Dev"
-                         data-tags="Mobile App,Flutter,Health"
-                         data-description="Aplikasi fitness tracker dengan fitur workout planner, calorie counter, dan integrasi wearable device. Mendukung sync data dengan Google Fit dan Apple Health untuk tracking yang lebih akurat."
-                         data-tools="Flutter, Dart, Firebase, REST API"
-                         data-duration="5 Minggu">
-                        <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#FEE2E2"/>
-                                <rect x="130" y="20" width="140" height="210" rx="20" fill="#EF4444"/>
-                                <rect x="145" y="40" width="110" height="170" rx="8" fill="#FCA5A5"/>
-                                <circle cx="200" cy="80" r="25" fill="#DC2626"/>
-                                <rect x="160" y="120" width="80" height="15" rx="4" fill="#B91C1C"/>
-                                <rect x="160" y="145" width="60" height="15" rx="4" fill="#991B1B"/>
-                                <rect x="160" y="170" width="80" height="25" rx="8" fill="#7F1D1D"/>
-                            </svg>
-                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
-                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
-                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                    Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p4">
-                            <div class="flex gap-1 mb2">
-                                <span class="bg-red-100 text-red-700 px2 py1 rounded text-xxs font-bold">Mobile App</span>
-                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Flutter</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-dark mb2">HealthTrack: Fitness Monitor</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-full max-w-30 h-auto">
-                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#EF4444"/>
-                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">DA</text>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-sm font-bold text-dark">Dimas Anggara</span>
-                                    <span class="block text-xs text-gray-500">Batch 14 • Mobile Dev</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 5 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="marketing"
-                         data-title="Organic Growth Strategy 2026"
-                         data-author="Bella Saphira"
-                         data-batch="Batch 11 • Digital Marketing"
-                         data-tags="SEO,Content,Strategy"
-                         data-description="Strategi pertumbuhan organic yang komprehensif untuk startup teknologi. Berhasil meningkatkan organic traffic sebesar 340% dan menurunkan customer acquisition cost hingga 60% dalam 6 bulan."
-                         data-tools="SEMrush, Ahrefs, Google Analytics, HubSpot"
-                         data-duration="8 Minggu">
-                        <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#FEF3C7"/>
-                                <rect x="30" y="150" width="50" height="70" rx="4" fill="#F59E0B"/>
-                                <rect x="95" y="110" width="50" height="110" rx="4" fill="#D97706"/>
-                                <rect x="160" y="80" width="50" height="140" rx="4" fill="#B45309"/>
-                                <rect x="225" y="50" width="50" height="170" rx="4" fill="#92400E"/>
-                                <rect x="290" y="30" width="50" height="190" rx="4" fill="#78350F"/>
-                                <path d="M55 130 L120 90 L185 60 L250 35 L315 20" stroke="#DC2626" stroke-width="4" stroke-linecap="round" fill="none"/>
-                                <circle cx="315" cy="20" r="8" fill="#DC2626"/>
-                            </svg>
-                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
-                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
-                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                    Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p4">
-                            <div class="flex gap-1 mb2">
-                                <span class="bg-yellow-100 text-yellow-700 px2 py1 rounded text-xxs font-bold">SEO</span>
-                                <span class="bg-indigo-100 text-indigo-700 px2 py1 rounded text-xxs font-bold">Content</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-dark mb2">Organic Growth Strategy 2026</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-full max-w-30 h-auto">
-                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="20" fill="#F59E0B"/>
-                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">BS</text>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-sm font-bold text-dark">Bella Saphira</span>
-                                    <span class="block text-xs text-gray-500">Batch 11 • Digital Marketing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 6 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="web"
-                         data-title="Netflix Clone with API"
-                         data-author="Andi Pratama"
-                         data-batch="Batch 15 • Frontend Dev"
-                         data-tags="Frontend,React JS,API"
-                         data-description="Clone Netflix dengan fitur lengkap termasuk user authentication, video streaming, dynamic content loading, dan responsive design. Terintegrasi dengan TMDB API untuk data film dan TV series."
-                         data-tools="React, Redux, Tailwind CSS, TMDB API"
-                         data-duration="4 Minggu">
-                        <div class="relative overflow-hidden">
-                            <svg class="w-full" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="250" fill="#1F2937"/>
-                                <rect x="20" y="20" width="360" height="80" rx="8" fill="#DC2626"/>
-                                <rect x="20" y="115" width="85" height="115" rx="8" fill="#374151"/>
-                                <rect x="115" y="115" width="85" height="115" rx="8" fill="#4B5563"/>
-                                <rect x="210" y="115" width="85" height="115" rx="8" fill="#6B7280"/>
-                                <rect x="305" y="115" width="75" height="115" rx="8" fill="#9CA3AF"/>
-                                <path d="M180 50 L210 70 L180 90 Z" fill="white"/>
-                            </svg>
-                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
-                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
-                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                        <circle cx="12" cy="12" r="3"/>
-                                    </svg>
-                                    Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                        <div class="p4">
-                            <div class="flex gap-1 mb2">
-                                <span class="bg-blue-100 text-blue-700 px2 py1 rounded text-xxs font-bold">Frontend</span>
-                                <span class="bg-indigo-100 text-indigo-700 px2 py1 rounded text-xxs font-bold">React JS</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-dark mb2">Netflix Clone with API</h3>
+                            <h3 class="text-lg font-bold text-white mb2">GrowthPlan: Business Model UMKM</h3>
                             <div class="flex items-center gap-2">
                                 <div class="w-full max-w-30 h-auto">
                                     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="20" cy="20" r="20" fill="#3B82F6"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">RF</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-white">Rizky Fajar</span>
+                                    <span class="block text-xs text-gray-400">Batch 10 • Manajemen Bisnis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 - Kreatif -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="kreatif"
+                         data-title="Nusantara Art: Kampanye Budaya Visual"
+                         data-author="Amanda Putri"
+                         data-batch="Batch 12 • Desain Komunikasi Visual"
+                         data-tags="Branding,Ilustrasi,Budaya"
+                         data-description="Kampanye visual untuk mempromosikan kebudayaan Nusantara kepada generasi muda. Meliputi desain poster, ilustrasi digital, dan konten media sosial. Kampanye berhasil menjangkau 500K+ audiens di Instagram."
+                         data-tools="Adobe Illustrator, Photoshop, Procreate"
+                         data-duration="4 Minggu"
+                         data-images="3">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#FDF4FF"/>
+                                <circle cx="100" cy="125" r="70" fill="#E879F9"/>
+                                <circle cx="200" cy="100" r="50" fill="#F0ABFC"/>
+                                <circle cx="300" cy="140" r="60" fill="#D946EF"/>
+                                <rect x="50" y="180" width="300" height="40" rx="8" fill="#A855F7"/>
+                                <path d="M180 60 L220 60 L200 30 Z" fill="#C026D3"/>
+                                <rect x="150" y="70" width="100" height="80" rx="12" fill="#FAE8FF"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-purple-100 text-purple-700 px2 py1 rounded text-xxs font-bold">Branding</span>
+                                <span class="bg-pink-100 text-pink-700 px2 py1 rounded text-xxs font-bold">Ilustrasi</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb2">Nusantara Art: Kampanye Budaya</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#D946EF"/>
                                         <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AP</text>
                                     </svg>
                                 </div>
                                 <div>
-                                    <span class="block text-sm font-bold text-dark">Andi Pratama</span>
-                                    <span class="block text-xs text-gray-500">Batch 15 • Frontend Dev</span>
+                                    <span class="block text-sm font-bold text-white">Amanda Putri</span>
+                                    <span class="block text-xs text-gray-400">Batch 12 • Desain Komunikasi Visual</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 - Sosial -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="sosial"
+                         data-title="SehatBersama: Program Kesehatan Desa"
+                         data-author="Nadia Sari"
+                         data-batch="Batch 8 • Kesehatan Masyarakat"
+                         data-tags="Kesehatan,Komunitas,Edukasi"
+                         data-description="Program edukasi kesehatan preventif untuk masyarakat desa terpencil. Meliputi penyuluhan gizi, pemeriksaan kesehatan gratis, dan pelatihan kader posyandu. Berhasil menjangkau 2000+ warga di 15 desa."
+                         data-tools="Metode Penyuluhan, Survey Kesehatan, Analisis Data"
+                         data-duration="8 Minggu"
+                         data-images="3">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#ECFDF5"/>
+                                <rect x="50" y="50" width="120" height="150" rx="12" fill="#10B981"/>
+                                <rect x="190" y="80" width="80" height="120" rx="8" fill="#34D399"/>
+                                <rect x="290" y="60" width="70" height="140" rx="8" fill="#6EE7B7"/>
+                                <circle cx="110" cy="100" r="30" fill="#D1FAE5"/>
+                                <path d="M95 100 L105 110 L125 90" stroke="#059669" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="80" y="140" width="60" height="40" rx="4" fill="#A7F3D0"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">Kesehatan</span>
+                                <span class="bg-lime-100 text-lime-700 px2 py1 rounded text-xxs font-bold">Komunitas</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb2">SehatBersama: Kesehatan Desa</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#10B981"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">NS</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-white">Nadia Sari</span>
+                                    <span class="block text-xs text-gray-400">Batch 8 • Kesehatan Masyarakat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 - Pendidikan -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up" data-category="pendidikan"
+                         data-title="EduPlay: Modul Belajar Interaktif Anak"
+                         data-author="Dimas Anggara"
+                         data-batch="Batch 14 • Pendidikan Anak Usia Dini"
+                         data-tags="Pendidikan,Anak,Interaktif"
+                         data-description="Modul pembelajaran interaktif untuk anak usia 4-6 tahun dengan pendekatan bermain sambil belajar. Meliputi aktivitas motorik, pengenalan huruf & angka, dan pengembangan kreativitas. Diuji coba di 10 TK dengan hasil positif."
+                         data-tools="Metode Montessori, Media Pembelajaran, Evaluasi Anak"
+                         data-duration="10 Minggu"
+                         data-images="3">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#FEF3C7"/>
+                                <rect x="40" y="40" width="150" height="100" rx="16" fill="#F59E0B"/>
+                                <rect x="210" y="60" width="150" height="80" rx="12" fill="#FBBF24"/>
+                                <circle cx="300" cy="180" r="45" fill="#FCD34D"/>
+                                <rect x="60" y="160" width="120" height="60" rx="8" fill="#F97316"/>
+                                <text x="115" y="200" font-size="24" text-anchor="middle" fill="white" font-weight="bold">ABC</text>
+                                <text x="285" y="110" font-size="20" text-anchor="middle" fill="#78350F" font-weight="bold">123</text>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-yellow-100 text-yellow-700 px2 py1 rounded text-xxs font-bold">Pendidikan</span>
+                                <span class="bg-orange-100 text-red-600 px2 py1 rounded text-xxs font-bold">Interaktif</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb2">EduPlay: Modul Belajar Anak</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#F59E0B"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">DA</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-white">Dimas Anggara</span>
+                                    <span class="block text-xs text-gray-400">Batch 14 • Pendidikan PAUD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 - Bisnis -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-1" data-category="bisnis"
+                         data-title="FinTrack: Laporan Keuangan UMKM"
+                         data-author="Bella Saphira"
+                         data-batch="Batch 11 • Akuntansi"
+                         data-tags="Keuangan,Akuntansi,UMKM"
+                         data-description="Sistem pencatatan dan pelaporan keuangan sederhana untuk UMKM. Meliputi template pembukuan, analisis arus kas, dan dashboard keuangan. Berhasil membantu 20+ UMKM mengelola keuangan dengan lebih baik."
+                         data-tools="Excel, Financial Statements, Cash Flow Analysis"
+                         data-duration="5 Minggu"
+                         data-images="3">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#F0FDF4"/>
+                                <rect x="30" y="40" width="160" height="170" rx="8" fill="#22C55E"/>
+                                <rect x="210" y="40" width="160" height="80" rx="8" fill="#16A34A"/>
+                                <rect x="210" y="130" width="75" height="80" rx="8" fill="#4ADE80"/>
+                                <rect x="295" y="130" width="75" height="80" rx="8" fill="#86EFAC"/>
+                                <path d="M60 180 L90 140 L120 160 L150 100 L180 120" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+                                <text x="290" y="90" font-size="24" text-anchor="middle" fill="white" font-weight="bold">Rp</text>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">Keuangan</span>
+                                <span class="bg-lime-100 text-lime-700 px2 py1 rounded text-xxs font-bold">Akuntansi</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb2">FinTrack: Laporan Keuangan</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#22C55E"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">BS</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-white">Bella Saphira</span>
+                                    <span class="block text-xs text-gray-400">Batch 11 • Akuntansi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 - Teknologi -->
+                    <div class="project-card bg-gray-900 rounded-xl overflow-hidden shadow transition cursor-pointer anim-fade-up delay-2" data-category="teknologi"
+                         data-title="SmartFarm: IoT Pertanian Modern"
+                         data-author="Andi Pratama"
+                         data-batch="Batch 15 • Teknik Pertanian"
+                         data-tags="IoT,Pertanian,Inovasi"
+                         data-description="Sistem monitoring tanaman berbasis IoT untuk petani modern. Meliputi sensor kelembaban tanah, otomatisasi irigasi, dan dashboard monitoring. Berhasil meningkatkan hasil panen 30% dengan efisiensi air 40%."
+                         data-tools="Arduino, Sensor IoT, Mobile App, Dashboard"
+                         data-duration="8 Minggu"
+                         data-images="3">
+                        <div class="relative overflow-hidden">
+                            <svg class="w-full project-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="#F0FDFA"/>
+                                <rect x="30" y="150" width="340" height="70" rx="8" fill="#5EEAD4"/>
+                                <rect x="60" y="80" width="40" height="70" rx="4" fill="#14B8A6"/>
+                                <rect x="120" y="60" width="40" height="90" rx="4" fill="#0D9488"/>
+                                <rect x="180" y="90" width="40" height="60" rx="4" fill="#14B8A6"/>
+                                <rect x="240" y="50" width="40" height="100" rx="4" fill="#0F766E"/>
+                                <rect x="300" y="70" width="40" height="80" rx="4" fill="#0D9488"/>
+                                <circle cx="330" cy="40" r="20" fill="#FBBF24"/>
+                                <path d="M50 40 Q100 20 150 40 T250 40" stroke="#0D9488" stroke-width="2" fill="none"/>
+                            </svg>
+                            <div class="absolute top-0 left-0 w-full h-full bg-dark-opacity opacity-0 flex items-center justify-center transition project-overlay">
+                                <button class="btn-view-project bg-lime-400 text-dark px5 py2 rounded-lg text-sm font-bold cursor-pointer border-none transition">
+                                    <svg class="svg1 va-2 mr1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4">
+                            <div class="flex gap-1 mb2">
+                                <span class="bg-indigo-100 text-indigo-700 px2 py1 rounded text-xxs font-bold">IoT</span>
+                                <span class="bg-green-100 text-green-700 px2 py1 rounded text-xxs font-bold">Pertanian</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb2">SmartFarm: IoT Pertanian</h3>
+                            <div class="flex items-center gap-2">
+                                <div class="w-full max-w-30 h-auto">
+                                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="20" fill="#0D9488"/>
+                                        <text x="20" y="26" font-size="16" text-anchor="middle" fill="white" font-weight="bold">AP</text>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block text-sm font-bold text-white">Andi Pratama</span>
+                                    <span class="block text-xs text-gray-400">Batch 15 • Teknik Pertanian</span>
                                 </div>
                             </div>
                         </div>
@@ -377,7 +387,7 @@
                                 Alumni Spotlight
                             </span>
                             <h2 class="text-4xl font-bold text-dark mb3">
-                                Punya Project <br class="sm:none"/>Level Dewa? 
+                                Punya Project <br> Level Dewa? 
                             </h2>
                             <p class="text-dark text-base mb0">
                                 Jangan disimpan sendiri! Tunjukkan karyamu kepada dunia dan rekruter top. 
@@ -410,100 +420,125 @@
         </section>
     </main>
 
-    <!-- Project Detail Modal -->
-    <div id="projectModal" class="fixed top-0 left-0 w-full h-screen bg-dark-opacity backdrop-blur-sm z-full none items-center justify-center">
-        <div class="bg-white rounded-xl max-w-1000 w-full m5 max-h-screen-75 overflow-y-auto shadow-lg anim-modal">
-            <div class="relative">
-                <!-- Modal Header Image -->
-                <div id="modalImage" class="w-full bg-gray-200 rounded-t-lg">
-                    <!-- SVG will be inserted here -->
-                </div>
-                <!-- Close Button -->
-                <button id="closeModal" class="absolute top-0 right-0 m4 bg-white rounded-full p2 cursor-pointer border-none shadow transition hover:bg-gray-100">
-                    <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Modal Content -->
-            <div class="p6">
-                <!-- Author Section -->
-                <div class="flex items-center gap-3 mb4">
-                    <div id="modalAvatar" class="w-full max-w-50 h-auto">
-                        <!-- Avatar SVG will be inserted here -->
+    <!-- Project Detail Modal - Blog Style -->
+    <div id="projectModal" class="fixed top-0 left-0 w-full h-screen bg-dark-opacity backdrop-blur-sm z-full none overflow-y-auto">
+        <!-- Close Button Fixed -->
+        <button id="closeModal" class="fixed top-0 right-0 m6 bg-gray-900 text-white rounded-full p3 cursor-pointer border border-gray-700 shadow-lg transition hover:bg-gray-800 z3">
+            <svg class="svg3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+
+        <!-- Blog Content Container -->
+        <div class="max-w-800 m-auto py8 px5">
+            <article class="anim-modal">
+                <!-- Hero Image Slider -->
+                <div class="relative rounded-xl overflow-hidden mb6 shadow-lg">
+                    <div id="modalSlider" class="flex transition">
+                        <!-- Slides will be inserted here -->
                     </div>
-                    <div>
-                        <span id="modalAuthor" class="block text-lg font-bold text-dark"></span>
-                        <span id="modalBatch" class="block text-sm text-gray-500"></span>
-                    </div>
-                </div>
-                
-                <!-- Title -->
-                <h2 id="modalTitle" class="text-2xl font-bold text-dark mb3"></h2>
-                
-                <!-- Tags -->
-                <div id="modalTags" class="flex gap-1 mb4">
-                    <!-- Tags will be inserted here -->
-                </div>
-                
-                <!-- Description -->
-                <div class="mb4">
-                    <h3 class="text-base font-bold text-dark mb2 flex items-center gap-2">
-                        <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10 9 9 9 8 9"/>
+                    <!-- Slider Navigation -->
+                    <button id="sliderPrev" class="absolute left-0 top-50 m4 bg-dark text-white rounded-full p3 cursor-pointer border-none shadow-lg transition hover:bg-gray-800 z1">
+                        <svg class="svg3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"/>
                         </svg>
-                        Deskripsi Proyek
-                    </h3>
-                    <p id="modalDescription" class="text-gray-600 text-sm mb0"></p>
-                </div>
-                
-                <!-- Project Details Grid -->
-                <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
-                    <div class="bg-gray-50 rounded-lg p4">
-                        <h4 class="text-sm font-bold text-gray-500 mb1 flex items-center gap-2">
-                            <svg class="svg1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                            </svg>
-                            Tools & Teknologi
-                        </h4>
-                        <p id="modalTools" class="text-dark text-sm font-bold mb0"></p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p4">
-                        <h4 class="text-sm font-bold text-gray-500 mb1 flex items-center gap-2">
-                            <svg class="svg1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                            Durasi Pengerjaan
-                        </h4>
-                        <p id="modalDuration" class="text-dark text-sm font-bold mb0"></p>
-                    </div>
-                </div>
-                
-                <!-- Action Buttons -->
-                <div class="flex gap-3 mt6">
-                    <button class="flex-1 bg-lime-400 text-dark px4 py3 rounded-lg text-sm font-bold cursor-pointer border-none transition hover:bg-lime-500 flex items-center justify-center gap-2">
-                        <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                        Lihat Live Demo
                     </button>
-                    <button class="flex-1 bg-dark text-white px4 py3 rounded-lg text-sm font-bold cursor-pointer border-none transition hover:bg-gray-800 flex items-center justify-center gap-2">
-                        <svg class="svg2" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    <button id="sliderNext" class="absolute right-0 top-50 m4 bg-dark text-white rounded-full p3 cursor-pointer border-none shadow-lg transition hover:bg-gray-800 z1">
+                        <svg class="svg3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
                         </svg>
-                        Lihat Repository
                     </button>
+                    <!-- Slider Dots -->
+                    <div id="sliderDots" class="absolute bottom-0 left-0 right-0 mb4 flex justify-center gap-2">
+                        <!-- Dots will be inserted here -->
+                    </div>
+                    <!-- Image Counter -->
+                    <div class="absolute top-0 left-0 m4 bg-dark text-white px3 py1 rounded-full text-sm font-bold">
+                        <span id="slideCounter">1/3</span>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Article Header -->
+                <header class="mb6">
+                    <!-- Tags -->
+                    <div id="modalTags" class="flex flex-wrap gap-2 mb4">
+                        <!-- Tags will be inserted here -->
+                    </div>
+                    
+                    <!-- Title -->
+                    <h1 id="modalTitle" class="text-4xl font-bold text-white mb4"></h1>
+                    
+                    <!-- Author Info -->
+                    <div class="flex items-center gap-4 pb5 border-b border-gray-800">
+                        <div id="modalAvatar" class="w-full max-w-50 h-auto">
+                            <!-- Avatar SVG will be inserted here -->
+                        </div>
+                        <div class="flex-1">
+                            <span id="modalAuthor" class="block text-lg font-bold text-white"></span>
+                            <span id="modalBatch" class="block text-sm text-gray-400"></span>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-sm flex items-center gap-1">
+                                <svg class="svg1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span id="modalDuration"></span>
+                            </span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Article Body -->
+                <div class="blog-content mb8">
+                    <!-- Project Overview -->
+                    <section class="mb8">
+                        <h2 class="text-2xl font-bold text-white mb4 flex items-center gap-3">
+                            <span class="bg-lime-400 text-dark p2 rounded-lg">
+                                <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                </svg>
+                            </span>
+                            Tentang Proyek
+                        </h2>
+                        <p id="modalDescription" class="text-gray-300 text-lg leading-relaxed mb0"></p>
+                    </section>
+
+                    <!-- Extended Description - Blog Style -->
+                    <section class="mb8" id="extendedContent">
+                        <h2 class="text-2xl font-bold text-white mb4 flex items-center gap-3">
+                            <span class="bg-purple-500 text-white p2 rounded-lg">
+                                <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </span>
+                            Cerita di Balik Proyek
+                        </h2>
+                        <div class="bg-gray-900 rounded-xl p6 border border-gray-800">
+                            <p id="modalStory" class="text-gray-300 text-base leading-relaxed mb0"></p>
+                        </div>
+                    </section>
+
+                    <!-- Tools & Methodology -->
+                    <section class="mb8">
+                        <h2 class="text-2xl font-bold text-white mb4 flex items-center gap-3">
+                            <span class="bg-blue-500 text-white p2 rounded-lg">
+                                <svg class="svg2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </span>
+                            Alat & Metode
+                        </h2>
+                        <div id="modalToolsGrid" class="grid grid-cols-3 gap-3 sm:grid-cols-2">
+                            <!-- Tools will be inserted here -->
+                        </div>
+                    </section>
+
+                </div>
+            </article>
         </div>
     </div>
 
@@ -538,16 +573,22 @@
             }
             .delay-1 { transition-delay: 0.1s; }
             .delay-2 { transition-delay: 0.2s; }
-            .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+            .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
             .project-card:hover .project-overlay { opacity: 1; }
             .anim-modal {
-                animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+                animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             }
             @keyframes modalIn {
-                from { opacity: 0; transform: scale(0.95) translateY(20px); }
-                to { opacity: 1; transform: scale(1) translateY(0); }
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
             }
-            #projectModal.flex { display: flex; }
+            #projectModal.block { display: block; }
+            #modalSlider {
+                transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .top-50 { top: 50%; transform: translateY(-50%); }
+            .leading-relaxed { line-height: 1.75; }
+            .blog-content section { border-left: 3px solid #a3e635; padding-left: 1.5rem; }
             
             /* CTA Section Animations */
             .cta-float-1 {
@@ -603,11 +644,11 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
-                    b.classList.remove('bg-dark', 'text-white');
-                    b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                    b.classList.remove('bg-lime-400', 'text-dark');
+                    b.classList.add('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
                 });
-                btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-                btn.classList.add('bg-dark', 'text-white');
+                btn.classList.remove('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
+                btn.classList.add('bg-lime-400', 'text-dark');
 
                 const filterValue = btn.getAttribute('data-filter');
                 projectCards.forEach(card => {
@@ -627,12 +668,158 @@
         const modal = document.getElementById('projectModal');
         const closeModalBtn = document.getElementById('closeModal');
         const viewProjectBtns = document.querySelectorAll('.btn-view-project');
+        const modalSlider = document.getElementById('modalSlider');
+        const sliderDots = document.getElementById('sliderDots');
+        const sliderPrev = document.getElementById('sliderPrev');
+        const sliderNext = document.getElementById('sliderNext');
+        let currentSlide = 0;
+        let totalSlides = 0;
 
         const colorMap = {
-            'uiux': '#6366F1',
-            'web': '#10B981',
-            'data': '#8B5CF6',
-            'marketing': '#F59E0B'
+            'bisnis': '#10B981',
+            'kreatif': '#8B5CF6',
+            'sosial': '#EC4899',
+            'pendidikan': '#F59E0B',
+            'teknologi': '#3B82F6'
+        };
+
+        // SVG slide templates based on category
+        function generateSlides(category, title) {
+            const colors = {
+                'bisnis': { bg: '#D1FAE5', accent: '#059669', secondary: '#10B981' },
+                'kreatif': { bg: '#EDE9FE', accent: '#7C3AED', secondary: '#8B5CF6' },
+                'sosial': { bg: '#FCE7F3', accent: '#DB2777', secondary: '#EC4899' },
+                'pendidikan': { bg: '#FEF3C7', accent: '#D97706', secondary: '#F59E0B' },
+                'teknologi': { bg: '#DBEAFE', accent: '#2563EB', secondary: '#3B82F6' }
+            };
+            const c = colors[category] || colors['teknologi'];
+            
+            return [
+                // Slide 1: Main project visualization
+                `<div class="w-full flex-shrink-0">
+                    <svg viewBox="0 0 800 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <rect width="800" height="350" fill="${c.bg}"/>
+                        <rect x="50" y="40" width="320" height="200" rx="16" fill="white" stroke="${c.accent}" stroke-width="2"/>
+                        <rect x="70" y="60" width="120" height="20" rx="4" fill="${c.accent}"/>
+                        <rect x="70" y="90" width="280" height="10" rx="2" fill="#E5E7EB"/>
+                        <rect x="70" y="110" width="250" height="10" rx="2" fill="#E5E7EB"/>
+                        <rect x="70" y="130" width="200" height="10" rx="2" fill="#E5E7EB"/>
+                        <rect x="70" y="160" width="100" height="35" rx="8" fill="${c.secondary}"/>
+                        <rect x="180" y="160" width="100" height="35" rx="8" fill="${c.accent}"/>
+                        <circle cx="600" cy="150" r="100" fill="${c.secondary}" opacity="0.3"/>
+                        <circle cx="600" cy="150" r="70" fill="${c.secondary}" opacity="0.5"/>
+                        <circle cx="600" cy="150" r="40" fill="${c.accent}"/>
+                        <path d="M585 150 L600 165 L620 135" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="50" y="270" width="150" height="50" rx="8" fill="white"/>
+                        <rect x="60" y="280" width="80" height="8" rx="2" fill="${c.accent}"/>
+                        <rect x="60" y="295" width="120" height="6" rx="2" fill="#E5E7EB"/>
+                        <rect x="60" y="305" width="100" height="6" rx="2" fill="#E5E7EB"/>
+                        <rect x="220" y="270" width="150" height="50" rx="8" fill="white"/>
+                        <rect x="230" y="280" width="80" height="8" rx="2" fill="${c.secondary}"/>
+                        <rect x="230" y="295" width="120" height="6" rx="2" fill="#E5E7EB"/>
+                        <rect x="230" y="305" width="100" height="6" rx="2" fill="#E5E7EB"/>
+                    </svg>
+                </div>`,
+                // Slide 2: Process/methodology
+                `<div class="w-full flex-shrink-0">
+                    <svg viewBox="0 0 800 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <rect width="800" height="350" fill="${c.bg}"/>
+                        <text x="400" y="40" font-size="18" text-anchor="middle" fill="${c.accent}" font-weight="bold">Proses Pengerjaan</text>
+                        <rect x="80" y="80" width="140" height="100" rx="12" fill="white" stroke="${c.accent}" stroke-width="2"/>
+                        <circle cx="150" cy="110" r="20" fill="${c.accent}"/>
+                        <text x="150" y="116" font-size="14" text-anchor="middle" fill="white" font-weight="bold">1</text>
+                        <rect x="110" y="140" width="80" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="100" y="155" width="100" height="6" rx="2" fill="#E5E7EB"/>
+                        <path d="M230 130 L270 130" stroke="${c.accent}" stroke-width="3" marker-end="url(#arrow)"/>
+                        <rect x="280" y="80" width="140" height="100" rx="12" fill="white" stroke="${c.secondary}" stroke-width="2"/>
+                        <circle cx="350" cy="110" r="20" fill="${c.secondary}"/>
+                        <text x="350" y="116" font-size="14" text-anchor="middle" fill="white" font-weight="bold">2</text>
+                        <rect x="310" y="140" width="80" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="300" y="155" width="100" height="6" rx="2" fill="#E5E7EB"/>
+                        <path d="M430 130 L470 130" stroke="${c.secondary}" stroke-width="3"/>
+                        <rect x="480" y="80" width="140" height="100" rx="12" fill="white" stroke="${c.accent}" stroke-width="2"/>
+                        <circle cx="550" cy="110" r="20" fill="${c.accent}"/>
+                        <text x="550" y="116" font-size="14" text-anchor="middle" fill="white" font-weight="bold">3</text>
+                        <rect x="510" y="140" width="80" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="500" y="155" width="100" height="6" rx="2" fill="#E5E7EB"/>
+                        <path d="M630 130 L670 130" stroke="${c.accent}" stroke-width="3"/>
+                        <rect x="680" y="80" width="80" height="100" rx="12" fill="${c.accent}"/>
+                        <path d="M705 130 L720 145 L740 115" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="100" y="220" width="600" height="80" rx="12" fill="white"/>
+                        <rect x="130" y="240" width="150" height="10" rx="2" fill="${c.accent}"/>
+                        <rect x="130" y="260" width="520" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="130" y="275" width="480" height="8" rx="2" fill="#E5E7EB"/>
+                    </svg>
+                </div>`,
+                // Slide 3: Results/outcome
+                `<div class="w-full flex-shrink-0">
+                    <svg viewBox="0 0 800 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <rect width="800" height="350" fill="${c.bg}"/>
+                        <text x="400" y="40" font-size="18" text-anchor="middle" fill="${c.accent}" font-weight="bold">Hasil Proyek</text>
+                        <rect x="50" y="70" width="200" height="120" rx="12" fill="white" stroke="${c.accent}" stroke-width="2"/>
+                        <rect x="70" y="90" width="60" height="60" rx="8" fill="${c.accent}" opacity="0.2"/>
+                        <text x="100" y="128" font-size="24" text-anchor="middle" fill="${c.accent}" font-weight="bold">📊</text>
+                        <rect x="145" y="95" width="80" height="10" rx="2" fill="${c.accent}"/>
+                        <rect x="145" y="115" width="90" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="145" y="130" width="70" height="8" rx="2" fill="#E5E7EB"/>
+                        <text x="100" y="175" font-size="12" text-anchor="middle" fill="${c.accent}" font-weight="bold">+85%</text>
+                        <rect x="300" y="70" width="200" height="120" rx="12" fill="white" stroke="${c.secondary}" stroke-width="2"/>
+                        <rect x="320" y="90" width="60" height="60" rx="8" fill="${c.secondary}" opacity="0.2"/>
+                        <text x="350" y="128" font-size="24" text-anchor="middle" fill="${c.secondary}" font-weight="bold">👥</text>
+                        <rect x="395" y="95" width="80" height="10" rx="2" fill="${c.secondary}"/>
+                        <rect x="395" y="115" width="90" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="395" y="130" width="70" height="8" rx="2" fill="#E5E7EB"/>
+                        <text x="350" y="175" font-size="12" text-anchor="middle" fill="${c.secondary}" font-weight="bold">500+</text>
+                        <rect x="550" y="70" width="200" height="120" rx="12" fill="white" stroke="${c.accent}" stroke-width="2"/>
+                        <rect x="570" y="90" width="60" height="60" rx="8" fill="${c.accent}" opacity="0.2"/>
+                        <text x="600" y="128" font-size="24" text-anchor="middle" fill="${c.accent}" font-weight="bold">⭐</text>
+                        <rect x="645" y="95" width="80" height="10" rx="2" fill="${c.accent}"/>
+                        <rect x="645" y="115" width="90" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="645" y="130" width="70" height="8" rx="2" fill="#E5E7EB"/>
+                        <text x="600" y="175" font-size="12" text-anchor="middle" fill="${c.accent}" font-weight="bold">4.9/5</text>
+                        <rect x="100" y="220" width="600" height="100" rx="12" fill="white"/>
+                        <rect x="130" y="245" width="200" height="12" rx="2" fill="${c.accent}"/>
+                        <rect x="130" y="270" width="520" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="130" y="285" width="480" height="8" rx="2" fill="#E5E7EB"/>
+                        <rect x="130" y="300" width="400" height="8" rx="2" fill="#E5E7EB"/>
+                    </svg>
+                </div>`
+            ];
+        }
+
+        function updateSlider() {
+            modalSlider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            const dots = sliderDots.querySelectorAll('button');
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.remove('bg-gray-600');
+                    dot.classList.add('bg-lime-400');
+                } else {
+                    dot.classList.remove('bg-lime-400');
+                    dot.classList.add('bg-gray-600');
+                }
+            });
+            // Update slide counter
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1}/${totalSlides}`;
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateSlider();
+        }
+
+        sliderPrev.addEventListener('click', () => goToSlide(currentSlide - 1));
+        sliderNext.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+        // Extended story content based on category
+        const storyContent = {
+            'bisnis': 'Proyek ini dimulai dari kegelisahan melihat banyak UMKM yang kesulitan mengembangkan bisnisnya karena tidak memiliki perencanaan yang matang. Melalui program bootcamp, kami belajar bagaimana menyusun business model canvas yang komprehensif dan mudah dipahami. Proses pengerjaan melibatkan riset lapangan, wawancara dengan pelaku UMKM, hingga validasi model bisnis dengan mentor berpengalaman. Hasilnya tidak hanya berupa dokumen perencanaan, tapi juga pendampingan langsung kepada para pelaku UMKM untuk mengimplementasikan strategi yang telah disusun.',
+            'kreatif': 'Berawal dari keprihatinan terhadap menurunnya minat generasi muda terhadap budaya lokal, proyek ini lahir sebagai upaya untuk mengemas warisan budaya Nusantara dalam bahasa visual yang lebih relevan. Setiap ilustrasi dan desain yang dibuat melalui proses riset mendalam tentang filosofi dan makna di balik setiap elemen budaya. Kolaborasi dengan komunitas seni lokal dan seniman tradisional menjadi kunci keberhasilan kampanye ini menjangkau audiens yang lebih luas.',
+            'sosial': 'Kesenjangan akses kesehatan di daerah terpencil menjadi motivasi utama proyek ini. Melalui pendekatan yang memberdayakan masyarakat lokal, program ini tidak hanya memberikan edukasi kesehatan satu arah, tapi juga melatih kader-kader kesehatan dari desa yang nantinya bisa meneruskan program secara mandiri. Setiap materi penyuluhan disesuaikan dengan konteks lokal dan menggunakan bahasa yang mudah dipahami masyarakat.',
+            'pendidikan': 'Pendidikan anak usia dini adalah fondasi penting bagi perkembangan generasi masa depan. Proyek ini mengembangkan modul pembelajaran yang mengintegrasikan prinsip bermain sambil belajar dengan pendekatan berbasis perkembangan anak. Setiap aktivitas dirancang untuk menstimulasi berbagai aspek perkembangan anak, mulai dari motorik, kognitif, bahasa, hingga sosial-emosional. Uji coba dilakukan bersama para guru PAUD untuk memastikan modul dapat diimplementasikan dengan mudah.',
+            'teknologi': 'Pertanian modern membutuhkan sentuhan teknologi untuk meningkatkan efisiensi dan hasil panen. Proyek ini mengembangkan sistem monitoring berbasis IoT yang memungkinkan petani memantau kondisi tanaman secara real-time melalui smartphone. Sensor-sensor yang dipasang di lahan dapat mengukur kelembaban tanah, suhu, dan intensitas cahaya, kemudian data tersebut diolah untuk memberikan rekomendasi waktu penyiraman dan pemupukan yang optimal.'
         };
 
         function openModal(card) {
@@ -651,10 +838,12 @@
             document.getElementById('modalAuthor').textContent = author;
             document.getElementById('modalBatch').textContent = batch;
             document.getElementById('modalDescription').textContent = description;
-            document.getElementById('modalTools').textContent = tools;
             document.getElementById('modalDuration').textContent = duration;
 
-            // Generate avatar
+            // Set extended story
+            document.getElementById('modalStory').textContent = storyContent[category] || storyContent['teknologi'];
+
+            // Generate avatar (smaller size)
             const initials = author.split(' ').map(n => n[0]).join('');
             document.getElementById('modalAvatar').innerHTML = `
                 <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -663,27 +852,54 @@
                 </svg>
             `;
 
-            // Generate tags
-            const tagColors = ['bg-lime-100 text-lime-700', 'bg-purple-100 text-purple-700', 'bg-blue-100 text-blue-700', 'bg-yellow-100 text-yellow-700'];
+            // Generate tags (dark theme)
+            const tagStyles = [
+                'bg-lime-500 text-dark', 
+                'bg-purple-500 text-white', 
+                'bg-blue-500 text-white', 
+                'bg-yellow-500 text-dark'
+            ];
             document.getElementById('modalTags').innerHTML = tags.map((tag, i) => 
-                `<span class="${tagColors[i % tagColors.length]} px3 py1 rounded-full text-xs font-bold">${tag.trim()}</span>`
+                `<span class="${tagStyles[i % tagStyles.length]} px4 py2 rounded-full text-sm font-bold">${tag.trim()}</span>`
             ).join('');
 
-            // Copy the SVG from card to modal
-            const cardSvg = card.querySelector('.relative svg');
-            if (cardSvg) {
-                document.getElementById('modalImage').innerHTML = cardSvg.outerHTML;
-            }
+            // Generate tools grid
+            const toolsList = tools.split(',').map(tool => tool.trim());
+            document.getElementById('modalToolsGrid').innerHTML = toolsList.map(tool => 
+                `<div class="bg-gray-900 rounded-lg p4 border border-gray-800 text-center">
+                    <span class="text-gray-300 text-sm font-bold">${tool}</span>
+                </div>`
+            ).join('');
 
-            // Show modal
+            // Generate image slider
+            const slides = generateSlides(category, title);
+            totalSlides = slides.length;
+            currentSlide = 0;
+            modalSlider.innerHTML = slides.join('');
+            
+            // Generate dots (dark theme)
+            sliderDots.innerHTML = slides.map((_, i) => 
+                `<button class="w-10 h-10 rounded-full border-none cursor-pointer transition ${i === 0 ? 'bg-lime-400' : 'bg-gray-600'}"></button>`
+            ).join('');
+            
+            // Add click events to dots
+            sliderDots.querySelectorAll('button').forEach((dot, i) => {
+                dot.addEventListener('click', () => goToSlide(i));
+            });
+
+            // Update slide counter
+            document.getElementById('slideCounter').textContent = `1/${totalSlides}`;
+
+            // Show modal (scroll to top)
             modal.classList.remove('none');
-            modal.classList.add('flex');
+            modal.classList.add('block');
+            modal.scrollTop = 0;
             document.body.classList.add('overflow-hidden');
         }
 
         function closeModal() {
             modal.classList.add('none');
-            modal.classList.remove('flex');
+            modal.classList.remove('block');
             document.body.classList.remove('overflow-hidden');
         }
 
@@ -708,6 +924,10 @@
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
+            if (modal.classList.contains('flex')) {
+                if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+            }
         });
     </script>
 </body>
