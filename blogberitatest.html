@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Berita Test - Praktika+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+    <main class="py9">
+        <section class="max-w-1000 m-auto px5">
+            <div class="text-center mb8 reveal">
+                <span class="inline-block bg-lime-400 text-dark px4 py1 rounded-full text-sm font-bold mb3">
+                    Blog Hub Praktika+
+                </span>
+                <h1 class="text-5xl font-bold mb3 sm:text-3xl">Blog Berita Alumni</h1>
+                <p class="text-gray-400 text-lg sm:text-base">
+                    Insight karier, teknologi, magang, dan dunia industri dalam format yang ringkas dan siap dipraktikkan.
+                </p>
+            </div>
+
+            <div class="flex flex-row justify-center gap-2 mb8 sm:grid sm:grid-cols-2 reveal">
+                <button class="filter-btn bg-lime-400 text-dark px4 py2 rounded-full text-sm font-bold border-none cursor-pointer" data-filter="all">Semua</button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold border border-gray-700 cursor-pointer" data-filter="karier">Tips Karier</button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold border border-gray-700 cursor-pointer" data-filter="teknologi">Teknologi</button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold border border-gray-700 cursor-pointer" data-filter="magang">Magang</button>
+                <button class="filter-btn bg-gray-800 text-gray-300 px4 py2 rounded-full text-sm font-bold border border-gray-700 cursor-pointer" data-filter="industri">Insight Industri</button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-5 sm:grid-cols-1" id="blogGrid">
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="karier">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#0F172A"/>
+                            <rect x="24" y="26" width="210" height="208" rx="14" fill="#1E293B"/>
+                            <rect x="255" y="26" width="201" height="96" rx="14" fill="#334155"/>
+                            <rect x="255" y="138" width="201" height="96" rx="14" fill="#475569"/>
+                            <rect x="42" y="48" width="120" height="14" rx="4" fill="#A3E635"/>
+                            <rect x="42" y="74" width="165" height="10" rx="3" fill="#64748B"/>
+                            <rect x="42" y="92" width="150" height="10" rx="3" fill="#64748B"/>
+                            <circle cx="356" cy="74" r="26" fill="#A3E635" opacity="0.4"/>
+                            <path d="M340 74L352 86L372 62" stroke="#A3E635" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-lime-400 text-dark px3 py1 rounded-full text-xs font-bold">Tips Karier</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">CV</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">CV ATS-Friendly yang Lolos Screening Recruiter</h3>
+                        <p class="text-gray-400 text-sm mb4">Langkah konkret menulis CV yang terbaca sistem ATS sekaligus tetap menarik untuk HR.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Rizky Fajar • 6 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="teknologi">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#0B1220"/>
+                            <rect x="26" y="30" width="428" height="200" rx="16" fill="#172554"/>
+                            <rect x="48" y="52" width="180" height="16" rx="5" fill="#60A5FA"/>
+                            <rect x="48" y="78" width="250" height="10" rx="3" fill="#93C5FD"/>
+                            <rect x="48" y="96" width="220" height="10" rx="3" fill="#93C5FD"/>
+                            <circle cx="360" cy="130" r="56" fill="#3B82F6" opacity="0.35"/>
+                            <circle cx="360" cy="130" r="28" fill="#1D4ED8"/>
+                            <path d="M360 102V130L380 142" stroke="#DBEAFE" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-blue-500 text-white px3 py1 rounded-full text-xs font-bold">Teknologi</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">AI untuk Tim Konten: Workflow yang Efektif</h3>
+                        <p class="text-gray-400 text-sm mb4">Panduan membuat alur kerja AI yang mempercepat riset, drafting, dan evaluasi kualitas artikel.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Nadia Putri • 7 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="magang">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#111827"/>
+                            <rect x="34" y="36" width="180" height="188" rx="14" fill="#1F2937"/>
+                            <rect x="234" y="36" width="212" height="56" rx="12" fill="#374151"/>
+                            <rect x="234" y="104" width="212" height="56" rx="12" fill="#4B5563"/>
+                            <rect x="234" y="172" width="212" height="52" rx="12" fill="#6B7280"/>
+                            <circle cx="124" cy="118" r="48" fill="#F59E0B" opacity="0.35"/>
+                            <path d="M98 118H150" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M124 92V144" stroke="#FBBF24" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-yellow-500 text-dark px3 py1 rounded-full text-xs font-bold">Magang</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">Persiapan</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">Checklist 30 Hari Sebelum Magang Pertama</h3>
+                        <p class="text-gray-400 text-sm mb4">Hal-hal yang wajib kamu siapkan agar onboarding lebih mulus dan performa cepat naik.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Dimas Anggara • 5 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="industri">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#0F172A"/>
+                            <rect x="28" y="32" width="424" height="196" rx="16" fill="#1E293B"/>
+                            <rect x="52" y="58" width="148" height="146" rx="10" fill="#334155"/>
+                            <rect x="218" y="58" width="210" height="34" rx="8" fill="#475569"/>
+                            <rect x="218" y="102" width="210" height="34" rx="8" fill="#64748B"/>
+                            <rect x="218" y="146" width="210" height="34" rx="8" fill="#94A3B8"/>
+                            <path d="M82 168L110 136L136 154L164 120" stroke="#A3E635" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-purple-500 text-white px3 py1 rounded-full text-xs font-bold">Insight Industri</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">Hiring</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">Peta Skill Hiring 2026: Apa yang Paling Dicari</h3>
+                        <p class="text-gray-400 text-sm mb4">Rangkuman tren kebutuhan skill dari startup, korporasi, sampai institusi publik.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Sarah Amalia • 8 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="karier">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#111827"/>
+                            <rect x="24" y="24" width="432" height="212" rx="16" fill="#1F2937"/>
+                            <rect x="50" y="54" width="170" height="150" rx="12" fill="#374151"/>
+                            <rect x="238" y="54" width="192" height="20" rx="6" fill="#9CA3AF"/>
+                            <rect x="238" y="84" width="170" height="10" rx="4" fill="#6B7280"/>
+                            <rect x="238" y="102" width="150" height="10" rx="4" fill="#6B7280"/>
+                            <rect x="238" y="126" width="90" height="36" rx="8" fill="#A3E635"/>
+                            <path d="M88 140L110 160L152 114" stroke="#D9F99D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-lime-400 text-dark px3 py1 rounded-full text-xs font-bold">Tips Karier</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">Interview</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">Jawaban "Tell Me About Yourself" yang Kuat</h3>
+                        <p class="text-gray-400 text-sm mb4">Framework sederhana agar jawabanmu fokus, relevan, dan mudah diingat interviewer.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Rizky Fajar • 4 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-gray-900 rounded-xl border border-gray-800 overflow-hidden reveal" data-category="teknologi">
+                    <div class="card-svg">
+                        <svg class="w-full h-auto" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="480" height="260" fill="#0B1220"/>
+                            <rect x="22" y="24" width="436" height="212" rx="16" fill="#172554"/>
+                            <circle cx="118" cy="128" r="56" fill="#2563EB" opacity="0.4"/>
+                            <circle cx="118" cy="128" r="30" fill="#1D4ED8"/>
+                            <rect x="206" y="62" width="216" height="20" rx="6" fill="#93C5FD"/>
+                            <rect x="206" y="92" width="188" height="10" rx="4" fill="#60A5FA"/>
+                            <rect x="206" y="110" width="174" height="10" rx="4" fill="#60A5FA"/>
+                            <rect x="206" y="140" width="116" height="40" rx="10" fill="#3B82F6"/>
+                            <path d="M96 128H140" stroke="#DBEAFE" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="p5">
+                        <div class="flex gap-2 mb3">
+                            <span class="bg-blue-500 text-white px3 py1 rounded-full text-xs font-bold">Teknologi</span>
+                            <span class="bg-gray-800 text-gray-300 px3 py1 rounded-full text-xs">Social Media</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb2">Strategi Konten Video Pendek yang Konsisten</h3>
+                        <p class="text-gray-400 text-sm mb4">Metode merancang ide, produksi, dan evaluasi agar performa konten lebih stabil.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Nadia Putri • 6 min read</span>
+                            <button class="btn-detail bg-lime-400 text-dark px4 py2 rounded-lg text-sm font-bold border-none cursor-pointer">Lihat Detail</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="detailModal" class="fixed top-0 right-0 bottom-0 left-0 bg-dark-opacity hidden z-full">
+        <div class="w-full h-full overflow-y-auto">
+            <div class="max-w-1000 m-auto px5 py8">
+                <div class="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+                    <div class="p5 border-b border-gray-800 flex items-center justify-between">
+                        <h2 class="text-2xl font-bold">Detail Artikel</h2>
+                        <button id="closeModal" class="bg-gray-800 text-white px3 py2 rounded-lg border border-gray-700 cursor-pointer" aria-label="Tutup modal">
+                            Tutup
+                        </button>
+                    </div>
+                    <div id="modalImage" class="border-b border-gray-800"></div>
+                    <div class="p6">
+                        <div class="flex gap-2 mb3" id="modalTags"></div>
+                        <h3 id="modalTitle" class="text-3xl font-bold mb3 sm:text-2xl"></h3>
+                        <div class="flex items-center gap-3 mb4">
+                            <div id="modalAvatar" class="w-50 h-50"></div>
+                            <div>
+                                <p id="modalAuthor" class="text-sm font-bold mb1"></p>
+                                <p id="modalMeta" class="text-xs text-gray-400 mb0"></p>
+                            </div>
+                        </div>
+                        <p id="modalDescription" class="text-gray-300 text-base mb5"></p>
+
+                        <div class="bg-gray-800 rounded-lg p5 mb4">
+                            <h4 class="text-lg font-bold mb3">Poin Utama</h4>
+                            <ul class="list-none" id="modalPoints"></ul>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 sm:grid-cols-1">
+                            <div class="bg-gray-800 rounded-lg p4">
+                                <p class="text-xs text-gray-400 mb1">Kategori</p>
+                                <p id="modalCategory" class="text-sm font-bold mb0"></p>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p4">
+                                <p class="text-xs text-gray-400 mb1">Durasi Baca</p>
+                                <p id="modalReadTime" class="text-sm font-bold mb0"></p>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg p4">
+                                <p class="text-xs text-gray-400 mb1">Diperbarui</p>
+                                <p id="modalDate" class="text-sm font-bold mb0"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealEls.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(18px)';
+            el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+            el.style.transitionDelay = (index % 6) * 0.05 + 's';
+            revealObserver.observe(el);
+        });
+
+        const categoryColor = {
+            karier: 'bg-lime-400 text-dark',
+            teknologi: 'bg-blue-500 text-white',
+            magang: 'bg-yellow-500 text-dark',
+            industri: 'bg-purple-500 text-white'
+        };
+
+        const detailData = {
+            'CV ATS-Friendly yang Lolos Screening Recruiter': {
+                author: 'Rizky Fajar',
+                category: 'karier',
+                date: '12 Mar 2026',
+                readTime: '6 menit',
+                description: 'Artikel ini membahas format CV yang ramah ATS, kata kunci yang perlu digunakan, dan struktur pengalaman kerja agar peluang dipanggil interview lebih besar.',
+                points: ['Gunakan format sederhana tanpa tabel kompleks.', 'Masukkan kata kunci sesuai deskripsi lowongan.', 'Tulis pencapaian dalam bentuk angka yang terukur.']
+            },
+            'AI untuk Tim Konten: Workflow yang Efektif': {
+                author: 'Nadia Putri',
+                category: 'teknologi',
+                date: '10 Mar 2026',
+                readTime: '7 menit',
+                description: 'Fokus artikel adalah membangun SOP penggunaan AI untuk brainstorming, drafting, dan validasi agar kualitas tetap konsisten di setiap publikasi.',
+                points: ['Pisahkan tahap ideasi, produksi, dan review.', 'Gunakan checklist kualitas sebelum publish.', 'Pantau metrik performa untuk iterasi konten.']
+            },
+            'Checklist 30 Hari Sebelum Magang Pertama': {
+                author: 'Dimas Anggara',
+                category: 'magang',
+                date: '8 Mar 2026',
+                readTime: '5 menit',
+                description: 'Panduan praktis persiapan magang mulai dari riset perusahaan, komunikasi dengan mentor, hingga manajemen ekspektasi di minggu pertama.',
+                points: ['Riset produk, budaya, dan struktur tim.', 'Siapkan target belajar mingguan sejak awal.', 'Bangun kebiasaan laporan progres singkat harian.']
+            },
+            'Peta Skill Hiring 2026: Apa yang Paling Dicari': {
+                author: 'Sarah Amalia',
+                category: 'industri',
+                date: '6 Mar 2026',
+                readTime: '8 menit',
+                description: 'Rangkuman kebutuhan skill terbaru berdasarkan peran yang banyak dibuka, termasuk kombinasi hard skill dan soft skill lintas industri.',
+                points: ['Analisis data dan komunikasi makin sering jadi paket wajib.', 'Portofolio nyata lebih kuat daripada klaim umum.', 'Kemampuan kolaborasi lintas fungsi jadi nilai tambah.']
+            },
+            'Jawaban "Tell Me About Yourself" yang Kuat': {
+                author: 'Rizky Fajar',
+                category: 'karier',
+                date: '4 Mar 2026',
+                readTime: '4 menit',
+                description: 'Framework ringkas untuk memperkenalkan diri secara relevan terhadap posisi yang dilamar tanpa terlalu panjang atau terlalu umum.',
+                points: ['Mulai dari latar belakang yang relevan.', 'Tunjukkan 1-2 capaian paling berdampak.', 'Akhiri dengan alasan fit terhadap posisi.']
+            },
+            'Strategi Konten Video Pendek yang Konsisten': {
+                author: 'Nadia Putri',
+                category: 'teknologi',
+                date: '2 Mar 2026',
+                readTime: '6 menit',
+                description: 'Strategi ini membantu tim konten mengelola ide, ritme produksi, dan evaluasi performa agar tidak berhenti di tengah jalan.',
+                points: ['Gunakan bank ide mingguan.', 'Produksi batch untuk efisiensi waktu.', 'Evaluasi retention dan engagement per tema konten.']
+            }
+        };
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach((item) => {
+                    item.classList.remove('bg-lime-400', 'text-dark');
+                    item.classList.add('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
+                });
+
+                btn.classList.remove('bg-gray-800', 'text-gray-300', 'border', 'border-gray-700');
+                btn.classList.add('bg-lime-400', 'text-dark');
+
+                const filter = btn.getAttribute('data-filter');
+                cards.forEach((card) => {
+                    const category = card.getAttribute('data-category');
+                    card.classList.remove('block', 'none');
+                    if (filter === 'all' || filter === category) {
+                        card.classList.add('block');
+                    } else {
+                        card.classList.add('none');
+                    }
+                });
+            });
+        });
+
+        const modal = document.getElementById('detailModal');
+        const closeModal = document.getElementById('closeModal');
+        const detailBtns = document.querySelectorAll('.btn-detail');
+
+        const modalImage = document.getElementById('modalImage');
+        const modalTags = document.getElementById('modalTags');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalAvatar = document.getElementById('modalAvatar');
+        const modalAuthor = document.getElementById('modalAuthor');
+        const modalMeta = document.getElementById('modalMeta');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalPoints = document.getElementById('modalPoints');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalReadTime = document.getElementById('modalReadTime');
+        const modalDate = document.getElementById('modalDate');
+
+        function avatarSVG(name, fill) {
+            const initials = name.split(' ').slice(0, 2).map((part) => part[0]).join('');
+            return `<svg class="w-full h-full" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="25" cy="25" r="25" fill="${fill}"/>
+                <text x="25" y="31" font-size="14" text-anchor="middle" fill="white" font-weight="bold">${initials}</text>
+            </svg>`;
+        }
+
+        function categoryLabel(category) {
+            if (category === 'karier') return 'Tips Karier';
+            if (category === 'teknologi') return 'Teknologi';
+            if (category === 'magang') return 'Magang';
+            return 'Insight Industri';
+        }
+
+        function avatarColor(category) {
+            if (category === 'karier') return '#84CC16';
+            if (category === 'teknologi') return '#3B82F6';
+            if (category === 'magang') return '#F59E0B';
+            return '#A855F7';
+        }
+
+        detailBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.blog-card');
+                const title = card.querySelector('h3').textContent.trim();
+                const meta = detailData[title];
+
+                if (!meta) return;
+
+                modalImage.innerHTML = card.querySelector('.card-svg').innerHTML;
+                modalTitle.textContent = title;
+                modalAuthor.textContent = meta.author;
+                modalMeta.textContent = `${meta.date} • ${meta.readTime}`;
+                modalDescription.textContent = meta.description;
+                modalCategory.textContent = categoryLabel(meta.category);
+                modalReadTime.textContent = meta.readTime;
+                modalDate.textContent = meta.date;
+
+                modalAvatar.innerHTML = avatarSVG(meta.author, avatarColor(meta.category));
+
+                const categoryClass = categoryColor[meta.category] || 'bg-gray-700 text-white';
+                modalTags.innerHTML = `<span class="${categoryClass} px3 py1 rounded-full text-xs font-bold">${categoryLabel(meta.category)}</span>`;
+
+                modalPoints.innerHTML = '';
+                meta.points.forEach((point) => {
+                    const item = document.createElement('li');
+                    item.className = 'flex items-center gap-2 mb2 text-sm text-gray-300';
+                    item.innerHTML = `<svg class="svg1 text-lime-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 12L11 15L16 9"></path>
+                    </svg>${point}`;
+                    modalPoints.appendChild(item);
+                });
+
+                modal.classList.remove('hidden');
+                modal.classList.add('block');
+                document.body.classList.add('overflow-hidden');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('block');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('block');
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('block')) {
+                modal.classList.remove('block');
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
