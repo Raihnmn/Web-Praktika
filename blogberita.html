@@ -325,7 +325,6 @@
                         </div>
                     </article>
                 </div>
-
                 <div class="load-more-container anim-fade-up">
                     <button class="btn btn-secondary load-more-btn">Muat Lebih Banyak Artikel</button>
                 </div>
@@ -357,7 +356,6 @@
                     <div class="footer-logo">
                         <img src="img/Logo Praktika+_white.png" alt="Praktika+" class="logo-img">
                     </div>
-                    
                     <div class="footer-contact">
                         <h3><span class="highlight-green">Contact Us</span></h3>
                         <p>Email: Praktika@gmail.com</p>
@@ -365,7 +363,6 @@
                         <p>Jl. Raya Banaran No.17, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
                     </div>
                 </div>
-                
                 <div class="footer-links">
                     <div class="footer-nav">
                         <a href="#about">About us</a>
@@ -374,7 +371,6 @@
                         <a href="#pricing">Pricing</a>
                         <a href="#blog">Blog</a>
                     </div>
-                    
                     <div class="social-links">
                         <a href="https://www.instagram.com/praktika.digibookacademy/" class="social-icon" aria-label="Instagram" title="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -411,14 +407,12 @@
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.anim-fade-up').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
-        
         const style = document.createElement('style');
         style.textContent = `
             body { background: #000000; }
