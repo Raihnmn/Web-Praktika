@@ -60,7 +60,6 @@
 </nav>
 
     <main>
-        <!-- Blog Hero Section -->
         <section class="showcase-hero">
             <div class="container">
                 <div class="showcase-header text-center anim-fade-up">
@@ -78,7 +77,6 @@
             </div>
         </section>
 
-        <!-- Featured Article -->
         <section class="blog-featured">
             <div class="container">
                 <div class="featured-article anim-fade-up">
@@ -106,13 +104,11 @@
             </div>
         </section>
 
-        <!-- Blog Grid -->
         <section class="showcase-gallery blog-gallery">
             <div class="container">
                 <h2 class="section-title anim-fade-up"><span class="highlight">Artikel Terbaru</span></h2>
                 
                 <div class="gallery-grid blog-grid">
-                    <!-- Article 1 -->
                     <article class="project-card blog-card anim-fade-up" data-category="karier">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="CV Tips">
@@ -137,7 +133,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 2 -->
                     <article class="project-card blog-card anim-fade-up delay-1" data-category="teknologi">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI Marketing">
@@ -162,7 +157,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 3 -->
                     <article class="project-card blog-card anim-fade-up delay-2" data-category="magang">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Internship Tips">
@@ -187,7 +181,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 4 -->
                     <article class="project-card blog-card anim-fade-up" data-category="industri">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Industry Insight">
@@ -212,7 +205,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 5 -->
                     <article class="project-card blog-card anim-fade-up delay-1" data-category="karier">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Interview Tips">
@@ -237,7 +229,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 6 -->
                     <article class="project-card blog-card anim-fade-up delay-2" data-category="teknologi">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media">
@@ -262,7 +253,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 7 -->
                     <article class="project-card blog-card anim-fade-up" data-category="magang">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80" alt="Remote Work">
@@ -287,7 +277,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 8 -->
                     <article class="project-card blog-card anim-fade-up delay-1" data-category="industri">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Career Path">
@@ -312,7 +301,6 @@
                         </div>
                     </article>
 
-                    <!-- Article 9 -->
                     <article class="project-card blog-card anim-fade-up delay-2" data-category="karier">
                         <div class="project-thumb blog-thumb">
                             <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80" alt="LinkedIn">
@@ -338,14 +326,12 @@
                     </article>
                 </div>
 
-                <!-- Load More Button -->
                 <div class="load-more-container anim-fade-up">
                     <button class="btn btn-secondary load-more-btn">Muat Lebih Banyak Artikel</button>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
         <section class="newsletter-section">
             <div class="container">
                 <div class="newsletter-box anim-fade-up">
@@ -420,7 +406,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Scroll Animation Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
@@ -502,7 +487,6 @@
         `;
         document.head.appendChild(style);
 
-        // Blog Filter Functionality
         document.addEventListener('DOMContentLoaded', () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const blogCards = document.querySelectorAll('.blog-card');
@@ -528,8 +512,6 @@
                     });
                 });
             });
-
-            // Blog Card Hover Animation
             blogCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px)';
