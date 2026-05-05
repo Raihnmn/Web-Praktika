@@ -12,12 +12,9 @@
 </head>
 <body class="bg-gray-900">
 
-<!-- Hero Section -->
 <header id="hero-section" class="relative overflow-hidden text-center text-white min-h-screen bg-black">
-    <!-- Grid Background (created via JS) -->
     <div id="grid-bg" class="absolute top-0 left-0 right-0 bottom-0 z0 opacity-50"></div>
     
-    <!-- Floating Avatars -->
     <img id="avatar-1" src="https://randomuser.me/api/portraits/men/32.jpg" class="absolute rounded-full border-2 border-lime-300 object-cover z1 sm:none" alt="Member">
     <img id="avatar-2" src="https://randomuser.me/api/portraits/women/44.jpg" class="absolute rounded-full border-2 border-lime-300 object-cover z1 sm:none" alt="Member">
     <img id="avatar-3" src="https://randomuser.me/api/portraits/men/85.jpg" class="absolute rounded-full border-2 border-lime-300 object-cover z1 sm:none" alt="Member">
@@ -45,7 +42,6 @@
     </div>
 </header>
 
-<!-- Stats Bar -->
 <div id="stats-bar" class="py6 backdrop-blur-sm border-t border-b border-gray-700 bg-gray-800">
     <div class="container">
         <div class="flex justify-around flex-wrap text-center gap-6 sm:flex-col sm:gap-4">
@@ -69,16 +65,13 @@
     </div>
 </div>
 
-<!-- Collaboration Section -->
 <section id="collab-section" class="py9 sm:py6 text-white bg-gray-900">
     <div class="container">
         <div class="grid grid-cols-2 sm:grid-cols-1 gap-9 sm:gap-6 items-center">
-            <!-- Chat Demo -->
             <div id="chat-demo" class="opacity-0">
                 <div class="relative p6 rounded-xl border border-gray-700 bg-gray-800">
                     <div class="absolute rounded-full px4 py1 text-xs font-bold text-black bg-lime-300" data-pos="top">#diskusi-santai</div>
                     
-                    <!-- Chat Bubble Left -->
                     <div id="chat-bubble-1" class="flex gap-3 p4 rounded-xl mb3 backdrop-blur-xxs border border-gray-700 bg-gray-700 opacity-0">
                         <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-auto h-auto rounded-full object-cover max-w-50 max-h-50" alt="Sarah">
                         <div>
@@ -88,7 +81,6 @@
                         </div>
                     </div>
 
-                    <!-- Chat Bubble Right -->
                     <div id="chat-bubble-2" class="flex gap-3 p4 rounded-xl mb3 border border-lime-400 bg-lime-950 opacity-0">
                         <div class="text-right w-full">
                             <span class="inline-block text-xxs font-bold px2 py1 rounded-md mb1 bg-yellow-500 text-black uppercase">Digital Mkt</span>
@@ -98,7 +90,6 @@
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-auto h-auto rounded-full object-cover max-w-50 max-h-50" alt="Budi">
                     </div>
 
-                    <!-- Chat Bubble Left -->
                     <div id="chat-bubble-3" class="flex gap-3 p4 rounded-xl backdrop-blur-xxs border border-gray-700 bg-gray-700 opacity-0">
                         <img src="https://randomuser.me/api/portraits/men/85.jpg" class="w-auto h-auto rounded-full object-cover max-w-50 max-h-50" alt="Admin">
                         <div>
@@ -110,7 +101,6 @@
                 </div>
             </div>
 
-            <!-- Content -->
             <div id="collab-content" class="opacity-0">
                 <h2 class="text-3xl sm:text-xl font-bold mb5">
                     Kolaborasi <span class="text-3xl sm:text-xl text-lime-300">Lintas Bidang.</span>
@@ -136,7 +126,6 @@
     </div>
 </section>
 
-<!-- Events Section -->
 <section id="events" class="py9 sm:py6 text-white bg-gray-900">
     <div class="container max-w-1100 m-auto px4">
 
@@ -193,33 +182,28 @@
     </div>
 </section>
 
-<!-- Gallery/Documentation Section -->
 <section id="gallery-section" class="py9 sm:py6 bg-gray-900">
     <div class="container">
         <h2 id="gallery-title" class="text-3xl sm:text-xl font-bold text-white mb6 opacity-0">Dokumentasi</h2>
         <div class="grid grid-cols-4 sm:grid-cols-2 gap-4">
-            <!-- Gallery Item 1 -->
             <div id="gallery-item-1" class="relative rounded-xl overflow-hidden cursor-pointer min-h-200 transition opacity-0">
                 <img id="gallery-img-1" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover transition" alt="Gallery">
                 <div id="gallery-overlay-1" class="absolute bottom-0 left-0 right-0 p5 bg-dark-opacity opacity-0 transition">
                     <span class="text-white font-bold">Diskusi Kelompok</span>
                 </div>
             </div>
-            <!-- Gallery Item 2 -->
             <div id="gallery-item-2" class="relative rounded-xl overflow-hidden cursor-pointer min-h-200 transition opacity-0">
                 <img id="gallery-img-2" src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover transition" alt="Gallery">
                 <div id="gallery-overlay-2" class="absolute bottom-0 left-0 right-0 p5 bg-dark-opacity opacity-0 transition">
                     <span class="text-white font-bold">Study Group</span>
                 </div>
             </div>
-            <!-- Gallery Item 3 -->
             <div id="gallery-item-3" class="relative rounded-xl overflow-hidden cursor-pointer min-h-200 transition opacity-0">
                 <img id="gallery-img-3" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover transition" alt="Gallery">
                 <div id="gallery-overlay-3" class="absolute bottom-0 left-0 right-0 p5 bg-dark-opacity opacity-0 transition">
                     <span class="text-white font-bold">Networking Night</span>
                 </div>
             </div>
-            <!-- Gallery Item 4 -->
             <div id="gallery-item-4" class="relative rounded-xl overflow-hidden cursor-pointer min-h-200 transition opacity-0">
                 <img id="gallery-img-4" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover transition" alt="Gallery">
                 <div id="gallery-overlay-4" class="absolute bottom-0 left-0 right-0 p5 bg-dark-opacity opacity-0 transition">
@@ -229,8 +213,6 @@
         </div>
     </div>
 </section>
-
-<!-- CTA Section -->
 <section id="cta-section" class="py9 sm:py6 text-center border-t border-gray-700 bg-black">
     <div class="container">
         <h2 id="cta-title" class="text-3xl sm:text-xl font-bold text-white mb4 opacity-0">Siap Gabung?</h2>
@@ -243,7 +225,6 @@
     </div>
 </section>
 
-<!-- Footer -->
     <footer class="footer bg-gray-900 py8">
         <div class="max-w-1200 m-auto px4">
             <div class="flex gap-7 flex-col sm:flex-row justify-between">
